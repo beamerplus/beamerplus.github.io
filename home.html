@@ -53,13 +53,12 @@ MathJax = {
         }
 
         // Create the command map for:
-        // \ifstar, \ifnextchar, \ifblank, \ifstrequal, \gsub, \seteqnumber
+        // \ifstar, \ifnextchar, \ifblank, \ifstrequal, \seteqnumber
         new CommandMap('Lwarp-macros', {
           ifstar: 'IfstarFunction',
           ifnextchar: 'IfnextcharFunction',
           ifblank: 'IfblankFunction',
           ifstrequal: 'IfstrequalFunction',
-          gsubstitute: 'GsubstituteFunction',
           seteqnumber: 'SeteqnumberFunction'
         }, {
           // This function implements an ifstar macro.
@@ -100,15 +99,6 @@ MathJax = {
             const resultnotequal = parser.GetArgument(name);
             const isequal = (strequalfirst == strequalsecond);
             useArgument(parser, isequal ? resultequal : resultnotequal);
-          },
-
-          // This function implements a gsub macro.
-          GsubstituteFunction(parser, name) {
-            const gsubfirst = parser.GetArgument(name);
-            const gsubsecond = parser.GetArgument(name);
-            const gsubthird = parser.GetArgument(name);
-            let gsubresult=gsubfirst.replace(gsubsecond, gsubthird);
-            useArgument(parser, gsubresult);
           },
 
           // This function modifies the equation numbers.
@@ -208,7 +198,9 @@ MathJax = {
   }
 }
 </script>
-<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script src="beameruserguide.js">
+</script>
 <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet"><link href="beameruserguide-images/favicon.png" rel="icon" sizes="16x16" type="image/png"></head>
 <body class="home-page">
 <div class="bodyandsidetoc grid-container"><header><div id="hamburger-button">☰</div><strong><a href="home.html">Beamer Manual</a></strong><div id="search"></div></header><div class="sidetoccontainer" id="chapter-toc-container"><nav class="toc">
