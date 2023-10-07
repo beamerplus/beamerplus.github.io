@@ -31,6 +31,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
   sections = document.querySelectorAll("span.sectionnumber");
   navLi = document.querySelectorAll("#local-toc-container a");
 
+  window.onscroll = () => {
+    debounce(updateTOC, 75)();
+  };
+
   const hamburger = document.getElementById("hamburger-button");
   const chapterMenu = document.getElementById("chapter-toc-container");
   function toggleMenu() {
