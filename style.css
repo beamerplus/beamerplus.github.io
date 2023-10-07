@@ -135,9 +135,7 @@ pre.verbatim {
   padding: 1ex;
 }
 
-div.themeexample-image object {
-  width: 45%;
-}
+
 
 div.hidden {
   display: none;
@@ -168,6 +166,16 @@ div.environment div.translatormanualentryheadline p {
   margin-right: -0.05em;
   bottom: -0.5ex;
   position: relative;
+}
+
+div.themeexample-image object {
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  div.themeexample-image object {
+    width: 46%;
+  }
 }
 
 /* section heading */
