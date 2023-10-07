@@ -6,11 +6,11 @@
 <meta charset="utf-8">
 <meta content="LaTeX Lwarp package" name="generator">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>&emsp;Licenses and Copyright - Beamer Manual</title>
-<link href="style.css?v=20231006" rel="stylesheet" type="text/css">
+<title>Licenses and Copyright - Beamer Manual</title>
+<link href="style.css?v=20231007" rel="stylesheet" type="text/css">
 
-<script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-<script async src="lwarp-mathjax-emulation.js"></script><link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet"></head>
+
+<link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet"></head>
 <body>
 <a id="beameruserguide-autopage-143"></a>
 
@@ -30,55 +30,55 @@ Contents
 <div class="sidetoccontents">
 
 <p>
-<a class="tocsection" href="Introduction.html#autosec-7">&emsp;Introduction</a>
+<a class="tocsection" href="Introduction.html">Introduction</a>
 </p>
 <p class="current-part">
-<a class="tocpart" href="Getting-Started.html#autosec-21">&emsp;Getting Started</a>
+<a class="tocpart" href="Getting-Started.html">Getting Started</a>
 </p>
 <p class="current-part">
-<a class="tocsection" href="Installation.html#autosec-24">&emsp;Installation</a>
+<a class="tocsection" href="Installation.html">Installation</a>
 </p>
 <p class="current-part">
-<a class="tocsection" href="Tutorial-Euclid-Presentation.html#autosec-42">&emsp;Tutorial: Euclid&rsquo;s Presentation</a>
+<a class="tocsection" href="Tutorial-Euclid-Presentation.html">Tutorial: Euclid&rsquo;s Presentation</a>
 </p>
 <p class="current-part">
-<a class="tocsection" href="Workflow-For-Creating-Beamer-Presentation.html#autosec-93">&emsp;Workflow For Creating a Beamer Presentation</a>
+<a class="tocsection" href="Workflow-For-Creating-Beamer-Presentation.html">Workflow For Creating a Beamer Presentation</a>
 </p>
 <p class="current-part">
-<a class="tocsection" href="Guidelines-Creating-Presentations.html#autosec-116">&emsp;Guidelines for Creating Presentations</a>
+<a class="tocsection" href="Guidelines-Creating-Presentations.html">Guidelines for Creating Presentations</a>
 </p>
 <p class="current-part">
-<a class="tocsection" href="Solution-Templates.html#autosec-141">&emsp;Solution Templates</a>
+<a class="tocsection" href="Solution-Templates.html">Solution Templates</a>
 </p>
 <p class="current current-part">
-<a class="tocsection" href="Licenses-Copyright.html#autosec-144">&emsp;Licenses and Copyright</a>
+<a class="tocsection" href="Licenses-Copyright.html">Licenses and Copyright</a>
 </p>
 <p>
-<a class="tocpart" href="Building-Presentation.html#autosec-185">&emsp;Building a Presentation</a>
-</p>
-
-
-
-
-
-
-
-<p>
-<a class="tocpart" href="Changing-Way-Things-Look.html#autosec-410">&emsp;Changing the Way Things Look</a>
+<a class="tocpart" href="Building-Presentation.html">Building a Presentation</a>
 </p>
 
 
 
 
+
+
+
 <p>
-<a class="tocpart" href="Creating-Supporting-Material.html#autosec-497">&emsp;Creating Supporting Material</a>
+<a class="tocpart" href="Changing-Way-Things-Look.html">Changing the Way Things Look</a>
 </p>
 
 
 
 
 <p>
-<a class="tocpart" href="Howtos.html#autosec-554">&emsp;Howtos</a>
+<a class="tocpart" href="Creating-Supporting-Material.html">Creating Supporting Material</a>
+</p>
+
+
+
+
+<p>
+<a class="tocpart" href="Howtos.html">Howtos</a>
 </p>
 
 
@@ -87,133 +87,9 @@ Contents
 </div>
 <main class="bodycontainer">
 <section class="textbody">
-<h1>The <span class="beamer-name"><span class="textsc">beamer</span></span> <i>class</i><br>
-<a href="https://github.com/josephwright/beamer" target="_blank">https://github.com/josephwright/beamer</a><br>
-User Guide for version 3.70.</h1><h2 class="inserted">&emsp;Getting Started</h2>
+<h2 class="inserted">Getting Started</h2>
 <!--MathJax customizations:-->
-<div class="hidden">
 
-\(\newcommand{\footnotename}{footnote}\)
-
-\(\def \LWRfootnote {1}\)
-
-\(\newcommand {\footnote }[2][\LWRfootnote ]{{}^{\mathrm {#1}}}\)
-
-\(\newcommand {\footnotemark }[1][\LWRfootnote ]{{}^{\mathrm {#1}}}\)
-
-\(\let \LWRorighspace \hspace \)
-
-\(\renewcommand {\hspace }{\ifstar \LWRorighspace \LWRorighspace }\)
-
-\(\newcommand {\mathnormal }[1]{{#1}}\)
-
-\(\newcommand \ensuremath [1]{#1}\)
-
-\(\newcommand {\LWRframebox }[2][]{\fbox {#2}} \newcommand {\framebox }[1][]{\LWRframebox } \)
-
-\(\newcommand {\setlength }[2]{}\)
-
-\(\newcommand {\addtolength }[2]{}\)
-
-\(\newcommand {\setcounter }[2]{}\)
-
-\(\newcommand {\addtocounter }[2]{}\)
-
-\(\newcommand {\arabic }[1]{}\)
-
-\(\newcommand {\number }[1]{}\)
-
-\(\newcommand {\noalign }[1]{\text {#1}\notag \\}\)
-
-\(\newcommand {\cline }[1]{}\)
-
-\(\newcommand {\directlua }[1]{\text {(directlua)}}\)
-
-\(\newcommand {\luatexdirectlua }[1]{\text {(directlua)}}\)
-
-\(\newcommand {\protect }{}\)
-
-\(\def \LWRabsorbnumber #1 {}\)
-
-\(\def \LWRabsorbquotenumber "#1 {}\)
-
-\(\newcommand {\LWRabsorboption }[1][]{}\)
-
-\(\newcommand {\LWRabsorbtwooptions }[1][]{\LWRabsorboption }\)
-
-\(\def \mathchar {\ifnextchar "\LWRabsorbquotenumber \LWRabsorbnumber }\)
-
-\(\def \mathcode #1={\mathchar }\)
-
-\(\let \delcode \mathcode \)
-
-\(\let \delimiter \mathchar \)
-
-\(\def \oe {\unicode {x0153}}\)
-
-\(\def \OE {\unicode {x0152}}\)
-
-\(\def \ae {\unicode {x00E6}}\)
-
-\(\def \AE {\unicode {x00C6}}\)
-
-\(\def \aa {\unicode {x00E5}}\)
-
-\(\def \AA {\unicode {x00C5}}\)
-
-\(\def \o {\unicode {x00F8}}\)
-
-\(\def \O {\unicode {x00D8}}\)
-
-\(\def \l {\unicode {x0142}}\)
-
-\(\def \L {\unicode {x0141}}\)
-
-\(\def \ss {\unicode {x00DF}}\)
-
-\(\def \SS {\unicode {x1E9E}}\)
-
-\(\def \dag {\unicode {x2020}}\)
-
-\(\def \ddag {\unicode {x2021}}\)
-
-\(\def \P {\unicode {x00B6}}\)
-
-\(\def \copyright {\unicode {x00A9}}\)
-
-\(\def \pounds {\unicode {x00A3}}\)
-
-\(\let \LWRref \ref \)
-
-\(\renewcommand {\ref }{\ifstar \LWRref \LWRref }\)
-
-\( \newcommand {\multicolumn }[3]{#3}\)
-
-\(\require {textcomp}\)
-
-\(\newcommand {\intertext }[1]{\text {#1}\notag \\}\)
-
-\(\let \Hat \hat \)
-
-\(\let \Check \check \)
-
-\(\let \Tilde \tilde \)
-
-\(\let \Acute \acute \)
-
-\(\let \Grave \grave \)
-
-\(\let \Dot \dot \)
-
-\(\let \Ddot \ddot \)
-
-\(\let \Breve \breve \)
-
-\(\let \Bar \bar \)
-
-\(\let \Vec \vec \)
-
-</div>
 <p>
 <!--
 ...... section Licenses and Copyright ......
@@ -1291,7 +1167,7 @@ in that place. In the absence of an unequivocal list it might be impossible for 
 </p>
 </p></section>
 </main>
-<footer><div class="footer-left"><a href="Licenses-Copyright.html">License</a> &middot; <a href="https://ctan.org/pkg/beamer">CTAN</a> &middot; <a href="http://mirrors.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf">Official PDF version</a> &middot; <a href="https://github.com/SwitWu/beamer-html-manual/issues">Feedback and issues</a> &middot; <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a></div><div class="footer-right"><em>HTML version last updated: 2023-10-06</em></div></footer></div>
+<footer><div class="footer-left"><a href="Licenses-Copyright.html">License</a> &middot; <a href="https://ctan.org/pkg/beamer">CTAN</a> &middot; <a href="http://mirrors.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf">Official PDF version</a> &middot; <a href="https://github.com/SwitWu/beamer-html-manual/issues">Feedback and issues</a> &middot; <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a></div><div class="footer-right"><em>HTML version last updated: 2023-10-07</em></div></footer></div>
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script><script>
       docsearch({

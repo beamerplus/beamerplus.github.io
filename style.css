@@ -1,3 +1,60 @@
+/* Font Declarations */
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url(https://cdn.jsdelivr.net/gh/rsms/inter@latest/docs/font-files/Inter-roman.var.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url(https://cdn.jsdelivr.net/gh/rsms/inter@latest/docs/font-files/Inter-italic.var.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@master/fonts/webfonts/JetBrainsMono-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: italic;
+  src: url(https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@master/fonts/webfonts/JetBrainsMono-Italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  src: url(https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@master/fonts/webfonts/JetBrainsMono-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: italic;
+  src: url(https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@master/fonts/webfonts/JetBrainsMono-BoldItalic.woff2) format('woff2');
+}
+
+
 :root {
   --base-font-family: Inter, sans-serif;
   --mono-font-family: 'JetBrains Mono';
@@ -29,7 +86,9 @@ kbd,
 pre.verbatim,
 span.extracttheme,
 span.classoption-heading,
-span.extractclass {
+span.extractclass,
+div.begin-environment,
+div.end-environment {
   font-family: var(--mono-font-family);
 }
 
@@ -71,6 +130,7 @@ div.command-headline {
 }
 
 pre.verbatim {
+  overflow-x: auto;
   background-color: #d4dce6;
   padding: 1ex;
 }
@@ -81,6 +141,13 @@ div.themeexample-image object {
 
 div.hidden {
   display: none;
+}
+
+div.environment > div.translatormanualentryheadline {
+  margin-left: 2em;
+}
+div.environment div.translatormanualentryheadline p {
+  margin: 0;
 }
 
 /* tex and latex logo */
@@ -166,7 +233,7 @@ h6 {
 
 div.sidetoccontainer {
   float: none;
-  /* border-right: 1px solid silver; */
+  border-right: 1px solid silver;
   border-radius: 0;
   padding: 0;
   font-size: 0.9em;
@@ -180,6 +247,24 @@ div.sidetoccontainer {
   grid-area: left;
   background-color: rgb(242, 242, 242);
   border-right: 1px solid #ccc;
+}
+
+@media screen and (max-width: 639px) {
+  #chapter-toc-container {
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.15s;
+    position: fixed;
+    z-index: 1000;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+  }
+
+  #chapter-toc-container.show-menu {
+    transform: translateX(0);
+  }
 }
 
 @media screen and (min-width: 640px) {
@@ -204,6 +289,16 @@ div.sidetoccontainer {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  #local-toc-container {
+    width: 19em;
+  }
+
+  #chapter-toc-container {
+    width: 19em;
+  }
+}
+
 main.bodycontainer {
   grid-area: content;
   float: none;
@@ -215,10 +310,11 @@ main.bodycontainer {
 nav {
   position: sticky;
   top: var(--header-height);
-  max-height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height));
   padding: 0;
   margin: 0;
   overflow-y: auto;
+  scroll-padding: 100px;
 }
 
 #chapter-toc-container nav.sidetoc {
@@ -406,17 +502,11 @@ div.sidetoccontents {
   text-align: left;
 }
 
+
 nav.sidetoc .sidetoccontents p {
   margin: 0;
-  font-size: 110%;
-}
-
-nav.sidetoc p a {
-  color: black;
-}
-
-nav.sidetoc p a:hover {
-  text-decoration: underline;
+  line-height: 1.2;
+  /* font-size: 110%; */
 }
 
 nav.sidetoc .sidetoccontents > p.current-part {
@@ -429,8 +519,8 @@ nav.sidetoc .sidetoccontents > p.current {
 
 nav.sidetoc .sidetoccontents a {
   display: block;
-  padding: 0.5em 0.3em;
-  text-indent: -0.5em;
+  padding: 0.5em 0.5em 0.5em 0;
+  text-indent: 0;
   font-weight: bold;
   font-size: 0.85em;
 }
@@ -456,6 +546,13 @@ nav.sidetoc .sidetoccontents a.tocsubsubsection {
 
 div.package:first-child {
   margin-left: 3em;
+}
+
+/* home page toc */
+
+body.home-page nav.toc > p > a {
+  display: block;
+  margin-left: 1em;
 }
 
 /* div.command { */
