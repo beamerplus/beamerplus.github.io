@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta content="LaTeX Lwarp package" name="generator">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>&emsp;Howtos - Beamer Manual</title>
+<link href="style.css?v=20231006" rel="stylesheet" type="text/css">
+
+<script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script async src="lwarp-mathjax-emulation.js"></script><link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet"></head>
+<body>
+<a id="beameruserguide-autopage-553"></a>
+
+<div class="bodyandsidetoc grid-container"><header><div id="hamburger-button">☰</div><strong><a href="home.html">Beamer Manual</a></strong><div id="search"></div></header><div class="sidetoccontainer" id="local-toc-container"><nav class="sidetoc"><div class="sidetoctitle"><p>On this page</p></div><div class="sidetoccontents"></div></nav></div>
+<div class="sidetoccontainer" id="chapter-toc-container">
+<nav class="sidetoc">
+<div class="sidetoctitle">
+<p>
+<span class="sidetocthetitle">The <span class="beamer-name"><span class="textsc">beamer</span></span> <i>class</i><br>
+<a href="https://github.com/josephwright/beamer" target="_blank">https://github.com/josephwright/beamer</a><br>
+User Guide for version 3.70.</span>
+</p>
+<p>
+Contents
+</p>
+</div>
+<div class="sidetoccontents">
+
+<p>
+<a class="tocsection" href="Introduction.html#autosec-7">&emsp;Introduction</a>
+</p>
+<p>
+<a class="tocpart" href="Getting-Started.html#autosec-21">&emsp;Getting Started</a>
+</p>
+
+
+
+
+
+
+<p>
+<a class="tocpart" href="Building-Presentation.html#autosec-185">&emsp;Building a Presentation</a>
+</p>
+
+
+
+
+
+
+
+<p>
+<a class="tocpart" href="Changing-Way-Things-Look.html#autosec-410">&emsp;Changing the Way Things Look</a>
+</p>
+
+
+
+
+<p>
+<a class="tocpart" href="Creating-Supporting-Material.html#autosec-497">&emsp;Creating Supporting Material</a>
+</p>
+
+
+
+
+<p class="current current-part">
+<a class="tocpart" href="Howtos.html#autosec-554">&emsp;Howtos</a>
+</p>
+<p class="current-part">
+<a class="tocsection" href="How-To-Uncover-Things-Piecewise.html#autosec-557">&emsp;How To Uncover Things Piecewise</a>
+</p>
+<p class="current-part">
+<a class="tocsection" href="How-To-Import-Presentations-Based-on-Other-Packages-Classes.html#autosec-580">&emsp;How To Import Presentations Based on Other Packages and Classes</a>
+</p>
+</div>
+</nav>
+</div>
+<main class="bodycontainer">
+<section class="textbody">
+<h1>The <span class="beamer-name"><span class="textsc">beamer</span></span> <i>class</i><br>
+<a href="https://github.com/josephwright/beamer" target="_blank">https://github.com/josephwright/beamer</a><br>
+User Guide for version 3.70.</h1>
+<!--MathJax customizations:-->
+<div class="hidden">
+
+\(\newcommand{\footnotename}{footnote}\)
+
+\(\def \LWRfootnote {1}\)
+
+\(\newcommand {\footnote }[2][\LWRfootnote ]{{}^{\mathrm {#1}}}\)
+
+\(\newcommand {\footnotemark }[1][\LWRfootnote ]{{}^{\mathrm {#1}}}\)
+
+\(\let \LWRorighspace \hspace \)
+
+\(\renewcommand {\hspace }{\ifstar \LWRorighspace \LWRorighspace }\)
+
+\(\newcommand {\mathnormal }[1]{{#1}}\)
+
+\(\newcommand \ensuremath [1]{#1}\)
+
+\(\newcommand {\LWRframebox }[2][]{\fbox {#2}} \newcommand {\framebox }[1][]{\LWRframebox } \)
+
+\(\newcommand {\setlength }[2]{}\)
+
+\(\newcommand {\addtolength }[2]{}\)
+
+\(\newcommand {\setcounter }[2]{}\)
+
+\(\newcommand {\addtocounter }[2]{}\)
+
+\(\newcommand {\arabic }[1]{}\)
+
+\(\newcommand {\number }[1]{}\)
+
+\(\newcommand {\noalign }[1]{\text {#1}\notag \\}\)
+
+\(\newcommand {\cline }[1]{}\)
+
+\(\newcommand {\directlua }[1]{\text {(directlua)}}\)
+
+\(\newcommand {\luatexdirectlua }[1]{\text {(directlua)}}\)
+
+\(\newcommand {\protect }{}\)
+
+\(\def \LWRabsorbnumber #1 {}\)
+
+\(\def \LWRabsorbquotenumber "#1 {}\)
+
+\(\newcommand {\LWRabsorboption }[1][]{}\)
+
+\(\newcommand {\LWRabsorbtwooptions }[1][]{\LWRabsorboption }\)
+
+\(\def \mathchar {\ifnextchar "\LWRabsorbquotenumber \LWRabsorbnumber }\)
+
+\(\def \mathcode #1={\mathchar }\)
+
+\(\let \delcode \mathcode \)
+
+\(\let \delimiter \mathchar \)
+
+\(\def \oe {\unicode {x0153}}\)
+
+\(\def \OE {\unicode {x0152}}\)
+
+\(\def \ae {\unicode {x00E6}}\)
+
+\(\def \AE {\unicode {x00C6}}\)
+
+\(\def \aa {\unicode {x00E5}}\)
+
+\(\def \AA {\unicode {x00C5}}\)
+
+\(\def \o {\unicode {x00F8}}\)
+
+\(\def \O {\unicode {x00D8}}\)
+
+\(\def \l {\unicode {x0142}}\)
+
+\(\def \L {\unicode {x0141}}\)
+
+\(\def \ss {\unicode {x00DF}}\)
+
+\(\def \SS {\unicode {x1E9E}}\)
+
+\(\def \dag {\unicode {x2020}}\)
+
+\(\def \ddag {\unicode {x2021}}\)
+
+\(\def \P {\unicode {x00B6}}\)
+
+\(\def \copyright {\unicode {x00A9}}\)
+
+\(\def \pounds {\unicode {x00A3}}\)
+
+\(\let \LWRref \ref \)
+
+\(\renewcommand {\ref }{\ifstar \LWRref \LWRref }\)
+
+\( \newcommand {\multicolumn }[3]{#3}\)
+
+\(\require {textcomp}\)
+
+\(\newcommand {\intertext }[1]{\text {#1}\notag \\}\)
+
+\(\let \Hat \hat \)
+
+\(\let \Check \check \)
+
+\(\let \Tilde \tilde \)
+
+\(\let \Acute \acute \)
+
+\(\let \Grave \grave \)
+
+\(\let \Dot \dot \)
+
+\(\let \Ddot \ddot \)
+
+\(\let \Breve \breve \)
+
+\(\let \Bar \bar \)
+
+\(\let \Vec \vec \)
+
+</div>
+<p>
+<!--
+...... part Howtos ......
+-->
+<h2 id="autosec-554">Part&nbsp;<span class="sectionnumber">V&emsp;</span>Howtos</h2>
+<a id="beameruserguide-autopage-554"></a>
+<a id="beameruserguide-autofile-27"></a>
+<p>
+This part contains explanations-of-how-to-do-things (commonly known as <em>howtos</em>). These explanations are not really part of the &ldquo;<span class="beamer-name"><span class="textsc">beamer</span></span> core.&rdquo; Rather, they explain how to use <span class="beamer-name"><span class="textsc">beamer</span></span> to achieve a certain effect or how get something special done.
+</p>
+<p>
+The first howto is about tricky uncovering situations.
+</p>
+<p>
+The second howto explains how you can import (parts or) presentations created using some other <span class="latexlogofont"><span class="latexlogo">L<span class="latexlogosup">a</span>T<span class="latexlogosub">e</span>X</span></span>-presentation
+class, like <span class="textsc">prosper</span>.
+</p>
+</p></section>
+</main>
+<footer><div class="footer-left"><a href="Licenses-Copyright.html">License</a> &middot; <a href="https://ctan.org/pkg/beamer">CTAN</a> &middot; <a href="http://mirrors.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf">Official PDF version</a> &middot; <a href="https://github.com/SwitWu/beamer-html-manual/issues">Feedback and issues</a> &middot; <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a></div><div class="footer-right"><em>HTML version last updated: 2023-10-06</em></div></footer></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script><script>
+      docsearch({
+        apiKey: '196e8c10ec187c9ae525dd5226fb9378',
+        indexName: 'beamer',
+        appId: 'JS6V5VZSDB',
+        container: '#search',
+        searchParameters: {
+          filters: "tags:beamer",
+        },
+    });
+    </script></body>
+</html>
