@@ -620,6 +620,30 @@ ul > li {
 }
 
 
+/* figures */
+
+figure > p {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+div.figurecaption {
+  font-size: 85%;
+}
+
+
+/* beamernote and articlenote */
+
+div.beamernote > p,
+div.articlenote > p {
+  margin-bottom: -1em;
+}
+
+div.beamernote > p > span,
+div.articlenote > p > span {
+  color: blue;
+}
+
 
 /* Home page */
 
