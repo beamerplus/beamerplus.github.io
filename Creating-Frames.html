@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Creating Frames - Beamer Manual</title>
-    <link href="style.css?v=20231012" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -2717,24 +2717,19 @@ background section in navigation frame
             following option:
           </p>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">compress</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Tries to make all navigation bars as small as possible. For
-                  example, all small frame representations in the navigation
-                  bars for a single section are shown alongside each other.
-                  Normally, the representations for different subsections are
-                  shown in different lines. Furthermore, section and subsection
-                  navigations are compressed into one line.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">compress</span>]{beamer}
+              </p>
+            </div>
+            <p>
+              Tries to make all navigation bars as small as possible. For
+              example, all small frame representations in the navigation bars
+              for a single section are shown alongside each other. Normally, the
+              representations for different subsections are shown in different
+              lines. Furthermore, section and subsection navigations are
+              compressed into one line.
+            </p>
           </div>
           <p>
             Some themes use the <span class="texttt">\insertnavigation</span> to
@@ -4074,41 +4069,27 @@ background section in navigation frame
             change this using the following class options:
           </p>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">t</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Place text of slides at the (vertical) top of the slides. This
-                  corresponds to a vertical &ldquo;flush.&rdquo; You can
-                  override this for individual frames using the
-                  <span class="texttt">c</span> or
-                  <span class="texttt">b</span> option.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>\documentclass[<span class="declare">t</span>]{beamer}</p>
+            </div>
+            <p>
+              Place text of slides at the (vertical) top of the slides. This
+              corresponds to a vertical &ldquo;flush.&rdquo; You can override
+              this for individual frames using the
+              <span class="texttt">c</span> or
+              <span class="texttt">b</span> option.
+            </p>
           </div>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">c</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Place text of slides at the (vertical) center of the slides.
-                  This is the default. You can override this for individual
-                  frames using the <span class="texttt">t</span> or
-                  <span class="texttt">b</span> option.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>\documentclass[<span class="declare">c</span>]{beamer}</p>
+            </div>
+            <p>
+              Place text of slides at the (vertical) center of the slides. This
+              is the default. You can override this for individual frames using
+              the <span class="texttt">t</span> or
+              <span class="texttt">b</span> option.
+            </p>
           </div>
           <!--
 ...... subsubsection The Background ......
@@ -4418,168 +4399,122 @@ background section in navigation frame
             following class options:
           </p>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">aspectratio=2013</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Sets aspect ratio to 20:13, and frame size to 140 mm by 91 mm.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">aspectratio=2013</span
+                >]{beamer}
+              </p>
+            </div>
+            <p>
+              Sets aspect ratio to 20:13, and frame size to 140 mm by 91 mm.
+            </p>
           </div>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">aspectratio=1610</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Sets aspect ratio to 16:10, and frame size to 160 mm by
-                  100 mm.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">aspectratio=1610</span
+                >]{beamer}
+              </p>
+            </div>
+            <p>
+              Sets aspect ratio to 16:10, and frame size to 160 mm by 100 mm.
+            </p>
           </div>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">aspectratio=169</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Sets aspect ratio to 16:9, and frame size to 160 mm by 90 mm.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">aspectratio=169</span
+                >]{beamer}
+              </p>
+            </div>
+            <p>Sets aspect ratio to 16:9, and frame size to 160 mm by 90 mm.</p>
           </div>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">aspectratio=149</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Sets aspect ratio to 14:9, and frame size to 140 mm by 90 mm.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">aspectratio=149</span
+                >]{beamer}
+              </p>
+            </div>
+            <p>Sets aspect ratio to 14:9, and frame size to 140 mm by 90 mm.</p>
           </div>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">aspectratio=141</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Sets aspect ratio to 1.41:1, and frame size to 148.5 mm by
-                  105 mm.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">aspectratio=141</span
+                >]{beamer}
+              </p>
+            </div>
+            <p>
+              Sets aspect ratio to 1.41:1, and frame size to 148.5 mm by 105 mm.
+            </p>
           </div>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">aspectratio=54</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Sets aspect ratio to 5:4, and frame size to 125 mm by 100 mm.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">aspectratio=54</span
+                >]{beamer}
+              </p>
+            </div>
+            <p>Sets aspect ratio to 5:4, and frame size to 125 mm by 100 mm.</p>
           </div>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">aspectratio=43</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  The default aspect ratio and frame size. You need not specify
-                  this option.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">aspectratio=43</span
+                >]{beamer}
+              </p>
+            </div>
+            <p>
+              The default aspect ratio and frame size. You need not specify this
+              option.
+            </p>
           </div>
           <div class="classoption">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">aspectratio=32</span
-                    >]{beamer}</span
-                  >
-                </p>
-                <p>
-                  Sets aspect ratio to 3:2, and frame size to 135 mm by 90 mm.
-                </p>
-              </li>
-            </ul>
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">aspectratio=32</span
+                >]{beamer}
+              </p>
+            </div>
+            <p>Sets aspect ratio to 3:2, and frame size to 135 mm by 90 mm.</p>
           </div>
           <div class="classoption">
+            <div class="classoption-headline">
+              <p>
+                \documentclass[<span class="declare">aspectratio=xxxx</span
+                >]{beamer}
+              </p>
+            </div>
+            <p>
+              Allows the user to set their own aspect ratio. For the height of
+              the resulting frame, the default value of 96 mm is used and the
+              width will be calculated accordingly to match the desired aspect
+              ratio.
+            </p>
+            <p>
+              The custom aspect ratio allows for two to four digits and will be
+              interpreted as shown in the following examples:
+            </p>
             <ul style="list-style-type: none">
               <li>
                 <p>
-                  <span class="classoption-heading"
-                    >\documentclass[<span class="declare">aspectratio=xxxx</span
-                    >]{beamer}</span
-                  >
+                  &bull; two digits:
+                  <span class="texttt">aspectratio=42</span> as 4:2
                 </p>
+              </li>
+              <li>
                 <p>
-                  Allows the user to set their own aspect ratio. For the height
-                  of the resulting frame, the default value of 96 mm is used and
-                  the width will be calculated accordingly to match the desired
-                  aspect ratio.
+                  &bull; three digits:
+                  <span class="texttt">aspectratio=137</span> as 13:7 (e.g.
+                  always in landscape format)
                 </p>
+              </li>
+              <li>
                 <p>
-                  The custom aspect ratio allows for two to four digits and will
-                  be interpreted as shown in the following examples:
+                  &bull; four digits:
+                  <span class="texttt">aspectratio=1024</span> as 10:24
                 </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull; two digits:
-                      <span class="texttt">aspectratio=42</span> as 4:2
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull; three digits:
-                      <span class="texttt">aspectratio=137</span> as 13:7 (e.g.
-                      always in landscape format)
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull; four digits:
-                      <span class="texttt">aspectratio=1024</span> as 10:24
-                    </p>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -4894,7 +4829,7 @@ background section in navigation frame
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-12</em>
+          <em>HTML version last updated: 2023-10-14</em>
         </div>
       </footer>
     </div>

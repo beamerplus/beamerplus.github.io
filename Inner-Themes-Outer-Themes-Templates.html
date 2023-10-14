@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Inner Themes, Outer Themes, and Templates - Beamer Manual</title>
-    <link href="style.css?v=20231012" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -213,250 +213,229 @@
             areas are transparent.
           </p>
           <div class="innertheme">
+            <p>
+              <span class="extracttheme"
+                >\useinnertheme{<span class="declare">default</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beameruginnerthemedefault-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beameruginnerthemedefault-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The default element theme is quite sober. The only extravagance is
+              the fact that a little triangle is used in
+              <span class="texttt">itemize</span> environments instead of the
+              usual dot.
+            </p>
+            <p>
+              In some cases the theme will honor background color specifications
+              for elements. For example, if you set the background color for
+              block titles to green, block titles will have a green background.
+              The background specifications are currently honored for the
+              following elements:
+            </p>
             <ul style="list-style-type: none">
               <li>
                 <p>
-                  <span class="extracttheme"
-                    >\useinnertheme{<span class="declare">default</span>}</span
-                  >
+                  &bull; Title, author, institute, and date fields in the title
+                  page.
                 </p>
-                <p>
-                  <i>Example: </i>
-                </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beameruginnerthemedefault-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beameruginnerthemedefault-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The default element theme is quite sober. The only
-                  extravagance is the fact that a little triangle is used in
-                  <span class="texttt">itemize</span> environments instead of
-                  the usual dot.
-                </p>
-                <p>
-                  In some cases the theme will honor background color
-                  specifications for elements. For example, if you set the
-                  background color for block titles to green, block titles will
-                  have a green background. The background specifications are
-                  currently honored for the following elements:
-                </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull; Title, author, institute, and date fields in the
-                      title page.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull; Block environments, both for the title and for the
-                      body.
-                    </p>
-                  </li>
-                </ul>
-                <p>This list may increase in the future.</p>
               </li>
-            </ul>
-          </div>
-          <div class="innertheme">
-            <ul style="list-style-type: none">
               <li>
                 <p>
-                  <span class="extracttheme"
-                    >\useinnertheme{<span class="declare">circles</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beameruginnerthemecircles-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beameruginnerthemecircles-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  In this theme, <span class="texttt">itemize</span> and
-                  <span class="texttt">enumerate</span> items start with a small
-                  circle. Likewise, entries in the table of contents start with
-                  circles.
+                  &bull; Block environments, both for the title and for the
+                  body.
                 </p>
               </li>
             </ul>
+            <p>This list may increase in the future.</p>
           </div>
           <div class="innertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useinnertheme{<span class="declare">rectangles</span
-                    >}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\useinnertheme{<span class="declare">circles</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beameruginnerthemerectangles-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beameruginnerthemerectangles-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  In this theme, <span class="texttt">itemize</span> and
-                  <span class="texttt">enumerate</span> items and table of
-                  contents entries start with small rectangles.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beameruginnerthemecircles-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beameruginnerthemecircles-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              In this theme, <span class="texttt">itemize</span> and
+              <span class="texttt">enumerate</span> items start with a small
+              circle. Likewise, entries in the table of contents start with
+              circles.
+            </p>
           </div>
           <div class="innertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useinnertheme<span class="opt"
-                      ><span class="oarg-left-bracket">[</span
-                      ><span class="meta"
-                        ><span class="angle">&langle;</span><i>options</i
-                        ><span class="angle">&rangle;</span></span
-                      ><span class="oarg-right-bracket">]</span></span
-                    >{<span class="declare">rounded</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\useinnertheme{<span class="declare">rectangles</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beameruginnerthemerounded-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beameruginnerthemerounded-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  In this theme, <span class="texttt">itemize</span> and
-                  <span class="texttt">enumerate</span> items and table of
-                  contents entries start with small balls. If a background is
-                  specified for blocks, then the corners of the background
-                  rectangles will be rounded off. The following
-                  <span class="meta"
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beameruginnerthemerectangles-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beameruginnerthemerectangles-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              In this theme, <span class="texttt">itemize</span> and
+              <span class="texttt">enumerate</span> items and table of contents
+              entries start with small rectangles.
+            </p>
+          </div>
+          <div class="innertheme">
+            <p>
+              <span class="extracttheme"
+                >\useinnertheme<span class="opt"
+                  ><span class="oarg-left-bracket">[</span
+                  ><span class="meta"
                     ><span class="angle">&langle;</span><i>options</i
                     ><span class="angle">&rangle;</span></span
+                  ><span class="oarg-right-bracket">]</span></span
+                >{<span class="declare">rounded</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beameruginnerthemerounded-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beameruginnerthemerounded-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              In this theme, <span class="texttt">itemize</span> and
+              <span class="texttt">enumerate</span> items and table of contents
+              entries start with small balls. If a background is specified for
+              blocks, then the corners of the background rectangles will be
+              rounded off. The following
+              <span class="meta"
+                ><span class="angle">&langle;</span><i>options</i
+                ><span class="angle">&rangle;</span></span
+              >
+              may be given:
+            </p>
+            <ul style="list-style-type: none">
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">shadow</span></span
                   >
-                  may be given:
+                  adds a shadow to all blocks.
                 </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">shadow</span></span
-                      >
-                      adds a shadow to all blocks.
-                    </p>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
           <div class="innertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useinnertheme{<span class="declare">inmargin</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\useinnertheme{<span class="declare">inmargin</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beameruginnerthemeinmargin-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beameruginnerthemeinmargin-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The idea behind this theme is to have
-                  &ldquo;structuring&rdquo; information on the left and
-                  &ldquo;normal&rdquo; information on the right. To this end,
-                  blocks are redefined such that the block title is shown on the
-                  left and the block body is shown on the right.
-                </p>
-                <p>
-                  The code used to place text in the margin is a bit fragile.
-                  You may often need to adjust the spacing &ldquo;by
-                  hand,&rdquo; so use at your own risk.
-                </p>
-                <p>
-                  Itemize items are redefined such that they appear on the left.
-                  However, only the position is changed by changing some spacing
-                  parameters; the code used to draw the items is not changed
-                  otherwise. Because of this, you can load another inner theme
-                  first and then load this theme afterwards.
-                </p>
-                <p>
-                  This theme is a &ldquo;dirty&rdquo; inner theme since it
-                  messes with things that an inner theme should not mess with.
-                  In particular, it changes the width of the left sidebar to a
-                  large value. However, you can still use it together with most
-                  outer themes.
-                </p>
-                <p>
-                  Using columns inside this theme is problematic. Most of the
-                  time, the result will not be what you expect.
-                </p>
-                <p>
-                  The indicators for the title page can be adjusted by
-                  redefining <span class="texttt">\inserttitleindicator</span>,
-                  <span class="texttt">\insertauthorindicator</span>,
-                  <span class="texttt">\insertinstituteindicator</span> and
-                  <span class="texttt">\insertdateindicator</span>.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beameruginnerthemeinmargin-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beameruginnerthemeinmargin-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The idea behind this theme is to have &ldquo;structuring&rdquo;
+              information on the left and &ldquo;normal&rdquo; information on
+              the right. To this end, blocks are redefined such that the block
+              title is shown on the left and the block body is shown on the
+              right.
+            </p>
+            <p>
+              The code used to place text in the margin is a bit fragile. You
+              may often need to adjust the spacing &ldquo;by hand,&rdquo; so use
+              at your own risk.
+            </p>
+            <p>
+              Itemize items are redefined such that they appear on the left.
+              However, only the position is changed by changing some spacing
+              parameters; the code used to draw the items is not changed
+              otherwise. Because of this, you can load another inner theme first
+              and then load this theme afterwards.
+            </p>
+            <p>
+              This theme is a &ldquo;dirty&rdquo; inner theme since it messes
+              with things that an inner theme should not mess with. In
+              particular, it changes the width of the left sidebar to a large
+              value. However, you can still use it together with most outer
+              themes.
+            </p>
+            <p>
+              Using columns inside this theme is problematic. Most of the time,
+              the result will not be what you expect.
+            </p>
+            <p>
+              The indicators for the title page can be adjusted by redefining
+              <span class="texttt">\inserttitleindicator</span>,
+              <span class="texttt">\insertauthorindicator</span>,
+              <span class="texttt">\insertinstituteindicator</span> and
+              <span class="texttt">\insertdateindicator</span>.
+            </p>
           </div>
           <!--
 ...... subsection Outer Themes ......
@@ -501,669 +480,614 @@
             look too unstructured with the default color theme.
           </p>
           <div class="outertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useoutertheme{<span class="declare">default</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\useoutertheme{<span class="declare">default</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugouterthemedefault-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugouterthemedefault-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The default layout theme is the most sober and minimalistic
-                  theme around. It will flush left the frame title and it will
-                  not install any head- or footlines. However, even this theme
-                  honors the background color specified for the frame title. If
-                  a color is specified, a bar occupying the whole page width is
-                  put behind the frame title. A background color of the frame
-                  subtitle is ignored.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugouterthemedefault-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugouterthemedefault-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The default layout theme is the most sober and minimalistic theme
+              around. It will flush left the frame title and it will not install
+              any head- or footlines. However, even this theme honors the
+              background color specified for the frame title. If a color is
+              specified, a bar occupying the whole page width is put behind the
+              frame title. A background color of the frame subtitle is ignored.
+            </p>
           </div>
           <div class="outertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useoutertheme{<span class="declare">infolines</span
-                    >}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\useoutertheme{<span class="declare">infolines</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugouterthemeinfolines-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugouterthemeinfolines-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme installs a headline showing the current section and
-                  the current subsection. It installs a footline showing the
-                  author&rsquo;s name, the institution, the presentation&rsquo;s
-                  title, the current date, and a frame count. This theme uses
-                  only little space.
-                </p>
-                <p>
-                  The colors used in the headline and footline are drawn from
-                  <span class="texttt">palette primary</span>,
-                  <span class="texttt">palette secondary</span>, and
-                  <span class="texttt">palette tertiary</span> (see
-                  Section&nbsp;<a href="Colors.html#section-colors">17</a> for
-                  details on how to change these).
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugouterthemeinfolines-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugouterthemeinfolines-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme installs a headline showing the current section and the
+              current subsection. It installs a footline showing the
+              author&rsquo;s name, the institution, the presentation&rsquo;s
+              title, the current date, and a frame count. This theme uses only
+              little space.
+            </p>
+            <p>
+              The colors used in the headline and footline are drawn from
+              <span class="texttt">palette primary</span>,
+              <span class="texttt">palette secondary</span>, and
+              <span class="texttt">palette tertiary</span> (see Section&nbsp;<a
+                href="Colors.html#section-colors"
+                >17</a
+              >
+              for details on how to change these).
+            </p>
           </div>
           <div class="outertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useoutertheme<span class="opt"
-                      ><span class="oarg-left-bracket">[</span
-                      ><span class="meta"
-                        ><span class="angle">&langle;</span><i>options</i
-                        ><span class="angle">&rangle;</span></span
-                      ><span class="oarg-right-bracket">]</span></span
-                    >{<span class="declare">miniframes</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugouterthememiniframes-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugouterthememiniframes-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme installs a headline in which a horizontal
-                  navigational bar is shown. This bar contains one entry for
-                  each section of the presentation. Below each section entry,
-                  small circles are shown that represent the different frames in
-                  the section. The frames are arranged subsection-wise, that is,
-                  there is a line of frames for each subsection. If the class
-                  option <span class="texttt">compress</span> is given, the
-                  frames will instead be arranged in a single row for each
-                  section. The navigation bars draws its color from
-                  <span class="texttt">section in head/foot</span>.
-                </p>
-                <p>
-                  Below the navigation bar, a line is put showing the title of
-                  the current subsection. The color is drawn from
-                  <span class="texttt">subsection in head/foot</span>.
-                </p>
-                <p>
-                  At the bottom, two lines are put that contain information such
-                  as the author&rsquo;s name, the institution, or the
-                  paper&rsquo;s title. What is shown exactly is influenced by
-                  the
-                  <span class="meta"
+            <p>
+              <span class="extracttheme"
+                >\useoutertheme<span class="opt"
+                  ><span class="oarg-left-bracket">[</span
+                  ><span class="meta"
                     ><span class="angle">&langle;</span><i>options</i
                     ><span class="angle">&rangle;</span></span
+                  ><span class="oarg-right-bracket">]</span></span
+                >{<span class="declare">miniframes</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugouterthememiniframes-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugouterthememiniframes-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme installs a headline in which a horizontal navigational
+              bar is shown. This bar contains one entry for each section of the
+              presentation. Below each section entry, small circles are shown
+              that represent the different frames in the section. The frames are
+              arranged subsection-wise, that is, there is a line of frames for
+              each subsection. If the class option
+              <span class="texttt">compress</span> is given, the frames will
+              instead be arranged in a single row for each section. The
+              navigation bars draws its color from
+              <span class="texttt">section in head/foot</span>.
+            </p>
+            <p>
+              Below the navigation bar, a line is put showing the title of the
+              current subsection. The color is drawn from
+              <span class="texttt">subsection in head/foot</span>.
+            </p>
+            <p>
+              At the bottom, two lines are put that contain information such as
+              the author&rsquo;s name, the institution, or the paper&rsquo;s
+              title. What is shown exactly is influenced by the
+              <span class="meta"
+                ><span class="angle">&langle;</span><i>options</i
+                ><span class="angle">&rangle;</span></span
+              >
+              given. The colors are drawn from the appropriate
+              <span class="beamer-name"><span class="textsc">beamer</span></span
+              >-colors like <span class="texttt">author in head/foot</span>.
+            </p>
+            <p>
+              At the top and bottom of both the head- and footline and between
+              the navigation bar and the subsection name, separation lines are
+              drawn <em>if</em> the background color of
+              <span class="texttt">separation line</span> is set. This
+              separation line will have a height of 3pt. You can get even more
+              fine-grained control over the colors of the separation lines by
+              setting appropriate colors like
+              <span class="texttt">lower separation line head</span>.
+            </p>
+            <p>
+              <em>Note:</em> Make sure the document is organized in the
+              section-subsection-frame structure when using
+              <span class="texttt">miniframes</span> and
+              <span class="texttt">smoothbars</span> theme. Any frame without a
+              <span class="texttt">\section</span> or
+              <span class="texttt">\subsection</span> will bring unpredictable
+              effects in the navigation bar.
+            </p>
+            <p>
+              The following
+              <span class="meta"
+                ><span class="angle">&langle;</span><i>options</i
+                ><span class="angle">&rangle;</span></span
+              >
+              can be given:
+            </p>
+            <ul style="list-style-type: none">
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">footline=empty</span></span
                   >
-                  given. The colors are drawn from the appropriate
-                  <span class="beamer-name"
-                    ><span class="textsc">beamer</span></span
-                  >-colors like <span class="texttt">author in head/foot</span>.
+                  suppresses the footline (default).
                 </p>
+              </li>
+              <li>
                 <p>
-                  At the top and bottom of both the head- and footline and
-                  between the navigation bar and the subsection name, separation
-                  lines are drawn <em>if</em> the background color of
-                  <span class="texttt">separation line</span> is set. This
-                  separation line will have a height of 3pt. You can get even
-                  more fine-grained control over the colors of the separation
-                  lines by setting appropriate colors like
-                  <span class="texttt">lower separation line head</span>.
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">footline=authorinstitute</span></span
+                  >
+                  shows the author&rsquo;s name and the institute in the
+                  footline.
                 </p>
+              </li>
+              <li>
                 <p>
-                  <em>Note:</em> Make sure the document is organized in the
-                  section-subsection-frame structure when using
-                  <span class="texttt">miniframes</span> and
-                  <span class="texttt">smoothbars</span> theme. Any frame
-                  without a <span class="texttt">\section</span> or
-                  <span class="texttt">\subsection</span> will bring
-                  unpredictable effects in the navigation bar.
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">footline=authortitle</span></span
+                  >
+                  shows the author&rsquo;s name and the title in the footline.
                 </p>
+              </li>
+              <li>
                 <p>
-                  The following
-                  <span class="meta"
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">footline=institutetitle</span></span
+                  >
+                  shows the institute and the title in the footline.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt"
+                      >footline=authorinstitutetitle</span
+                    ></span
+                  >
+                  shows the author&rsquo;s name, the institute, and the title in
+                  the footline.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">subsection=</span
+                    ><span class="meta"
+                      ><span class="angle">&langle;</span><i>true or false</i
+                      ><span class="angle">&rangle;</span></span
+                    ></span
+                  >
+                  shows or suppresses line showing the subsection in the
+                  headline. It is shown by default. If the document does not use
+                  subsections, this option should be set
+                  <span class="texttt">false</span>.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="outertheme">
+            <p>
+              <span class="extracttheme"
+                >\useoutertheme<span class="opt"
+                  ><span class="oarg-left-bracket">[</span
+                  ><span class="meta"
                     ><span class="angle">&langle;</span><i>options</i
                     ><span class="angle">&rangle;</span></span
+                  ><span class="oarg-right-bracket">]</span></span
+                >{<span class="declare">smoothbars</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugouterthemesmoothbars-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugouterthemesmoothbars-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme behaves very much like the
+              <span class="texttt">miniframes</span> theme, at least with
+              respect to the headline. The only differences are that smooth
+              transitions are installed between the background colors of the
+              navigation bar, the (optional) bar for the subsection name, and
+              the background of the frame title. No footline is created. You can
+              get the footlines of the
+              <span class="texttt">miniframes</span> theme by first loading that
+              theme and then loading the
+              <span class="texttt">smoothbars</span> theme.
+            </p>
+            <p>
+              The following
+              <span class="meta"
+                ><span class="angle">&langle;</span><i>options</i
+                ><span class="angle">&rangle;</span></span
+              >
+              can be given:
+            </p>
+            <ul style="list-style-type: none">
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">subsection=</span
+                    ><span class="meta"
+                      ><span class="angle">&langle;</span><i>true or false</i
+                      ><span class="angle">&rangle;</span></span
+                    ></span
                   >
-                  can be given:
+                  shows or suppresses line showing the subsection in the
+                  headline. It is shown by default.
                 </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">footline=empty</span></span
-                      >
-                      suppresses the footline (default).
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt"
-                          >footline=authorinstitute</span
-                        ></span
-                      >
-                      shows the author&rsquo;s name and the institute in the
-                      footline.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">footline=authortitle</span></span
-                      >
-                      shows the author&rsquo;s name and the title in the
-                      footline.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt"
-                          >footline=institutetitle</span
-                        ></span
-                      >
-                      shows the institute and the title in the footline.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt"
-                          >footline=authorinstitutetitle</span
-                        ></span
-                      >
-                      shows the author&rsquo;s name, the institute, and the
-                      title in the footline.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">subsection=</span
-                        ><span class="meta"
-                          ><span class="angle">&langle;</span
-                          ><i>true or false</i
-                          ><span class="angle">&rangle;</span></span
-                        ></span
-                      >
-                      shows or suppresses line showing the subsection in the
-                      headline. It is shown by default. If the document does not
-                      use subsections, this option should be set
-                      <span class="texttt">false</span>.
-                    </p>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
           <div class="outertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useoutertheme<span class="opt"
-                      ><span class="oarg-left-bracket">[</span
-                      ><span class="meta"
-                        ><span class="angle">&langle;</span><i>options</i
-                        ><span class="angle">&rangle;</span></span
-                      ><span class="oarg-right-bracket">]</span></span
-                    >{<span class="declare">smoothbars</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugouterthemesmoothbars-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugouterthemesmoothbars-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme behaves very much like the
-                  <span class="texttt">miniframes</span> theme, at least with
-                  respect to the headline. The only differences are that smooth
-                  transitions are installed between the background colors of the
-                  navigation bar, the (optional) bar for the subsection name,
-                  and the background of the frame title. No footline is created.
-                  You can get the footlines of the
-                  <span class="texttt">miniframes</span> theme by first loading
-                  that theme and then loading the
-                  <span class="texttt">smoothbars</span> theme.
-                </p>
-                <p>
-                  The following
-                  <span class="meta"
+            <p>
+              <span class="extracttheme"
+                >\useoutertheme<span class="opt"
+                  ><span class="oarg-left-bracket">[</span
+                  ><span class="meta"
                     ><span class="angle">&langle;</span><i>options</i
                     ><span class="angle">&rangle;</span></span
+                  ><span class="oarg-right-bracket">]</span></span
+                >{<span class="declare">sidebar</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugouterthemesidebar-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugouterthemesidebar-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              In this layout, a sidebar is shown that contains a small table of
+              contents with the current section, subsection, or subsubsection
+              highlighted. The frame title is vertically centered in a
+              rectangular area at the top that always occupies the same amount
+              of space in all frames. Finally, the logo is shown in the
+              &ldquo;corner&rdquo; resulting from the sidebar and the frame
+              title rectangle.
+            </p>
+            <p>
+              There are several ways of modifying the layout using the
+              <span class="meta"
+                ><span class="angle">&langle;</span><i>options</i
+                ><span class="angle">&rangle;</span></span
+              >. If you set the width of the sidebar to 0pt, it is not shown,
+              giving you a layout in which the frame title does not
+              &ldquo;wobble&rdquo; since it always occupies the same amount of
+              space on all slides. Conversely, if you set the height of the
+              frame title rectangle to 0pt, the rectangular area is not used and
+              the frame title is inserted normally (occupying as much space as
+              needed on each slide).
+            </p>
+            <p>
+              The background color of the sidebar is taken from
+              <span class="texttt">sidebar</span>, the background color of the
+              frame title from <span class="texttt">frametitle</span>, and the
+              background color of the logo corner from
+              <span class="texttt">logo</span>.
+            </p>
+            <p>
+              The colors of the entries in the table of contents are drawn from
+              the
+              <span class="beamer-name"><span class="textsc">beamer</span></span
+              >-color <span class="texttt">section in sidebar</span> and
+              <span class="texttt">section in sidebar current</span> as well as
+              the corresponding
+              <span class="beamer-name"><span class="textsc">beamer</span></span
+              >-colors for subsections. If an entry does not fit on a single
+              line it is automatically &ldquo;linebroken.&rdquo;
+            </p>
+            <p>
+              The following
+              <span class="meta"
+                ><span class="angle">&langle;</span><i>options</i
+                ><span class="angle">&rangle;</span></span
+              >
+              may be given:
+            </p>
+            <ul style="list-style-type: none">
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">height=</span
+                    ><span class="meta"
+                      ><span class="angle">&langle;</span><i>dimension</i
+                      ><span class="angle">&rangle;</span></span
+                    ></span
                   >
-                  can be given:
+                  specifies the height of the frame title rectangle. If it is
+                  set to 0pt, no frame title rectangle is created. Instead, the
+                  frame title is inserted normally into the frame. The default
+                  is 2.5 base line heights of the frame title font. Thus, there
+                  is about enough space for a two-line frame title plus a
+                  one-line subtitle.
                 </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">subsection=</span
-                        ><span class="meta"
-                          ><span class="angle">&langle;</span
-                          ><i>true or false</i
-                          ><span class="angle">&rangle;</span></span
-                        ></span
-                      >
-                      shows or suppresses line showing the subsection in the
-                      headline. It is shown by default.
-                    </p>
-                  </li>
-                </ul>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">hideothersubsections</span></span
+                  >
+                  causes all subsections except those of the current section to
+                  be suppressed in the table of contents. This is useful if you
+                  have lots of subsections.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">hideallsubsections</span></span
+                  >
+                  causes all subsections to be suppressed in the table of
+                  contents.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"><span class="texttt">left</span></span>
+                  puts the sidebar on the left side. Note that in a
+                  left-to-right reading culture this is the side people look
+                  first. Note also that this table of contents is usually
+                  <em>not</em> the most important part of the frame, so you do
+                  not necessarily want people to look at it first. Nevertheless,
+                  it is the default.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"><span class="texttt">right</span></span>
+                  puts the sidebar of the right side.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">width=</span
+                    ><span class="meta"
+                      ><span class="angle">&langle;</span><i>dimension</i
+                      ><span class="angle">&rangle;</span></span
+                    ></span
+                  >
+                  specifies the width of the sidebar. If it is set to 0pt, it is
+                  completely suppressed. The default is 2.5 base line heights of
+                  the frame title font.
+                </p>
               </li>
             </ul>
           </div>
           <div class="outertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useoutertheme<span class="opt"
-                      ><span class="oarg-left-bracket">[</span
-                      ><span class="meta"
-                        ><span class="angle">&langle;</span><i>options</i
-                        ><span class="angle">&rangle;</span></span
-                      ><span class="oarg-right-bracket">]</span></span
-                    >{<span class="declare">sidebar</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\useoutertheme{<span class="declare">split</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugouterthemesidebar-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugouterthemesidebar-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  In this layout, a sidebar is shown that contains a small table
-                  of contents with the current section, subsection, or
-                  subsubsection highlighted. The frame title is vertically
-                  centered in a rectangular area at the top that always occupies
-                  the same amount of space in all frames. Finally, the logo is
-                  shown in the &ldquo;corner&rdquo; resulting from the sidebar
-                  and the frame title rectangle.
-                </p>
-                <p>
-                  There are several ways of modifying the layout using the
-                  <span class="meta"
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugouterthemesplit-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugouterthemesplit-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme installs a headline in which, on the left, the sections
+              of the talk are shown and, on the right, the subsections of the
+              current section. If the class option
+              <span class="texttt">compress</span> has been given, the sections
+              and subsections will be put in one line; normally there is one
+              line per section or subsection.
+            </p>
+            <p>
+              The footline shows the author on the left and the talk&rsquo;s
+              title on the right.
+            </p>
+            <p>
+              The colors are taken from
+              <span class="texttt">palette primary</span> and
+              <span class="texttt">palette quaternary</span>.
+            </p>
+          </div>
+          <div class="outertheme">
+            <p>
+              <span class="extracttheme"
+                >\useoutertheme{<span class="declare">shadow</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugouterthemeshadow-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugouterthemeshadow-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This layout theme extends the
+              <span class="texttt">split</span> theme by putting a horizontal
+              shading behind the frame title and adding a little
+              &ldquo;shadow&rdquo; at the bottom of the headline.
+            </p>
+          </div>
+          <div class="outertheme">
+            <p>
+              <span class="extracttheme"
+                >\useoutertheme<span class="opt"
+                  ><span class="oarg-left-bracket">[</span
+                  ><span class="meta"
                     ><span class="angle">&langle;</span><i>options</i
                     ><span class="angle">&rangle;</span></span
-                  >. If you set the width of the sidebar to 0pt, it is not
-                  shown, giving you a layout in which the frame title does not
-                  &ldquo;wobble&rdquo; since it always occupies the same amount
-                  of space on all slides. Conversely, if you set the height of
-                  the frame title rectangle to 0pt, the rectangular area is not
-                  used and the frame title is inserted normally (occupying as
-                  much space as needed on each slide).
-                </p>
-                <p>
-                  The background color of the sidebar is taken from
-                  <span class="texttt">sidebar</span>, the background color of
-                  the frame title from <span class="texttt">frametitle</span>,
-                  and the background color of the logo corner from
-                  <span class="texttt">logo</span>.
-                </p>
-                <p>
-                  The colors of the entries in the table of contents are drawn
-                  from the
-                  <span class="beamer-name"
-                    ><span class="textsc">beamer</span></span
-                  >-color <span class="texttt">section in sidebar</span> and
-                  <span class="texttt">section in sidebar current</span> as well
-                  as the corresponding
-                  <span class="beamer-name"
-                    ><span class="textsc">beamer</span></span
-                  >-colors for subsections. If an entry does not fit on a single
-                  line it is automatically &ldquo;linebroken.&rdquo;
-                </p>
-                <p>
-                  The following
-                  <span class="meta"
-                    ><span class="angle">&langle;</span><i>options</i
-                    ><span class="angle">&rangle;</span></span
-                  >
-                  may be given:
-                </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">height=</span
-                        ><span class="meta"
-                          ><span class="angle">&langle;</span><i>dimension</i
-                          ><span class="angle">&rangle;</span></span
-                        ></span
-                      >
-                      specifies the height of the frame title rectangle. If it
-                      is set to 0pt, no frame title rectangle is created.
-                      Instead, the frame title is inserted normally into the
-                      frame. The default is 2.5 base line heights of the frame
-                      title font. Thus, there is about enough space for a
-                      two-line frame title plus a one-line subtitle.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">hideothersubsections</span></span
-                      >
-                      causes all subsections except those of the current section
-                      to be suppressed in the table of contents. This is useful
-                      if you have lots of subsections.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">hideallsubsections</span></span
-                      >
-                      causes all subsections to be suppressed in the table of
-                      contents.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">left</span></span
-                      >
-                      puts the sidebar on the left side. Note that in a
-                      left-to-right reading culture this is the side people look
-                      first. Note also that this table of contents is usually
-                      <em>not</em> the most important part of the frame, so you
-                      do not necessarily want people to look at it first.
-                      Nevertheless, it is the default.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">right</span></span
-                      >
-                      puts the sidebar of the right side.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">width=</span
-                        ><span class="meta"
-                          ><span class="angle">&langle;</span><i>dimension</i
-                          ><span class="angle">&rangle;</span></span
-                        ></span
-                      >
-                      specifies the width of the sidebar. If it is set to 0pt,
-                      it is completely suppressed. The default is 2.5 base line
-                      heights of the frame title font.
-                    </p>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="outertheme">
+                  ><span class="oarg-right-bracket">]</span></span
+                >{<span class="declare">tree</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugouterthemetree-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugouterthemetree-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              In this layout, the headline contains three lines that show the
+              title of the current talk, the current section in this talk, and
+              the current subsection in the section. The colors are drawn from
+              <span class="texttt">title in head/foot</span>,
+              <span class="texttt">section in head/foot</span>, and
+              <span class="texttt">subsection in head/foot</span>.
+            </p>
+            <p>
+              In addition, separation lines of height 3pt are shown above and
+              below the three lines <em>if</em> the background of
+              <span class="texttt">separation line</span> is set. More
+              fine-grained control of the colors of these lines can be gained by
+              setting <span class="texttt">upper separation line head</span> and
+              <span class="texttt">lower separation line head</span>.
+            </p>
+            <p>
+              The following
+              <span class="meta"
+                ><span class="angle">&langle;</span><i>options</i
+                ><span class="angle">&rangle;</span></span
+              >
+              may be given:
+            </p>
             <ul style="list-style-type: none">
               <li>
                 <p>
-                  <span class="extracttheme"
-                    >\useoutertheme{<span class="declare">split</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugouterthemesplit-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugouterthemesplit-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme installs a headline in which, on the left, the
-                  sections of the talk are shown and, on the right, the
-                  subsections of the current section. If the class option
-                  <span class="texttt">compress</span> has been given, the
-                  sections and subsections will be put in one line; normally
-                  there is one line per section or subsection.
-                </p>
-                <p>
-                  The footline shows the author on the left and the talk&rsquo;s
-                  title on the right.
-                </p>
-                <p>
-                  The colors are taken from
-                  <span class="texttt">palette primary</span> and
-                  <span class="texttt">palette quaternary</span>.
+                  &bull;
+                  <span class="declare"><span class="texttt">hooks</span></span>
+                  causes little &ldquo;hooks&rdquo; to be drawn in front of the
+                  section and subsection entries. These are supposed to increase
+                  the tree-like appearance.
                 </p>
               </li>
             </ul>
           </div>
           <div class="outertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useoutertheme{<span class="declare">shadow</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\useoutertheme{<span class="declare">smoothtree</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugouterthemeshadow-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugouterthemeshadow-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This layout theme extends the
-                  <span class="texttt">split</span> theme by putting a
-                  horizontal shading behind the frame title and adding a little
-                  &ldquo;shadow&rdquo; at the bottom of the headline.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="outertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useoutertheme<span class="opt"
-                      ><span class="oarg-left-bracket">[</span
-                      ><span class="meta"
-                        ><span class="angle">&langle;</span><i>options</i
-                        ><span class="angle">&rangle;</span></span
-                      ><span class="oarg-right-bracket">]</span></span
-                    >{<span class="declare">tree</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugouterthemetree-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugouterthemetree-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  In this layout, the headline contains three lines that show
-                  the title of the current talk, the current section in this
-                  talk, and the current subsection in the section. The colors
-                  are drawn from <span class="texttt">title in head/foot</span>,
-                  <span class="texttt">section in head/foot</span>, and
-                  <span class="texttt">subsection in head/foot</span>.
-                </p>
-                <p>
-                  In addition, separation lines of height 3pt are shown above
-                  and below the three lines <em>if</em> the background of
-                  <span class="texttt">separation line</span> is set. More
-                  fine-grained control of the colors of these lines can be
-                  gained by setting
-                  <span class="texttt">upper separation line head</span> and
-                  <span class="texttt">lower separation line head</span>.
-                </p>
-                <p>
-                  The following
-                  <span class="meta"
-                    ><span class="angle">&langle;</span><i>options</i
-                    ><span class="angle">&rangle;</span></span
-                  >
-                  may be given:
-                </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">hooks</span></span
-                      >
-                      causes little &ldquo;hooks&rdquo; to be drawn in front of
-                      the section and subsection entries. These are supposed to
-                      increase the tree-like appearance.
-                    </p>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="outertheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\useoutertheme{<span class="declare">smoothtree</span
-                    >}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugouterthemesmoothtree-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugouterthemesmoothtree-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This layout is similar to the
-                  <span class="texttt">tree</span> layout. The main difference
-                  is that the background colors change smoothly.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugouterthemesmoothtree-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugouterthemesmoothtree-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This layout is similar to the
+              <span class="texttt">tree</span> layout. The main difference is
+              that the background colors change smoothly.
+            </p>
           </div>
           <!--
 ...... subsection Changing the Templates Used for Different Elements of a Presentation ......
@@ -2235,7 +2159,7 @@ Your answer is \usebeamertemplate*{answer}.
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-12</em>
+          <em>HTML version last updated: 2023-10-14</em>
         </div>
       </footer>
     </div>

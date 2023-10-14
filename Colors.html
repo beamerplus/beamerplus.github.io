@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Colors - Beamer Manual</title>
-    <link href="style.css?v=20231012" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -213,270 +213,248 @@
           </h6>
           <a id="beameruserguide-autopage-479"></a>
           <div class="colortheme">
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">default</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemedefault-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemedefault-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The <span class="texttt">default</span> color theme is very sober.
+              It installs little special colors and even less backgrounds. The
+              default color theme sets up the default parent relations between
+              the different
+              <span class="beamer-name"><span class="textsc">beamer</span></span
+              >-colors.
+            </p>
+            <p>
+              The main colors set in the
+              <span class="texttt">default</span> color theme are the following:
+            </p>
             <ul style="list-style-type: none">
               <li>
                 <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">default</span>}</span
-                  >
+                  &bull; <span class="texttt">normal text</span> is black on
+                  white.
                 </p>
+              </li>
+              <li>
+                <p>&bull; <span class="texttt">alerted text</span> is red.</p>
+              </li>
+              <li>
                 <p>
-                  <i>Example: </i>
+                  &bull; <span class="texttt">example text</span> is a dark
+                  green (green with 50% black).
                 </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemedefault-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemedefault-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
+              </li>
+              <li>
                 <p>
-                  The <span class="texttt">default</span> color theme is very
-                  sober. It installs little special colors and even less
-                  backgrounds. The default color theme sets up the default
-                  parent relations between the different
-                  <span class="beamer-name"
-                    ><span class="textsc">beamer</span></span
-                  >-colors.
-                </p>
-                <p>
-                  The main colors set in the
-                  <span class="texttt">default</span> color theme are the
-                  following:
-                </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull; <span class="texttt">normal text</span> is black on
-                      white.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull; <span class="texttt">alerted text</span> is red.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull; <span class="texttt">example text</span> is a dark
-                      green (green with 50% black).
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull; <span class="texttt">structure</span> is set to a
-                      light version of MidnightBlue (more precisely, 20% red,
-                      20% green, and 70% blue).
-                    </p>
-                  </li>
-                </ul>
-                <p>
-                  Use this theme for a no-nonsense presentation. Since this
-                  theme is loaded by default, you cannot &ldquo;reload&rdquo; it
-                  after having loaded another color theme.
+                  &bull; <span class="texttt">structure</span> is set to a light
+                  version of MidnightBlue (more precisely, 20% red, 20% green,
+                  and 70% blue).
                 </p>
               </li>
             </ul>
+            <p>
+              Use this theme for a no-nonsense presentation. Since this theme is
+              loaded by default, you cannot &ldquo;reload&rdquo; it after having
+              loaded another color theme.
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme<span class="opt"
-                      ><span class="oarg-left-bracket">[</span
-                      ><span class="meta"
-                        ><span class="angle">&langle;</span><i>options</i
-                        ><span class="angle">&rangle;</span></span
-                      ><span class="oarg-right-bracket">]</span></span
-                    >{<span class="declare">structure</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemestructure-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemestructure-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The example was created using
-                  <span class="texttt"
-                    >\usecolortheme[named=SeaGreen]{structure}</span
-                  >.
-                </p>
-                <p>
-                  This theme offers a convenient way of changing the color used
-                  for structural elements. More precisely, it just changes the
-                  foreground of the
-                  <span class="beamer-name"
-                    ><span class="textsc">beamer</span></span
-                  >-color <span class="texttt">structure</span>. You can also
-                  achieve this by directly invoking the function
-                  <span class="texttt">\setbeamercolor</span>, but this color
-                  theme makes things a bit easier.
-                </p>
-                <p>
-                  The theme offers several
-                  <span class="meta"
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme<span class="opt"
+                  ><span class="oarg-left-bracket">[</span
+                  ><span class="meta"
                     ><span class="angle">&langle;</span><i>options</i
                     ><span class="angle">&rangle;</span></span
-                  >, which can be used to specify the color to be used for
-                  structural elements:
+                  ><span class="oarg-right-bracket">]</span></span
+                >{<span class="declare">structure</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemestructure-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemestructure-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The example was created using
+              <span class="texttt"
+                >\usecolortheme[named=SeaGreen]{structure}</span
+              >.
+            </p>
+            <p>
+              This theme offers a convenient way of changing the color used for
+              structural elements. More precisely, it just changes the
+              foreground of the
+              <span class="beamer-name"><span class="textsc">beamer</span></span
+              >-color <span class="texttt">structure</span>. You can also
+              achieve this by directly invoking the function
+              <span class="texttt">\setbeamercolor</span>, but this color theme
+              makes things a bit easier.
+            </p>
+            <p>
+              The theme offers several
+              <span class="meta"
+                ><span class="angle">&langle;</span><i>options</i
+                ><span class="angle">&rangle;</span></span
+              >, which can be used to specify the color to be used for
+              structural elements:
+            </p>
+            <ul style="list-style-type: none">
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">rgb=</span>{<span class="meta"
+                      ><span class="angle">&langle;</span><i>rgb tuple</i
+                      ><span class="angle">&rangle;</span></span
+                    >}</span
+                  >
+                  sets the <span class="texttt">structure</span> foreground to
+                  the specified red-green-blue tuple. The numbers are given as
+                  decimals between 0 and 1. For example,
+                  <span class="texttt">rgb={0.5,0,0}</span> yields a dark red.
                 </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">rgb=</span>{<span class="meta"
-                          ><span class="angle">&langle;</span><i>rgb tuple</i
-                          ><span class="angle">&rangle;</span></span
-                        >}</span
-                      >
-                      sets the <span class="texttt">structure</span> foreground
-                      to the specified red-green-blue tuple. The numbers are
-                      given as decimals between 0 and 1. For example,
-                      <span class="texttt">rgb={0.5,0,0}</span> yields a dark
-                      red.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">RGB=</span>{<span class="meta"
-                          ><span class="angle">&langle;</span><i>rgb tuple</i
-                          ><span class="angle">&rangle;</span></span
-                        >}</span
-                      >
-                      does the same as <span class="texttt">rgb</span>, except
-                      that the numbers range between 0 and 255. For example,
-                      <span class="texttt">RGB={128,0,0}</span> yields a dark
-                      red.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">cmyk=</span>{<span class="meta"
-                          ><span class="angle">&langle;</span><i>cmyk tuple</i
-                          ><span class="angle">&rangle;</span></span
-                        >}</span
-                      >
-                      sets the <span class="texttt">structure</span> foreground
-                      to the specified cyan-magenta-yellow-black tuple. The
-                      numbers are given as decimals between 0 and 1. For
-                      example,
-                      <span class="texttt">cmyk={0,1,1,0.5}</span> yields a dark
-                      red.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">cmy=</span>{<span class="meta"
-                          ><span class="angle">&langle;</span><i>cmy tuple</i
-                          ><span class="angle">&rangle;</span></span
-                        >}</span
-                      >
-                      is similar to <span class="texttt">cmyk</span>, except
-                      that the black component is not specified.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">hsb=</span>{<span class="meta"
-                          ><span class="angle">&langle;</span><i>hsb tuple</i
-                          ><span class="angle">&rangle;</span></span
-                        >}</span
-                      >
-                      sets the <span class="texttt">structure</span> foreground
-                      to the specified hue-saturation-brightness tuple. The
-                      numbers are given as decimals between 0 and 1. For
-                      example, <span class="texttt">hsb={0,1,.5}</span> yields a
-                      dark red.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">named=</span>{<span class="meta"
-                          ><span class="angle">&langle;</span><i>color name</i
-                          ><span class="angle">&rangle;</span></span
-                        >}</span
-                      >
-                      sets the <span class="texttt">structure</span> foreground
-                      to a named color. This color must previously have been
-                      defined using the
-                      <span class="texttt">\DefineNamedColor</span> command.
-                      Adding the class option
-                      <span class="texttt">xcolor=dvipsnames</span> or
-                      <span class="texttt">xcolor=svgnames</span> will install a
-                      long list of standard <span class="texttt">dvips</span> or
-                      SVG color names (respectively). See the file
-                      <span class="texttt">dvipsnam.def</span> for the list.
-                    </p>
-                  </li>
-                </ul>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">RGB=</span>{<span class="meta"
+                      ><span class="angle">&langle;</span><i>rgb tuple</i
+                      ><span class="angle">&rangle;</span></span
+                    >}</span
+                  >
+                  does the same as <span class="texttt">rgb</span>, except that
+                  the numbers range between 0 and 255. For example,
+                  <span class="texttt">RGB={128,0,0}</span> yields a dark red.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">cmyk=</span>{<span class="meta"
+                      ><span class="angle">&langle;</span><i>cmyk tuple</i
+                      ><span class="angle">&rangle;</span></span
+                    >}</span
+                  >
+                  sets the <span class="texttt">structure</span> foreground to
+                  the specified cyan-magenta-yellow-black tuple. The numbers are
+                  given as decimals between 0 and 1. For example,
+                  <span class="texttt">cmyk={0,1,1,0.5}</span> yields a dark
+                  red.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">cmy=</span>{<span class="meta"
+                      ><span class="angle">&langle;</span><i>cmy tuple</i
+                      ><span class="angle">&rangle;</span></span
+                    >}</span
+                  >
+                  is similar to <span class="texttt">cmyk</span>, except that
+                  the black component is not specified.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">hsb=</span>{<span class="meta"
+                      ><span class="angle">&langle;</span><i>hsb tuple</i
+                      ><span class="angle">&rangle;</span></span
+                    >}</span
+                  >
+                  sets the <span class="texttt">structure</span> foreground to
+                  the specified hue-saturation-brightness tuple. The numbers are
+                  given as decimals between 0 and 1. For example,
+                  <span class="texttt">hsb={0,1,.5}</span> yields a dark red.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">named=</span>{<span class="meta"
+                      ><span class="angle">&langle;</span><i>color name</i
+                      ><span class="angle">&rangle;</span></span
+                    >}</span
+                  >
+                  sets the <span class="texttt">structure</span> foreground to a
+                  named color. This color must previously have been defined
+                  using the
+                  <span class="texttt">\DefineNamedColor</span> command. Adding
+                  the class option
+                  <span class="texttt">xcolor=dvipsnames</span> or
+                  <span class="texttt">xcolor=svgnames</span> will install a
+                  long list of standard <span class="texttt">dvips</span> or SVG
+                  color names (respectively). See the file
+                  <span class="texttt">dvipsnam.def</span> for the list.
+                </p>
               </li>
             </ul>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">sidebartab</span
-                    >}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">sidebartab</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemesidebartab-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemesidebartab-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme changes the colors in a sidebar such that the
-                  current entry in a table of contents shown there gets
-                  highlighted by showing a different background behind it.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemesidebartab-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemesidebartab-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme changes the colors in a sidebar such that the current
+              entry in a table of contents shown there gets highlighted by
+              showing a different background behind it.
+            </p>
           </div>
           <!--
 ...... subsubsection Complete Color Themes ......
@@ -498,434 +476,385 @@
             animals.
           </p>
           <div class="colortheme">
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">albatross</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemealbatross-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemealbatross-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The color theme is a &ldquo;dark&rdquo; or &ldquo;inverted&rdquo;
+              theme using yellow on blue as the main colors. The color theme
+              also installs a slightly darker background color for blocks, which
+              is necessary for presentation themes that use shadows, but which
+              (in Till&rsquo;s opinion) is undesirable for all other
+              presentation themes. By using the
+              <span class="texttt">lily</span> color theme together with this
+              theme, the backgrounds for blocks can be removed.
+            </p>
+            <p>
+              When using a light-on-dark theme like this one, be aware that
+              there are certain disadvantages:
+            </p>
             <ul style="list-style-type: none">
               <li>
                 <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">albatross</span
-                    >}</span
-                  >
+                  &bull; If the room in which the talk is given has been
+                  &ldquo;darkened,&rdquo; using such a theme makes it more
+                  difficult for the audience to take or read notes.
                 </p>
+              </li>
+              <li>
                 <p>
-                  <i>Example: </i>
+                  &bull; Since the room becomes darker, the pupil becomes
+                  larger, thus making it harder for the eye to focus. This
+                  <em>can</em> make text harder to read.
                 </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemealbatross-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemealbatross-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The color theme is a &ldquo;dark&rdquo; or
-                  &ldquo;inverted&rdquo; theme using yellow on blue as the main
-                  colors. The color theme also installs a slightly darker
-                  background color for blocks, which is necessary for
-                  presentation themes that use shadows, but which (in
-                  Till&rsquo;s opinion) is undesirable for all other
-                  presentation themes. By using the
-                  <span class="texttt">lily</span> color theme together with
-                  this theme, the backgrounds for blocks can be removed.
-                </p>
-                <p>
-                  When using a light-on-dark theme like this one, be aware that
-                  there are certain disadvantages:
-                </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull; If the room in which the talk is given has been
-                      &ldquo;darkened,&rdquo; using such a theme makes it more
-                      difficult for the audience to take or read notes.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      &bull; Since the room becomes darker, the pupil becomes
-                      larger, thus making it harder for the eye to focus. This
-                      <em>can</em> make text harder to read.
-                    </p>
-                  </li>
-                  <li>
-                    <p>&bull; Printing such slides is difficult at best.</p>
-                  </li>
-                </ul>
-                <p>
-                  On the other hand, a light-on-dark presentation often appears
-                  to be more &ldquo;stylish&rdquo; than a plain black-on-white
-                  one.
-                </p>
-                <p>
-                  The following
-                  <span class="meta"
-                    ><span class="angle">&langle;</span><i>options</i
-                    ><span class="angle">&rangle;</span></span
-                  >
-                  may be given:
-                </p>
-                <ul style="list-style-type: none">
-                  <li>
-                    <p>
-                      &bull;
-                      <span class="declare"
-                        ><span class="texttt">overlystylish</span></span
-                      >
-                      installs a background canvas that is, in Till&rsquo;s
-                      opinion, way too stylish. But then, it is not his
-                      intention to press his taste on other people. When using
-                      this option, it is probably a very good idea to also use
-                      the <span class="texttt">lily</span> color theme.
-                    </p>
-                  </li>
-                </ul>
-                <p>
-                  <i>Example: </i>The
-                  <span class="texttt">overlystylish</span> option together with
-                  the <span class="texttt">lily</span> color theme:
-                </p>
-
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemealbatrossstylish-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemealbatrossstylish-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
+              </li>
+              <li>
+                <p>&bull; Printing such slides is difficult at best.</p>
               </li>
             </ul>
+            <p>
+              On the other hand, a light-on-dark presentation often appears to
+              be more &ldquo;stylish&rdquo; than a plain black-on-white one.
+            </p>
+            <p>
+              The following
+              <span class="meta"
+                ><span class="angle">&langle;</span><i>options</i
+                ><span class="angle">&rangle;</span></span
+              >
+              may be given:
+            </p>
+            <ul style="list-style-type: none">
+              <li>
+                <p>
+                  &bull;
+                  <span class="declare"
+                    ><span class="texttt">overlystylish</span></span
+                  >
+                  installs a background canvas that is, in Till&rsquo;s opinion,
+                  way too stylish. But then, it is not his intention to press
+                  his taste on other people. When using this option, it is
+                  probably a very good idea to also use the
+                  <span class="texttt">lily</span> color theme.
+                </p>
+              </li>
+            </ul>
+            <p>
+              <i>Example: </i>The
+              <span class="texttt">overlystylish</span> option together with the
+              <span class="texttt">lily</span> color theme:
+            </p>
+
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemealbatrossstylish-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemealbatrossstylish-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">beetle</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">beetle</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemebeetle-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemebeetle-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The main &ldquo;theme behind this theme&rdquo; is to use white
-                  and black text on gray background. The white text is used for
-                  special emphasis, the black text for normal text. The
-                  &ldquo;outer stuff&rdquo; like the headline and the footline
-                  use, however, a bluish color. To change this color, change the
-                  background of <span class="texttt">palette primary</span>.
-                </p>
-                <p>
-                  Great care must be taken with this theme since both the
-                  white/gray and the black/gray contrasts are much lower than
-                  with other themes. Make sure that the contrast is high enough
-                  for the actual presentation.
-                </p>
-                <p>
-                  You can change the &ldquo;grayish&rdquo; background by
-                  changing the background of
-                  <span class="texttt">normal text</span>.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemebeetle-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemebeetle-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The main &ldquo;theme behind this theme&rdquo; is to use white and
+              black text on gray background. The white text is used for special
+              emphasis, the black text for normal text. The &ldquo;outer
+              stuff&rdquo; like the headline and the footline use, however, a
+              bluish color. To change this color, change the background of
+              <span class="texttt">palette primary</span>.
+            </p>
+            <p>
+              Great care must be taken with this theme since both the white/gray
+              and the black/gray contrasts are much lower than with other
+              themes. Make sure that the contrast is high enough for the actual
+              presentation.
+            </p>
+            <p>
+              You can change the &ldquo;grayish&rdquo; background by changing
+              the background of <span class="texttt">normal text</span>.
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">crane</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">crane</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemecrane-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemecrane-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme uses the colors of Lufthansa, whose logo is a
-                  crane. It is <em>not</em> an official theme by that company,
-                  however.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemecrane-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemecrane-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme uses the colors of Lufthansa, whose logo is a crane. It
+              is <em>not</em> an official theme by that company, however.
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">dove</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">dove</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemedove-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemedove-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme is nearly a black and white theme and useful for
-                  creating presentations that are easy to print on a
-                  black-and-white printer. The theme uses grayscale in certain
-                  unavoidable cases, but never color. It also changes the font
-                  of alerted text to boldface.
-                </p>
-                <p>
-                  When using this theme, you should consider using the class
-                  option <span class="texttt">gray</span>, which ensures that
-                  all colors are converted to grayscale. Also consider using the
-                  <span class="texttt">structurebold</span> font theme.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemedove-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemedove-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme is nearly a black and white theme and useful for
+              creating presentations that are easy to print on a black-and-white
+              printer. The theme uses grayscale in certain unavoidable cases,
+              but never color. It also changes the font of alerted text to
+              boldface.
+            </p>
+            <p>
+              When using this theme, you should consider using the class option
+              <span class="texttt">gray</span>, which ensures that all colors
+              are converted to grayscale. Also consider using the
+              <span class="texttt">structurebold</span> font theme.
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">fly</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">fly</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemefly-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemefly-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme is the &ldquo;consequent&rdquo; version of
-                  <span class="texttt">beetle</span> and uses white/black/gray
-                  throughout. It does not go particularly well with themes that
-                  use shadows.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemefly-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemefly-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme is the &ldquo;consequent&rdquo; version of
+              <span class="texttt">beetle</span> and uses white/black/gray
+              throughout. It does not go particularly well with themes that use
+              shadows.
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">monarca</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">monarca</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthememonarca-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthememonarca-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The theme is based on the colors of the Monarch butterfly.
-                </p>
-                <p><i>Theme author: </i>Max Dohse.</p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthememonarca-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthememonarca-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>The theme is based on the colors of the Monarch butterfly.</p>
+            <p><i>Theme author: </i>Max Dohse.</p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">seagull</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">seagull</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemeseagull-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemeseagull-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  Like the <span class="texttt">dove</span> color theme, this
-                  theme is useful for printing on a black-and-white printer.
-                  However, it uses different shades of gray extensively, which
-                  may or may not look good on a transparency.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemeseagull-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemeseagull-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              Like the <span class="texttt">dove</span> color theme, this theme
+              is useful for printing on a black-and-white printer. However, it
+              uses different shades of gray extensively, which may or may not
+              look good on a transparency.
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">wolverine</span
-                    >}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">wolverine</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemewolverine-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemewolverine-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The theme is based on the colors of the University of
-                  Michigan&rsquo;s mascot, a wolverine.
-                </p>
-                <p><i>Theme author: </i>Madhusudan Singh.</p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemewolverine-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemewolverine-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The theme is based on the colors of the University of
+              Michigan&rsquo;s mascot, a wolverine.
+            </p>
+            <p><i>Theme author: </i>Madhusudan Singh.</p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">beaver</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">beaver</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemebeaver-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemebeaver-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The theme is based on the colors of MIT&rsquo;s mascot, a
-                  beaver.
-                </p>
-                <p><i>Theme author: </i>Madhusudan Singh.</p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemebeaver-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemebeaver-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The theme is based on the colors of MIT&rsquo;s mascot, a beaver.
+            </p>
+            <p><i>Theme author: </i>Madhusudan Singh.</p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">spruce</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">spruce</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemespruce-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemespruce-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  The theme is based on the colors of Michigan State University.
-                </p>
-                <p><i>Theme author: </i>Alan Munn.</p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemespruce-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemespruce-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              The theme is based on the colors of Michigan State University.
+            </p>
+            <p><i>Theme author: </i>Alan Munn.</p>
           </div>
           <!--
 ...... subsubsection Inner Color Themes ......
@@ -947,112 +876,98 @@
             happen to have flower names.
           </p>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">lily</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">lily</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemelily-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemelily-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme is mainly used to <em>uninstall</em> any block
-                  colors setup by another theme, restoring the colors used in
-                  the <span class="texttt">default</span> theme. In particular,
-                  using this theme will remove all background colors for blocks.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemelily-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemelily-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme is mainly used to <em>uninstall</em> any block colors
+              setup by another theme, restoring the colors used in the
+              <span class="texttt">default</span> theme. In particular, using
+              this theme will remove all background colors for blocks.
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">orchid</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">orchid</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemeorchid-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemeorchid-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme installs white-on-dark block titles. The background
-                  of the title of a normal block is set to the foreground of the
-                  structure color, the foreground is set to white. The
-                  background of alerted blocks are set to red and of example
-                  blocks to green. The body of blocks get a nearly transparent
-                  background.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemeorchid-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemeorchid-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme installs white-on-dark block titles. The background of
+              the title of a normal block is set to the foreground of the
+              structure color, the foreground is set to white. The background of
+              alerted blocks are set to red and of example blocks to green. The
+              body of blocks get a nearly transparent background.
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">rose</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">rose</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemerose-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemerose-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  This theme installs nearly transparent backgrounds for both
-                  block titles and block bodies. This theme is much less
-                  &ldquo;aggressive&rdquo; than the
-                  <span class="texttt">orchid</span> theme. The background
-                  colors are derived from the foreground of the structure
-                  <span class="beamer-name"
-                    ><span class="textsc">beamer</span></span
-                  >-color.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemerose-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemerose-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              This theme installs nearly transparent backgrounds for both block
+              titles and block bodies. This theme is much less
+              &ldquo;aggressive&rdquo; than the
+              <span class="texttt">orchid</span> theme. The background colors
+              are derived from the foreground of the structure
+              <span class="beamer-name"><span class="textsc">beamer</span></span
+              >-color.
+            </p>
           </div>
           <!--
 ...... subsubsection Outer Color Themes ......
@@ -1072,132 +987,119 @@
             They happen to be sea-animal names.
           </p>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">whale</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">whale</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemewhale-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemewhale-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  Installs a white-on-dark palette for the headline, footline,
-                  and sidebar. The backgrounds used there are set to shades
-                  between the structure
-                  <span class="beamer-name"
-                    ><span class="textsc">beamer</span></span
-                  >-color and black. The foreground is set to white.
-                </p>
-                <p>
-                  While this color theme can appear to be aggressive, you should
-                  note that a dark bar at the border of a frame will have a
-                  somewhat different appearance during a presentation than it
-                  has on paper: During a presentation the projection on the wall
-                  is usually surrounded by blackness. Thus, a dark bar will not
-                  create a contrast as opposed to the way it does on paper.
-                  Indeed, using this theme will cause the main part of the frame
-                  to be more at the focus of attention.
-                </p>
-                <p>
-                  The counterpart to the theme with respect to blocks is the
-                  <span class="texttt">orchid</span> theme. However, pairing it
-                  with the <span class="texttt">rose</span> color theme is also
-                  interesting.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemewhale-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemewhale-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              Installs a white-on-dark palette for the headline, footline, and
+              sidebar. The backgrounds used there are set to shades between the
+              structure
+              <span class="beamer-name"><span class="textsc">beamer</span></span
+              >-color and black. The foreground is set to white.
+            </p>
+            <p>
+              While this color theme can appear to be aggressive, you should
+              note that a dark bar at the border of a frame will have a somewhat
+              different appearance during a presentation than it has on paper:
+              During a presentation the projection on the wall is usually
+              surrounded by blackness. Thus, a dark bar will not create a
+              contrast as opposed to the way it does on paper. Indeed, using
+              this theme will cause the main part of the frame to be more at the
+              focus of attention.
+            </p>
+            <p>
+              The counterpart to the theme with respect to blocks is the
+              <span class="texttt">orchid</span> theme. However, pairing it with
+              the <span class="texttt">rose</span> color theme is also
+              interesting.
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">seahorse</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">seahorse</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemeseahorse-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemeseahorse-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  Installs a near-transparent backgrounds for the headline,
-                  footline, and sidebar. Using this theme will cause
-                  navigational elements to be much less &ldquo;dominant&rdquo;
-                  than when using the <span class="texttt">whale</span> theme
-                  (see the discussion on contrast there, though).
-                </p>
-                <p>
-                  It goes well with the <span class="texttt">rose</span> or the
-                  <span class="texttt">lily</span> color theme. Pairing it with
-                  the <span class="texttt">orchid</span> overemphasizes blocks
-                  (in Till&rsquo;s opinion).
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemeseahorse-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemeseahorse-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              Installs a near-transparent backgrounds for the headline,
+              footline, and sidebar. Using this theme will cause navigational
+              elements to be much less &ldquo;dominant&rdquo; than when using
+              the <span class="texttt">whale</span> theme (see the discussion on
+              contrast there, though).
+            </p>
+            <p>
+              It goes well with the <span class="texttt">rose</span> or the
+              <span class="texttt">lily</span> color theme. Pairing it with the
+              <span class="texttt">orchid</span> overemphasizes blocks (in
+              Till&rsquo;s opinion).
+            </p>
           </div>
           <div class="colortheme">
-            <ul style="list-style-type: none">
-              <li>
-                <p>
-                  <span class="extracttheme"
-                    >\usecolortheme{<span class="declare">dolphin</span>}</span
-                  >
-                </p>
-                <p>
-                  <i>Example: </i>
-                </p>
+            <p>
+              <span class="extracttheme"
+                >\usecolortheme{<span class="declare">dolphin</span>}</span
+              >
+            </p>
+            <p>
+              <i>Example: </i>
+            </p>
 
-                <div class="themeexample-image">
-                  <p>
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemedolphin-page1.svg"
-                      type="image/svg+xml"
-                    ></object
-                    >&emsp;&emsp;
-                    <object
-                      data="beamerthemeexample/beamerugcolorthemedolphin-page2.svg"
-                      type="image/svg+xml"
-                    ></object>
-                  </p>
-                </div>
-                <p>
-                  A color theme somewhere in the middle between the whale and
-                  the seahorse. It was graciously donated by Manuel Carro. Like
-                  the seahorse, it goes well with the
-                  <span class="texttt">rose</span> and the
-                  <span class="texttt">lily</span> color theme.
-                </p>
-              </li>
-            </ul>
+            <div class="themeexample-image">
+              <p>
+                <object
+                  data="beamerthemeexample/beamerugcolorthemedolphin-page1.svg"
+                  type="image/svg+xml"
+                ></object
+                >&emsp;&emsp;
+                <object
+                  data="beamerthemeexample/beamerugcolorthemedolphin-page2.svg"
+                  type="image/svg+xml"
+                ></object>
+              </p>
+            </div>
+            <p>
+              A color theme somewhere in the middle between the whale and the
+              seahorse. It was graciously donated by Manuel Carro. Like the
+              seahorse, it goes well with the
+              <span class="texttt">rose</span> and the
+              <span class="texttt">lily</span> color theme.
+            </p>
           </div>
           <!--
 ...... subsection Changing the Colors Used for Different Elements of a Presentation ......
@@ -2501,7 +2403,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-12</em>
+          <em>HTML version last updated: 2023-10-14</em>
         </div>
       </footer>
     </div>
