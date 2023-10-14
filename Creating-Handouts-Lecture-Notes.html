@@ -556,12 +556,11 @@ With some more text.
             to get control over all line breaks. These line breaks are mostly
             superfluous in <span class="texttt">article</span> mode. If you
             really want a line break to apply in all versions, say
-            <span class="texttt">\\<all></all></span>. Note that the command
+            <span class="texttt">\\&lt;all&gt;</span>. Note that the command
             <span class="texttt">\\</span> is often redefined by certain
             environments, so it may not always be overlay-specification-aware.
             In such a case you have to write something like
-            <span class="texttt">\only<presentation>{\\}</presentation></span
-            >.
+            <span class="texttt">\only&lt;presentation&gt;{\\}</span>.
           </p>
           <!--
 ...... subsubsection Workflow ......
@@ -1007,15 +1006,18 @@ beamer second handout trans
             <p>
               <i>Example: </i>
             </p>
-            <pre class="verbatim">
-\mode<article>{Extra detail mentioned only in the article version.}
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
+\mode&lt;article&gt;{Extra detail mentioned only in the article version.}
 
-\mode<beamer| trans>{
-  \begin{frame}
-    \tableofcontents[currentsection]
-  \end{frame}
+\mode&lt;beamer| trans&gt;{
+ \begin{frame}
+   \tableofcontents[currentsection]
+ \end{frame}
 }
-</beamer|></article></pre>
+</pre
+              >
+            </div>
           </div>
           <p>
             The second flavor of the <span class="texttt">\mode</span> command
@@ -1148,7 +1150,7 @@ beamer second handout trans
               >
               must not be in the gobbling state. Switch this state off using
               <span class="texttt">\mode</span> on one line and
-              <span class="texttt"><all></all></span> on the next.
+              <span class="texttt">&lt;all&gt;</span> on the next.
             </p>
             <p>
               <em>Note:</em> The behavior of
@@ -1166,26 +1168,28 @@ beamer second handout trans
             <p>
               <i>Example: </i>
             </p>
-            <pre class="verbatim">
-\mode<article>
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
+\mode&lt;article&gt;
 
 This text is typeset only in |article| mode.
 \verb!verbatim text is ok {!
 
-\mode<presentation>{% this text is inserted only in presentation mode
-  \begin{frame}
-    \tableofcontents[currentsection]
-  \end{frame}
+\mode&lt;presentation&gt;{% this text is inserted only in presentation mode
+ \begin{frame}
+   \tableofcontents[currentsection]
+ \end{frame}
 }
 
 Here we are back to article mode stuff. This text
 is not inserted in presentation mode
 
-\mode
-<presentation>
+\mode&lt;presentation&gt;
 
 This text is only inserted in presentation mode.
-</presentation></presentation></article></pre>
+</pre
+              >
+            </div>
           </div>
           <p>The last flavor of the mode command behaves quite differently.</p>
           <div class="command">
@@ -1265,14 +1269,15 @@ This text is only inserted in presentation mode.
             <p>
               <i>Example: </i>
             </p>
-            <pre class="verbatim">
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
 \begin{document}
 \mode*
 
 This text is not shown in the presentation.
 
 \begin{frame}
-  This text is shown both in article and presentation mode.
+ This text is shown both in article and presentation mode.
 \end{frame}
 
 this text is not shown in the presentation again.
@@ -1281,42 +1286,50 @@ this text is not shown in the presentation again.
 
 Back to article stuff again.
 
-\frame<presentation>
+\frame&lt;presentation&gt;
 { this frame is shown only in the presentation. }
 \end{document}
-</presentation></pre>
+</pre
+              >
+            </div>
             <p>
               <i>Example: </i>The following example shows how you can include
               other files in a main file. The contents of a
               <span class="texttt">main.tex</span>:
             </p>
-            <pre class="verbatim">
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
 \documentclass[ignorenonframetext]{beamer}
 \begin{document}
 This is star mode stuff.
 
 Let's include files:
-\mode<all>
+\mode&lt;all&gt;
 \include{a}
 \include{b}
 \mode*
 
 Back to star mode
 \end{document}
-</all></pre>
+</pre
+              >
+            </div>
             <p>
               And <span class="texttt">a.tex</span> (and likewise
               <span class="texttt">b.tex</span>):
             </p>
-            <pre class="verbatim">
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
 \mode*
 \section{First section}
 Extra text in article version.
 \begin{frame}
-  Some text.
+ Some text.
 \end{frame}
-\mode<all>
-</all></pre>
+\mode&lt;all&gt;
+</pre
+              >
+            </div>
           </div>
         </section>
       </main>

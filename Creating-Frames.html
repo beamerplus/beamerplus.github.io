@@ -327,11 +327,14 @@
             <p>
               <i>Example: </i>
             </p>
-            <pre class="verbatim">
-\begin{frame}<beamer>{Outline} % frame is only shown in beamer mode
-  \tabelofcontent[current]
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
+\begin{frame}&lt;beamer&gt;{Outline} % frame is only shown in beamer mode
+ \tabelofcontent[current]
 \end{frame}
-</beamer></pre>
+</pre
+              >
+            </div>
             <p>
               Normally, the complete
               <span class="meta"
@@ -4793,20 +4796,19 @@ background section in navigation frame
             A useful specification is just
             <span class="texttt">&lt;0&gt;</span>, which causes the frame to
             have no slides at all. For example,
-            <span class="texttt">\begin{frame}<handout:0></handout:0></span>
-            causes the frame to be suppressed in the handout version, but to be
-            shown normally in all other versions. Another useful specification
-            is <span class="texttt"><beamer></beamer></span>, which causes the
-            frame to be shown normally in
-            <span class="texttt">beamer</span> mode, but to be suppressed in all
-            other versions.
+            <span class="texttt">\begin{frame}&lt;handout:0&gt;</span> causes
+            the frame to be suppressed in the handout version, but to be shown
+            normally in all other versions. Another useful specification is
+            <span class="texttt">&lt;beamer&gt;</span>, which causes the frame
+            to be shown normally in <span class="texttt">beamer</span> mode, but
+            to be suppressed in all other versions.
           </p>
           <p>
             Frames which are hidden with
             <span class="texttt">&lt;0&gt;</span> behave like the
             <span class="texttt">noframenumbering</span> option and will not be
             counted for the number of frames (this only applies if no mode is
-            specified, e.g. not for <span class="texttt">&lt; all:0&gt;</span>).
+            specified, e.g. not for <span class="texttt">&lt;all:0&gt;</span>).
           </p>
         </section>
       </main>

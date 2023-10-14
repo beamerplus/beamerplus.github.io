@@ -314,53 +314,59 @@
             <p>
               <i>Example: </i>
             </p>
-            <pre class="verbatim">
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
 \documentclass{beamer}
 \setbeameroption{second mode text on second screen}
 \begin{document}
 \begin{frame}[typeset second]
-  This text is shown on the left and on the right.
-  \only<second>{This text is only shown on the right.}
-  \only<second:0>{This text is only shown on the left.}
+ This text is shown on the left and on the right.
+ \only&lt;second&gt;{This text is only shown on the right.}
+ \only&lt;second:0&gt;{This text is only shown on the left.}
 \end{frame}
 \begin{frame}
-  This text is shown on the left. The right shows the same as for the
-  previous frame.
+ This text is shown on the left. The right shows the same as for the
+ previous frame.
 \end{frame}
 \begin{frame}[typeset second]
-  \alt<second>{The \string\alt command is useful for second
-    mode. Let's show the table of contents, here: \tableofcontents}
-  {Here comes some normal text for the first slide.}
+ \alt&lt;second&gt;{The \string\alt command is useful for second
+   mode. Let's show the table of contents, here: \tableofcontents}
+ {Here comes some normal text for the first slide.}
 \end{frame}
 \end{document}
-</second></second:0></second></pre>
+</pre
+              >
+            </div>
             <p>
               <i>Example: </i>The following example shows how translations can
               be added in a comfortable way.
             </p>
-            <pre class="verbatim">
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
 \documentclass{beamer}
 \setbeameroption{second mode text on second screen}
 \DeclareRobustCommand\translation[1]{\mytranslation#1\relax}
-\long\def\mytranslation#1|#2\relax{\alt<second>{#2}{#1}}
+\long\def\mytranslation#1|#2\relax{\alt&lt;second&gt;{#2}{#1}}
 \title{\translation{Preparing Presentations|Vortr\"age vorbereiten}}
 \author{Till Tantau}
 \begin{document}
 \begin{frame}[typeset second]
-  \titlepage
+ \titlepage
 \end{frame}
 \begin{frame}[typeset second]
-  \frametitle{\translation{This is the frame title.|Dies ist der Titel des Rahmens.}}
-  \begin{itemize}
-  \item&lt;1-&gt; \translation{First|Erstens}.
-  \item&lt;2-&gt; \translation{Second|Zweitens}.
-  \item&lt;3-&gt; \translation{Third|Drittens}.
-  \end{itemize}
-  \translation{Do not use line-by-line uncovering.|Man sollte Text nicht
-  Zeile f\"ur Zeile aufdecken.}
+ \frametitle{\translation{This is the frame title.|Dies ist der Titel des Rahmens.}}
+ \begin{itemize}
+ \item&lt;1-&gt; \translation{First|Erstens}.
+ \item&lt;2-&gt; \translation{Second|Zweitens}.
+ \item&lt;3-&gt; \translation{Third|Drittens}.
+ \end{itemize}
+ \translation{Do not use line-by-line uncovering.|Man sollte Text nicht
+ Zeile f\"ur Zeile aufdecken.}
 \end{frame}
 \end{document}
-</second></pre>
+</pre
+              >
+            </div>
           </div>
           <p>
             In the last of the above example, it is a bit bothersome that the

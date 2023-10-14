@@ -816,10 +816,13 @@
             <p>
               <i>Example: </i>
             </p>
-            <pre class="verbatim">
-\section<presentation>[Results]{Results on the Main Problem}
-\section<article>{Results on the Main Problem}
-</article></presentation></pre>
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
+\section&lt;presentation&gt;[Results]{Results on the Main Problem}
+\section&lt;article&gt;{Results on the Main Problem}
+</pre
+              >
+            </div>
             <div class="element">
               <div class="element-headline">
                 <p>
@@ -909,7 +912,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\section<beamer>*{Outline}</beamer></span>
+              ><span class="texttt">\section&lt;beamer&gt;*{Outline}</span>
             </p>
           </div>
           <div class="command">
@@ -1214,15 +1217,18 @@
             <p>
               <i>Example: </i>
             </p>
-            <pre class="verbatim">
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
 \AtBeginSection[] % Do nothing for \section*
 {
-  \begin{frame}<beamer>
-    \frametitle{Outline}
-    \tableofcontents[currentsection]
-  \end{frame}
+ \begin{frame}&lt;beamer&gt;
+   \frametitle{Outline}
+   \tableofcontents[currentsection]
+ \end{frame}
 }
-</beamer></pre>
+</pre
+              >
+            </div>
             <div class="articlenote">
               <p>
                 <span class="textsc">article</span>
@@ -1263,15 +1269,18 @@
             <p>
               <i>Example: </i>
             </p>
-            <pre class="verbatim">
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
 \AtBeginSubsection[] % Do nothing for \subsection*
 {
-  \begin{frame}<beamer>
-    \frametitle{Outline}
-    \tableofcontents[currentsection,currentsubsection]
-  \end{frame}
+ \begin{frame}&lt;beamer&gt;
+   \frametitle{Outline}
+   \tableofcontents[currentsection,currentsubsection]
+ \end{frame}
 }
-</beamer></pre>
+</pre
+              >
+            </div>
           </div>
           <div class="command">
             <div class="command-headline">
