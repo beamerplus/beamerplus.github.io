@@ -689,24 +689,18 @@
                   the frame to apply also to the
                   <span class="texttt">article</span> mode, you can add a mode
                   specification like
-                  <span class="texttt"><presentation></presentation></span> to
-                  make these commands apply only to the presentation modes. The
-                  command
+                  <span class="texttt">&lt;presentation&gt;</span> to make these
+                  commands apply only to the presentation modes. The command
                   <span class="declare"
                     ><span class="texttt">\framebreak</span></span
                   >
                   is a shorthand for
-                  <span class="texttt"
-                    >\pagebreak<presentation></presentation
-                  ></span>
-                  and
+                  <span class="texttt">\pagebreak&lt;presentation&gt;</span> and
                   <span class="declare"
                     ><span class="texttt">\noframebreak</span></span
                   >
                   is a shorthand for
-                  <span class="texttt"
-                    >\nopagebreak<presentation></presentation></span
-                  >.
+                  <span class="texttt">\nopagebreak&lt;presentation&gt;</span>.
                 </p>
                 <p>
                   The use of this option is <em>evil</em>. In a (good)
@@ -1129,8 +1123,8 @@
               <span class="texttt">frame end</span>, see below. To suppress a
               frame in <span class="texttt">article</span> mode, you can, for
               example, specify
-              <span class="texttt"><presentation></presentation></span> as
-              overlay specification.
+              <span class="texttt">&lt;presentation&gt;</span> as overlay
+              specification.
             </p>
             <div class="element">
               <div class="element-headline">
@@ -4031,14 +4025,17 @@ background section in navigation frame
             <p>
               <i>Example: </i>
             </p>
-            <pre class="verbatim">
+            <div class="fancyvrb" style>
+              <pre class="verbatim">
 \begin{frame}
-  \frametitle<presentation>{Frame Title Should Be in Uppercase.}
-  \framesubtitle{Subtitles can be in lowercase if they are full sentences.}
+ \frametitle&lt;presentation&gt;{Frame Title Should Be in Uppercase.}
+ \framesubtitle{Subtitles can be in lowercase if they are full sentences.}
 
-  Frame contents.
+ Frame contents.
 \end{frame}
-</presentation></pre>
+</pre
+              >
+            </div>
             <div class="articlenote">
               <p>
                 <span class="textsc">article</span>
