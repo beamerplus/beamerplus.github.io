@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Tutorial: Euclid&rsquo;s Presentation - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -103,7 +103,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -248,9 +248,9 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           >
           <p>
             might be appropriate. He creates a subdirectory
-            <span class="texttt">presentation</span> in the directory that
+            <span class="verb">presentation</span> in the directory that
             contains the actual paper and copies the solution template to this
-            subdirectory, renaming to <span class="texttt">main.tex</span>.
+            subdirectory, renaming to <span class="verb">main.tex</span>.
           </p>
           <p>He opens the file in his favorite editor. It starts</p>
           <pre class="verbatim">
@@ -281,7 +281,7 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           <a id="beameruserguide-autopage-52"></a>
           <p>
             The next thing that seems logical is the place where the
-            <span class="texttt">\title</span> command is used. Naturally, he
+            <span class="verb">\title</span> command is used. Naturally, he
             replaces it with
           </p>
           <pre class="verbatim">
@@ -290,14 +290,14 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           >
           <p>
             since this was the title of the paper. He sees that the command
-            <span class="texttt">\title</span> also takes an optional
+            <span class="verb">\title</span> also takes an optional
             &ldquo;short&rdquo; argument in square brackets, which is shown in
             places where there is little space, but he decides that the title is
             short enough by itself.
           </p>
           <p>
-            Euclid next adjusts the <span class="texttt">\author</span> and
-            <span class="texttt">\date</span> fields as follows:
+            Euclid next adjusts the <span class="verb">\author</span> and
+            <span class="verb">\date</span> fields as follows:
           </p>
           <pre class="verbatim">
 %\author{Euclid of Alexandria}
@@ -306,9 +306,9 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           >
           <p>
             For the date, he felt that the name was a little long, so a short
-            version is given (<span class="texttt">ISPN &rsquo;80</span>). On
+            version is given (<span class="verb">ISPN &rsquo;80</span>). On
             second thought, Euclid decides to add his email address and replaces
-            the <span class="texttt">\author</span> field as follows:
+            the <span class="verb">\author</span> field as follows:
           </p>
           <pre class="verbatim">
 %\author[Euclid]{Euclid of Alexandria \\ \texttt{euclid@alexandria.edu}}
@@ -316,7 +316,7 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           >
           <p>
             Somehow Euclid does not like the fact that there is no &ldquo;<span
-              class="texttt"
+              class="verb"
               >\email</span
             >&rdquo; command in
             <span class="beamer-name"><span class="textsc">beamer</span></span
@@ -327,11 +327,11 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           </p>
           <p>
             There are two fields that Euclid does not know, but whose meaning he
-            can guess: <span class="texttt">\subtitle</span> and
-            <span class="texttt">\institute</span>. He adjusts them. (Euclid
-            does not need to use the <span class="texttt">\and</span> command,
-            which is used to separate several authors, nor the
-            <span class="texttt">\inst</span> command, which just makes its
+            can guess: <span class="verb">\subtitle</span> and
+            <span class="verb">\institute</span>. He adjusts them. (Euclid does
+            not need to use the <span class="verb">\and</span> command, which is
+            used to separate several authors, nor the
+            <span class="verb">\inst</span> command, which just makes its
             argument a superscript).
           </p>
           <!--
@@ -347,8 +347,8 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           <p>
             The next thing in the file that seems interesting is where the first
             &ldquo;frame&rdquo; is created, right after the
-            <span class="texttt">\</span
-            ><span class="texttt">begin{document}</span>:
+            <span class="verb">\</span
+            ><span class="verb">begin{document}</span>:
           </p>
           <pre class="verbatim">
 \begin{frame}
@@ -362,8 +362,8 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             >, a presentation consists of a series of frames. Each frame in turn
             may consist of several slides (if there is more than one, they are
             called overlays). Normally, everything between
-            <span class="texttt">\begin{frame}</span> and
-            <span class="texttt">\end{frame}</span> is put on a single slide. No
+            <span class="verb">\begin{frame}</span> and
+            <span class="verb">\end{frame}</span> is put on a single slide. No
             page breaking is performed. So Euclid infers that the first frame is
             &ldquo;filled&rdquo; by the title page, which seems quite logical.
           </p>
@@ -379,21 +379,21 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           <a id="beameruserguide-autopage-58"></a>
           <p>
             Eager to find out how the first page will look, he invokes
-            <span class="texttt">pdflatex</span> on his file
-            <span class="texttt">main.tex</span> (twice). He could also use
-            <span class="texttt">latex</span> (twice), followed by
-            <span class="texttt">dvips</span>, and then possibly
-            <span class="texttt">ps2pdf</span>, or
-            <span class="texttt">lualatex</span> (twice), or
-            <span class="texttt">xelatex</span> (twice). Then he uses the
-            Acrobat Reader, <span class="texttt">xpdf</span>,
-            <span class="texttt">evince</span> or
-            <span class="texttt">okular</span> to view the resulting
-            <span class="texttt">main.pdf</span>. Indeed, the first page
-            contains all the information Euclid has provided until now. It even
-            looks quite impressive with the colorful title and the rounded
-            corners and the shadows, but he is doubtful whether he should leave
-            it like that. He decides to address this problem later.
+            <span class="verb">pdflatex</span> on his file
+            <span class="verb">main.tex</span> (twice). He could also use
+            <span class="verb">latex</span> (twice), followed by
+            <span class="verb">dvips</span>, and then possibly
+            <span class="verb">ps2pdf</span>, or
+            <span class="verb">lualatex</span> (twice), or
+            <span class="verb">xelatex</span> (twice). Then he uses the Acrobat
+            Reader, <span class="verb">xpdf</span>,
+            <span class="verb">evince</span> or
+            <span class="verb">okular</span> to view the resulting
+            <span class="verb">main.pdf</span>. Indeed, the first page contains
+            all the information Euclid has provided until now. It even looks
+            quite impressive with the colorful title and the rounded corners and
+            the shadows, but he is doubtful whether he should leave it like
+            that. He decides to address this problem later.
           </p>
           <p>
             Euclid is delighted to find out that clicking on a section or
@@ -428,7 +428,7 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           <p>
             Furthermore, this frame has an individual title (Outline). A comment
             in the frame says that Euclid might wish to try to add the
-            <span class="texttt">[pausesections]</span> option. He tries this,
+            <span class="verb">[pausesections]</span> option. He tries this,
             changing the frame to:
           </p>
           <pre class="verbatim">
@@ -450,9 +450,9 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             presentation. On the first of these, only the first section is
             shown, on the second both sections are shown (scanning down in the
             file, Euclid finds that, indeed, there are
-            <span class="texttt">\section</span> commands introducing these
+            <span class="verb">\section</span> commands introducing these
             sections). The effect of the
-            <span class="texttt">pausesections</span> seems to be that one can
+            <span class="verb">pausesections</span> seems to be that one can
             talk about the first section before the second one is shown. Then,
             Euclid can press the down- or right-key, to show the complete table
             of contents and can talk about the second section.
@@ -478,29 +478,29 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             assumes that at the point of invocation they have no direct effect,
             they only create entries in the table of contents. Having a
             &ldquo;Motivation&rdquo; section seems reasonable to Euclid, but he
-            changes the <span class="texttt">\subsection</span> title.
+            changes the <span class="verb">\subsection</span> title.
           </p>
           <p>
             As he looks at the presentation, he notices that his assumption was
-            not quite true: each <span class="texttt">\subsection</span> command
+            not quite true: each <span class="verb">\subsection</span> command
             seems to insert a frame containing a table of contents into the
             presentation. Doubling back he finds the command that causes this:
-            The <span class="texttt">\AtBeginSubsection</span> inserts a frame
+            The <span class="verb">\AtBeginSubsection</span> inserts a frame
             with only the current subsection highlighted at the beginning of
             each section. If Euclid does not like this, he can just delete the
-            whole <span class="texttt">\AtBeginSubsection</span> stuff and the
+            whole <span class="verb">\AtBeginSubsection</span> stuff and the
             table of contents at the beginning of each subsection disappears.
           </p>
           <p>
-            The <span class="texttt">\section</span> and
-            <span class="texttt">\subsection</span> commands take optional short
+            The <span class="verb">\section</span> and
+            <span class="verb">\subsection</span> commands take optional short
             arguments. These short arguments are used whenever a short form of
             the section of subsection name is needed. While this is in keeping
             with the way
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             treats the optional arguments of things like
-            <span class="texttt">\title</span>, it is <em>different</em> from
-            the usual way
+            <span class="verb">\title</span>, it is <em>different</em> from the
+            usual way
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >L<span class="latexlogosup">a</span>T<span class="latexlogosub"
@@ -538,17 +538,16 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           <p>
             This yields the desired result. It might be a good idea to put some
             emphasis on the object being defined (prime numbers). Euclid tries
-            <span class="texttt">\emph</span> but finds that too mild an
-            emphasis.
+            <span class="verb">\emph</span> but finds that too mild an emphasis.
             <span class="beamer-name"><span class="textsc">beamer</span></span>
-            offers the command <span class="texttt">\alert</span>, which is used
-            like <span class="texttt">\emph</span> and, by default, typesets its
+            offers the command <span class="verb">\alert</span>, which is used
+            like <span class="verb">\emph</span> and, by default, typesets its
             argument in bright red.
           </p>
           <p>
             Next, Euclid decides to make it even clearer that he is giving a
             definition by putting a
-            <span class="texttt">definition</span> environment around the
+            <span class="verb">definition</span> environment around the
             definition.
           </p>
           <pre class="verbatim">
@@ -561,15 +560,14 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
 </pre
           >
           <p>
-            Other useful environments like <span class="texttt">theorem</span>,
-            <span class="texttt">lemma</span>,
-            <span class="texttt">proof</span>,
-            <span class="texttt">corollary</span>, or
-            <span class="texttt">example</span> are also predefined by
+            Other useful environments like <span class="verb">theorem</span>,
+            <span class="verb">lemma</span>, <span class="verb">proof</span>,
+            <span class="verb">corollary</span>, or
+            <span class="verb">example</span> are also predefined by
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >. As in <span class="texttt">amsmath</span>, they take optional
+            >. As in <span class="verb">amsmath</span>, they take optional
             arguments that they show in brackets. Indeed,
-            <span class="texttt">amsmath</span> is automatically loaded by
+            <span class="verb">amsmath</span> is automatically loaded by
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >.
           </p>
@@ -607,8 +605,8 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             The frame already looks quite nice, though, perhaps a bit colorful.
             However, Euclid would now like to show the three items one after
             another, not all three right away. To achieve this, he adds
-            <span class="texttt">\pause</span> commands after the first and
-            second items:
+            <span class="verb">\pause</span> commands after the first and second
+            items:
           </p>
           <pre class="verbatim">
  \begin{itemize}
@@ -624,26 +622,24 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             By showing them incrementally, he hopes to focus the
             audience&rsquo;s attention on the item he is currently talking
             about. On second thought, he deletes the
-            <span class="texttt">\pause</span> stuff once more since in simple
+            <span class="verb">\pause</span> stuff once more since in simple
             cases like the above the pausing is rather silly. Indeed, Euclid has
             noticed that good presentations make use of this uncovering
             mechanism only in special circumstances.
           </p>
           <p>
             Euclid finds that he can also add a
-            <span class="texttt">\pause</span> between the definition and the
-            example. So, <span class="texttt">\pause</span>s seem to transcend
+            <span class="verb">\pause</span> between the definition and the
+            example. So, <span class="verb">\pause</span>s seem to transcend
             environments, which Euclid finds quite useful. After some
-            experimentation he finds that
-            <span class="texttt">\pause</span> only does not work in
-            <span class="texttt">align</span> environments. He immediately
-            writes an email about this to
+            experimentation he finds that <span class="verb">\pause</span> only
+            does not work in <span class="verb">align</span> environments. He
+            immediately writes an email about this to
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >&rsquo;s author, but receives a polite answer stating that the
-            implementation of <span class="texttt">align</span> does wicked
-            things and there is no fix for this. Also, Euclid is pointed to the
-            last part of the user&rsquo;s guide, where a workaround is
-            described.
+            implementation of <span class="verb">align</span> does wicked things
+            and there is no fix for this. Also, Euclid is pointed to the last
+            part of the user&rsquo;s guide, where a workaround is described.
           </p>
           <!--
 ...... subsection Using Overlay Specifications ......
@@ -690,20 +686,19 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
           >
           <p>
             The overlay specifications are given in pointed brackets. The
-            specification <span class="texttt">&lt;1-&gt;</span> means
-            &ldquo;from slide 1 on.&rdquo; Thus, the first and fourth item are
-            shown on the first slide of the frame, but the other two items are
-            not shown. Rather, the second point is shown only from the second
-            slide onward.
+            specification <span class="verb">&lt;1-&gt;</span> means &ldquo;from
+            slide 1 on.&rdquo; Thus, the first and fourth item are shown on the
+            first slide of the frame, but the other two items are not shown.
+            Rather, the second point is shown only from the second slide onward.
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             automatically computes the number of slides needed for each frame.
             More generally, overlay specification are lists of numbers or number
             ranges where the start or ending of a range can be left open. For
-            example <span class="texttt">-3,5-6,8-</span> means &ldquo;on all
+            example <span class="verb">-3,5-6,8-</span> means &ldquo;on all
             slides, except for slides 4 and&nbsp;7.&rdquo;
           </p>
           <p>
-            The <span class="texttt">\qedhere</span> is used to put the
+            The <span class="verb">\qedhere</span> is used to put the
             <span class="textsc">qed</span> symbol at the end of the line
             <em>inside</em> the enumeration. Normally, the
             <span class="textsc">qed</span> symbol is automatically inserted at
@@ -711,35 +706,34 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             line here.
           </p>
           <p>
-            The <span class="texttt">\item</span> command is not the only
-            command that takes overlay specifications. Another useful command
-            that takes one is the <span class="texttt">\uncover</span> command.
-            It only shows its argument on the slides specified in the overlay
-            specification. On all other slides, the argument is hidden (though
-            it still occupies space). The command
-            <span class="texttt">\only</span> is similar and Euclid could also
-            have tried
+            The <span class="verb">\item</span> command is not the only command
+            that takes overlay specifications. Another useful command that takes
+            one is the <span class="verb">\uncover</span> command. It only shows
+            its argument on the slides specified in the overlay specification.
+            On all other slides, the argument is hidden (though it still
+            occupies space). The command <span class="verb">\only</span> is
+            similar and Euclid could also have tried
           </p>
           <pre class="verbatim">
  \only&lt;4-&gt;{The proof used \textit{reductio ad absurdum}.}
 </pre
           >
           <p>
-            On non-specified slides the
-            <span class="texttt">\only</span> command simply &ldquo;throws its
-            argument away&rdquo; and the argument does not occupy any space.
-            This leads to different heights of the text on the first three
-            slides and on the fourth slide. If the text is centered vertically,
-            this will cause the text to &ldquo;wobble&rdquo; and thus
-            <span class="texttt">\uncover</span> should be used. However, you
+            On non-specified slides the <span class="verb">\only</span> command
+            simply &ldquo;throws its argument away&rdquo; and the argument does
+            not occupy any space. This leads to different heights of the text on
+            the first three slides and on the fourth slide. If the text is
+            centered vertically, this will cause the text to
+            &ldquo;wobble&rdquo; and thus
+            <span class="verb">\uncover</span> should be used. However, you
             sometimes wish things to &ldquo;really disappear&rdquo; on some
-            slides and then <span class="texttt">\only</span> is useful. Euclid
-            could also have used the class option <span class="texttt">t</span>,
+            slides and then <span class="verb">\only</span> is useful. Euclid
+            could also have used the class option <span class="verb">t</span>,
             which causes the text in frames to be vertically flushed to the top.
             Then a differing text height does not cause wobbling. Vertical
             flushing can also be achieved for only a single frame by giving the
-            optional argument <span class="texttt">[t]</span> like this to the
-            <span class="texttt">frame</span> environment as in
+            optional argument <span class="verb">[t]</span> like this to the
+            <span class="verb">frame</span> environment as in
           </p>
           <pre class="verbatim">
 \begin{frame}[t]
@@ -749,14 +743,14 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
 </pre
           >
           <p>
-            Vice versa, if the <span class="texttt">t</span> class option is
+            Vice versa, if the <span class="verb">t</span> class option is
             given, a frame can be vertically centered using the
-            <span class="texttt">[c]</span> option for the frame.
+            <span class="verb">[c]</span> option for the frame.
           </p>
           <p>
             It turns out that certain environments, including the
-            <span class="texttt">theorem</span> and
-            <span class="texttt">proof</span> environments above, also take
+            <span class="verb">theorem</span> and
+            <span class="verb">proof</span> environments above, also take
             overlay specifications. If such a specification is given, the whole
             theorem or proof is only shown on the specified slides.
           </p>
@@ -774,8 +768,8 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             On the next frame, Euclid wishes to contrast solved and open
             problems on prime numbers. Since there is no &ldquo;Solved
             problem&rdquo; environment similar to the
-            <span class="texttt">theorem</span> environment, Euclid decides to
-            use the <span class="texttt">block</span>
+            <span class="verb">theorem</span> environment, Euclid decides to use
+            the <span class="verb">block</span>
             environment, which allows him to give an arbitrary title:
           </p>
           <pre class="verbatim">
@@ -800,14 +794,14 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
 </pre
           >
           <p>
-            The optional argument <span class="texttt">[theorem]</span> ensures
+            The optional argument <span class="verb">[theorem]</span> ensures
             that these environments are numbered the same way as everything
             else. Since these numbers are not shown anyway, it does not really
             matter whether they are given, but it&rsquo;s a good practice and,
             perhaps, Euclid might need these numbers some other time.
           </p>
           <p>
-            An alternative would be nested <span class="texttt">itemize</span>:
+            An alternative would be nested <span class="verb">itemize</span>:
           </p>
           <pre class="verbatim">
 \begin{frame}
@@ -830,8 +824,8 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             even nicer to have the &ldquo;Answered Questions&rdquo; on the left
             and the &ldquo;Open Questions&rdquo; on the right, so as to create a
             stronger visual contrast. For this, he uses the
-            <span class="texttt">columns</span> environment. Inside this
-            environment, <span class="texttt">\column</span> commands create new
+            <span class="verb">columns</span> environment. Inside this
+            environment, <span class="verb">\column</span> commands create new
             columns.
           </p>
           <pre class="verbatim">
@@ -855,12 +849,12 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             Trying this, he is not quite satisfied with the result as the block
             on the left has a different height than the one on the right. He
             thinks it would be nicer if they were vertically top-aligned. So he
-            adds the <span class="texttt">[t]</span> option to the
-            <span class="texttt">columns</span> environment.
+            adds the <span class="verb">[t]</span> option to the
+            <span class="verb">columns</span> environment.
           </p>
           <p>
             Euclid is somewhat pleased to find out that a
-            <span class="texttt">\pause</span> at the end of the first column
+            <span class="verb">\pause</span> at the end of the first column
             allows him to &ldquo;uncover&rdquo; the second column only on the
             second slide of the frame.
           </p>
@@ -884,7 +878,7 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             To this end, he adds an entry to the bibliography, which he
             fortunately already finds in the solution file. Having the
             bibliography in the appendix does not quite suit Euclid, so he
-            removes the <span class="texttt">\appendix</span> command. He also
+            removes the <span class="verb">\appendix</span> command. He also
             notices <span class="texttt">&lt;presentation&gt;</span> overlay
             specifications and finds them a bit strange, but they don&rsquo;t
             seem to hurt either. Hopefully they do something useful. His
@@ -921,12 +915,12 @@ beamer/doc/solutions/conference-talks/conference-ornate-20min.en.tex
             On another frame, Euclid would like to show a listing of an
             algorithm his friend Eratosthenes has sent him (saying he came up
             with it while reorganizing his sieve collection). Euclid normally
-            uses the <span class="texttt">verbatim</span> environment and
+            uses the <span class="verb">verbatim</span> environment and
             sometimes also similar environments like
-            <span class="texttt">lstlisting</span> to typeset listings. He can
+            <span class="verb">lstlisting</span> to typeset listings. He can
             also use them in
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >, but he must add the <span class="texttt">fragile</span> option to
+            >, but he must add the <span class="verb">fragile</span> option to
             the frame:
           </p>
           <div class="fancyvrb" style>
@@ -959,16 +953,16 @@ int main (void)
             On second thought, Euclid would prefer to uncover part of the
             algorithm stepwise and to add an emphasis on certain lines or parts
             of lines. He can use package like
-            <span class="texttt">alltt</span> for this, but in simple cases the
-            environment <span class="texttt">{semiverbatim}</span> defined by
+            <span class="verb">alltt</span> for this, but in simple cases the
+            environment <span class="verb">{semiverbatim}</span> defined by
             <span class="beamer-name"><span class="textsc">beamer</span></span>
-            is more useful: It works like
-            <span class="texttt">{verbatim}</span>, except that
-            <span class="texttt">\</span>, <span class="texttt">{</span>, and
-            <span class="texttt">}</span> retain their meaning (one can typeset
-            them by using <span class="texttt">\\</span>,
-            <span class="texttt">\{</span>, and <span class="texttt">\}</span>).
-            Euclid might now typeset his algorithm as follows:
+            is more useful: It works like <span class="verb">{verbatim}</span>,
+            except that <span class="verb">\</span>,
+            <span class="verb">{</span>, and <span class="verb">}</span> retain
+            their meaning (one can typeset them by using
+            <span class="verb">\\</span>, <span class="verb">\{</span>, and
+            <span class="verb">\}</span>). Euclid might now typeset his
+            algorithm as follows:
           </p>
           <div class="fancyvrb" style>
             <pre class="verbatim">
@@ -996,12 +990,12 @@ int main (void)
             >
           </div>
           <p>
-            The <span class="texttt">\visible</span> command does nearly the
-            same as <span class="texttt">\uncover</span>. However one difference
-            occurs if the command
-            <span class="texttt">\setbeamercovered{transparent}</span> has been
+            The <span class="verb">\visible</span> command does nearly the same
+            as <span class="verb">\uncover</span>. However one difference occurs
+            if the command
+            <span class="verb">\setbeamercovered{transparent}</span> has been
             used to make covered text &ldquo;transparent&rdquo; instead,
-            <span class="texttt">\visible</span> still makes the text completely
+            <span class="verb">\visible</span> still makes the text completely
             &ldquo;invisible&rdquo; on non-specified slides. Euclid has the
             feeling that the naming convention is a bit strange, but cannot
             quite pinpoint the problem.
@@ -1035,7 +1029,7 @@ int main (void)
             bit of navigational information.
           </p>
           <p>
-            He settles on the <span class="texttt">Frankfurt</span> theme but
+            He settles on the <span class="verb">Frankfurt</span> theme but
             decides that the light-dark contrast is too strong. He adds
           </p>
           <pre class="verbatim">
@@ -1085,10 +1079,10 @@ int main (void)
             He notices that the font is still quite large (which he likes), but
             wonders why this is the case since he did not specify this. The
             reason is that calls of
-            <span class="texttt">\setbeamerfont</span> accumulate and the size
-            was already set to <span class="texttt">\large</span> by some font
-            theme. Using the starred version of
-            <span class="texttt">\setbeamerfont</span> &ldquo;resets&rdquo; the
+            <span class="verb">\setbeamerfont</span> accumulate and the size was
+            already set to <span class="verb">\large</span> by some font theme.
+            Using the starred version of
+            <span class="verb">\setbeamerfont</span> &ldquo;resets&rdquo; the
             font.
           </p>
           <p>
@@ -1141,7 +1135,7 @@ int main (void)
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

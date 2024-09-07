@@ -8,7 +8,7 @@
     <title>
       Structuring a Presentation: The Static Global Structure - Beamer Manual
     </title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -77,7 +77,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -169,9 +169,9 @@
           <p>
             This section lists the commands that are used for structuring a
             presentation &ldquo;globally&rdquo; using commands like
-            <span class="texttt">\section</span> or
-            <span class="texttt">\part</span>. These commands are used to create
-            a <em>static</em> structure, meaning that the resulting presentation
+            <span class="verb">\section</span> or
+            <span class="verb">\part</span>. These commands are used to create a
+            <em>static</em> structure, meaning that the resulting presentation
             is normally presented one slide after the other in the order the
             slides occur. Section&nbsp;<a
               href="Structuring-Presentation-The-Interactive-Global-Structure.html#section-nonlinear"
@@ -193,7 +193,7 @@
           </h5>
           <a id="beameruserguide-autopage-313"></a>
           <p>
-            You can use the <span class="texttt">\titlepage</span> command to
+            You can use the <span class="verb">\titlepage</span> command to
             insert a title page into a frame. By default, it will arrange the
             following elements on the title page: the document title, the
             authors&rsquo; names, their affiliation, a title graphic, and a
@@ -208,11 +208,11 @@
             <p>Inserts the text of a title page into the current frame.</p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\begin{frame}\titlepage\end{frame}</span>
+              ><span class="verb">\begin{frame}\titlepage\end{frame}</span>
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\begin{frame}[plain]\titlepage\end{frame}</span
               >
               for a titlepage that fills the whole frame.
@@ -226,13 +226,13 @@
               </div>
               <p>
                 This template is invoked when the
-                <span class="texttt">\titlepage</span> command is used.
+                <span class="verb">\titlepage</span> command is used.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd
                       ><span class="opt"
@@ -249,11 +249,11 @@
                     titlegraphic, if the
                     <span class="beamer-name"
                       ><span class="textsc">beamer</span></span
-                    >-color <span class="texttt">title</span>,
-                    <span class="texttt">author</span>,
-                    <span class="texttt">institute</span>, or
-                    <span class="texttt">date</span> is defined, respectively,
-                    it is used as textcolor for these entries. If a background
+                    >-color <span class="verb">title</span>,
+                    <span class="verb">author</span>,
+                    <span class="verb">institute</span>, or
+                    <span class="verb">date</span> is defined, respectively, it
+                    is used as textcolor for these entries. If a background
                     color is defined for them, a colored bar in the
                     corresponding color is drawn behind them, spanning the text
                     width. The corresponding
@@ -309,17 +309,17 @@
                       ><span class="angle">&rangle;</span></span
                     >
                     option is passed on the
-                    <span class="texttt">beamercolorbox</span> and can be used,
+                    <span class="verb">beamercolorbox</span> and can be used,
                     for example, to flush the title page to the left by
-                    specifying <span class="texttt">left</span> here.
+                    specifying <span class="verb">left</span> here.
                   </p>
                 </li>
               </ul>
               <p>The following commands are useful for this template:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertauthor</span></kbd>
                     inserts a version of the author&rsquo;s name that is useful
                     for the title page.
@@ -327,21 +327,21 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertdate</span></kbd> inserts
                     the date.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertinstitute</span></kbd>
                     inserts the institute.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\inserttitle</span></kbd> inserts
                     a version of the document title that is useful for the title
                     page.
@@ -349,7 +349,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertsubtitle</span></kbd>
                     inserts a version of the document title that is useful for
                     the title page.
@@ -357,7 +357,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\inserttitlegraphic</span></kbd>
                     inserts the title graphic into a template.
                   </p>
@@ -367,8 +367,8 @@
           </div>
           <p>
             For compatibility with other classes, in
-            <span class="texttt">article</span> mode the following command is
-            also provided:
+            <span class="verb">article</span> mode the following command is also
+            provided:
           </p>
           <div class="command">
             <div class="command-headline">
@@ -383,9 +383,9 @@
             </div>
             <p>
               If used inside a frame, it has the same effect as
-              <span class="texttt">\titlepage</span>. If used outside a frame,
-              it has the same effect as
-              <span class="texttt">\begin{frame}\titlepage\end{frame}</span>; in
+              <span class="verb">\titlepage</span>. If used outside a frame, it
+              has the same effect as
+              <span class="verb">\begin{frame}\titlepage\end{frame}</span>; in
               other words, a frame is added if necessary.
             </p>
           </div>
@@ -438,7 +438,7 @@
             </div>
             <p>
               The short form is ignored in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
@@ -464,7 +464,7 @@
                 ><span class="angle">&rangle;</span></span
               >
               is not used by default, but is available via the insert
-              <span class="texttt">\insertshortsubtitle</span>. The subtitle is
+              <span class="verb">\insertshortsubtitle</span>. The subtitle is
               shown below the title in a smaller font.
             </p>
             <p>
@@ -482,7 +482,7 @@
             </div>
             <p>
               This command causes the subtitle to be appended to the title with
-              a linebreak and a <span class="texttt">\normalsize</span> command
+              a linebreak and a <span class="verb">\normalsize</span> command
               issued before it. This may or may not be what you would like to
               happen.
             </p>
@@ -505,13 +505,13 @@
             </div>
             <p>
               The names should be separated using the command
-              <span class="texttt">\and</span>. In case authors have different
+              <span class="verb">\and</span>. In case authors have different
               affiliations, they should be suffixed by the command
-              <span class="texttt">\inst</span> with different parameters.
+              <span class="verb">\inst</span> with different parameters.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\author[Hemaspaandra et al.]{L. Hemaspaandra\inst{1} \and T.
                 Tantau\inst{2}}</span
               >
@@ -523,7 +523,7 @@
             </div>
             <p>
               The short form is ignored in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
@@ -544,8 +544,8 @@
             </div>
             <p>
               If more than one institute is given, they should be separated
-              using the command <span class="texttt">\and</span> and they should
-              be prefixed by the command <span class="texttt">\inst</span> with
+              using the command <span class="verb">\and</span> and they should
+              be prefixed by the command <span class="verb">\inst</span> with
               different parameters.
             </p>
             <p>
@@ -567,9 +567,9 @@
             </div>
             <p>
               The short form is ignored in
-              <span class="texttt">article</span> mode. The long form is also
+              <span class="verb">article</span> mode. The long form is also
               ignored, except if the document class (like
-              <span class="texttt">llncs</span>) defines it.
+              <span class="verb">llncs</span>) defines it.
             </p>
           </div>
           <div class="command">
@@ -589,9 +589,8 @@
               </p>
             </div>
             <p>
-              <i>Example: </i><span class="texttt">\date{\today}</span> or
-              <span class="texttt"
-                >\date[STACS 2003]{STACS Conference, 2003}</span
+              <i>Example: </i><span class="verb">\date{\today}</span> or
+              <span class="verb">\date[STACS 2003]{STACS Conference, 2003}</span
               >.
             </p>
             <div class="articlenote">
@@ -601,7 +600,7 @@
             </div>
             <p>
               The short form is ignored in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
@@ -629,7 +628,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\titlegraphic{\pgfuseimage{titlegraphic}}</span
               >
             </p>
@@ -639,8 +638,7 @@
               </p>
             </div>
             <p>
-              The command is ignored in
-              <span class="texttt">article</span> mode.
+              The command is ignored in <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
@@ -686,8 +684,8 @@
             </p>
           </div>
           <p>
-            By default, the <span class="texttt">\title</span> and
-            <span class="texttt">\author</span> commands will also insert their
+            By default, the <span class="verb">\title</span> and
+            <span class="verb">\author</span> commands will also insert their
             arguments into a resulting
             <span class="pgf-name"><span class="textsc">pdf</span></span
             >-file in the document information fields. This may cause problems
@@ -721,8 +719,8 @@
           <a id="beameruserguide-autopage-317"></a>
           <p>
             You can structure your text using the commands
-            <span class="texttt">\section</span> and
-            <span class="texttt">\subsection</span>. Unlike standard
+            <span class="verb">\section</span> and
+            <span class="verb">\subsection</span>. Unlike standard
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >L<span class="latexlogosup">a</span>T<span class="latexlogosub"
@@ -736,11 +734,11 @@
           <p>
             In order to create a line break in the table of contents (usually
             not a good idea), you can use the command
-            <span class="texttt">\breakhere</span>. Note that the standard
-            command <span class="texttt">\\</span> is modified so that
-            it&rsquo;s no longer robust (see Section 9.3; using
-            <span class="texttt">\protect\\</span> or
-            <span class="texttt">\newline</span> will also be fine).
+            <span class="verb">\breakhere</span>. Note that the standard command
+            <span class="verb">\\</span> is modified so that it&rsquo;s no
+            longer robust (see Section 9.3; using
+            <span class="verb">\protect\\</span> or
+            <span class="verb">\newline</span> will also be fine).
           </p>
           <div class="command">
             <div class="command-headline">
@@ -789,7 +787,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\section[Summary]{Summary of Main Results}</span
               >
             </p>
@@ -805,7 +803,7 @@
                 ><span class="angle">&rangle;</span></span
               >
               allows you to provide an alternate section command in
-              <span class="texttt">article</span> mode. This is necessary for
+              <span class="verb">article</span> mode. This is necessary for
               example if the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>short section name</i
@@ -838,13 +836,13 @@
                   ><span class="angle">&rangle;</span></span
                 >
                 see the parent template
-                <span class="texttt">table of contents</span>.
+                <span class="verb">table of contents</span>.
               </p>
               <p>The following commands are useful for this template:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\inserttocsection</span></kbd>
                     inserts the table of contents version of the current section
                     name.
@@ -852,7 +850,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd
                       ><span class="declare">\inserttocsectionnumber</span></kbd
                     >
@@ -878,7 +876,7 @@
                   ><span class="angle">&rangle;</span></span
                 >
                 see the parent template
-                <span class="texttt">table of contents</span>.
+                <span class="verb">table of contents</span>.
               </p>
             </div>
           </div>
@@ -891,7 +889,7 @@
                     ><span class="angle">&langle;</span><i>mode specification</i
                     ><span class="angle">&rangle;</span></span
                   >&gt;</span
-                ><span class="declare"><span class="texttt">*</span></span
+                ><span class="declare"><span class="verb">*</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>section name</i
                   ><span class="angle">&rangle;</span></span
@@ -907,9 +905,7 @@
               >
               is shown in the navigation bar.
             </p>
-            <p>
-              <i>Example: </i><span class="texttt">\section*{Outline}</span>
-            </p>
+            <p><i>Example: </i><span class="verb">\section*{Outline}</span></p>
             <p>
               <i>Example: </i
               ><span class="texttt">\section&lt;beamer&gt;*{Outline}</span>
@@ -939,11 +935,11 @@
             </div>
             <p>
               This command works the same way as the
-              <span class="texttt">\section</span> command.
+              <span class="verb">\section</span> command.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\subsection[Applications]{Applications to the Reduction of
                 Pollution}</span
               >
@@ -956,18 +952,18 @@
                 </p>
               </div>
               <p>
-                Like <span class="texttt">section in toc</span>, only for
+                Like <span class="verb">section in toc</span>, only for
                 subsection.
               </p>
               <p>
                 In addition to the inserts for the
-                <span class="texttt">section in toc</span> template, the
-                following commands are available for this template:
+                <span class="verb">section in toc</span> template, the following
+                commands are available for this template:
               </p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\inserttocsubsection</span></kbd>
                     inserts the table of contents version of the current
                     subsection name.
@@ -975,7 +971,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd
                       ><span class="declare"
                         >\inserttocsubsectionnumber</span
@@ -995,7 +991,7 @@
                 </p>
               </div>
               <p>
-                Like <span class="texttt">section in toc shaded</span>, only for
+                Like <span class="verb">section in toc shaded</span>, only for
                 subsections.
               </p>
             </div>
@@ -1009,7 +1005,7 @@
                     ><span class="angle">&langle;</span><i>mode specification</i
                     ><span class="angle">&rangle;</span></span
                   >&gt;</span
-                ><span class="declare"><span class="texttt">*</span></span
+                ><span class="declare"><span class="verb">*</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>subsection name</i
                   ><span class="angle">&rangle;</span></span
@@ -1080,11 +1076,10 @@
               </p>
             </div>
             <p>
-              This command works the like
-              <span class="texttt">\subsection</span>. However, subsubsections
-              are supported less well than subsections. For example, in the
-              table of contents subsubsections are always shown with the same
-              shading/hiding parameters as the subsection.
+              This command works the like <span class="verb">\subsection</span>.
+              However, subsubsections are supported less well than subsections.
+              For example, in the table of contents subsubsections are always
+              shown with the same shading/hiding parameters as the subsection.
             </p>
             <p>
               We <em>strongly</em> discourage the use of subsubsections in
@@ -1093,7 +1088,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\subsubsection[Applications]{Applications to the Reduction of
                 Pollution}</span
               >
@@ -1106,18 +1101,18 @@
                 </p>
               </div>
               <p>
-                Like <span class="texttt">subsection in toc</span>, only for
+                Like <span class="verb">subsection in toc</span>, only for
                 subsection.
               </p>
               <p>
                 In addition to the inserts for the
-                <span class="texttt">subsection in toc</span> template, the
+                <span class="verb">subsection in toc</span> template, the
                 following commands are available for this template:
               </p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd
                       ><span class="declare">\inserttocsubsubsection</span></kbd
                     >
@@ -1127,7 +1122,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd
                       ><span class="declare"
                         >\inserttocsubsubsectionnumber</span
@@ -1147,7 +1142,7 @@
                 </p>
               </div>
               <p>
-                Like <span class="texttt">subsection in toc shaded</span>, only
+                Like <span class="verb">subsection in toc shaded</span>, only
                 for subsubsections.
               </p>
             </div>
@@ -1161,7 +1156,7 @@
                     ><span class="angle">&langle;</span><i>mode specification</i
                     ><span class="angle">&rangle;</span></span
                   >&gt;</span
-                ><span class="declare"><span class="texttt">*</span></span
+                ><span class="declare"><span class="verb">*</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>subsubsection name</i
                   ><span class="angle">&rangle;</span></span
@@ -1211,8 +1206,8 @@
               parameter is specified, this text will be used for starred
               sections instead. Different calls of this command will not
               &ldquo;add up&rdquo; the given texts (like the
-              <span class="texttt">\AtBeginDocument</span> command does), but
-              will overwrite any previous text.
+              <span class="verb">\AtBeginDocument</span> command does), but will
+              overwrite any previous text.
             </p>
             <p>
               <i>Example: </i>
@@ -1236,7 +1231,7 @@
             </div>
             <p>
               This command has no effect in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
@@ -1299,17 +1294,17 @@
               </p>
             </div>
             <p>
-              Like <span class="texttt">\AtBeginSubsection</span>, only for
+              Like <span class="verb">\AtBeginSubsection</span>, only for
               subsubsections.
             </p>
           </div>
           <p>
             <span class="beamer-name"><span class="textsc">beamer</span></span>
-            also provides <span class="texttt">\sectionpage</span> and
-            <span class="texttt">\subsectionpage</span> commands, which are used
+            also provides <span class="verb">\sectionpage</span> and
+            <span class="verb">\subsectionpage</span> commands, which are used
             to fill a frame with section or subsection number and title in a
             stylish way. They are very similar to
-            <span class="texttt">\partpage</span> command described below.
+            <span class="verb">\partpage</span> command described below.
           </p>
           <div class="command">
             <div class="command-headline">
@@ -1345,13 +1340,13 @@
               </div>
               <p>
                 This template is invoked when the
-                <span class="texttt">\sectionpage</span> command is used.
+                <span class="verb">\sectionpage</span> command is used.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd
                       ><span class="opt"
@@ -1384,29 +1379,29 @@
                   </div>
                   <p>
                     are used, including the background color of
-                    <span class="texttt">section title</span>. As for the
-                    <span class="texttt">title page</span> template, the
+                    <span class="verb">section title</span>. As for the
+                    <span class="verb">title page</span> template, the
                     <span class="meta"
                       ><span class="angle">&langle;</span><i>alignment</i
                       ><span class="angle">&rangle;</span></span
                     >
                     option is passed on the
-                    <span class="texttt">beamercolorbox</span>.
+                    <span class="verb">beamercolorbox</span>.
                   </p>
                 </li>
               </ul>
               <p>The following commands are useful for this template:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertsection</span></kbd>
                     inserts the title of the current section.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertsectionnumber</span></kbd>
                     inserts the current section number.
                   </p>
@@ -1421,8 +1416,7 @@
               </p>
             </div>
             <p>
-              Works the same way as the
-              <span class="texttt">\sectionpage</span>.
+              Works the same way as the <span class="verb">\sectionpage</span>.
             </p>
             <div class="element">
               <div class="element-headline">
@@ -1432,10 +1426,10 @@
                 </p>
               </div>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd
                       ><span class="opt"
@@ -1467,29 +1461,29 @@
                   </div>
                   <p>
                     are used, including the background color of
-                    <span class="texttt">subsection title</span>. As for the
-                    <span class="texttt">title page</span> template, the
+                    <span class="verb">subsection title</span>. As for the
+                    <span class="verb">title page</span> template, the
                     <span class="meta"
                       ><span class="angle">&langle;</span><i>alignment</i
                       ><span class="angle">&rangle;</span></span
                     >
                     option is passed on the
-                    <span class="texttt">beamercolorbox</span>.
+                    <span class="verb">beamercolorbox</span>.
                   </p>
                 </li>
               </ul>
               <p>The following commands are useful for this template:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertsubsection</span></kbd>
                     inserts the title of the current subsection.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd
                       ><span class="declare">\insertsubsectionnumber</span></kbd
                     >
@@ -1518,15 +1512,15 @@
           </p>
           <p>
             To create a new part, use the
-            <span class="texttt">\part</span> command. All sections and
+            <span class="verb">\part</span> command. All sections and
             subsections following this command will be &ldquo;local&rdquo; to
-            that part. Like the <span class="texttt">\section</span> and
-            <span class="texttt">\subsection</span> command, the
-            <span class="texttt">\part</span> command does not cause any frame
-            or special text to be produced. However, it is often advisable for
-            the start of a new part to use the command
-            <span class="texttt">\partpage</span> to insert some text into a
-            frame that &ldquo;advertises&rdquo; the beginning of a new part.
+            that part. Like the <span class="verb">\section</span> and
+            <span class="verb">\subsection</span> command, the
+            <span class="verb">\part</span> command does not cause any frame or
+            special text to be produced. However, it is often advisable for the
+            start of a new part to use the command
+            <span class="verb">\partpage</span> to insert some text into a frame
+            that &ldquo;advertises&rdquo; the beginning of a new part.
           </p>
           <div class="command">
             <div class="command-headline">
@@ -1555,14 +1549,14 @@
                 ><span class="angle">&langle;</span><i>part name</i
                 ><span class="angle">&rangle;</span></span
               >
-              will be shown when the
-              <span class="texttt">\partpage</span> command is used. The
+              will be shown when the <span class="verb">\partpage</span> command
+              is used. The
               <span class="meta"
                 ><span class="angle">&langle;</span><i>short part name</i
                 ><span class="angle">&rangle;</span></span
               >
               is not shown anywhere by default, but it is accessible via the
-              command <span class="texttt">\insertshortpart</span>.
+              command <span class="verb">\insertshortpart</span>.
             </p>
             <p>
               <i>Example: </i>
@@ -1622,13 +1616,13 @@
               </p>
             </div>
             <p>
-              Works like <span class="texttt">\titlepage</span>, only that the
+              Works like <span class="verb">\titlepage</span>, only that the
               current part, not the current presentation is
               &ldquo;advertised.&rdquo;
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\begin{frame}\partpage\end{frame}</span>
+              ><span class="verb">\begin{frame}\partpage\end{frame}</span>
             </p>
             <div class="element">
               <div class="element-headline">
@@ -1638,13 +1632,13 @@
               </div>
               <p>
                 This template is invoked when the
-                <span class="texttt">\partpage</span> command is used.
+                <span class="verb">\partpage</span> command is used.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd
                       ><span class="opt"
@@ -1677,29 +1671,29 @@
                   </div>
                   <p>
                     are used, including the background color of
-                    <span class="texttt">part title</span>. As for the
-                    <span class="texttt">title page</span> template, the
+                    <span class="verb">part title</span>. As for the
+                    <span class="verb">title page</span> template, the
                     <span class="meta"
                       ><span class="angle">&langle;</span><i>alignment</i
                       ><span class="angle">&rangle;</span></span
                     >
                     option is passed on the
-                    <span class="texttt">beamercolorbox</span>.
+                    <span class="verb">beamercolorbox</span>.
                   </p>
                 </li>
               </ul>
               <p>The following commands are useful for this template:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertpart</span></kbd> inserts
                     the current part name.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertpartnumber</span></kbd>
                     inserts the current part number as an Arabic number into a
                     template.
@@ -1707,7 +1701,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd
                       ><span class="declare">\insertromanpartnumber</span></kbd
                     >
@@ -1756,25 +1750,25 @@
           <p>
             When using
             <span class="beamer-name"><span class="textsc">beamer</span></span>
-            with the <span class="texttt">article</span> mode, you may wish to
+            with the <span class="verb">article</span> mode, you may wish to
             have the lecture notes of a whole course reside in one file. In this
             case, only a few frames are actually part of any particular lecture.
           </p>
           <p>
-            The <span class="texttt">\lecture</span> command makes it easy to
+            The <span class="verb">\lecture</span> command makes it easy to
             select only a certain set of frames from a file to be presented.
             This command takes (among other things) a label name. If you say
-            <span class="texttt">\includeonlylecture</span> with this label
-            name, then only the frames following the corresponding
-            <span class="texttt">\lecture</span> command are shown. The frames
-            following other <span class="texttt">\lecture</span> commands are
+            <span class="verb">\includeonlylecture</span> with this label name,
+            then only the frames following the corresponding
+            <span class="verb">\lecture</span> command are shown. The frames
+            following other <span class="verb">\lecture</span> commands are
             suppressed.
           </p>
           <p>
-            By default, the <span class="texttt">\lecture</span> command has no
+            By default, the <span class="verb">\lecture</span> command has no
             other effect. It does not create any frames or introduce entries in
             the table of contents. However, you can use
-            <span class="texttt">\AtBeginLecture</span> to have
+            <span class="verb">\AtBeginLecture</span> to have
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             insert, say, a title page at the beginning of (each) lecture.
           </p>
@@ -1804,13 +1798,13 @@
                 ><span class="angle">&rangle;</span></span
               >
               will be available via the
-              <span class="texttt">\insertlecture</span> command. The
+              <span class="verb">\insertlecture</span> command. The
               <span class="meta"
                 ><span class="angle">&langle;</span><i>short lecture name</i
                 ><span class="angle">&rangle;</span></span
               >
               is available via the
-              <span class="texttt">\insertshortlecture</span> command.
+              <span class="verb">\insertshortlecture</span> command.
             </p>
             <p>
               <i>Example: </i>
@@ -1839,7 +1833,7 @@
             </div>
             <p>
               This command has no effect in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
@@ -1853,22 +1847,22 @@
               </p>
             </div>
             <p>
-              Causes all <span class="texttt">\frame</span>,
-              <span class="texttt">frame</span>,
-              <span class="texttt">\section</span>,
-              <span class="texttt">\subsection</span>, and
-              <span class="texttt">\part</span> commands following a
-              <span class="texttt">\lecture</span> command to be suppressed,
+              Causes all <span class="verb">\frame</span>,
+              <span class="verb">frame</span>,
+              <span class="verb">\section</span>,
+              <span class="verb">\subsection</span>, and
+              <span class="verb">\part</span> commands following a
+              <span class="verb">\lecture</span> command to be suppressed,
               except if the lecture&rsquo;s label matches the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>lecture label</i
                 ><span class="angle">&rangle;</span></span
-              >. Frames before any <span class="texttt">\lecture</span> commands
+              >. Frames before any <span class="verb">\lecture</span> commands
               are always included. This command should be given in the preamble.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\includeonlylecture{week 1}</span>
+              ><span class="verb">\includeonlylecture{week 1}</span>
             </p>
             <div class="articlenote">
               <p>
@@ -1877,7 +1871,7 @@
             </div>
             <p>
               This command has no effect in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
@@ -1911,7 +1905,7 @@
             </div>
             <p>
               This command has no effect in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <!--
@@ -1926,7 +1920,7 @@
           <a id="beameruserguide-autopage-329"></a>
           <p>
             You can create a table of contents using the command
-            <span class="texttt">\tableofcontents</span>. Unlike the normal
+            <span class="verb">\tableofcontents</span>. Unlike the normal
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >L<span class="latexlogosup">a</span>T<span class="latexlogosub"
@@ -1983,12 +1977,12 @@
 </pre
             >
             <p>The following options can be given:</p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">currentsection</span></span
+                    ><span class="verb">currentsection</span></span
                   >
                   causes all sections but the current to be shown in a
                   semi-transparent way. Also, all subsections but those in the
@@ -2002,21 +1996,21 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">currentsubsection</span></span
+                    ><span class="verb">currentsubsection</span></span
                   >
                   causes all subsections but the current subsection in the
                   current section to be shown in a semi-transparent way. This
                   command is a shorthand for specifying the option
-                  <span class="texttt">subsectionstyle=show/shaded</span>.
+                  <span class="verb">subsectionstyle=show/shaded</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">firstsection=</span
+                    ><span class="verb">firstsection=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>section number</i
                       ><span class="angle">&rangle;</span></span
@@ -2032,50 +2026,50 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">hideallsubsections</span></span
+                    ><span class="verb">hideallsubsections</span></span
                   >
                   causes all subsections to be hidden. This command is a
                   shorthand for specifying the option
-                  <span class="texttt">subsectionstyle=hide</span>.
+                  <span class="verb">subsectionstyle=hide</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">hideothersubsections</span></span
+                    ><span class="verb">hideothersubsections</span></span
                   >
                   causes the subsections of sections other than the current one
                   to be hidden. This command is a shorthand for specifying the
                   option
-                  <span class="texttt">subsectionstyle=show/show/hide</span>.
+                  <span class="verb">subsectionstyle=show/show/hide</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">lastsection=</span
+                    ><span class="verb">lastsection=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>section number</i
                       ><span class="angle">&rangle;</span></span
                     ></span
                   >
-                  similar to <span class="texttt">firstsection</span>, this
-                  option specifies which section should be the last numbered
-                  section. This is useful if you have unnumbered sections at the
-                  end, like a summary or outlook. Section numbers are not shown
-                  by default. To show them, you must install a different table
-                  of contents templates.
+                  similar to <span class="verb">firstsection</span>, this option
+                  specifies which section should be the last numbered section.
+                  This is useful if you have unnumbered sections at the end,
+                  like a summary or outlook. Section numbers are not shown by
+                  default. To show them, you must install a different table of
+                  contents templates.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">part=</span
+                    ><span class="verb">part=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>part number</i
                       ><span class="angle">&rangle;</span></span
@@ -2089,36 +2083,36 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                   to be shown, instead of the table of contents of the current
                   part (which is the default). This option can be combined with
                   the other options, although combining it with the
-                  <span class="texttt">current</span> option obviously makes no
+                  <span class="verb">current</span> option obviously makes no
                   sense.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">pausesections</span></span
+                    ><span class="verb">pausesections</span></span
                   >
-                  causes a <span class="texttt">\pause</span> command to be
-                  issued before each section. This is useful if you wish to show
-                  the table of contents in an incremental way.
+                  causes a <span class="verb">\pause</span> command to be issued
+                  before each section. This is useful if you wish to show the
+                  table of contents in an incremental way.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">pausesubsections</span></span
+                    ><span class="verb">pausesubsections</span></span
                   >
-                  causes a <span class="texttt">\pause</span> command to be
-                  issued before each subsection.
+                  causes a <span class="verb">\pause</span> command to be issued
+                  before each subsection.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">sections=</span>{<span class="meta"
+                    ><span class="verb">sections=</span>{<span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>overlay specification</i
                       ><span class="angle">&rangle;</span></span
@@ -2131,26 +2125,26 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                     ><span class="angle">&rangle;</span></span
                   >
                   to be shown. For example,
-                  <span class="texttt">sections={&lt;2-4| handout:0&gt;}</span>
+                  <span class="verb">sections={&lt;2-4| handout:0&gt;}</span>
                   causes only the second, third, and fourth section to be shown
                   in the normal version, nothing to be shown in the handout
                   version, and everything to be shown in all other versions. For
                   convenience, if you omit the pointed brackets, the
                   specification is assumed to apply to all versions. Thus
-                  <span class="texttt">sections={2-4}</span> causes sections
-                  two, three, and four to be shown in all versions.
+                  <span class="verb">sections={2-4}</span> causes sections two,
+                  three, and four to be shown in all versions.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">sectionstyle=</span
+                    ><span class="verb">sectionstyle=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>style for current section</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">/</span
+                    ><span class="verb">/</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>style for other sections</i
@@ -2162,9 +2156,9 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                     ><span class="angle">&langle;</span><i>styles</i
                     ><span class="angle">&rangle;</span></span
                   >
-                  are <span class="texttt">show</span>,
-                  <span class="texttt">shaded</span>, and
-                  <span class="texttt">hide</span>. The first will show the
+                  are <span class="verb">show</span>,
+                  <span class="verb">shaded</span>, and
+                  <span class="verb">hide</span>. The first will show the
                   section title normally, the second will show it in a
                   semi-transparent way, and the third will completely suppress
                   it. You can also omit the second style, in which case the
@@ -2173,19 +2167,19 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">subsectionstyle=</span
+                    ><span class="verb">subsectionstyle=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>style for current subsection</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">/</span
+                    ><span class="verb">/</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>style for other subsections in current section</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">/</span><br />
+                    ><span class="verb">/</span><br />
                     <span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>style for subsections in other sections</i
@@ -2193,36 +2187,36 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                     ></span
                   >
                   specifies how subsections should be displayed. The same styles
-                  as for the <span class="texttt">sectionstyle</span> option may
+                  as for the <span class="verb">sectionstyle</span> option may
                   be given. You can omit the last style, in which case the
                   second also applies to the last, and you can omit the last
                   two, in which case the first applies to all.
                 </p>
                 <p>
                   <i>Example: </i
-                  ><span class="texttt">subsectionstyle=shaded</span> causes all
+                  ><span class="verb">subsectionstyle=shaded</span> causes all
                   subsections to be shaded.
                 </p>
                 <p>
                   <i>Example: </i
-                  ><span class="texttt">subsectionstyle=hide</span> causes all
+                  ><span class="verb">subsectionstyle=hide</span> causes all
                   subsections to be hidden.
                 </p>
                 <p>
                   <i>Example: </i
-                  ><span class="texttt">subsectionstyle=show/shaded</span>
-                  causes all subsections but the current subsection in the
-                  current section to be shown in a semi-transparent way.
+                  ><span class="verb">subsectionstyle=show/shaded</span> causes
+                  all subsections but the current subsection in the current
+                  section to be shown in a semi-transparent way.
                 </p>
                 <p>
                   <i>Example: </i
-                  ><span class="texttt">subsectionstyle=show/show/hide</span>
+                  ><span class="verb">subsectionstyle=show/show/hide</span>
                   causes all subsections outside the current section to be
                   suppressed.
                 </p>
                 <p>
                   <i>Example: </i
-                  ><span class="texttt">subsectionstyle=show/shaded/hide</span>
+                  ><span class="verb">subsectionstyle=show/shaded/hide</span>
                   causes all subsections outside the current section to be
                   suppressed and only the current subsection in the current
                   section to be highlighted.
@@ -2230,27 +2224,27 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">subsubsectionstyle=</span
+                    ><span class="verb">subsubsectionstyle=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>style for current subsubsection</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">/</span
+                    ><span class="verb">/</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i
                         >style for other subsubsections in current subsection</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">/</span><br />
+                    ><span class="verb">/</span><br />
                     <span class="meta"
                       ><span class="angle">&langle;</span
                       ><i
                         >style for subsubsections in other subsections in
                         current section</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">/</span
+                    ><span class="verb">/</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i
@@ -2261,11 +2255,11 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                   >
                   specifies how subsubsections should be displayed. The same
                   styles as for the
-                  <span class="texttt">sectionstyle</span> option may be given.
+                  <span class="verb">sectionstyle</span> option may be given.
                   You can omit styles from the end of the list, in which case
                   the last given style will also be applied to the omitted
                   styles. This option operates in an analogous manner to
-                  <span class="texttt">subsectionstyle</span>.
+                  <span class="verb">subsectionstyle</span>.
                 </p>
               </li>
             </ul>
@@ -2279,8 +2273,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               </p>
             </div>
             <p>
-              The options are ignored in
-              <span class="texttt">article</span> mode.
+              The options are ignored in <span class="verb">article</span> mode.
             </p>
             <div class="element">
               <div class="element-headline">
@@ -2291,31 +2284,30 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               </div>
               <p>
                 This is a parent template, whose children are
-                <span class="texttt">section in toc</span> and
-                <span class="texttt">subsection in toc</span>. This means that
-                if you use the
-                <span class="texttt">\setbeamertemplate</span> command on this
-                template, the command is instead called for both of these
-                children (with the same arguments).
+                <span class="verb">section in toc</span> and
+                <span class="verb">subsection in toc</span>. This means that if
+                you use the <span class="verb">\setbeamertemplate</span> command
+                on this template, the command is instead called for both of
+                these children (with the same arguments).
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd></span
                     >
                     In the default setting, the sections and subsections are
                     typeset using the fonts and colors
-                    <span class="texttt">section in toc</span> and
-                    <span class="texttt">subsection in toc</span>, though the
+                    <span class="verb">section in toc</span> and
+                    <span class="verb">subsection in toc</span>, though the
                     background colors are ignored. The subsections are indented.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd
                         >[<span class="declare">sections numbered</span>]</kbd
@@ -2327,7 +2319,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd
                         >[<span class="declare">subsections numbered</span
@@ -2343,7 +2335,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">circle</span>]</kbd></span
                     >
@@ -2352,7 +2344,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                     <span class="beamer-name"
                       ><span class="textsc">beamer</span></span
                     >-font and color
-                    <span class="texttt">section number projected</span> is used
+                    <span class="verb">section number projected</span> is used
                     for typesetting the circles, that is, the circle gets the
                     background color and the text inside the circle the
                     foreground color.
@@ -2360,11 +2352,11 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">square</span>]</kbd></span
                     >
-                    Similar to the <span class="texttt">circle</span> option,
+                    Similar to the <span class="verb">circle</span> option,
                     except that small squares are used instead of circles.
                     Small, unnumbered squares are shown in front of the
                     subsections.
@@ -2372,32 +2364,32 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">ball</span>]</kbd></span
                     >
-                    Like <span class="texttt">square</span>, the only difference
+                    Like <span class="verb">square</span>, the only difference
                     being the balls are used instead of squares.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd
                         >[<span class="declare">ball unnumbered</span>]</kbd
                       ></span
                     >
-                    Similar to <span class="texttt">ball</span>, except that no
+                    Similar to <span class="verb">ball</span>, except that no
                     numbering is used. This option makes the table of contents
-                    look more like an <span class="texttt">itemize</span>.
+                    look more like an <span class="verb">itemize</span>.
                   </p>
                 </li>
               </ul>
               <p>
                 If none of the above options suits you, you have to change the
-                templates <span class="texttt">section in toc</span> and
-                <span class="texttt">subsection in toc</span> directly.
+                templates <span class="verb">section in toc</span> and
+                <span class="verb">subsection in toc</span> directly.
               </p>
             </div>
             <div class="element">
@@ -2411,17 +2403,17 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               </div>
               <p>
                 A parent template with children
-                <span class="texttt">section in toc shaded</span> and
-                <span class="texttt">subsection in toc shaded</span>. They are
+                <span class="verb">section in toc shaded</span> and
+                <span class="verb">subsection in toc shaded</span>. They are
                 used to render section and subsection entries when they are
                 currently shaded; like all non-current subsections in
-                <span class="texttt">\tableofcontents[currentsubsection]</span>.
+                <span class="verb">\tableofcontents[currentsubsection]</span>.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd
                       ><span class="opt"
@@ -2433,10 +2425,10 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                       ></span
                     >
                     In the default setting, the templates
-                    <span class="texttt">section in toc shaded</span> and
-                    <span class="texttt">subsection in toc shaded</span> just
-                    show whatever the nonshaded versions of these templates
-                    show, but only
+                    <span class="verb">section in toc shaded</span> and
+                    <span class="verb">subsection in toc shaded</span> just show
+                    whatever the nonshaded versions of these templates show, but
+                    only
                     <span class="meta"
                       ><span class="angle">&langle;</span><i>opaqueness</i
                       ><span class="angle">&rangle;</span></span
@@ -2444,7 +2436,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                   </p>
                   <p>
                     <i>Example: </i
-                    ><span class="texttt"
+                    ><span class="verb"
                       >\setbeamertemplate{section in toc
                       shaded}[default][50]</span
                     >
@@ -2466,7 +2458,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
           <a id="beameruserguide-autopage-332"></a>
           <p>
             You can use the bibliography environment and the
-            <span class="texttt">\cite</span> commands of
+            <span class="verb">\cite</span> commands of
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >L<span class="latexlogosup">a</span>T<span class="latexlogosub"
@@ -2478,18 +2470,18 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             presentation. You will typically have to typeset your bibliography
             items partly &ldquo;by hand.&rdquo; Nevertheless, you
-            <em>can</em> use <span class="texttt">bibtex</span> to create a
+            <em>can</em> use <span class="verb">bibtex</span> to create a
             &ldquo;first approximation&rdquo; of the bibliography. Copy the
-            content of the file <span class="texttt">main.bbl</span> into your
+            content of the file <span class="verb">main.bbl</span> into your
             presentation. If you are not familiar with
-            <span class="texttt">bibtex</span>, you may wish to consult its
+            <span class="verb">bibtex</span>, you may wish to consult its
             documentation. It is a powerful tool for creating high-quality
             citations.
           </p>
           <p>
-            Using <span class="texttt">bibtex</span> or your editor, place your
+            Using <span class="verb">bibtex</span> or your editor, place your
             bibliographic references in the environment
-            <span class="texttt">thebibliography</span>. This (standard
+            <span class="verb">thebibliography</span>. This (standard
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >L<span class="latexlogosup">a</span>T<span class="latexlogosub"
@@ -2497,7 +2489,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 >X</span
               ></span
             >) environment takes one parameter, which should be the longest
-            <span class="texttt">\bibitem</span> label in the following list of
+            <span class="verb">\bibitem</span> label in the following list of
             bibliographic entries.
           </p>
           <div class="environment">
@@ -2542,7 +2534,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                     >e</span
                   >X</span
                 ></span
-              >) <span class="texttt">\bibitem</span> command for each reference
+              >) <span class="verb">\bibitem</span> command for each reference
               item. Inside each item, use a (standard
               <span class="latexlogofont"
                 ><span class="latexlogo"
@@ -2551,7 +2543,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                     >e</span
                   >X</span
                 ></span
-              >) <span class="texttt">\newblock</span> command to separate the
+              >) <span class="verb">\newblock</span> command to separate the
               authors&rsquo; names, the title, the book/journal reference, and
               any notes. Each of these commands may introduce a new line or
               color or other formatting, as specified by the template for
@@ -2561,10 +2553,10 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               The environment must be placed inside a frame. If the bibliography
               does not fit on one frame, you should split it (create a new frame
               and a second
-              <span class="texttt">thebibliography</span> environment) or use
-              the <span class="texttt">allowframebreaks</span> option. Even
-              better, you should reconsider whether it is a good idea to present
-              so many references.
+              <span class="verb">thebibliography</span> environment) or use the
+              <span class="verb">allowframebreaks</span>
+              option. Even better, you should reconsider whether it is a good
+              idea to present so many references.
             </p>
             <p>
               <i>Example: </i>
@@ -2592,9 +2584,9 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               journal, and note text. These author templates are inserted before
               the first block of the entry (the first block is all text before
               the first occurrence of a
-              <span class="texttt">\newblock</span> command). The title template
+              <span class="verb">\newblock</span> command). The title template
               is inserted before the second block (the text between the first
-              and second occurrence of <span class="texttt">\newblock</span>).
+              and second occurrence of <span class="verb">\newblock</span>).
               Likewise for the journal and note templates.
             </p>
             <p>
@@ -2633,9 +2625,9 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               <p>
                 This template is inserted before the title of a bibliography
                 entry (more precisely, it is inserted after the first occurrence
-                of the <span class="texttt">\newblock</span> command). By
-                default, this template starts a new paragraph, causing a line
-                break. The default color is the normal text color.
+                of the <span class="verb">\newblock</span> command). By default,
+                this template starts a new paragraph, causing a line break. The
+                default color is the normal text color.
               </p>
             </div>
             <div class="element">
@@ -2647,7 +2639,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               </div>
               <p>
                 This template is inserted before the journal of a bibliography
-                entry (the second <span class="texttt">\newblock</span>). By
+                entry (the second <span class="verb">\newblock</span>). By
                 default, this template starts a new paragraph. The default color
                 is a slightly transparent version of the structure color.
               </p>
@@ -2662,9 +2654,9 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
               <p>
                 This template is inserted before any note text at the end of a
                 bibliography entry (it is inserted before the third
-                <span class="texttt">\newblock</span>). By default, this
-                template starts a new paragraph. The default color is the same
-                as for the journal.
+                <span class="verb">\newblock</span>). By default, this template
+                starts a new paragraph. The default color is the same as for the
+                journal.
               </p>
             </div>
           </div>
@@ -2697,19 +2689,18 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 ><span class="angle">&rangle;</span></span
               >
               is inserted into the text when the item is cited using
-              <span class="texttt">\cite{</span
+              <span class="verb">\cite{</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>label name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">}</span> in the main presentation text. For
-              a
+              ><span class="verb">}</span> in the main presentation text. For a
               <span class="beamer-name"
                 ><span class="textsc">beamer</span></span
               >
               presentation, this should usually be as long as possible.
             </p>
             <p>
-              Use <span class="texttt">\newblock</span> commands to separate the
+              Use <span class="verb">\newblock</span> commands to separate the
               authors&rsquo;s names, the title, the book/journal reference, and
               any notes. If the
               <span class="meta"
@@ -2754,10 +2745,10 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 talk.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd></span
                     >
@@ -2768,7 +2759,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">article</span>]</kbd></span
                     >
@@ -2777,7 +2768,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">book</span>]</kbd></span
                     >
@@ -2787,7 +2778,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">online</span>]</kbd></span
                     >
@@ -2797,7 +2788,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">triangle</span>]</kbd></span
                     >
@@ -2807,7 +2798,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">text</span>]</kbd></span
                     >
@@ -2818,10 +2809,10 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
                 </li>
               </ul>
               <p>The following insert is useful for the template:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertbiblabel</span></kbd>
                     inserts the current citation label.
                   </p>
@@ -2841,14 +2832,14 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
           <a id="beameruserguide-autopage-335"></a>
           <p>
             You can add an appendix to your talk by using the
-            <span class="texttt">\appendix</span> command. You should put frames
+            <span class="verb">\appendix</span> command. You should put frames
             and perhaps whole subsections into the appendix that you do not
             intend to show during your presentation, but which might be useful
             to answer a question. The
-            <span class="texttt">\appendix</span> command essentially just
-            starts a new part named <span class="texttt">\appendixname</span>.
-            However, it also sets up certain hyperlinks. Like other parts, the
-            appendix is kept separate from your actual talk.
+            <span class="verb">\appendix</span> command essentially just starts
+            a new part named <span class="verb">\appendixname</span>. However,
+            it also sets up certain hyperlinks. Like other parts, the appendix
+            is kept separate from your actual talk.
           </p>
           <div class="command">
             <div class="command-headline">
@@ -2864,8 +2855,8 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
             </div>
             <p>
               Starts the appendix in the specified modes. All frames, all
-              <span class="texttt">\subsection</span> commands, and all
-              <span class="texttt">\section</span> commands used after this
+              <span class="verb">\subsection</span> commands, and all
+              <span class="verb">\section</span> commands used after this
               command will not be shown as part of the normal navigation bars.
             </p>
             <p>
@@ -2927,7 +2918,7 @@ sectionstyle=show/shaded,subsectionstyle=show/show/shaded
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

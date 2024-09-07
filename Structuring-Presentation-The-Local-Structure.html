@@ -8,7 +8,7 @@
     <title>
       Structuring a Presentation: The Local Structure - Beamer Manual
     </title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -92,7 +92,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -191,7 +191,7 @@
             >
             provides different commands for structuring text
             &ldquo;locally,&rdquo; for example, via the
-            <span class="texttt">itemize</span> environment. These environments
+            <span class="verb">itemize</span> environment. These environments
             are also available in the
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             class, although their appearance has been slightly changed.
@@ -214,21 +214,21 @@
 
           <p>
             There are three predefined environments for creating lists, namely
-            <span class="texttt">enumerate</span>,
-            <span class="texttt">itemize</span>, and
-            <span class="texttt">description</span>. The first two can be nested
+            <span class="verb">enumerate</span>,
+            <span class="verb">itemize</span>, and
+            <span class="verb">description</span>. The first two can be nested
             to depth three, but nesting them to this depth creates totally
             unreadable slides.
           </p>
           <p>
-            The <span class="texttt">\item</span> command is overlay
+            The <span class="verb">\item</span> command is overlay
             specification-aware. If an overlay specification is provided, the
             item will only be shown on the specified slides, see the following
-            example. If the <span class="texttt">\item</span> command is to take
+            example. If the <span class="verb">\item</span> command is to take
             an optional argument and an overlay specification, the overlay
             specification can either come first as in
-            <span class="texttt">\item&lt;1&gt;[Cat]</span> or come last as in
-            <span class="texttt">\item[Cat]&lt;1&gt;</span>.
+            <span class="verb">\item&lt;1&gt;[Cat]</span> or come last as in
+            <span class="verb">\item[Cat]&lt;1&gt;</span>.
           </p>
           <div class="fancyvrb" style>
             <pre class="verbatim">
@@ -253,12 +253,12 @@
               <div class="begin-environment">
                 <p>
                   \begin{<span class="declare">itemize</span>}<span class="opt"
-                    ><span class="texttt">[&lt;</span
+                    ><span class="verb">[&lt;</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>default overlay specification</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">&gt;]</span></span
+                    ><span class="verb">&gt;]</span></span
                   >
                 </p>
               </div>
@@ -277,7 +277,7 @@
             <p>
               Used to display a list of items that do not have a special
               ordering. Inside the environment, use an
-              <span class="texttt">\item</span> command for each topic.
+              <span class="verb">\item</span> command for each topic.
             </p>
             <p>
               If the optional parameter
@@ -287,7 +287,7 @@
                 ><span class="angle">&rangle;</span></span
               >
               is given, in every occurrence of an
-              <span class="texttt">\item</span> command that does not have an
+              <span class="verb">\item</span> command that does not have an
               overlay specification attached to it, the
               <span class="meta"
                 ><span class="angle">&langle;</span
@@ -307,7 +307,7 @@
               >
               is inherited by subenvironments. Naturally, in a subenvironment
               you can reset it locally by setting it to
-              <span class="texttt">&lt;1-&gt;</span>.
+              <span class="verb">&lt;1-&gt;</span>.
             </p>
             <p>
               <i>Example: </i>
@@ -357,7 +357,7 @@
               >
             </div>
             <p>
-              The appearance of an <span class="texttt">itemize</span> list is
+              The appearance of an <span class="verb">itemize</span> list is
               governed by several templates. The first template concerns the way
               the little marker introducing each item is typeset:
             </p>
@@ -370,19 +370,18 @@
               </div>
               <p>
                 This template is a parent template, whose children are
-                <span class="texttt">itemize item</span>,
-                <span class="texttt">itemize subitem</span>, and
-                <span class="texttt">itemize subsubitem</span>. This means that
-                if you use the
-                <span class="texttt">\setbeamertemplate</span> command on this
-                template, the command is instead called for all of these
+                <span class="verb">itemize item</span>,
+                <span class="verb">itemize subitem</span>, and
+                <span class="verb">itemize subsubitem</span>. This means that if
+                you use the <span class="verb">\setbeamertemplate</span> command
+                on this template, the command is instead called for all of these
                 children (with the same arguments).
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd></span
                     >
@@ -390,16 +389,16 @@
                     foreground of the
                     <span class="beamer-name"
                       ><span class="textsc">beamer</span></span
-                    >-color <span class="texttt">itemize item</span> (or, for
-                    subitems, <span class="texttt">itemize subitem</span> etc.).
+                    >-color <span class="verb">itemize item</span> (or, for
+                    subitems, <span class="verb">itemize subitem</span> etc.).
                     Note that these colors will automatically change under
                     certain circumstances such as inside an example block or
-                    inside an <span class="texttt">alertenv</span> environment.
+                    inside an <span class="verb">alertenv</span> environment.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">triangle</span>]</kbd></span
                     >
@@ -408,7 +407,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">circle</span>]</kbd></span
                     >
@@ -417,7 +416,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">square</span>]</kbd></span
                     >
@@ -426,7 +425,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">ball</span>]</kbd></span
                     >
@@ -444,11 +443,11 @@
               </div>
               <p>Color/font parents: <kbd>item</kbd></p>
               <p>
-                This template (with <span class="texttt">item</span> instead of
-                <span class="texttt">items</span>) governs how the marker in
-                front of a first-level item is typeset.
-                &ldquo;First-level&rdquo; refers to the level of nesting. See
-                the <span class="texttt">itemize items</span> template for the
+                This template (with <span class="verb">item</span> instead of
+                <span class="verb">items</span>) governs how the marker in front
+                of a first-level item is typeset. &ldquo;First-level&rdquo;
+                refers to the level of nesting. See the
+                <span class="verb">itemize items</span> template for the
                 <span class="meta"
                   ><span class="angle">&langle;</span><i>options</i
                   ><span class="angle">&rangle;</span></span
@@ -459,16 +458,16 @@
                 When the template is inserted, the
                 <span class="beamer-name"
                   ><span class="textsc">beamer</span></span
-                >-font and -color <span class="texttt">itemize item</span> is
+                >-font and -color <span class="verb">itemize item</span> is
                 installed. Typically, the font is ignored by the template as
                 some special symbol is drawn anyway, by the font may be
                 important if an optional argument is given to the
-                <span class="texttt">\item</span> command as in
-                <span class="texttt">\item[First]</span>.
+                <span class="verb">\item</span> command as in
+                <span class="verb">\item[First]</span>.
               </p>
               <p>
                 The font and color inherit from the
-                <span class="texttt">item</span> font and color, which are
+                <span class="verb">item</span> font and color, which are
                 explained at the end of this section.
               </p>
             </div>
@@ -481,7 +480,7 @@
               </div>
               <p>Color/font parents: <kbd>subitem</kbd></p>
               <p>
-                Like <span class="texttt">itemize item</span>, only for
+                Like <span class="verb">itemize item</span>, only for
                 second-level items. An item of an itemize inside an enumerate
                 counts as a second-level item.
               </p>
@@ -495,7 +494,7 @@
               </div>
               <p>Color/font parents: <kbd>subsubitem</kbd></p>
               <p>
-                Like <span class="texttt">itemize item</span>, only for
+                Like <span class="verb">itemize item</span>, only for
                 third-level items.
               </p>
             </div>
@@ -506,12 +505,12 @@
                 <p>
                   \begin{<span class="declare">enumerate</span>}<span
                     class="opt"
-                    ><span class="texttt">[&lt;</span
+                    ><span class="verb">[&lt;</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>default overlay specification</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">&gt;]</span></span
+                    ><span class="verb">&gt;]</span></span
                   ><span class="opt"
                     ><span class="oarg-left-bracket">[</span
                     ><span class="meta"
@@ -535,7 +534,7 @@
             </div>
             <p>
               Used to display a list of items that are ordered. Inside the
-              environment, use an <span class="texttt">\item</span> command for
+              environment, use an <span class="verb">\item</span> command for
               each topic. By default, before each item increasing Arabic numbers
               followed by a dot are printed (as in &ldquo;1.&rdquo; and
               &ldquo;2.&rdquo;). This can be changed by specifying a different
@@ -549,16 +548,16 @@
                 ><span class="angle">&rangle;</span></span
               >
               has exactly the same effect as for the
-              <span class="texttt">itemize</span> environment. It is
+              <span class="verb">itemize</span> environment. It is
               &ldquo;detected&rdquo; by the opening
-              <span class="texttt">&lt;</span>-sign in the
+              <span class="verb">&lt;</span>-sign in the
               <span class="meta"
                 ><span class="angle">&langle;</span
                 ><i>default overlay specification</i
                 ><span class="angle">&rangle;</span></span
               >. Thus, if there is only one optional argument and if this
-              argument does not start with <span class="texttt">&lt;</span>,
-              then it is considered to be a
+              argument does not start with <span class="verb">&lt;</span>, then
+              it is considered to be a
               <span class="meta"
                 ><span class="angle">&langle;</span><i>mini template</i
                 ><span class="angle">&rangle;</span></span
@@ -571,17 +570,17 @@
                 ><span class="angle">&rangle;</span></span
               >
               is the same as the syntax of mini templates in the
-              <span class="texttt">enumerate</span> package (you do not need to
-              include the <span class="texttt">enumerate</span> package, this is
+              <span class="verb">enumerate</span> package (you do not need to
+              include the <span class="verb">enumerate</span> package, this is
               done automatically). Roughly spoken, the text of the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>mini template</i
                 ><span class="angle">&rangle;</span></span
               >
               is printed before each item, but any occurrence of a
-              <span class="texttt">1</span> in the mini template is replaced by
+              <span class="verb">1</span> in the mini template is replaced by
               the current item number, an occurrence of the letter
-              <span class="texttt">A</span> is replaced by the
+              <span class="verb">A</span> is replaced by the
               <span class="lateximagesource" id="lateximage-beameruserguide-11"
                 ><!--
 𝑖
@@ -601,17 +600,16 @@
                   role="math"
                   src="beameruserguide-images/D50F79E2E66556E5AE928DD6FF809A89.svg"
                   style="height: 0.77591em" /></span
-              >-th item, and the letters <span class="texttt">a</span>,
-              <span class="texttt">i</span>, and
-              <span class="texttt">I</span> are replaced by the corresponding
-              lowercase letters, lowercase Roman letters, and uppercase Roman
-              letters, respectively. So the mini template
-              <span class="texttt">(i)</span> would yield the items (i), (ii),
-              (iii), (iv), and so on. The mini template
-              <span class="texttt">A.)</span> would yield the items A.), B.),
-              C.), D.) and so on. For more details on the possible mini
-              templates, see the documentation of the
-              <span class="texttt">enumerate</span> package. Note that there is
+              >-th item, and the letters <span class="verb">a</span>,
+              <span class="verb">i</span>, and <span class="verb">I</span> are
+              replaced by the corresponding lowercase letters, lowercase Roman
+              letters, and uppercase Roman letters, respectively. So the mini
+              template <span class="verb">(i)</span> would yield the items (i),
+              (ii), (iii), (iv), and so on. The mini template
+              <span class="verb">A.)</span> would yield the items A.), B.), C.),
+              D.) and so on. For more details on the possible mini templates,
+              see the documentation of the
+              <span class="verb">enumerate</span> package. Note that there is
               also a template that governs the appearance of the mini template.
             </p>
             <p>
@@ -647,7 +645,7 @@
                 ><span class="angle">&langle;</span><i>mini template</i
                 ><span class="angle">&rangle;</span></span
               >, you have to include the package
-              <span class="texttt">enumerate</span>.
+              <span class="verb">enumerate</span>.
             </p>
             <div class="element">
               <div class="element-headline">
@@ -657,20 +655,20 @@
                 </p>
               </div>
               <p>
-                Similar to <span class="texttt">itemize items</span>, this
+                Similar to <span class="verb">itemize items</span>, this
                 template is a parent template, whose children are
-                <span class="texttt">enumerate item</span>,
-                <span class="texttt">enumerate subitem</span>,
-                <span class="texttt">enumerate subsubitem</span>, and
-                <span class="texttt">enumerate mini template</span>. These
+                <span class="verb">enumerate item</span>,
+                <span class="verb">enumerate subitem</span>,
+                <span class="verb">enumerate subsubitem</span>, and
+                <span class="verb">enumerate mini template</span>. These
                 templates govern how the text (the number) of an enumeration is
                 typeset.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd></span
                     >
@@ -681,19 +679,19 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">circle</span>]</kbd></span
                     >
                     Places the numbers inside little circles. The colors are
-                    taken from <span class="texttt">item projected</span> or
-                    <span class="texttt">subitem projected</span> or
-                    <span class="texttt">subsubitem projected</span>.
+                    taken from <span class="verb">item projected</span> or
+                    <span class="verb">subitem projected</span> or
+                    <span class="verb">subsubitem projected</span>.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">square</span>]</kbd></span
                     >
@@ -702,7 +700,7 @@
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">ball</span>]</kbd></span
                     >
@@ -723,20 +721,20 @@
                 item is typeset. The level here refers to the level of
                 enumeration nesting only. Thus an enumerate inside an itemize is
                 a first-level enumerate (but it uses the second-level
-                <span class="texttt">itemize/enumerate body</span>).
+                <span class="verb">itemize/enumerate body</span>).
               </p>
               <p>
                 When the template is inserted, the
                 <span class="beamer-name"
                   ><span class="textsc">beamer</span></span
-                >-font and -color <span class="texttt">enumerate item</span> are
+                >-font and -color <span class="verb">enumerate item</span> are
                 installed.
               </p>
               <p>The following command is useful for this template:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertenumlabel</span></kbd>
                     inserts the current number of the top-level enumeration (as
                     an Arabic number). This insert is also available in the next
@@ -753,13 +751,13 @@
                 </p>
               </div>
               <p>
-                Like <span class="texttt">enumerate item</span>, only for
+                Like <span class="verb">enumerate item</span>, only for
                 second-level items.
               </p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertsubenumlabel</span></kbd>
                     inserts the current number of the second-level enumeration
                     (as an Arabic number).
@@ -782,17 +780,17 @@
                 </p>
               </div>
               <p>
-                Like <span class="texttt">enumerate item</span>, only for
+                Like <span class="verb">enumerate item</span>, only for
                 third-level items.
               </p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd
                       ><span class="declare">\insertsubsubenumlabel</span></kbd
                     >
-                    inserts the current number of the second-level enumeration
+                    inserts the current number of the third-level enumeration
                     (as an Arabic number).
                   </p>
                 </li>
@@ -809,10 +807,10 @@
                 This template is used to typeset the number that arises from a
                 mini template.
               </p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertenumlabel</span></kbd>
                     inserts the current number rendered by this mini template.
                     For example, if the
@@ -820,10 +818,10 @@
                       ><span class="angle">&langle;</span><i>mini template</i
                       ><span class="angle">&rangle;</span></span
                     >
-                    is <span class="texttt">(i)</span> and this command is used
-                    in the fourth item,
-                    <span class="texttt">\insertenumlabel</span> would yield
-                    <span class="texttt">(iv)</span>.
+                    is <span class="verb">(i)</span> and this command is used in
+                    the fourth item,
+                    <span class="verb">\insertenumlabel</span> would yield
+                    <span class="verb">(iv)</span>.
                   </p>
                 </li>
               </ul>
@@ -831,8 +829,8 @@
           </div>
           <p>
             The following templates govern how the <em>body</em> of an
-            <span class="texttt">itemize</span> or an
-            <span class="texttt">enumerate</span> is typeset.
+            <span class="verb">itemize</span> or an
+            <span class="verb">enumerate</span> is typeset.
           </p>
           <div class="element">
             <div class="element-headline">
@@ -843,12 +841,12 @@
             </div>
             <p>
               This template is inserted at the beginning of a first-level
-              <span class="texttt">itemize</span> or
-              <span class="texttt">enumerate</span> environment. Furthermore,
+              <span class="verb">itemize</span> or
+              <span class="verb">enumerate</span> environment. Furthermore,
               before this template is inserted, the
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-font and -color
-              <span class="texttt">itemize/enumerate body</span> is used.
+              <span class="verb">itemize/enumerate body</span> is used.
             </p>
           </div>
           <div class="element">
@@ -860,13 +858,13 @@
             </div>
             <p>
               This template is inserted at the end of a first-level
-              <span class="texttt">itemize</span> or
-              <span class="texttt">enumerate</span> environment.
+              <span class="verb">itemize</span> or
+              <span class="verb">enumerate</span> environment.
             </p>
           </div>
           <p>
             There exist corresponding templates like
-            <span class="texttt">itemize/enumerate subbody begin</span> for
+            <span class="verb">itemize/enumerate subbody begin</span> for
             second- and third-level itemize or enumerates.
           </p>
           <div class="element">
@@ -877,15 +875,15 @@
             </div>
             <p>
               This template is a parent template of
-              <span class="texttt">itemize items</span> and
-              <span class="texttt">enumerate items</span>.
+              <span class="verb">itemize items</span> and
+              <span class="verb">enumerate items</span>.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\setbeamertemplate{items}[circle]</span>
-              will cause all items in <span class="texttt">itemize</span> or
-              <span class="texttt">enumerate</span> environments to become
-              circles (of the appropriate size, color, and font).
+              ><span class="verb">\setbeamertemplate{items}[circle]</span> will
+              cause all items in <span class="verb">itemize</span> or
+              <span class="verb">enumerate</span> environments to become circles
+              (of the appropriate size, color, and font).
             </p>
           </div>
           <a id="section-descriptions"></a>
@@ -895,12 +893,12 @@
                 <p>
                   \begin{<span class="declare">description</span>}<span
                     class="opt"
-                    ><span class="texttt">[&lt;</span
+                    ><span class="verb">[&lt;</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>default overlay specification</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">&gt;]</span></span
+                    ><span class="verb">&gt;]</span></span
                   ><span class="opt"
                     ><span class="oarg-left-bracket">[</span
                     ><span class="meta"
@@ -923,8 +921,8 @@
               </div>
             </div>
             <p>
-              Like <span class="texttt">itemize</span>, but used to display a
-              list that explains or defines labels. The width of
+              Like <span class="verb">itemize</span>, but used to display a list
+              that explains or defines labels. The width of
               <span class="meta"
                 ><span class="angle">&langle;</span><i>long text</i
                 ><span class="angle">&rangle;</span></span
@@ -932,24 +930,23 @@
               is used to set the indentation. Normally, you choose the widest
               label in the description and copy it here. If you do not give this
               argument, the default width is used, which can be changed using
-              <span class="texttt">\setbeamersize</span> with the argument
-              <span class="texttt">description width=</span
+              <span class="verb">\setbeamersize</span> with the argument
+              <span class="verb">description width=</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>width</i
                 ><span class="angle">&rangle;</span></span
               >.
             </p>
             <p>
-              As for <span class="texttt">enumerate</span>, the
+              As for <span class="verb">enumerate</span>, the
               <span class="meta"
                 ><span class="angle">&langle;</span
                 ><i>default overlay specification</i
                 ><span class="angle">&rangle;</span></span
               >
-              is detected by an opening&nbsp;<span class="texttt">&lt;</span>.
-              The effect is the same as for
-              <span class="texttt">enumerate</span> and
-              <span class="texttt">itemize</span>.
+              is detected by an opening&nbsp;<span class="verb">&lt;</span>. The
+              effect is the same as for <span class="verb">enumerate</span> and
+              <span class="verb">itemize</span>.
             </p>
             <p>
               <i>Example: </i>
@@ -995,14 +992,14 @@
                 this template is called, the
                 <span class="beamer-name"
                   ><span class="textsc">beamer</span></span
-                >-font and -color
-                <span class="texttt">description item</span> are installed.
+                >-font and -color <span class="verb">description item</span> are
+                installed.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd></span
                     >
@@ -1012,10 +1009,10 @@
                 </li>
               </ul>
               <p>The main insert that is useful inside this template is:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd
                       ><span class="declare">\insertdescriptionitem</span></kbd
                     >
@@ -1033,12 +1030,12 @@
               </div>
               <p>
                 This template is inserted at the beginning of a
-                <span class="texttt">description</span> environment.
-                Furthermore, before this template is inserted, the
+                <span class="verb">description</span> environment. Furthermore,
+                before this template is inserted, the
                 <span class="beamer-name"
                   ><span class="textsc">beamer</span></span
-                >-font and -color
-                <span class="texttt">description body</span> is used.
+                >-font and -color <span class="verb">description body</span> is
+                used.
               </p>
             </div>
             <div class="element">
@@ -1050,7 +1047,7 @@
               </div>
               <p>
                 This template is inserted at the end of a
-                <span class="texttt">description</span> environment.
+                <span class="verb">description</span> environment.
               </p>
             </div>
           </div>
@@ -1069,11 +1066,11 @@
             <p>Font parents: <kbd>structure</kbd></p>
             <p>
               This color/font serves as a parent for the individual items of
-              <span class="texttt">itemize</span> and
-              <span class="texttt">enumerate</span> environments, but also for
+              <span class="verb">itemize</span> and
+              <span class="verb">enumerate</span> environments, but also for
               items in the table of contents. Since its color parent is the
-              <span class="texttt">local structure</span>, a change of that
-              color causes the color of items to change accordingly.
+              <span class="verb">local structure</span>, a change of that color
+              causes the color of items to change accordingly.
             </p>
           </div>
           <div class="element">
@@ -1086,14 +1083,13 @@
             <p>Color/font parents: <kbd>item</kbd></p>
             <p>
               This is a special &ldquo;version&rdquo; of the
-              <span class="texttt">item</span> color and font that should be
-              used by templates that render items with text (as in an
-              enumeration) and which &ldquo;project&rdquo; this text onto
-              something like a ball or a square or whatever. While the normal
-              <span class="texttt">item</span> color typically has a transparent
-              background, the
-              <span class="texttt">item projected</span> typically has a colored
-              background and, say, a white foreground.
+              <span class="verb">item</span> color and font that should be used
+              by templates that render items with text (as in an enumeration)
+              and which &ldquo;project&rdquo; this text onto something like a
+              ball or a square or whatever. While the normal
+              <span class="verb">item</span> color typically has a transparent
+              background, the <span class="verb">item projected</span> typically
+              has a colored background and, say, a white foreground.
             </p>
           </div>
           <div class="element">
@@ -1104,8 +1100,8 @@
             </div>
             <p>Color/font parents: <kbd>item</kbd></p>
             <p>
-              Same as <span class="texttt">item</span> for subitems, that is,
-              for items on the second level of indentation.
+              Same as <span class="verb">item</span> for subitems, that is, for
+              items on the second level of indentation.
             </p>
           </div>
           <div class="element">
@@ -1117,7 +1113,7 @@
             </div>
             <p>Color/font parents: <kbd>item projected</kbd></p>
             <p>
-              Same as <span class="texttt">item projected</span> for subitems,
+              Same as <span class="verb">item projected</span> for subitems,
               that is, for items on the second level of indentation.
             </p>
           </div>
@@ -1130,7 +1126,7 @@
             </div>
             <p>Color/font parents: <kbd>subitem</kbd></p>
             <p>
-              Same as <span class="texttt">subitem</span> for subsubitems, that
+              Same as <span class="verb">subitem</span> for subsubitems, that
               is, for items on the third level of indentation.
             </p>
           </div>
@@ -1143,7 +1139,7 @@
             </div>
             <p>Color/font parents: <kbd>subitem projected</kbd></p>
             <p>
-              Same as <span class="texttt">subitem projected</span> for
+              Same as <span class="verb">subitem projected</span> for
               subsubitems, that is, for items on the third level of indentation.
             </p>
           </div>
@@ -1193,11 +1189,11 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\structure{Paragraph Heading.}</span>
+              ><span class="verb">\structure{Paragraph Heading.}</span>
             </p>
             <p>
               Internally, this command just puts the <em>text</em> inside a
-              <span class="texttt">structureenv</span> environment.
+              <span class="verb">structureenv</span> environment.
             </p>
             <div class="articlenote">
               <p>
@@ -1221,21 +1217,20 @@
                 the headings of blocks, item buttons, and titles. In most color
                 themes, the colors for navigational elements in the headline or
                 the footline are derived from the foreground color of
-                <span class="texttt">structure</span>. By changing the structure
+                <span class="verb">structure</span>. By changing the structure
                 color you can easily change the &ldquo;basic color&rdquo; of
                 your presentation, other than the color of normal text. See also
-                the related color
-                <span class="texttt">local structure</span> and the related font
-                <span class="texttt">tiny structure</span>.
+                the related color <span class="verb">local structure</span> and
+                the related font <span class="verb">tiny structure</span>.
               </p>
               <p>
-                Inside the <span class="texttt">\structure</span> command, the
+                Inside the <span class="verb">\structure</span> command, the
                 background of the color is ignored, but this is not necessarily
                 true for elements that inherit their color from
-                <span class="texttt">structure</span>. There is no template
-                <span class="texttt">structure</span>, use
-                <span class="texttt">structure begin</span> and
-                <span class="texttt">structure end</span> instead.
+                <span class="verb">structure</span>. There is no template
+                <span class="verb">structure</span>, use
+                <span class="verb">structure begin</span> and
+                <span class="verb">structure end</span> instead.
               </p>
             </div>
             <div class="element">
@@ -1249,15 +1244,15 @@
                 This color should be used to typeset structural elements that
                 change their color according to the &ldquo;local
                 environment.&rdquo; For example, an item &ldquo;button&rdquo; in
-                an <span class="texttt">itemize</span> environment changes its
+                an <span class="verb">itemize</span> environment changes its
                 color according to circumstances. If it is used inside an
                 example block, it should have the
-                <span class="texttt">example text</span> color; if it is
-                currently &ldquo;alerted&rdquo; it should have the
-                <span class="texttt">alerted text</span> color. This color is
+                <span class="verb">example text</span> color; if it is currently
+                &ldquo;alerted&rdquo; it should have the
+                <span class="verb">alerted text</span> color. This color is
                 setup by certain environments to have the color that should be
                 used to typeset things like item buttons. Since the color used
-                for items, <span class="texttt">item</span>, inherits from this
+                for items, <span class="verb">item</span>, inherits from this
                 color by default, items automatically change their color
                 according to the current situation.
               </p>
@@ -1265,7 +1260,7 @@
                 If you write your own environment in which the item buttons and
                 similar structural elements should have a different color, you
                 should change the color
-                <span class="texttt">local structure</span> inside these
+                <span class="verb">local structure</span> inside these
                 environments.
               </p>
             </div>
@@ -1279,7 +1274,7 @@
                 This special font is used for &ldquo;tiny&rdquo; structural
                 text. Basically, this font should be used whenever a structural
                 element uses a tiny font. The idea is that the tiny versions of
-                the <span class="texttt">structure</span> font often are not
+                the <span class="verb">structure</span> font often are not
                 suitable. For example, it is often necessary to use a boldface
                 version for them. Also, one might wish to have serif smallcaps
                 structural text, but still retain normal sans-serif tiny
@@ -1315,7 +1310,7 @@
             </div>
             <p>
               Environment version of the
-              <span class="texttt">\structure</span> command.
+              <span class="verb">\structure</span> command.
             </p>
             <div class="element">
               <div class="element-headline">
@@ -1326,13 +1321,13 @@
               </div>
               <p>
                 This text is inserted at the beginning of a
-                <span class="texttt">structureenv</span> environment.
+                <span class="verb">structureenv</span> environment.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd></span
                     >
@@ -1355,7 +1350,7 @@
               </div>
               <p>
                 This text is inserted at the end of a
-                <span class="texttt">structureenv</span> environment.
+                <span class="verb">structureenv</span> environment.
               </p>
             </div>
           </div>
@@ -1387,12 +1382,12 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">This is \alert{important}.</span>
+              ><span class="verb">This is \alert{important}.</span>
             </p>
             <p>
               Internally, this command just puts the
               <em>highlighted text</em> inside an
-              <span class="texttt">alertenv</span>.
+              <span class="verb">alertenv</span>.
             </p>
             <div class="articlenote">
               <p>
@@ -1413,9 +1408,9 @@
               <p>
                 This color/font is used when alerted text is typeset. The
                 background is currently ignored. There is no template
-                <span class="texttt">alerted text</span>, rather there are
-                templates <span class="texttt">alerted text begin</span> and
-                <span class="texttt">alerted text end</span> that are inserted
+                <span class="verb">alerted text</span>, rather there are
+                templates <span class="verb">alerted text begin</span> and
+                <span class="verb">alerted text end</span> that are inserted
                 before and after alerted text.
               </p>
             </div>
@@ -1447,7 +1442,7 @@
             </div>
             <p>
               Environment version of the
-              <span class="texttt">\alert</span> command.
+              <span class="verb">\alert</span> command.
             </p>
             <div class="element">
               <div class="element-headline">
@@ -1457,14 +1452,14 @@
                 </p>
               </div>
               <p>
-                This text is inserted at the beginning of a an
-                <span class="texttt">alertenv</span> environment.
+                This text is inserted at the beginning of an
+                <span class="verb">alertenv</span> environment.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd></span
                     >
@@ -1476,11 +1471,11 @@
                   </div>
                   <p>
                     This changes the color
-                    <span class="texttt">local structure</span> to
-                    <span class="texttt">alerted text</span>. This causes things
+                    <span class="verb">local structure</span> to
+                    <span class="verb">alerted text</span>. This causes things
                     like buttons or items to be colored in the same color as the
                     alerted text, which is often visually pleasing. See also the
-                    <span class="texttt">\structure</span> command.
+                    <span class="verb">\structure</span> command.
                   </p>
                   <div class="articlenote">
                     <p>
@@ -1500,7 +1495,7 @@
               </div>
               <p>
                 This text is inserted at the end of an
-                <span class="texttt">alertenv</span> environment.
+                <span class="verb">alertenv</span> environment.
               </p>
             </div>
           </div>
@@ -1536,27 +1531,27 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\setbeamertemplate{blocks}[default]</span>
+              ><span class="verb">\setbeamertemplate{blocks}[default]</span>
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\setbeamertemplate{blocks}[rounded][shadow=true]</span
               >
             </p>
             <p>The following template options are predefined:</p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">default</span>]</kbd></span
                   >
                   The default setting typesets the block title on its own line.
                   If a background is specified either for the
-                  <span class="texttt">block title</span> or for the
-                  <span class="texttt">block body</span>, this background color
-                  is used as background of the title or body, respectively. For
+                  <span class="verb">block title</span> or for the
+                  <span class="verb">block body</span>, this background color is
+                  used as background of the title or body, respectively. For
                   alerted and example blocks, the corresponding
                   <span class="beamer-name"
                     ><span class="textsc">beamer</span></span
@@ -1565,7 +1560,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">rounded</span>]</kbd
                     ><span class="opt"
@@ -1578,9 +1573,9 @@
                   >
                   Makes the blocks &ldquo;rounded.&rdquo; This means that the
                   corners of the backgrounds of the blocks are &ldquo;rounded
-                  off.&rdquo; If the <span class="texttt">shadow=true</span>
-                  option is given, a &ldquo;shadow&rdquo; is drawn behind the
-                  block.
+                  off.&rdquo; If the
+                  <span class="verb">shadow=true</span> option is given, a
+                  &ldquo;shadow&rdquo; is drawn behind the block.
                 </p>
               </li>
             </ul>
@@ -1647,9 +1642,9 @@
             </p>
             <div class="fancyvrb" style>
               <pre class="verbatim">
- \begin{block}&lt;3-&gt;{Definition}
-   A \alert{set} consists of elements.
- \end{block}
+\begin{block}&lt;3-&gt;{Definition}
+  A \alert{set} consists of elements.
+\end{block}
 </pre
               >
             </div>
@@ -1674,10 +1669,10 @@
                 >. Inside this template, the block title can be accessed via the
                 following insert:
               </p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertblocktitle</span></kbd>
                     Inserts the
                     <span class="meta"
@@ -1716,12 +1711,12 @@
                   ><span class="textsc">beamer</span></span
                 >-color/-font should be used to typeset the title of the block.
                 Since neither the color nor the font are setup automatically,
-                the template <span class="texttt">block begin</span> must do so
+                the template <span class="verb">block begin</span> must do so
                 itself.
               </p>
               <p>
                 The default block template and also the
-                <span class="texttt">rounded</span> version honor the background
+                <span class="verb">rounded</span> version honor the background
                 of this color.
               </p>
             </div>
@@ -1741,9 +1736,9 @@
                 <span class="meta"
                   ><span class="angle">&langle;</span><i>environment contents</i
                   ><span class="angle">&rangle;</span></span
-                >. As for <span class="texttt">block title</span>, the color and
+                >. As for <span class="verb">block title</span>, the color and
                 font must be setup by the template
-                <span class="texttt">block begin</span>.
+                <span class="verb">block begin</span>.
               </p>
             </div>
           </div>
@@ -1784,7 +1779,7 @@
             </div>
             <p>
               Inserts a block whose title is highlighting. Behaves like the
-              <span class="texttt">block</span> environment otherwise.
+              <span class="verb">block</span> environment otherwise.
             </p>
             <p>
               <i>Example: </i>
@@ -1855,7 +1850,7 @@
                   >}<span class="opt"
                     >&lt;<span class="meta"
                       ><span class="angle">&langle;</span
-                      ><i>overlay specification</i
+                      ><i>action specification</i
                       ><span class="angle">&rangle;</span></span
                     >&gt;</span
                   >
@@ -1875,7 +1870,7 @@
             </div>
             <p>
               Inserts a block that is supposed to be an example. Behaves like
-              the <span class="texttt">block</span> environment otherwise.
+              the <span class="verb">block</span> environment otherwise.
             </p>
             <p>
               <i>Example: </i>In the following example, the block is completely
@@ -1948,27 +1943,37 @@
             The
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             class predefines several environments, like
-            <span class="texttt">theorem</span> or
-            <span class="texttt">definition</span> or
-            <span class="texttt">proof</span>, that you can use to typeset
-            things like, well, theorems, definitions, or proofs. The complete
-            list is the following: <span class="texttt">theorem</span>,
-            <span class="texttt">corollary</span>,
-            <span class="texttt">definition</span>,
-            <span class="texttt">definitions</span>,
-            <span class="texttt">fact</span>,
-            <span class="texttt">example</span>, and
-            <span class="texttt">examples</span>. The following German block
-            environments are also predefined:
-            <span class="texttt">Problem</span>,
-            <span class="texttt">Loesung</span>,
-            <span class="texttt">Definition</span>,
-            <span class="texttt">Satz</span>,
-            <span class="texttt">Beweis</span>,
-            <span class="texttt">Folgerung</span>,
-            <span class="texttt">Lemma</span>, <span class="texttt">Fakt</span>,
-            <span class="texttt">Beispiel</span>, and
-            <span class="texttt">Beispiele</span>.
+            <span class="verb">theorem</span> or
+            <span class="verb">definition</span> or
+            <span class="verb">proof</span>, that you can use to typeset things
+            like, well, theorems, definitions, or proofs. The complete list is
+            the following: <span class="verb">theorem</span>,
+            <span class="verb">Theorem</span>,
+            <span class="verb">corollary</span>,
+            <span class="verb">Corollary</span>,
+            <span class="verb">definition</span>,
+            <span class="verb">Definition</span>,
+            <span class="verb">definitions</span>,
+            <span class="verb">fact</span>, <span class="verb">example</span>,
+            <span class="verb">Example</span>,
+            <span class="verb">examples</span>,
+            <span class="verb">Examples</span>, <span class="verb">lemma</span>,
+            <span class="verb">Lemma</span>, <span class="verb">problem</span>,
+            <span class="verb">Problem</span>, <span class="verb">proof</span>,
+            <span class="verb">Proof</span>, and
+            <span class="verb">solution</span>.
+          </p>
+          <p>
+            The following German block environments are also predefined:
+            <span class="verb">Problem</span>,
+            <span class="verb">Loesung</span>,
+            <span class="verb">Definition</span>,
+            <span class="verb">Satz</span>, <span class="verb">Beweis</span>,
+            <span class="verb">Folgerung</span>,
+            <span class="verb">Lemma</span>, <span class="verb">Fakt</span>,
+            <span class="verb">Theorem</span>,
+            <span class="verb">Beispiel</span>, and
+            <span class="verb">Beispiele</span>.
           </p>
           <p>Here is a typical example on how to use them:</p>
           <div class="fancyvrb" style>
@@ -2048,34 +2053,34 @@
             </p>
             <p>
               The appearance of the theorem is governed by the templates
-              <span class="texttt">theorem begin</span> and
-              <span class="texttt">theorem end</span>, see their description
-              later on for details on how to change these. Every theorem is put
-              into a <span class="texttt">block</span> environment, thus the
-              templates for blocks also apply.
+              <span class="verb">theorem begin</span> and
+              <span class="verb">theorem end</span>, see their description later
+              on for details on how to change these. Every theorem is put into a
+              <span class="verb">block</span> environment, thus the templates
+              for blocks also apply.
             </p>
             <p>
               The theorem style (a concept from
-              <span class="texttt">amsthm</span>) used for this environment is
-              <span class="texttt">plain</span>. In this style, the body of a
+              <span class="verb">amsthm</span>) used for this environment is
+              <span class="verb">plain</span>. In this style, the body of a
               theorem should be typeset in italics. The head of the theorem
               should be typeset in a bold font, but this is usually overruled by
               the templates.
             </p>
             <p>
-              If the option <span class="texttt">envcountsect</span> is given
+              If the option <span class="verb">envcountsect</span> is given
               either as class option in one of the
-              <span class="texttt">presentation</span> modes or as an option to
-              the package <span class="texttt">beamerarticle</span> in
-              <span class="texttt">article</span> mode, then the numbering of
-              the theorems is local to each section with the section number
+              <span class="verb">presentation</span> modes or as an option to
+              the package <span class="verb">beamerarticle</span> in
+              <span class="verb">article</span> mode, then the numbering of the
+              theorems is local to each section with the section number
               prefixing the theorem number; otherwise they are numbered
               consecutively throughout the presentation or article. We recommend
-              using this option in <span class="texttt">article</span> mode.
+              using this option in <span class="verb">article</span> mode.
             </p>
             <p>
               By default, no theorem numbers are shown in the
-              <span class="texttt">presentation</span> modes.
+              <span class="verb">presentation</span> modes.
             </p>
             <p>
               <i>Example: </i>
@@ -2095,11 +2100,11 @@
           </div>
           <p>
             The environments
-            <span class="declare"><span class="texttt">corollary</span></span
-            >, <span class="declare"><span class="texttt">fact</span></span
+            <span class="declare"><span class="verb">corollary</span></span
+            >, <span class="declare"><span class="verb">fact</span></span
             >, and
-            <span class="declare"><span class="texttt">lemma</span></span>
-            behave exactly the same way.
+            <span class="declare"><span class="verb">lemma</span></span> behave
+            exactly the same way.
           </p>
           <div class="classoption">
             <div class="classoption-headline">
@@ -2154,15 +2159,15 @@
               </div>
             </div>
             <p>
-              Behaves like the <span class="texttt">theorem</span> environment,
+              Behaves like the <span class="verb">theorem</span> environment,
               except that the theorem style
-              <span class="texttt">definition</span> is used. In this style, the
+              <span class="verb">definition</span> is used. In this style, the
               body of a theorem is typeset in an upright font.
             </p>
           </div>
           <p>
             The environment
-            <span class="declare"><span class="texttt">definitions</span></span>
+            <span class="declare"><span class="verb">definitions</span></span>
             behaves exactly the same way.
           </p>
           <div class="environment">
@@ -2203,21 +2208,20 @@
               </div>
             </div>
             <p>
-              Behaves like the <span class="texttt">theorem</span> environment,
-              except that the theorem style
-              <span class="texttt">example</span> is used. A side-effect of
-              using this theorem style is that the
+              Behaves like the <span class="verb">theorem</span> environment,
+              except that the theorem style <span class="verb">example</span> is
+              used. A side-effect of using this theorem style is that the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>environment contents</i
                 ><span class="angle">&rangle;</span></span
               >
-              is put in an <span class="texttt">exampleblock</span> instead of a
-              <span class="texttt">block</span>.
+              is put in an <span class="verb">exampleblock</span> instead of a
+              <span class="verb">block</span>.
             </p>
           </div>
           <p>
             The environment
-            <span class="declare"><span class="texttt">examples</span></span>
+            <span class="declare"><span class="verb">examples</span></span>
             behaves exactly the same way.
           </p>
           <div class="beamernote">
@@ -2230,8 +2234,8 @@
             number, even if this number is &ldquo;available&rdquo; for
             typesetting (which it is by default in all predefined environments;
             but if you define your own environment using
-            <span class="texttt">\newtheorem*</span> no number will be
-            available).
+            <span class="verb">\newtheorem*</span>
+            no number will be available).
           </p>
           <div class="articlenote">
             <p>
@@ -2239,9 +2243,9 @@
             </p>
           </div>
           <p>
-            In <span class="texttt">article</span> mode, theorems are
+            In <span class="verb">article</span> mode, theorems are
             automatically numbered. By specifying the class option
-            <span class="texttt">envcountsect</span>, theorems will be numbered
+            <span class="verb">envcountsect</span>, theorems will be numbered
             locally to each section, which is usually a good idea, except for
             very short articles.
           </p>
@@ -2293,13 +2297,13 @@
               argument is shown in brackets.
             </p>
             <p>
-              At the end of the theorem, a
-              <span class="texttt">\qed</span> symbol is shown, except if you
-              say <span class="texttt">\qedhere</span> earlier in the proof
-              (this is exactly as in <span class="texttt">amsthm</span>). The
-              default <span class="texttt">\qed</span> symbol is an open circle.
-              To completely suppress the symbol, write
-              <span class="texttt">\def\qedsymbol{}</span> in your preamble. To
+              At the end of the proof, a <span class="verb">\qed</span> symbol
+              is shown, except if you say
+              <span class="verb">\qedhere</span> earlier in the proof (this is
+              exactly as in <span class="verb">amsthm</span>). The default
+              <span class="verb">\qed</span> symbol is an open square. To
+              completely suppress the symbol, write
+              <span class="verb">\def\qedsymbol{}</span> in your preamble. To
               get a closed square, say
             </p>
             <pre class="verbatim">
@@ -2307,7 +2311,7 @@
 </pre
             >
             <p>
-              If you use <span class="texttt">babel</span> and a different
+              If you use <span class="verb">babel</span> and a different
               language, the text &ldquo;Proof&rdquo; is replaced by whatever is
               appropriate in the selected language.
             </p>
@@ -2337,7 +2341,7 @@
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\newtheorem</kbd></span
-                ><span class="opt"><span class="texttt">*</span></span
+                ><span class="opt"><span class="verb">*</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>environment name</i
                   ><span class="angle">&rangle;</span></span
@@ -2361,9 +2365,9 @@
             </div>
             <p>
               This command is used exactly the same way as in the
-              <span class="texttt">amsthm</span> package (as a matter of fact,
-              it is the command from that package). For example, the two
-              optional arguments,
+              <span class="verb">amsthm</span> package (as a matter of fact, it
+              is the command from that package). For example, the two optional
+              arguments,
               <span class="meta"
                 ><span class="angle">&langle;</span><i>numbered same as</i
                 ><span class="angle">&rangle;</span></span
@@ -2373,9 +2377,9 @@
                 ><span class="angle">&langle;</span><i>number within</i
                 ><span class="angle">&rangle;</span></span
               >, are mutually exclusive; see the documentation of
-              <span class="texttt">amsthm</span> for details. The only
-              difference is that environments declared using this command are
-              overlay specification-aware in
+              <span class="verb">amsthm</span> for details. The only difference
+              is that environments declared using this command are overlay
+              specification-aware in
               <span class="beamer-name"
                 ><span class="textsc">beamer</span></span
               >
@@ -2390,25 +2394,25 @@
             </div>
             <p>
               Environments declared using this command are also overlay
-              specification-aware in <span class="texttt">article</span> mode.
+              specification-aware in <span class="verb">article</span> mode.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\newtheorem{observation}[theorem]{Observation}</span
               >
             </p>
           </div>
           <p>
-            You can also use <span class="texttt">amsthm</span>&rsquo;s command
-            <span class="texttt">\newtheoremstyle</span> to define new theorem
+            You can also use <span class="verb">amsthm</span>&rsquo;s command
+            <span class="verb">\newtheoremstyle</span> to define new theorem
             styles. Note that the default template for theorems will ignore any
             head font setting, but will honor the body font setting.
           </p>
           <p>
             If you wish to define the environments like
-            <span class="texttt">theorem</span> differently (for example, have
-            it numbered within each subsection), you can use the following class
+            <span class="verb">theorem</span> differently (for example, have it
+            numbered within each subsection), you can use the following class
             option to disable the definition of the predefined environments:
           </p>
           <div class="classoption">
@@ -2419,14 +2423,14 @@
             </div>
             <p>
               Switches off the definition of default blocks like
-              <span class="texttt">theorem</span>, but still loads
-              <span class="texttt">amsthm</span> and makes theorems overlay
+              <span class="verb">theorem</span>, but still loads
+              <span class="verb">amsthm</span> and makes theorems overlay
               specification-aware.
             </p>
           </div>
           <p>
             The option is also available as a package option for
-            <span class="texttt">beamerarticle</span> and has the same effect.
+            <span class="verb">beamerarticle</span> and has the same effect.
           </p>
           <div class="articlenote">
             <p>
@@ -2434,14 +2438,14 @@
             </p>
           </div>
           <p>
-            In the <span class="texttt">article</span> version, the package
-            <span class="texttt">amsthm</span> sometimes clashes with the
-            document class. In this case you can use the following option, which
-            is once more available as a class option for
+            In the <span class="verb">article</span> version, the package
+            <span class="verb">amsthm</span> sometimes clashes with the document
+            class. In this case you can use the following option, which is once
+            more available as a class option for
             <span class="beamer-name"><span class="textsc">beamer</span></span>
-            and as a package option for
-            <span class="texttt">beamerarticle</span>, to switch off the loading
-            of <span class="texttt">amsthm</span> altogether.
+            and as a package option for <span class="verb">beamerarticle</span>,
+            to switch off the loading of
+            <span class="verb">amsthm</span> altogether.
           </p>
           <div class="classoption">
             <div class="classoption-headline">
@@ -2450,10 +2454,10 @@
               </p>
             </div>
             <p>
-              Does not load <span class="texttt">amsthm</span> and also not
-              <span class="texttt">amsmath</span>. Environments like
-              <span class="texttt">theorem</span> or
-              <span class="texttt">proof</span> will not be available.
+              Does not load <span class="verb">amsthm</span> and also not
+              <span class="verb">amsmath</span>. Environments like
+              <span class="verb">theorem</span> or
+              <span class="verb">proof</span> will not be available.
             </p>
           </div>
           <div class="classoption">
@@ -2463,12 +2467,11 @@
               </p>
             </div>
             <p>
-              Does not load <span class="texttt">amssymb</span>. This option is
+              Does not load <span class="verb">amssymb</span>. This option is
               mainly intended for users who are loading specialist font
               packages. Note that
-              <span class="texttt">\blacktriangleright</span> needs to be
-              defined if <span class="texttt">itemize</span>
-              environments are in use.
+              <span class="verb">\blacktriangleright</span> needs to be defined
+              if <span class="verb">itemize</span> environments are in use.
             </p>
           </div>
           <div class="classoption">
@@ -2495,21 +2498,19 @@
             </div>
             <p>
               This template is a parent of
-              <span class="texttt">theorem begin</span> and
-              <span class="texttt">theorem end</span>, see the first for a
+              <span class="verb">theorem begin</span> and
+              <span class="verb">theorem end</span>, see the first for a
               detailed discussion of how the theorem templates are set.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
-                >\setbeamertemplate{theorems}[numbered]</span
-              >
+              ><span class="verb">\setbeamertemplate{theorems}[numbered]</span>
             </p>
             <p>The following template options are predefined:</p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">default</span>]</kbd></span
                   >
@@ -2520,7 +2521,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">normal font</span>]</kbd></span
                   >
@@ -2531,7 +2532,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">numbered</span>]</kbd></span
                   >
@@ -2541,17 +2542,17 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">ams style</span>]</kbd></span
                   >
                   This causes theorems to be put in a
-                  <span class="texttt">block</span> or
-                  <span class="texttt">exampleblock</span>, but to be otherwise
+                  <span class="verb">block</span> or
+                  <span class="verb">exampleblock</span>, but to be otherwise
                   typeset as is normally done in
-                  <span class="texttt">amsthm</span>. Thus the head font and
-                  body font depend on the setting for the theorem to be typeset
-                  and theorems are numbered.
+                  <span class="verb">amsthm</span>. Thus the head font and body
+                  font depend on the setting for the theorem to be typeset and
+                  theorems are numbered.
                 </p>
               </li>
             </ul>
@@ -2565,11 +2566,11 @@
             </div>
             <p>
               Whenever an environment declared using the command
-              <span class="texttt">\newtheorem</span> is to be typeset, this
+              <span class="verb">\newtheorem</span> is to be typeset, this
               template is inserted at the beginning and the template
-              <span class="texttt">theorem end</span> at the end. If there is an
+              <span class="verb">theorem end</span> at the end. If there is an
               overlay specification when an environment like
-              <span class="texttt">theorem</span> is used, this overlay
+              <span class="verb">theorem</span> is used, this overlay
               specification will directly follow the
               <span class="meta"
                 ><span class="angle">&langle;</span
@@ -2577,9 +2578,9 @@
                 ><span class="angle">&rangle;</span></span
               >
               upon invocation. This is even true if there was an optional
-              argument to the <span class="texttt">theorem</span> environment.
+              argument to the <span class="verb">theorem</span> environment.
               This optional argument is available via the insert
-              <span class="texttt">\inserttheoremaddition</span>.
+              <span class="verb">\inserttheoremaddition</span>.
             </p>
             <p>Numerous inserts are available in this template, see below.</p>
             <p>
@@ -2588,7 +2589,7 @@
             </p>
             <p>
               <i>Example: </i>The following typesets theorems like
-              <span class="texttt">amsthm</span>:
+              <span class="verb">amsthm</span>:
             </p>
             <pre class="verbatim">
 \setbeamertemplate{theorem begin}
@@ -2624,22 +2625,22 @@
 </pre
             >
             <p>The following inserts are available inside this template:</p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd><span class="declare">\inserttheoremblockenv</span></kbd>
-                  This will normally expand to
-                  <span class="texttt">block</span>, but if a theorem that has
-                  theorem style <span class="texttt">example</span> is typeset,
-                  it will expand to <span class="texttt">exampleblock</span>.
-                  Thus you can use this insert to decide which environment
-                  should be used when typesetting the theorem.
+                  This will normally expand to <span class="verb">block</span>,
+                  but if a theorem that has theorem style
+                  <span class="verb">example</span> is typeset, it will expand
+                  to <span class="verb">exampleblock</span>. Thus you can use
+                  this insert to decide which environment should be used when
+                  typesetting the theorem.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd><span class="declare">\inserttheoremheadfont</span></kbd>
                   This will expand to a font changing command that switches to
                   the font to be used in the head of the theorem. By not
@@ -2648,7 +2649,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd><span class="declare">\inserttheoremname</span></kbd>
                   This will expand to the name of the environment to be typeset
                   (like &ldquo;Theorem&rdquo; or &ldquo;Corollary&rdquo;).
@@ -2656,7 +2657,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd><span class="declare">\inserttheoremnumber</span></kbd>
                   This will expand to the number of the current theorem preceded
                   by a space or to nothing, if the current theorem does not have
@@ -2665,7 +2666,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd><span class="declare">\inserttheoremaddition</span></kbd>
                   This will expand to the optional argument given to the
                   environment or will be empty, if there was no optional
@@ -2674,7 +2675,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd
                     ><span class="declare">\inserttheorempunctuation</span></kbd
                   >
@@ -2700,14 +2701,14 @@
             </div>
             <p>
               Inserted at the beginning of a
-              <span class="texttt">proof</span> environment. This template
-              behaves like a normal
-              <span class="texttt">block begin</span> template by default.
+              <span class="verb">proof</span> environment. This template behaves
+              like a normal <span class="verb">block begin</span> template by
+              default.
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd><span class="declare">\insertproofname</span></kbd> This
                   will expand to the proof name, followed by a period most of
                   the time.
@@ -2723,7 +2724,7 @@
             </div>
             <p>
               Inserted at the end of a
-              <span class="texttt">proof</span> environment.
+              <span class="verb">proof</span> environment.
             </p>
           </div>
           <!--
@@ -2744,10 +2745,10 @@
                   >e</span
                 >X</span
               ></span
-            >s standard command <span class="texttt">\fbox</span> and also
-            <span class="texttt">\frame</span> (inside a
+            >&rsquo;s standard command <span class="verb">\fbox</span> and also
+            <span class="verb">\frame</span> (inside a
             <span class="beamer-name"><span class="textsc">beamer</span></span>
-            frame, the <span class="texttt">\frame</span> command changes its
+            frame, the <span class="verb">\frame</span> command changes its
             meaning to the normal
             <span class="latexlogofont"
               ><span class="latexlogo"
@@ -2756,13 +2757,13 @@
                 >X</span
               ></span
             >
-            <span class="texttt">\frame</span> command). More frame types are
-            offered by the package <span class="texttt">fancybox</span>, which
+            <span class="verb">\frame</span> command). More frame types are
+            offered by the package <span class="verb">fancybox</span>, which
             defines the following commands:
-            <span class="texttt">\shadowbox</span>,
-            <span class="texttt">\doublebox</span>,
-            <span class="texttt">\ovalbox</span>, and
-            <span class="texttt">\Ovalbox</span>. Please consult the
+            <span class="verb">\shadowbox</span>,
+            <span class="verb">\doublebox</span>,
+            <span class="verb">\ovalbox</span>, and
+            <span class="verb">\Ovalbox</span>. Please consult the
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >L<span class="latexlogosup">a</span>T<span class="latexlogosub"
@@ -2855,9 +2856,9 @@
               This command is used extensively by the default inner and outer
               themes for typesetting the headlines and footlines. It is not
               really intended to be used in normal frames (for example, it is
-              not available inside <span class="texttt">article</span> mode).
-              You should prefer using structuring elements like blocks or
-              theorems that automatically insert colored boxes as needed.
+              not available inside <span class="verb">article</span> mode). You
+              should prefer using structuring elements like blocks or theorems
+              that automatically insert colored boxes as needed.
             </p>
             <p>
               <i>Example: </i>The following example could be used to typeset a
@@ -2891,12 +2892,12 @@
               >
               can be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">wd=</span>{<span class="meta"
+                    ><span class="verb">wd=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>width</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
@@ -2907,7 +2908,7 @@
                     ><span class="latexlogo"
                       >T<span class="latexlogosub">e</span>X</span
                     ></span
-                  >&rsquo;s <span class="texttt">\hsize</span> is set to
+                  >&rsquo;s <span class="verb">\hsize</span> is set to
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>width</i
                     ><span class="angle">&rangle;</span></span
@@ -2917,7 +2918,7 @@
                     ><span class="angle">&rangle;</span></span
                   >
                   (no matter what it actually turned out to be). Since setting
-                  the <span class="texttt">\hsize</span> does not automatically
+                  the <span class="verb">\hsize</span> does not automatically
                   change some of
                   <span class="latexlogofont"
                     ><span class="latexlogo"
@@ -2933,21 +2934,21 @@
                 <p>
                   If the width is larger than the normal text width, as
                   specified by the value of
-                  <span class="texttt">\textwidth</span>, the width of the
+                  <span class="verb">\textwidth</span>, the width of the
                   resulting box is reset to the width
-                  <span class="texttt">\textwidth</span>, but intelligent
-                  negative skips are inserted at the left and right end of the
-                  box. The net effect of this is that you can use a width larger
-                  than the text width for a box and can insert the resulting box
-                  directly into normal text without getting annoying warnings
-                  and having the box positioned sensibly.
+                  <span class="verb">\textwidth</span>, but intelligent negative
+                  skips are inserted at the left and right end of the box. The
+                  net effect of this is that you can use a width larger than the
+                  text width for a box and can insert the resulting box directly
+                  into normal text without getting annoying warnings and having
+                  the box positioned sensibly.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">dp=</span>{<span class="meta"
+                    ><span class="verb">dp=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>depth</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
@@ -2967,9 +2968,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">ht=</span
+                    ><span class="verb">ht=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>height</i
                       ><span class="angle">&rangle;</span></span
@@ -2989,43 +2990,40 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">left</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">left</span></span>
                   causes the text inside the box to be typeset left-aligned and
                   with a (radically) ragged right border. This is the default.
                   To get a better ragged right border, use the
-                  <span class="texttt">rightskip</span> option. Note that this
-                  will override any <span class="texttt">leftskip</span> or
-                  <span class="texttt">rightskip</span> setting.
+                  <span class="verb">rightskip</span> option. Note that this
+                  will override any <span class="verb">leftskip</span> or
+                  <span class="verb">rightskip</span> setting.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">right</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">right</span></span>
                   causes the text to be right-aligned with a (radically) ragged
                   left border. Note that this will override any
-                  <span class="texttt">leftskip</span> or
-                  <span class="texttt">rightskip</span>
-                  setting.
+                  <span class="verb">leftskip</span> or
+                  <span class="verb">rightskip</span> setting.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"
-                    ><span class="texttt">center</span></span
-                  >
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">center</span></span>
                   centers the text inside the box. Note that this will override
-                  any <span class="texttt">leftskip</span> or
-                  <span class="texttt">rightskip</span> setting.
+                  any <span class="verb">leftskip</span> or
+                  <span class="verb">rightskip</span> setting.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">leftskip=</span
+                    ><span class="verb">leftskip=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>left skip</i
                       ><span class="angle">&rangle;</span></span
@@ -3048,16 +3046,16 @@
                       >T<span class="latexlogosub">e</span>X</span
                     ></span
                   >-book for details. Note that this will override any
-                  <span class="texttt">left</span>,
-                  <span class="texttt">center</span> or
-                  <span class="texttt">right</span> setting.
+                  <span class="verb">left</span>,
+                  <span class="verb">center</span> or
+                  <span class="verb">right</span> setting.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">rightskip=</span
+                    ><span class="verb">rightskip=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>right skip</i
                       ><span class="angle">&rangle;</span></span
@@ -3068,17 +3066,17 @@
                     ><span class="angle">&langle;</span><i>right skip</i
                     ><span class="angle">&rangle;</span></span
                   >. To get a good ragged right border, try, say,
-                  <span class="texttt">\rightskip=0pt plus 4em</span>. Note that
-                  this will override any <span class="texttt">left</span>,
-                  <span class="texttt">center</span> or
-                  <span class="texttt">right</span> setting.
+                  <span class="verb">\rightskip=0pt plus 4em</span>. Note that
+                  this will override any <span class="verb">left</span>,
+                  <span class="verb">center</span> or
+                  <span class="verb">right</span> setting.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">sep=</span
+                    ><span class="verb">sep=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>dimension</i
                       ><span class="angle">&rangle;</span></span
@@ -3086,9 +3084,9 @@
                   >
                   sets the size of extra space around the text. This space is
                   added &ldquo;inside the box,&rdquo; which means that if you
-                  specify a <span class="texttt">sep</span> of 1cm and insert
-                  the box normally into the vertical list, then the left border
-                  of the box will be aligned with the left border of the slide
+                  specify a <span class="verb">sep</span> of 1cm and insert the
+                  box normally into the vertical list, then the left border of
+                  the box will be aligned with the left border of the slide
                   text, while the left border of the text inside the box will be
                   1cm to the right of this left border. Likewise, the text
                   inside the box will stop 1cm before the right border of the
@@ -3097,9 +3095,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">colsep=</span
+                    ><span class="verb">colsep=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>dimension</i
                       ><span class="angle">&rangle;</span></span
@@ -3107,7 +3105,7 @@
                   >
                   sets the extra &ldquo;color separation space&rdquo; around the
                   text. This space behaves the same way as the space added by
-                  <span class="texttt">sep</span>, only this space is only
+                  <span class="verb">sep</span>, only this space is only
                   inserted if the box has a colored background, that is, if the
                   background of the
                   <span class="meta"
@@ -3115,14 +3113,14 @@
                     ><span class="angle">&rangle;</span></span
                   >
                   is not empty. This command can be used together with
-                  <span class="texttt">sep</span>, the effects accumulate.
+                  <span class="verb">sep</span>, the effects accumulate.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">colsep*=</span
+                    ><span class="verb">colsep*=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>dimension</i
                       ><span class="angle">&rangle;</span></span
@@ -3154,15 +3152,15 @@
                   looks silly) <em>and</em> you would like the normal text
                   always to be at the same horizontal position, independently of
                   whether a background is present or not. In this case, using
-                  <span class="texttt">colsep*=4pt</span> is a good option.
+                  <span class="verb">colsep*=4pt</span> is a good option.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">shadow</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">shadow</span></span
                   ><span class="opt"
-                    ><span class="texttt">=</span
+                    ><span class="verb">=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>true or false</i
                       ><span class="angle">&rangle;</span></span
@@ -3170,17 +3168,15 @@
                   >
                   draws a shadow behind the box. Currently, this option only has
                   an effect if used together with the
-                  <span class="texttt">rounded</span> option, but that may
-                  change.
+                  <span class="verb">rounded</span> option, but that may change.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"
-                    ><span class="texttt">rounded</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">rounded</span></span
                   ><span class="opt"
-                    ><span class="texttt">=</span
+                    ><span class="verb">=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>true or false</i
                       ><span class="angle">&rangle;</span></span
@@ -3188,16 +3184,15 @@
                   >
                   causes the borders of the box to be rounded off if there is a
                   background installed. This command internally calls
-                  <span class="texttt">beamerboxesrounded</span>. In this case,
-                  <span class="texttt">colsep*</span> option will have no
-                  effect.
+                  <span class="verb">beamerboxesrounded</span>. In this case,
+                  <span class="verb">colsep*</span> option will have no effect.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">ignorebg</span></span
+                    ><span class="verb">ignorebg</span></span
                   >
                   causes the background color of the
                   <span class="meta"
@@ -3210,8 +3205,8 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">vmode</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">vmode</span></span>
                   causes
                   <span class="latexlogofont"
                     ><span class="latexlogo"
@@ -3225,7 +3220,7 @@
                     ></span
                   >
                   will be in horizontal mode at the start of the box (a
-                  <span class="texttt">\leavevmode</span> is inserted
+                  <span class="verb">\leavevmode</span> is inserted
                   automatically at the beginning of the box unless this option
                   is given). Only
                   <span class="latexlogofont"
@@ -3271,10 +3266,9 @@
               The text inside the environment is framed by a rectangular area
               with rounded corners. For the large rectangular area, the
               <span class="beamer-name"><span class="textsc">beamer</span></span
-              >-color specified with the
-              <span class="texttt">lower</span> option is used. Its background
-              is used for the background, its foreground for the foreground. If
-              the
+              >-color specified with the <span class="verb">lower</span> option
+              is used. Its background is used for the background, its foreground
+              for the foreground. If the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>head</i
                 ><span class="angle">&rangle;</span></span
@@ -3286,16 +3280,15 @@
               >
               is drawn in the upper part of the box using the
               <span class="beamer-name"><span class="textsc">beamer</span></span
-              >-color specified with the
-              <span class="texttt">upper</span> option for the fore- and
-              background. The following options can be given:
+              >-color specified with the <span class="verb">upper</span> option
+              for the fore- and background. The following options can be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">lower=</span
+                    ><span class="verb">lower=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>beamer color</i
                       ><span class="angle">&rangle;</span></span
@@ -3313,9 +3306,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">upper=</span
+                    ><span class="verb">upper=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>beamer color</i
                       ><span class="angle">&rangle;</span></span
@@ -3335,9 +3328,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">width=</span
+                    ><span class="verb">width=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>dimension</i
                       ><span class="angle">&rangle;</span></span
@@ -3348,22 +3341,22 @@
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>dimension</i
                     ><span class="angle">&rangle;</span></span
-                  >. By default, the <span class="texttt">\textwidth</span> is
+                  >. By default, the <span class="verb">\textwidth</span> is
                   used. Note that the box will protrude 4pt to the left and
                   right.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">shadow=</span
+                    ><span class="verb">shadow=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>true or false</i
                       ><span class="angle">&rangle;</span></span
                     ></span
-                  >. If set to <span class="texttt">true</span>, a shadow will
-                  be drawn.
+                  >. If set to <span class="verb">true</span>, a shadow will be
+                  drawn.
                 </p>
               </li>
             </ul>
@@ -3391,7 +3384,7 @@
             </div>
             <p>
               This environment is not available in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <!--
@@ -3413,13 +3406,13 @@
                 >X</span
               ></span
             >
-            environments <span class="texttt">figure</span> and
-            <span class="texttt">table</span> much the same way you would
-            normally use them. However, any placement specification will be
-            ignored. Figures and tables are immediately inserted where the
-            environments start. If there are too many of them to fit on the
-            frame, you must manually split them among additional frames or use
-            the <span class="texttt">allowframebreaks</span> option.
+            environments <span class="verb">figure</span> and
+            <span class="verb">table</span> much the same way you would normally
+            use them. However, any placement specification will be ignored.
+            Figures and tables are immediately inserted where the environments
+            start. If there are too many of them to fit on the frame, you must
+            manually split them among additional frames or use the
+            <span class="verb">allowframebreaks</span> option.
           </p>
           <p>
             <i>Example: </i>
@@ -3447,10 +3440,10 @@
             </div>
             <p>This template is used to render the caption.</p>
             <p>The following template options are predefined:</p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">default</span>]</kbd></span
                   >
@@ -3464,7 +3457,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">numbered</span>]</kbd></span
                   >
@@ -3475,39 +3468,39 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd
                       >[<span class="declare">caption name own line</span>]</kbd
                     ></span
                   >
-                  As the name suggests, this options puts the caption name (like
+                  As the name suggests, this option puts the caption name (like
                   &ldquo;Figure&rdquo;) on its own line.
                 </p>
               </li>
             </ul>
             <p>Inside the template, you can use the following inserts:</p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd><span class="declare">\insertcaption</span></kbd> Inserts
                   the text of the current caption.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd><span class="declare">\insertcaptionname</span></kbd>
                   Inserts the name of the current caption. This word is either
                   &ldquo;Table&rdquo; or &ldquo;Figure&rdquo; or, if the
-                  <span class="texttt">babel</span> package is used, some
+                  <span class="verb">babel</span> package is used, some
                   translation thereof.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <kbd><span class="declare">\insertcaptionnumber</span></kbd>
                   Inserts the number of the current figure or table.
                 </p>
@@ -3526,9 +3519,9 @@
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-color and -font are used to typeset the caption name (a word
               like &ldquo;Figure&rdquo;). The
-              <span class="texttt">caption</span> template must directly
+              <span class="verb">caption</span> template must directly
               &ldquo;use&rdquo; them, they are not installed automatically by
-              the <span class="texttt">\insertcaptionname</span> command.
+              the <span class="verb">\insertcaptionname</span> command.
             </p>
           </div>
           <div class="element">
@@ -3542,10 +3535,10 @@
               This template is inserted between caption name and caption text.
             </p>
             <p>The following template options are predefined:</p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">default</span>]</kbd></span
                   >
@@ -3554,7 +3547,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">none</span>]</kbd></span
                   >
@@ -3563,7 +3556,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">colon</span>]</kbd></span
                   >
@@ -3572,7 +3565,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">period</span>]</kbd></span
                   >
@@ -3581,7 +3574,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">space</span>]</kbd></span
                   >
@@ -3590,23 +3583,21 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">quad</span>]</kbd></span
                   >
-                  Typesets the <span class="texttt">\quad</span> followed by the
+                  Typesets the <span class="verb">\quad</span> followed by the
                   space.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">endash</span>]</kbd></span
                   >
-                  Typesets the en-dash surrounded by spaces (<span
-                    class="texttt"
-                  >
+                  Typesets the en-dash surrounded by spaces (<span class="verb">
                     -- </span
                   >).
                 </p>
@@ -3640,11 +3631,10 @@
           </p>
           <p>
             The main environment for creating columns is called
-            <span class="texttt">columns</span>. Inside this environment, you
-            can either place several
-            <span class="texttt">column</span> environments, each of which
-            creates a new column, or use the
-            <span class="texttt">\column</span> command to create new columns.
+            <span class="verb">columns</span>. Inside this environment, you can
+            either place several <span class="verb">column</span> environments,
+            each of which creates a new column, or use the
+            <span class="verb">\column</span> command to create new columns.
           </p>
           <div class="environment">
             <div class="environment-headline">
@@ -3653,7 +3643,7 @@
                   \begin{<span class="declare">columns</span>}<span class="opt"
                     >&lt;<span class="meta"
                       ><span class="angle">&langle;</span
-                      ><i>overlay specification</i
+                      ><i>action specification</i
                       ><span class="angle">&rangle;</span></span
                     >&gt;</span
                   ><span class="opt"
@@ -3678,15 +3668,18 @@
               </div>
             </div>
             <p>
-              A multi-column area. If
+              A multi-column area. If the
               <span class="meta"
-                ><span class="angle">&langle;</span><i>overlay specification</i
+                ><span class="angle">&langle;</span><i>action specification</i
                 ><span class="angle">&rangle;</span></span
               >
-              is present, the environment will only be shown on the specified
-              slides. Inside the environment you should place only
-              <span class="texttt">column</span> environments or
-              <span class="texttt">\column</span> commands (see below). The
+              is present, the given actions are taken on the specified slides,
+              see Section&nbsp;<a
+                href="Creating-Overlays.html#section-action-specifications"
+                >9.6.3</a
+              >. Inside the environment you should place only
+              <span class="verb">column</span> environments or
+              <span class="verb">\column</span> commands (see below). The
               following
               <span class="meta"
                 ><span class="angle">&langle;</span><i>options</i
@@ -3694,34 +3687,34 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">b</span></span>
-                  will cause the bottom lines of the columns to be vertically
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">b</span></span> will
+                  cause the bottom lines of the columns to be vertically
                   aligned.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">c</span></span>
-                  will cause the columns to be centered vertically relative to
-                  each other. Default, unless the global option
-                  <span class="texttt">t</span> is used.
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">c</span></span> will
+                  cause the columns to be centered vertically relative to each
+                  other. Default, unless the global option
+                  <span class="verb">t</span> is used.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">onlytextwidth</span></span
+                    ><span class="verb">onlytextwidth</span></span
                   >
                   is the same as
-                  <span class="texttt">totalwidth=\textwidth</span>. This option
+                  <span class="verb">totalwidth=\textwidth</span>. This option
                   can also be set for the whole document with the
-                  <span class="texttt">onlytextwidth</span> class option:
+                  <span class="verb">onlytextwidth</span> class option:
                 </p>
                 <div class="classoption">
                   <div class="classoption-headline">
@@ -3734,32 +3727,31 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">t</span></span>
-                  will cause the first lines of the columns to be aligned.
-                  Default if global option <span class="texttt">t</span> is
-                  used.
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">t</span></span> will
+                  cause the first lines of the columns to be aligned. Default if
+                  global option <span class="verb">t</span> is used.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">T</span></span> is
-                  similar to the <span class="texttt">t</span> option, but
-                  <span class="texttt">T</span> aligns the tops of the first
-                  lines while <span class="texttt">t</span> aligns the so-called
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">T</span></span> is
+                  similar to the <span class="verb">t</span> option, but
+                  <span class="verb">T</span> aligns the tops of the first lines
+                  while <span class="verb">t</span> aligns the so-called
                   baselines of the first lines. If strange things seem to happen
-                  in conjunction with the <span class="texttt">t</span> option
+                  in conjunction with the <span class="verb">t</span> option
                   (for example if a graphic suddenly &ldquo;drops down&rdquo;
-                  with the <span class="texttt">t</span> option instead of
+                  with the <span class="verb">t</span> option instead of
                   &ldquo;going up&rdquo;), try using this option instead.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">totalwidth=</span
+                    ><span class="verb">totalwidth=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>width</i
                       ><span class="angle">&rangle;</span></span
@@ -3809,13 +3801,13 @@
             </div>
             <p>
               This environment is ignored in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <p>
             To create a column, you can either use the
-            <span class="texttt">column</span> environment or the
-            <span class="texttt">\column</span> command.
+            <span class="verb">column</span> environment or the
+            <span class="verb">\column</span> command.
           </p>
           <div class="environment">
             <div class="environment-headline">
@@ -3824,7 +3816,7 @@
                   \begin{<span class="declare">column</span>}<span class="opt"
                     >&lt;<span class="meta"
                       ><span class="angle">&langle;</span
-                      ><i>overlay specification</i
+                      ><i>action specification</i
                       ><span class="angle">&rangle;</span></span
                     >&gt;</span
                   ><span class="opt"
@@ -3856,23 +3848,25 @@
               <span class="meta"
                 ><span class="angle">&langle;</span><i>column width</i
                 ><span class="angle">&rangle;</span></span
-              >. If
+              >. If the
               <span class="meta"
-                ><span class="angle">&langle;</span><i>overlay specification</i
+                ><span class="angle">&langle;</span><i>action specification</i
                 ><span class="angle">&rangle;</span></span
               >
-              is present, the column will only be shown on the specified slides.
-              The vertical placement of the enclosing
-              <span class="texttt">columns</span> environment can be overruled
-              by specifying a specific
+              is present, the given actions are taken on the specified slides,
+              see Section&nbsp;<a
+                href="Creating-Overlays.html#section-action-specifications"
+                >9.6.3</a
+              >. The vertical placement of the enclosing
+              <span class="verb">columns</span> environment can be overruled by
+              specifying a specific
               <span class="meta"
                 ><span class="angle">&langle;</span><i>placement</i
                 ><span class="angle">&rangle;</span></span
               >
-              (<span class="texttt">t</span> and
-              <span class="texttt">T</span> for the two top modes,
-              <span class="texttt">c</span> for centered, and
-              <span class="texttt">b</span> for bottom).
+              (<span class="verb">t</span> and <span class="verb">T</span> for
+              the two top modes, <span class="verb">c</span> for centered, and
+              <span class="verb">b</span> for bottom).
             </p>
             <p>
               <i>Example: </i>The following code has the same effect as the
@@ -3895,8 +3889,7 @@
               </p>
             </div>
             <p>
-              This command is ignored in
-              <span class="texttt">article</span> mode.
+              This command is ignored in <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
@@ -3906,7 +3899,7 @@
                 ><span class="opt"
                   >&lt;<span class="meta"
                     ><span class="angle">&langle;</span
-                    ><i>overlay specification</i
+                    ><i>action specification</i
                     ><span class="angle">&rangle;</span></span
                   >&gt;</span
                 ><span class="opt"
@@ -3923,11 +3916,11 @@
             </div>
             <p>
               Starts a single column. The parameters and options are the same as
-              for the <span class="texttt">column</span> environment. The column
+              for the <span class="verb">column</span> environment. The column
               automatically ends with the next occurrence of
-              <span class="texttt">\column</span> or of a
-              <span class="texttt">column</span> environment or of the end of
-              the current <span class="texttt">columns</span> environment.
+              <span class="verb">\column</span> or of a
+              <span class="verb">column</span> environment or of the end of the
+              current <span class="verb">columns</span> environment.
             </p>
             <p>
               <i>Example: </i>
@@ -3947,8 +3940,7 @@
               </p>
             </div>
             <p>
-              This command is ignored in
-              <span class="texttt">article</span> mode.
+              This command is ignored in <span class="verb">article</span> mode.
             </p>
           </div>
           <!--
@@ -3976,12 +3968,12 @@
             relative to the upper left corner of the slide.
           </p>
           <p>
-            The package <span class="texttt">textpos</span> provides several
+            The package <span class="verb">textpos</span> provides several
             commands for positioning text absolutely and it works together with
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >. When using this package, you will typically have to specify the
-            options <span class="texttt">overlay</span> and perhaps
-            <span class="texttt">absolute</span>. For details on how to use the
+            options <span class="verb">overlay</span> and perhaps
+            <span class="verb">absolute</span>. For details on how to use the
             package, please see its documentation.
           </p>
           <p>
@@ -4015,18 +4007,18 @@
           <a id="beameruserguide-autopage-394"></a>
           <p>
             If you wish to use a
-            <span class="texttt">{verbatim}</span> environment in a frame, you
-            have to add the option <span class="texttt">[fragile]</span> to the
-            <span class="texttt">{frame}</span> environment. The
-            <span class="texttt">\end{frame}</span> must be alone on a single
-            line (except for any leading whitespace). Using this option will
-            cause the frame contents to be written to an external file and then
-            read back. See the description of the
-            <span class="texttt">{frame}</span> environment for more details.
+            <span class="verb">{verbatim}</span> environment in a frame, you
+            have to add the option <span class="verb">[fragile]</span> to the
+            <span class="verb">{frame}</span> environment. The
+            <span class="verb">\end{frame}</span> must be alone on a single line
+            (except for any leading whitespace). Using this option will cause
+            the frame contents to be written to an external file and then read
+            back. See the description of the
+            <span class="verb">{frame}</span> environment for more details.
           </p>
           <p>
-            You must also use the <span class="texttt">[fragile]</span> option
-            for frames that include any &ldquo;fragile&rdquo; text, which is any
+            You must also use the <span class="verb">[fragile]</span> option for
+            frames that include any &ldquo;fragile&rdquo; text, which is any
             text that is not &ldquo;interpreted the way text is usually
             interpreted by
             <span class="latexlogofont"
@@ -4034,18 +4026,18 @@
                 >T<span class="latexlogosub">e</span>X</span
               ></span
             >.&rdquo; For example, if you use a package that (locally) redefined
-            the meaning of, say, the character
-            <span class="texttt">&amp;</span>, you must use this option.
+            the meaning of, say, the character <span class="verb">&amp;</span>,
+            you must use this option.
           </p>
           <p>
-            Inside <span class="texttt">{verbatim}</span> environments you
+            Inside <span class="verb">{verbatim}</span> environments you
             obviously cannot use commands like
-            <span class="texttt">\alert&lt;2&gt;</span> to highlight part of
-            code since the text is written in, well, verbatim. There are several
-            good packages like <span class="texttt">alltt</span> or
-            <span class="texttt">listings</span> that allow you to circumvent
-            this problem. For simple cases, the following environment can be
-            used, which is defined by
+            <span class="verb">\alert&lt;2&gt;</span> to highlight part of code
+            since the text is written in, well, verbatim. There are several good
+            packages like <span class="verb">alltt</span> or
+            <span class="verb">listings</span> that allow you to circumvent this
+            problem. For simple cases, the following environment can be used,
+            which is defined by
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >:
           </p>
@@ -4068,9 +4060,9 @@
             </div>
             <p>
               The text inside this environment is typeset like verbatim text.
-              However, the characters <span class="texttt">\</span>,
-              <span class="texttt">{</span>, and
-              <span class="texttt">}</span> retain their meaning. Thus, you can
+              However, the characters <span class="verb">\</span>,
+              <span class="verb">{</span>, and
+              <span class="verb">}</span> retain their meaning. Thus, you can
               say things like
             </p>
             <div class="fancyvrb" style>
@@ -4080,15 +4072,14 @@
               >
             </div>
             <p>
-              To typeset the three characters <span class="texttt">\</span>,
-              <span class="texttt">{</span>, and
-              <span class="texttt">}</span> you can use the commands
-              <span class="texttt">\\</span> (which is redefined inside this
-              environment&mdash;you do not need it anyway),
-              <span class="texttt">\{</span>, and
-              <span class="texttt">\}</span>. Thus in order to get typeset
-              &ldquo;<span class="texttt">\alert&lt;1&gt;{X}</span>&rdquo; you
-              can write <span class="texttt">\\alert&lt;1&gt;\{X\}</span>.
+              To typeset the three characters <span class="verb">\</span>,
+              <span class="verb">{</span>, and <span class="verb">}</span> you
+              can use the commands <span class="verb">\\</span> (which is
+              redefined inside this environment&mdash;you do not need it
+              anyway), <span class="verb">\{</span>, and
+              <span class="verb">\}</span>. Thus in order to get typeset
+              &ldquo;<span class="verb">\alert&lt;1&gt;{X}</span>&rdquo; you can
+              write <span class="verb">\\alert&lt;1&gt;\{X\}</span>.
             </p>
           </div>
           <!--
@@ -4102,7 +4093,7 @@
           </h5>
           <a id="beameruserguide-autopage-396"></a>
           <p>
-            The <span class="texttt">{abstract}</span> environment is overlay
+            The <span class="verb">{abstract}</span> environment is overlay
             specification-aware in
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >:
@@ -4159,8 +4150,8 @@
               <p>Color parents: <kbd>titlelike</kbd></p>
               <p>
                 This template is used for the title. By default, this inserts
-                the word <span class="texttt">\abstractname</span>, centered.
-                The background color is ignored.
+                the word <span class="verb">\abstractname</span>, centered. The
+                background color is ignored.
               </p>
             </div>
             <div class="element">
@@ -4215,16 +4206,16 @@
               ></span
             >
             defines three environments for typesetting quotations and verses:
-            <span class="texttt">verse</span>,
-            <span class="texttt">quotation</span>, and
-            <span class="texttt">quote</span>. These environments are also
+            <span class="verb">verse</span>,
+            <span class="verb">quotation</span>, and
+            <span class="verb">quote</span>. These environments are also
             available in the
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             class, where they are overlay specification-aware. If an overlay
             specification is given, the verse or quotation is shown only on the
             specified slides and is covered otherwise. The difference between a
-            <span class="texttt">quotation</span> and a
-            <span class="texttt">quote</span> is that the first has paragraph
+            <span class="verb">quotation</span> and a
+            <span class="verb">quote</span> is that the first has paragraph
             indentation, whereas the second hasn&rsquo;t.
           </p>
           <p>
@@ -4438,7 +4429,7 @@
             They disrupt the flow of reading.
           </p>
           <p>
-            You can use the usual <span class="texttt">\footnote</span> command.
+            You can use the usual <span class="verb">\footnote</span> command.
             It has been augmented to take an additional option, for placing
             footnotes at the frame bottom instead of at the bottom of the
             current minipage.
@@ -4479,11 +4470,11 @@
               >
               class adds one additional option:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">frame</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">frame</span></span>
                   causes the footnote to be shown at the bottom of the frame.
                   This is normally the default behavior anyway, but in minipages
                   and certain blocks it makes a difference. In a minipage, the
@@ -4508,15 +4499,15 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\footnote{On a fast machine.}</span>
+              ><span class="verb">\footnote{On a fast machine.}</span>
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\footnote[frame,2]{Not proved.}</span>
+              ><span class="verb">\footnote[frame,2]{Not proved.}</span>
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\footnote&lt;.-&gt;{Der Spiegel, 4/04, S.~90.}</span
               >
             </p>
@@ -4526,8 +4517,8 @@
               </p>
             </div>
             <p>
-              In <span class="texttt">article</span> mode, footnotes are typeset
-              as usual. The <span class="texttt">frame</span> option has no
+              In <span class="verb">article</span> mode, footnotes are typeset
+              as usual. The <span class="verb">frame</span> option has no
               effect, which means in a minipage the footnote is shown as part of
               it.
             </p>
@@ -4542,17 +4533,17 @@
                 This template will be used to render the footnote. Inside this
                 template, the following two inserts can be used:
               </p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertfootnotetext</span></kbd>
                     Inserts the current footnote text.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertfootnotemark</span></kbd>
                     Inserts the current footnote mark (like a raised number).
                     This mark is computed automatically.
@@ -4594,7 +4585,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

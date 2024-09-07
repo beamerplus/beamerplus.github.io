@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Fonts - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -90,7 +90,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -220,33 +220,31 @@
               for things like titles or head- and footlines, but does not use
               boldface or italics for &ldquo;highlighting.&rdquo; To change some
               or all text to a serif font, use the
-              <span class="texttt">serif</span> theme.
+              <span class="verb">serif</span> theme.
             </p>
             <p>
-              <em>Note:</em> The command
-              <span class="texttt">\mathrm</span> will always produce upright
-              (not slanted), serif text and the command
-              <span class="texttt">\mathsf</span> will always produce upright,
+              <em>Note:</em> The command <span class="verb">\mathrm</span> will
+              always produce upright (not slanted), serif text and the command
+              <span class="verb">\mathsf</span> will always produce upright,
               sans-serif text. The command
-              <span class="texttt">\mathbf</span> will produce upright,
-              bold-face, sans-serif or serif text, depending on whether
-              <span class="texttt">mathsans</span> or
-              <span class="texttt">mathserif</span> is used.
+              <span class="verb">\mathbf</span> will produce upright, bold-face,
+              sans-serif or serif text, depending on whether
+              <span class="verb">mathsans</span> or
+              <span class="verb">mathserif</span> is used.
             </p>
             <p>
               To produce an upright, sans-serif or serif text, depending on
-              whether <span class="texttt">mathsans</span> or
-              <span class="texttt">mathserif</span> is used, you can use for
-              instance the command
-              <span class="texttt">\operatorname</span> from the
-              <span class="texttt">amsmath</span> package. Using this command
-              instead of <span class="texttt">\mathrm</span> or
-              <span class="texttt">\mathsf</span> directly will automatically
+              whether <span class="verb">mathsans</span> or
+              <span class="verb">mathserif</span> is used, you can use for
+              instance the command <span class="verb">\operatorname</span> from
+              the <span class="verb">amsmath</span> package. Using this command
+              instead of <span class="verb">\mathrm</span> or
+              <span class="verb">\mathsf</span> directly will automatically
               adjust upright mathematical text if you switch from sans-serif to
               serif or back.
             </p>
           </div>
-          <ul style="list-style-type: none">
+          <ul class="list" style="list-style-type: none">
             <li>
               <p>
                 <span class="extracttheme"
@@ -284,22 +282,22 @@
                   ><span class="textsc">beamer</span></span
                 >&rsquo;s substitution is automatically turned off if one of the
                 following packages is loaded:
-                <span class="texttt">arevmath</span>,
-                <span class="texttt">hvmath</span>,
-                <span class="texttt">kpfonts</span>,
-                <span class="texttt">lmodern</span>,
-                <span class="texttt">lucidabr</span>,
-                <span class="texttt">lucimatx</span>,
-                <span class="texttt">mathastext</span>,
-                <span class="texttt">mathpmnt</span>,
-                <span class="texttt">mathpple</span>,
-                <span class="texttt">mathtime</span>,
-                <span class="texttt">mtpro</span>, and
-                <span class="texttt">mtpro2</span>. It is also turned off when
-                <span class="texttt">unicode-math</span> is loaded for the use
-                of Unicode math fonts. If your favorite professional font
-                package is not among these, use the
-                <span class="texttt">professionalfonts</span> theme (and open an
+                <span class="verb">arevmath</span>,
+                <span class="verb">hvmath</span>,
+                <span class="verb">kpfonts</span>,
+                <span class="verb">lmodern</span>,
+                <span class="verb">lucidabr</span>,
+                <span class="verb">lucimatx</span>,
+                <span class="verb">mathastext</span>,
+                <span class="verb">mathpmnt</span>,
+                <span class="verb">mathpple</span>,
+                <span class="verb">mathtime</span>,
+                <span class="verb">mtpro</span>, and
+                <span class="verb">mtpro2</span>. It is also turned off when
+                <span class="verb">unicode-math</span> is loaded for the use of
+                Unicode math fonts. If your favorite professional font package
+                is not among these, use the
+                <span class="verb">professionalfonts</span> theme (and open an
                 issue in our github bug tracker, so that the package can be
                 added).
               </p>
@@ -354,36 +352,36 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">stillsansserifmath</span></span
+                    ><span class="verb">stillsansserifmath</span></span
                   >
                   causes mathematical text still to be typeset using sans serif.
                   This option only makes sense if you also use the
-                  <span class="texttt">stillsansseriftext</span> option since
-                  sans serif math inside serif text looks silly.
+                  <span class="verb">stillsansseriftext</span> option since sans
+                  serif math inside serif text looks silly.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">stillsansserifsmall</span></span
+                    ><span class="verb">stillsansserifsmall</span></span
                   >
                   will cause &ldquo;small&rdquo; text to be still typeset using
                   sans serif. This refers to the text in the headline, footline,
-                  and sidebars. Using this options is often advisable since
-                  small text is often easier to read in sans serif.
+                  and sidebars. Using this option is often advisable since small
+                  text is often easier to read in sans serif.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">stillsansseriflarge</span></span
+                    ><span class="verb">stillsansseriflarge</span></span
                   >
                   will cause &ldquo;large&rdquo; text like the presentation
                   title or the frame title to be still typeset using sans serif.
@@ -393,16 +391,16 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">stillsansseriftext</span></span
+                    ><span class="verb">stillsansseriftext</span></span
                   >
                   will cause normal text (none of the above three) to be still
                   typeset using sans serif. If you use this option, you should
                   most likely also use the first two. However, by not using
-                  <span class="texttt">stillsansseriflarge</span>, you get a
-                  serif (possibly italic) title over a sans serif text. This can
-                  be an interesting visual effect. Naturally, &ldquo;interesting
+                  <span class="verb">stillsansseriflarge</span>, you get a serif
+                  (possibly italic) title over a sans serif text. This can be an
+                  interesting visual effect. Naturally, &ldquo;interesting
                   typographic effect&rdquo; can mean &ldquo;terrible typographic
                   effect&rdquo; if you choose the wrong fonts combinations or
                   sizes. You&rsquo;ll need some typographic experience to judge
@@ -412,9 +410,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">onlymath</span></span
+                    ><span class="verb">onlymath</span></span
                   >
                   is a short-cut for selecting all of the above options except
                   for the first. Thus, using this option causes only
@@ -475,12 +473,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">onlysmall</span></span
+                    ><span class="verb">onlysmall</span></span
                   >
                   will cause only &ldquo;small&rdquo; text to be typeset in
                   bold. More precisely, only the text in the headline, footline,
@@ -490,9 +488,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">onlylarge</span></span
+                    ><span class="verb">onlylarge</span></span
                   >
                   will cause only &ldquo;large&rdquo; text to be typeset in
                   bold. These are the main title, frame titles, and section
@@ -505,7 +503,7 @@
                 href="Guidelines-Creating-Presentations.html#section-sizes"
                 >5.6.1</a
               >, you should use this theme (possibly with the
-              <span class="texttt">onlysmall</span> option) if your font is not
+              <span class="verb">onlysmall</span> option) if your font is not
               scaled down properly or for light-on-dark text.
             </p>
             <p>
@@ -546,15 +544,15 @@
             </div>
             <p>
               This theme is similarly as the
-              <span class="texttt">structurebold</span> font theme, but where
-              <span class="texttt">structurebold</span> makes text bold, this
+              <span class="verb">structurebold</span> font theme, but where
+              <span class="verb">structurebold</span> makes text bold, this
               theme typesets it in italics and in the standard serif font. The
               same
               <span class="meta"
                 ><span class="angle">&langle;</span><i>options</i
                 ><span class="angle">&rangle;</span></span
               >
-              as for the <span class="texttt">structurebold</span> theme are
+              as for the <span class="verb">structurebold</span> theme are
               supported. See Section&nbsp;<a
                 href="Guidelines-Creating-Presentations.html#section-italics"
                 >5.6.3</a
@@ -593,13 +591,13 @@
             </div>
             <p>
               Again, this theme does exactly the same as the
-              <span class="texttt">structurebold</span> font theme, only this
-              time text is set using small caps and a serif font. The same
+              <span class="verb">structurebold</span> font theme, only this time
+              text is set using small caps and a serif font. The same
               <span class="meta"
                 ><span class="angle">&langle;</span><i>options</i
                 ><span class="angle">&rangle;</span></span
               >
-              as for the <span class="texttt">structurebold</span> theme are
+              as for the <span class="verb">structurebold</span> theme are
               supported. See Section&nbsp;<a
                 href="Guidelines-Creating-Presentations.html#section-smallcaps"
                 >5.6.3</a
@@ -657,7 +655,7 @@
             </div>
             <p>
               This is way too small. Requires that the package
-              <span class="texttt">extsize</span> is installed.
+              <span class="verb">extsize</span> is installed.
             </p>
           </div>
           <div class="classoption">
@@ -666,7 +664,7 @@
             </div>
             <p>
               This is also too small. Requires that the package
-              <span class="texttt">extsize</span> is installed.
+              <span class="verb">extsize</span> is installed.
             </p>
           </div>
           <div class="classoption">
@@ -675,7 +673,7 @@
             </div>
             <p>
               If you really need to fit more onto each frame, use this option.
-              Works without <span class="texttt">extsize</span>.
+              Works without <span class="verb">extsize</span>.
             </p>
           </div>
           <div class="classoption">
@@ -684,7 +682,7 @@
                 \documentclass[<span class="declare">smaller</span>]{beamer}
               </p>
             </div>
-            <p>Same as the <span class="texttt">10pt</span> option.</p>
+            <p>Same as the <span class="verb">10pt</span> option.</p>
           </div>
           <div class="classoption">
             <div class="classoption-headline">
@@ -705,7 +703,7 @@
             <div class="classoption-headline">
               <p>\documentclass[<span class="declare">bigger</span>]{beamer}</p>
             </div>
-            <p>Same as the <span class="texttt">12pt</span> option.</p>
+            <p>Same as the <span class="verb">12pt</span> option.</p>
           </div>
           <div class="classoption">
             <div class="classoption-headline">
@@ -713,7 +711,7 @@
             </div>
             <p>
               Makes all fonts somewhat bigger. Requires
-              <span class="texttt">extsize</span> to be installed.
+              <span class="verb">extsize</span> to be installed.
             </p>
           </div>
           <div class="classoption">
@@ -722,7 +720,7 @@
             </div>
             <p>
               This is about the default size of PowerPoint and OpenOffice.org
-              Impress. Requires <span class="texttt">extsize</span> to be
+              Impress. Requires <span class="verb">extsize</span> to be
               installed.
             </p>
           </div>
@@ -731,8 +729,8 @@
               <p>\documentclass[<span class="declare">20pt</span>]{beamer}</p>
             </div>
             <p>
-              This is really huge. Requires
-              <span class="texttt">extsize</span> to be installed.
+              This is really huge. Requires <span class="verb">extsize</span> to
+              be installed.
             </p>
           </div>
           <!--
@@ -768,27 +766,23 @@
           >
           <p>
             in your preamble. Note that if you do not use the
-            <span class="texttt">serif</span> font theme, Helvetica (not Times)
+            <span class="verb">serif</span> font theme, Helvetica (not Times)
             will be selected as the text font.
           </p>
           <p>
             There may be many other fonts available on your installation.
             Typically, at least some of the following packages should be
-            available: <span class="texttt">arev</span>,
-            <span class="texttt">avant</span>,
-            <span class="texttt">bookman</span>,
-            <span class="texttt">chancery</span>,
-            <span class="texttt">charter</span>,
-            <span class="texttt">euler</span>,
-            <span class="texttt">helvet</span>,
-            <span class="texttt">lmodern</span>,
-            <span class="texttt">mathtime</span>,
-            <span class="texttt">mathptm</span>,
-            <span class="texttt">mathptmx</span>,
-            <span class="texttt">newcent</span>,
-            <span class="texttt">palatino</span>,
-            <span class="texttt">pifont</span>,
-            <span class="texttt">utopia</span>.
+            available: <span class="verb">arev</span>,
+            <span class="verb">avant</span>, <span class="verb">bookman</span>,
+            <span class="verb">chancery</span>,
+            <span class="verb">charter</span>, <span class="verb">euler</span>,
+            <span class="verb">helvet</span>, <span class="verb">lmodern</span>,
+            <span class="verb">mathtime</span>,
+            <span class="verb">mathptm</span>,
+            <span class="verb">mathptmx</span>,
+            <span class="verb">newcent</span>,
+            <span class="verb">palatino</span>,
+            <span class="verb">pifont</span>, <span class="verb">utopia</span>.
           </p>
           <!--
 ...... subsubsection Choosing a Font Encodings ......
@@ -842,28 +836,27 @@
             >
             (for Windows platforms) can be installed with different levels of
             completeness. Concerning the Computer Modern fonts, the following
-            packages can be installed:
-            <span class="texttt">cm-super</span> fonts,
-            <span class="texttt">lmodern</span> (Latin Modern) fonts, and
-            <span class="texttt">lgc</span> fonts, the latter containing the
+            packages can be installed: <span class="verb">cm-super</span> fonts,
+            <span class="verb">lmodern</span> (Latin Modern) fonts, and
+            <span class="verb">lgc</span> fonts, the latter containing the
             Latin, Greek, and Cyrillic alphabets. Concerning other fonts, the
-            <span class="texttt">txfonts</span> and
-            <span class="texttt">pxfonts</span> are two extended sets of the
-            Times and the Palatino PostScript fonts, both packages containing
-            extended sets of mathematical glyphs. Most other standard PostScript
-            fonts are also available in T1&nbsp;encoding.
+            <span class="verb">txfonts</span> and
+            <span class="verb">pxfonts</span> are two extended sets of the Times
+            and the Palatino PostScript fonts, both packages containing extended
+            sets of mathematical glyphs. Most other standard PostScript fonts
+            are also available in T1&nbsp;encoding.
           </p>
           <p>
             Among the packages that make available the Computer Modern fonts in
             the T1&nbsp;encoding, the package
-            <span class="texttt">lmodern</span> may be suggested. If you use
-            <span class="texttt">lmodern</span>, several extra fonts become
+            <span class="verb">lmodern</span> may be suggested. If you use
+            <span class="verb">lmodern</span>, several extra fonts become
             available (like a sans-serif boldface math) and extra symbols (like
             proper guillemots).
           </p>
           <p>
             To select the T1 encoding, use
-            <span class="texttt">\usepackage[T1]{fontenc}</span>. Thus, if you
+            <span class="verb">\usepackage[T1]{fontenc}</span>. Thus, if you
             have the LM&nbsp;fonts installed, you could write
           </p>
           <pre class="verbatim">
@@ -880,18 +873,18 @@
           </p>
           <p>
             Everything mentioned above applies to
-            <span class="texttt">pdflatex</span> and
-            <span class="texttt">latex</span>+<span class="texttt">dvips</span>.
-            Unlike those engines, <span class="texttt">xelatex</span> and
-            <span class="texttt">lualatex</span> support OpenType fonts, and
-            that means that you can use system fonts in your documents
-            relatively easy. Details will eventually be documented in this
-            manual. For now, you can take a look at the documentation for the
-            <span class="texttt">fontspec</span> package which supports both
+            <span class="verb">pdflatex</span> and
+            <span class="verb">latex</span>+<span class="verb">dvips</span>.
+            Unlike those engines, <span class="verb">xelatex</span> and
+            <span class="verb">lualatex</span> support OpenType fonts, and that
+            means that you can use system fonts in your documents relatively
+            easy. Details will eventually be documented in this manual. For now,
+            you can take a look at the documentation for the
+            <span class="verb">fontspec</span> package which supports both
             engines. Also, note that when you use
-            <span class="texttt">lualatex</span> or
-            <span class="texttt">xelatex</span> with TU encoding, respectively,
-            by default you get OpenType Latin Modern fonts.
+            <span class="verb">lualatex</span> or
+            <span class="verb">xelatex</span> with TU encoding, respectively, by
+            default you get OpenType Latin Modern fonts.
           </p>
           <!--
 ...... subsection Changing the Fonts Used for Different Elements of a Presentation ......
@@ -922,14 +915,14 @@
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >&rsquo;s font mechanism is somewhat similar to
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >&rsquo;s color mechanism, but not quite the same. As for colors,
-            every
+            >&rsquo;s color mechanism, but not quite the same. Similar to
+            colors, every
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             element, like the frame titles, the document title, the footnotes,
             and so on has a certain
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >-font. As for colors, on the one hand you can specify the font of
-            each element individually; on the other hand fonts also use
+            >-font. Similar to colors, on the one hand you can specify the font
+            of each element individually; on the other hand fonts also use
             inheritance, thereby making it easy to globally change the fonts
             used for, say, &ldquo;titlelike things&rdquo; or for
             &ldquo;itemizelike things.&rdquo;
@@ -972,7 +965,7 @@
             To use a
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >-font, you can use the command
-            <span class="texttt">\usebeamerfont</span>. Inside the templates for
+            <span class="verb">\usebeamerfont</span>. Inside the templates for
             elements, this command will (typically) have already been called for
             you, so you will only seldomly have to use this command.
           </p>
@@ -980,7 +973,7 @@
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\usebeamerfont</kbd></span
-                ><span class="opt"><span class="texttt">*</span></span
+                ><span class="opt"><span class="verb">*</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>beamer-font name</i
                   ><span class="angle">&rangle;</span></span
@@ -998,9 +991,9 @@
                 ><span class="angle">&rangle;</span></span
               >
               can be a not-too-fancyful text and may contain spaces. Typical
-              examples are <span class="texttt">frametitle</span> or
-              <span class="texttt">section in toc</span> or
-              <span class="texttt">My Font 1</span>.
+              examples are <span class="verb">frametitle</span> or
+              <span class="verb">section in toc</span> or
+              <span class="verb">My Font 1</span>.
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-fonts can have (and should) have the same name as
               <span class="beamer-name"><span class="textsc">beamer</span></span
@@ -1010,7 +1003,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\usebeamerfont{frametitle}</span> In the
+              ><span class="verb">\usebeamerfont{frametitle}</span> In the
               unstarred version of this command, the font is changed according
               to the attributes specified in the
               <span class="meta"
@@ -1019,7 +1012,7 @@
               >, but unspecified attributes remain unchanged. For example, if
               the font specifies that the font should be &ldquo;bold,&rdquo; but
               specifies nothing else, and if the current font is large, then
-              <span class="texttt">\usebeamerfont</span> causes the current font
+              <span class="verb">\usebeamerfont</span> causes the current font
               to become large and bold.
             </p>
             <p>
@@ -1028,7 +1021,7 @@
               example of a
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-font having only the attribute &ldquo;boldface&rdquo; set,
-              saying <span class="texttt">\usebeamerfont*</span> will
+              saying <span class="verb">\usebeamerfont*</span> will
               <em>always</em> cause the current font to become a normal-shape,
               bold, default-family font (the font size won&rsquo;t be reset).
             </p>
@@ -1054,7 +1047,7 @@
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\setbeamerfont</kbd></span
-                ><span class="opt"><span class="texttt">*</span></span
+                ><span class="opt"><span class="verb">*</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>beamer-font name</i
                   ><span class="angle">&rangle;</span></span
@@ -1098,12 +1091,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">size=</span
+                    ><span class="verb">size=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>size command</i
                       ><span class="angle">&rangle;</span></span
@@ -1128,39 +1121,39 @@
                     ></span
                   >-command used for setting the font size or it should be
                   empty. Useful commands include
-                  <span class="texttt">\tiny</span>,
-                  <span class="texttt">\scriptsize</span>,
-                  <span class="texttt">\footnotesize</span>,
-                  <span class="texttt">\small</span>,
-                  <span class="texttt">\normalsize</span>,
-                  <span class="texttt">\large</span>,
-                  <span class="texttt">\Large</span>,
-                  <span class="texttt">\huge</span>, and
-                  <span class="texttt">\Huge</span>.
+                  <span class="verb">\tiny</span>,
+                  <span class="verb">\scriptsize</span>,
+                  <span class="verb">\footnotesize</span>,
+                  <span class="verb">\small</span>,
+                  <span class="verb">\normalsize</span>,
+                  <span class="verb">\large</span>,
+                  <span class="verb">\Large</span>,
+                  <span class="verb">\huge</span>, and
+                  <span class="verb">\Huge</span>.
                   <span class="beamer-name"
                     ><span class="textsc">beamer</span></span
                   >
                   also introduces the two font sizes
-                  <span class="texttt">\Tiny</span> and
-                  <span class="texttt">\TINY</span> for <em>really</em> small
+                  <span class="verb">\Tiny</span> and
+                  <span class="verb">\TINY</span> for <em>really</em> small
                   text. But you should know <em>exactly</em> what you are doing
                   if you use them. You have been warned.
                 </p>
                 <p>
                   Note that there is a difference between specifying an empty
-                  command and specifying
-                  <span class="texttt">\normalsize</span>: Making the size
-                  attribute &ldquo;empty&rdquo; means that the font size should
-                  not be changed when this font is used, while specifying
-                  <span class="texttt">\normalsize</span> means that the size
-                  should be set to the normal size whenever this font is used.
+                  command and specifying <span class="verb">\normalsize</span>:
+                  Making the size attribute &ldquo;empty&rdquo; means that the
+                  font size should not be changed when this font is used, while
+                  specifying <span class="verb">\normalsize</span> means that
+                  the size should be set to the normal size whenever this font
+                  is used.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">size*=</span>{<span class="meta"
+                    ><span class="verb">size*=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>size in pt</i
                       ><span class="angle">&rangle;</span></span
                     >}{<span class="meta"
@@ -1179,37 +1172,37 @@
                   than other ones; the standard commands take care of choosing
                   appropriate sizes for you. Do not use this option unless you
                   have a good reason. This command has the same effect as
-                  <span class="texttt">size={\fontsize</span>{<span class="meta"
+                  <span class="verb">size={\fontsize</span>{<span class="meta"
                     ><span class="angle">&langle;</span><i>size in pt</i
                     ><span class="angle">&rangle;</span></span
                   >}{<span class="meta"
                     ><span class="angle">&langle;</span><i>baselineskip</i
                     ><span class="angle">&rangle;</span></span
-                  >}<span class="texttt">}</span>.
+                  >}<span class="verb">}</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">shape=</span
+                    ><span class="verb">shape=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>shape command</i
                       ><span class="angle">&rangle;</span></span
                     ></span
                   >
                   sets the shape attribute of the font. The command should be a
-                  command like <span class="texttt">\itshape</span>,
-                  <span class="texttt">\slshape</span>,
-                  <span class="texttt">\scshape</span>, or
-                  <span class="texttt">\upshape</span>.
+                  command like <span class="verb">\itshape</span>,
+                  <span class="verb">\slshape</span>,
+                  <span class="verb">\scshape</span>, or
+                  <span class="verb">\upshape</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">shape*=</span>{<span class="meta"
+                    ><span class="verb">shape*=</span>{<span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>shape attribute abbreviation</i
                       ><span class="angle">&rangle;</span></span
@@ -1225,19 +1218,18 @@
                     ></span
                   >&rsquo;s abbreviations for attributes. This command has the
                   same effect as
-                  <span class="texttt">shape={\fontshape</span>{<span
-                    class="meta"
+                  <span class="verb">shape={\fontshape</span>{<span class="meta"
                     ><span class="angle">&langle;</span
                     ><i>shape attributes abbreviation</i
                     ><span class="angle">&rangle;</span></span
-                  >}<span class="texttt">}</span>.
+                  >}<span class="verb">}</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">series=</span
+                    ><span class="verb">series=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>series command</i
                       ><span class="angle">&rangle;</span></span
@@ -1245,33 +1237,33 @@
                   >
                   sets the &ldquo;series&rdquo; attribute of the font. The
                   command should be a command like
-                  <span class="texttt">\bfseries</span>.
+                  <span class="verb">\bfseries</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">series*=</span>{<span class="meta"
+                    ><span class="verb">series*=</span>{<span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>series attribute abbreviation</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
                   >
                   has the same effect as
-                  <span class="texttt">series={\fontseries</span>{<span
+                  <span class="verb">series={\fontseries</span>{<span
                     class="meta"
                     ><span class="angle">&langle;</span
                     ><i>series attributes abbreviation</i
                     ><span class="angle">&rangle;</span></span
-                  >}<span class="texttt">}</span>.
+                  >}<span class="verb">}</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">family=</span
+                    ><span class="verb">family=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>family command</i
                       ><span class="angle">&rangle;</span></span
@@ -1285,15 +1277,15 @@
                         >e</span
                       >X</span
                     ></span
-                  >-font command like <span class="texttt">\rmfamily</span> or
-                  <span class="texttt">\sffamily</span>.
+                  >-font command like <span class="verb">\rmfamily</span> or
+                  <span class="verb">\sffamily</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">family*=</span>{<span class="meta"
+                    ><span class="verb">family*=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>family name</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
@@ -1303,11 +1295,11 @@
                     ><span class="angle">&langle;</span><i>family name</i
                     ><span class="angle">&rangle;</span></span
                   >. The command has the same effect as
-                  <span class="texttt">family={\fontfamily</span>{<span
+                  <span class="verb">family={\fontfamily</span>{<span
                     class="meta"
                     ><span class="angle">&langle;</span><i>family name</i
                     ><span class="angle">&rangle;</span></span
-                  >}<span class="texttt">}</span>. The
+                  >}<span class="verb">}</span>. The
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>family name</i
                     ><span class="angle">&rangle;</span></span
@@ -1318,16 +1310,16 @@
                     ><span class="angle">&langle;</span><i>family name</i
                     ><span class="angle">&rangle;</span></span
                   >
-                  for Times happens to be <span class="texttt">ptm</span>. No
-                  one can remember these names, so it&rsquo;s perfectly normal
-                  if you have to look them up laboriously.
+                  for Times happens to be <span class="verb">ptm</span>. No one
+                  can remember these names, so it&rsquo;s perfectly normal if
+                  you have to look them up laboriously.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">parent=</span>{<span class="meta"
+                    ><span class="verb">parent=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>parent list</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
@@ -1384,7 +1376,7 @@ This text is small and bold.
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

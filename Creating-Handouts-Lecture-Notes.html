@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Creating Handouts and Lecture Notes - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -73,7 +73,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -162,13 +162,13 @@
             package offers two different ways of creating special versions of
             your talk; they are discussed in the following. The first, easy, way
             is to create a handout version by adding the
-            <span class="texttt">handout</span> option, which will cause the
-            document to be typeset in <span class="texttt">handout</span> mode.
-            It will &ldquo;look like&rdquo; a presentation, but it can be
-            printed more easily (the overlays are &ldquo;flattened&rdquo;). The
-            second, more complicated and more powerful way is to create an
-            independent &ldquo;article&rdquo; version of your presentation. This
-            version coexists in your main file.
+            <span class="verb">handout</span> option, which will cause the
+            document to be typeset in <span class="verb">handout</span> mode. It
+            will &ldquo;look like&rdquo; a presentation, but it can be printed
+            more easily (the overlays are &ldquo;flattened&rdquo;). The second,
+            more complicated and more powerful way is to create an independent
+            &ldquo;article&rdquo; version of your presentation. This version
+            coexists in your main file.
           </p>
           <!--
 ...... subsection Creating Handouts Using the Handout Mode ......
@@ -185,8 +185,8 @@
           <p>
             The easiest way of creating a handout for your audience (though not
             the most desirable one) is to use the
-            <span class="texttt">handout</span> option. This option works
-            exactly like the <span class="texttt">trans</span> option.
+            <span class="verb">handout</span> option. This option works exactly
+            like the <span class="verb">trans</span> option.
           </p>
           <div class="classoption">
             <div class="classoption-headline">
@@ -196,7 +196,7 @@
             </div>
             <p>
               Create a version that uses the
-              <span class="texttt">handout</span> overlay specifications.
+              <span class="verb">handout</span> overlay specifications.
             </p>
             <p>
               You might wish to choose a different color and/or presentation
@@ -207,7 +207,7 @@
             When printing a handout created this way, you will typically wish to
             print at least two and possibly four slides on each page. The
             easiest way of doing so is presumably to use
-            <span class="texttt">pgfpages</span> as follows:
+            <span class="verb">pgfpages</span> as follows:
           </p>
           <pre class="verbatim">
 \usepackage{pgfpages}
@@ -215,11 +215,11 @@
 </pre
           >
           <p>
-            Instead of <span class="texttt">2 on 1</span> you can use
-            <span class="texttt">4 on 1</span> (but then you have to add
-            <span class="texttt">landscape</span> to the list of options) and
-            you can use, say, <span class="texttt">letterpaper</span> instead of
-            <span class="texttt">a4paper</span>.
+            Instead of <span class="verb">2 on 1</span> you can use
+            <span class="verb">4 on 1</span> (but then you have to add
+            <span class="verb">landscape</span> to the list of options) and you
+            can use, say, <span class="verb">letterpaper</span> instead of
+            <span class="verb">a4paper</span>.
           </p>
           <!--
 ...... subsection Creating Handouts Using the Article Mode ......
@@ -242,8 +242,8 @@
               ></span
             >
             text typeset using, for example, the document class
-            <span class="texttt">article</span> or perhaps
-            <span class="texttt">llncs</span> or a similar document class. This
+            <span class="verb">article</span> or perhaps
+            <span class="verb">llncs</span> or a similar document class. This
             version of the presentation will typically follow different
             typesetting rules and may even have a different structure.
             Nevertheless, you may wish to have this version coexist with your
@@ -253,8 +253,8 @@
           <p>
             In general, the article version of a talk is better suited as a
             handout than a handout created using the simple
-            <span class="texttt">handout</span> mode since it is more economic
-            and can include more in-depth information.
+            <span class="verb">handout</span> mode since it is more economic and
+            can include more in-depth information.
           </p>
           <!--
 ...... subsubsection Starting the Article Mode ......
@@ -268,39 +268,38 @@
           <a id="beameruserguide-autopage-550"></a>
           <p>
             The article mode of a presentation is created by specifying
-            <span class="texttt">article</span> or
-            <span class="texttt">book</span> or some other class as the document
-            class instead of <span class="texttt">beamer</span> and by then
-            loading the package <span class="texttt">beamerarticle</span>.
+            <span class="verb">article</span> or
+            <span class="verb">book</span> or some other class as the document
+            class instead of <span class="verb">beamer</span> and by then
+            loading the package <span class="verb">beamerarticle</span>.
           </p>
           <p>
-            The package <span class="texttt">beamerarticle</span> defines
+            The package <span class="verb">beamerarticle</span> defines
             virtually all of
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >&rsquo;s commands in a way that is sensible for the
-            <span class="texttt">article</span> mode. Also, overlay
-            specifications can be given to commands like
-            <span class="texttt">\textbf</span> or
-            <span class="texttt">\item</span> once
-            <span class="texttt">beamerarticle</span> has been loaded. Note
-            that, except for <span class="texttt">\item</span>, these overlay
+            <span class="verb">article</span> mode. Also, overlay specifications
+            can be given to commands like <span class="verb">\textbf</span> or
+            <span class="verb">\item</span> once
+            <span class="verb">beamerarticle</span> has been loaded. Note that,
+            except for <span class="verb">\item</span>, these overlay
             specifications also work: by writing
             <span class="texttt">\section&lt;presentation&gt;{Name}</span> you
             will suppress this section command in the article version. For the
             exact effects overlay specifications have in
-            <span class="texttt">article</span> mode, please see the
-            descriptions of the commands to which you wish to apply them.
+            <span class="verb">article</span> mode, please see the descriptions
+            of the commands to which you wish to apply them.
           </p>
           <div class="package">
             <div class="package-headline">
               <p>
                 <span class="extracttheme"
                   >\usepackage<span class="opt"
-                    ><span class="texttt">[</span
+                    ><span class="verb">[</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>options</i
                       ><span class="angle">&rangle;</span></span
-                    ><span class="texttt">]</span></span
+                    ><span class="verb">]</span></span
                   >{<span class="declare">beamerarticle</span>}</span
                 >
               </p>
@@ -320,12 +319,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">activeospeccharacters</span></span
+                    ><span class="verb">activeospeccharacters</span></span
                   >
                   will leave the character code of the pointed brackets as
                   specified by other packages. Normally,
@@ -333,76 +332,75 @@
                     ><span class="textsc">beamer</span></span
                   >
                   will turn off the special behavior of the two characters
-                  <span class="texttt">&lt;</span> and
-                  <span class="texttt">&gt;</span>. Using this option, you can
+                  <span class="verb">&lt;</span> and
+                  <span class="verb">&gt;</span>. Using this option, you can
                   reinstall the original behavior at the price of possible
                   problems when using overlay specifications in the
-                  <span class="texttt">article</span> mode.
+                  <span class="verb">article</span> mode.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">noamssymb</span></span
+                    ><span class="verb">noamssymb</span></span
                   >
                   will suppress the automatic loading of the
-                  <span class="texttt">amssymb</span> package. Normally,
+                  <span class="verb">amssymb</span> package. Normally,
                   <span class="beamer-name"
                     ><span class="textsc">beamer</span></span
                   >
                   will load this package since many themes use AMS symbols. This
                   option allows you to opt-out from this behavior in article
                   mode, thus preventing clashes with some classes and font
-                  packages that conflict with
-                  <span class="texttt">amssymb</span>. Note that, if you use
-                  this option, you will have to care for yourself that
-                  <span class="texttt">amssymb</span> or an alternative package
-                  is loaded if you use respective symbols.
+                  packages that conflict with <span class="verb">amssymb</span>.
+                  Note that, if you use this option, you will have to care for
+                  yourself that <span class="verb">amssymb</span> or an
+                  alternative package is loaded if you use respective symbols.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">noamsthm</span></span
+                    ><span class="verb">noamsthm</span></span
                   >
                   will suppress the loading of the
-                  <span class="texttt">amsthm</span> package. No theorems will
-                  be defined.
+                  <span class="verb">amsthm</span> package. No theorems will be
+                  defined.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">nokeywords</span></span
+                    ><span class="verb">nokeywords</span></span
                   >
                   will suppress the creation of a
-                  <span class="texttt">\keywords</span> command.
+                  <span class="verb">\keywords</span> command.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">notheorems</span></span
+                    ><span class="verb">notheorems</span></span
                   >
                   will suppress the definition of standard environments like
-                  <span class="texttt">theorem</span>, but
-                  <span class="texttt">amsthm</span> is still loaded and the
-                  <span class="texttt">\newtheorem</span> command still makes
-                  the defined environments overlay-specification-aware. Using
-                  this option allows you to define the standard environments in
+                  <span class="verb">theorem</span>, but
+                  <span class="verb">amsthm</span> is still loaded and the
+                  <span class="verb">\newtheorem</span> command still makes the
+                  defined environments overlay-specification-aware. Using this
+                  option allows you to define the standard environments in
                   whatever way you like while retaining the power of the
-                  extensions to <span class="texttt">amsthm</span>.
+                  extensions to <span class="verb">amsthm</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">envcountsect</span></span
+                    ><span class="verb">envcountsect</span></span
                   >
                   causes theorem, definitions and the like to be numbered with
                   each section. Thus instead of Theorem&nbsp;1 you get
@@ -411,12 +409,12 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">noxcolor</span></span
+                    ><span class="verb">noxcolor</span></span
                   >
                   will suppress the loading of the
-                  <span class="texttt">xcolor</span> package. No colors will be
+                  <span class="verb">xcolor</span> package. No colors will be
                   defined.
                 </p>
               </li>
@@ -441,22 +439,22 @@
           </div>
           <p>
             There is one remaining problem: While the
-            <span class="texttt">article</span> version can easily
+            <span class="verb">article</span> version can easily
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >T<span class="latexlogosub">e</span>X</span
               ></span
             >
             the whole file, even in the presence of commands like
-            <span class="texttt">\frame&lt;2&gt;</span>, we do not want the
+            <span class="verb">\frame&lt;2&gt;</span>, we do not want the
             special article text to be inserted into our original
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             presentation. That means, we would like all text
             <em>between</em> frames to be suppressed. More precisely, we want
             all text except for commands like
-            <span class="texttt">\section</span> and so on to be suppressed.
-            This behavior can be enforced by specifying the option
-            <span class="texttt">ignorenonframetext</span> in the presentation
+            <span class="verb">\section</span> and so on to be suppressed. This
+            behavior can be enforced by specifying the option
+            <span class="verb">ignorenonframetext</span> in the presentation
             version.
           </p>
           <div class="classoption">
@@ -467,15 +465,15 @@
               </p>
             </div>
             <p>
-              Cause <span class="texttt">beamer</span> to ignore (almost) all
+              Cause <span class="verb">beamer</span> to ignore (almost) all
               texts and commands outside frames in the
-              <span class="texttt">presentation</span> mode. The option will
-              insert a <span class="texttt">\mode*</span> at the beginning of
-              your presentation.
+              <span class="verb">presentation</span> mode. The option will
+              insert a <span class="verb">\mode*</span> at the beginning of your
+              presentation.
             </p>
             <p>
-              <em>Note:</em> When using <span class="texttt">\include</span> or
-              <span class="texttt">\input</span> commands, conversions of modes
+              <em>Note:</em> When using <span class="verb">\include</span> or
+              <span class="verb">\input</span> commands, conversions of modes
               must be controlled manually. See Section&nbsp;<a
                 href="Creating-Handouts-Lecture-Notes.html#section-mode-details"
                 >21.3</a
@@ -485,7 +483,7 @@
           </div>
           <p>
             The following example shows a simple usage of the
-            <span class="texttt">article</span> mode:
+            <span class="verb">article</span> mode:
           </p>
           <div class="fancyvrb" style>
             <pre class="verbatim">
@@ -546,18 +544,18 @@ With some more text.
           </div>
           <p>
             There is one command whose behavior is a bit special in
-            <span class="texttt">article</span> mode: The line break command
-            <span class="texttt">\\</span>. Inside frames, this command has no
-            effect in <span class="texttt">article</span> mode, except if an
+            <span class="verb">article</span> mode: The line break command
+            <span class="verb">\\</span>. Inside frames, this command has no
+            effect in <span class="verb">article</span> mode, except if an
             overlay specification is present. Then it has the normal effect
             dictated by the specification. The reason for this behavior is that
             you will typically inserts lots of
-            <span class="texttt">\\</span> commands in a presentation in order
-            to get control over all line breaks. These line breaks are mostly
-            superfluous in <span class="texttt">article</span> mode. If you
-            really want a line break to apply in all versions, say
+            <span class="verb">\\</span> commands in a presentation in order to
+            get control over all line breaks. These line breaks are mostly
+            superfluous in <span class="verb">article</span> mode. If you really
+            want a line break to apply in all versions, say
             <span class="texttt">\\&lt;all&gt;</span>. Note that the command
-            <span class="texttt">\\</span> is often redefined by certain
+            <span class="verb">\\</span> is often redefined by certain
             environments, so it may not always be overlay-specification-aware.
             In such a case you have to write something like
             <span class="texttt">\only&lt;presentation&gt;{\\}</span>.
@@ -578,17 +576,20 @@ With some more text.
             The following workflow steps are optional, but they can simplify the
             creation of the article version.
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; In the main file <span class="texttt">main.tex</span>,
-                delete the first line, which sets the document class.
+                <span class="listmarker">&bull;</span> In the main file
+                <span class="verb">main.tex</span>, delete the first line, which
+                sets the document class. In case the article version is used as
+                a starting point, also remove
+                <span class="verb">\usepackage{beamerarticle}</span>.
               </p>
             </li>
             <li>
               <p>
-                &bull; Create a file named, say,
-                <span class="texttt">main.beamer.tex</span> with the following
+                <span class="listmarker">&bull;</span> Create a file named, say,
+                <span class="verb">main.beamer.tex</span> with the following
                 content:
               </p>
               <pre class="verbatim">
@@ -599,9 +600,9 @@ With some more text.
             </li>
             <li>
               <p>
-                &bull; Create an extra file named, say,
-                <span class="texttt">main.article.tex</span> with the following
-                content:
+                <span class="listmarker">&bull;</span> Create an extra file
+                named, say, <span class="verb">main.article.tex</span> with the
+                following content:
               </p>
               <pre class="verbatim">
 \documentclass{article}
@@ -613,17 +614,17 @@ With some more text.
             </li>
             <li>
               <p>
-                &bull; You can now run <span class="texttt">pdflatex</span> or
-                <span class="texttt">latex</span> on the two files
-                <span class="texttt">main.beamer.tex</span> and
-                <span class="texttt">main.article.tex</span>.
+                <span class="listmarker">&bull;</span> You can now run
+                <span class="verb">pdflatex</span> or
+                <span class="verb">latex</span> on the two files
+                <span class="verb">main.beamer.tex</span> and
+                <span class="verb">main.article.tex</span>.
               </p>
             </li>
           </ul>
           <p>
-            The command
-            <span class="texttt">\setjobnamebeamerversion</span> tells the
-            article version where to find the presentation version. This is
+            The command <span class="verb">\setjobnamebeamerversion</span> tells
+            the article version where to find the presentation version. This is
             necessary if you wish to include slides from the presentation
             version in an article as figures.
           </p>
@@ -658,15 +659,15 @@ With some more text.
           </h6>
           <a id="beameruserguide-autopage-556"></a>
           <p>
-            If you use the package <span class="texttt">beamerarticle</span>,
-            the <span class="texttt">\frame</span> command becomes available in
-            <span class="texttt">article</span> mode. By adjusting the frame
+            If you use the package <span class="verb">beamerarticle</span>, the
+            <span class="verb">\frame</span> command becomes available in
+            <span class="verb">article</span> mode. By adjusting the frame
             template, you can &ldquo;mimic&rdquo; the appearance of frames
             typeset by
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             in your articles. However, sometimes you may wish to insert
             &ldquo;the real thing&rdquo; into the
-            <span class="texttt">article</span> version, that is, a precise
+            <span class="verb">article</span> version, that is, a precise
             &ldquo;screenshot&rdquo; of a slide from the presentation. The
             commands introduced in the following help you do exactly this.
           </p>
@@ -681,10 +682,9 @@ With some more text.
               ></span
             >
             label on the slide using the
-            <span class="texttt">\label</span> command. Since this command is
+            <span class="verb">\label</span> command. Since this command is
             overlay-specification-aware, you can also select specific slides of
-            a frame. Also, by adding the option
-            <span class="texttt">label=</span
+            a frame. Also, by adding the option <span class="verb">label=</span
             ><span class="meta"
               ><span class="angle">&langle;</span><i>name</i
               ><span class="angle">&rangle;</span></span
@@ -693,12 +693,12 @@ With some more text.
             <span class="meta"
               ><span class="angle">&langle;</span><i>name</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">&lt;</span
+            ><span class="verb">&lt;</span
             ><span class="meta"
               ><span class="angle">&langle;</span><i>slide number</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">&gt;</span> is automatically added to each
-            slide of the frame.
+            ><span class="verb">&gt;</span> is automatically added to each slide
+            of the frame.
           </p>
           <p>
             Once you have labeled a slide, you can use the following command in
@@ -721,7 +721,7 @@ With some more text.
               </p>
             </div>
             <p>
-              This command calls <span class="texttt">\pgfimage</span> with the
+              This command calls <span class="verb">\pgfimage</span> with the
               given
               <span class="meta"
                 ><span class="angle">&langle;</span><i>options</i
@@ -731,7 +731,7 @@ With some more text.
             </p>
             <blockquote>
               <p>
-                <span class="texttt">\setjobnamebeamerversion</span
+                <span class="verb">\setjobnamebeamerversion</span
                 ><span class="meta"
                   ><span class="angle">&langle;</span><i>filename</i
                   ><span class="angle">&rangle;</span></span
@@ -739,12 +739,12 @@ With some more text.
               </p>
             </blockquote>
             <p>
-              Furthermore, the option <span class="texttt">page=</span
+              Furthermore, the option <span class="verb">page=</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>page of label name</i
                 ><span class="angle">&rangle;</span></span
               >
-              is passed to <span class="texttt">\pgfimage</span>, where the
+              is passed to <span class="verb">\pgfimage</span>, where the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>page of label name</i
                 ><span class="angle">&rangle;</span></span
@@ -753,7 +753,7 @@ With some more text.
               <span class="meta"
                 ><span class="angle">&langle;</span><i>filename</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.snm</span>.
+              ><span class="verb">.snm</span>.
             </p>
             <p>
               <i>Example: </i>
@@ -777,35 +777,34 @@ With some more text.
           </div>
           <p>
             The exact effect of passing the option
-            <span class="texttt">page=</span
+            <span class="verb">page=</span
             ><span class="meta"
               ><span class="angle">&langle;</span><i>page of label name</i
               ><span class="angle">&rangle;</span></span
             >
-            to the command <span class="texttt">\pgfimage</span> is explained in
-            the documentation of <span class="texttt">pgf</span>. In essence,
-            the following happens:
+            to the command <span class="verb">\pgfimage</span> is explained in
+            the documentation of <span class="verb">pgf</span>. In essence, the
+            following happens:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; For old versions of
-                <span class="texttt">pdflatex</span> and for any version of
-                <span class="texttt">latex</span> together with
-                <span class="texttt">dvips</span>, the
-                <span class="texttt">pgf</span> package will look for a file
-                named
+                <span class="listmarker">&bull;</span> For old versions of
+                <span class="verb">pdflatex</span> and for any version of
+                <span class="verb">latex</span> together with
+                <span class="verb">dvips</span>, the
+                <span class="verb">pgf</span> package will look for a file named
               </p>
               <blockquote>
                 <p>
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>filename</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">.page</span
+                  ><span class="verb">.page</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>page of label name</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">.</span
+                  ><span class="verb">.</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>extension</i
                     ><span class="angle">&rangle;</span></span
@@ -813,27 +812,28 @@ With some more text.
                 </p>
               </blockquote>
               <p>
-                For each page of your <span class="texttt">.pdf</span> or
-                <span class="texttt">.ps</span> file that is to be included in
+                For each page of your <span class="verb">.pdf</span> or
+                <span class="verb">.ps</span> file that is to be included in
                 this way, you must create such a file by hand. For example, if
                 the PostScript file of your presentation version is named
-                <span class="texttt">main.beamer.ps</span> and you wish to
-                include the slides with page numbers 2 and&nbsp;3, you must
-                create (single page) files
-                <span class="texttt">main.beamer.page2.ps</span> and
-                <span class="texttt">main.beamer.page3.ps</span> &ldquo;by
+                <span class="verb">main.beamer.ps</span> and you wish to include
+                the slides with page numbers 2 and&nbsp;3, you must create
+                (single page) files
+                <span class="verb">main.beamer.page2.ps</span> and
+                <span class="verb">main.beamer.page3.ps</span> &ldquo;by
                 hand&rdquo; (or using some script). If these files cannot be
-                found, <span class="texttt">pgf</span> will complain.
+                found, <span class="verb">pgf</span> will complain.
               </p>
             </li>
             <li>
               <p>
-                &bull; For new versions of <span class="texttt">pdflatex</span>,
-                <span class="texttt">pdflatex</span> also looks for the files
+                <span class="listmarker">&bull;</span> For new versions of
+                <span class="verb">pdflatex</span>,
+                <span class="verb">pdflatex</span> also looks for the files
                 according to the above naming scheme. However, if it fails to
                 find them (because you have not produced them), it uses a
                 special mechanism to directly extract the desired page from the
-                presentation file <span class="texttt">main.beamer.pdf</span>.
+                presentation file <span class="verb">main.beamer.pdf</span>.
               </p>
             </li>
           </ul>
@@ -851,52 +851,52 @@ With some more text.
 
           <p>
             This subsection describes how modes work exactly and how you can use
-            the <span class="texttt">\mode</span> command to control what part
-            of your text belongs to which mode.
+            the <span class="verb">\mode</span> command to control what part of
+            your text belongs to which mode.
           </p>
           <p>
             When
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             typesets your text, it is always in one of the following five modes:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">beamer</span></span>
-                is the default mode.
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">beamer</span></span> is
+                the default mode.
               </p>
             </li>
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">second</span></span>
-                is the mode used when a slide for an optional second screen is
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">second</span></span> is
+                the mode used when a slide for an optional second screen is
                 being typeset.
               </p>
             </li>
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">handout</span></span>
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">handout</span></span>
                 is the mode for creating handouts.
               </p>
             </li>
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">trans</span></span>
-                is the mode for creating transparencies.
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">trans</span></span> is
+                the mode for creating transparencies.
               </p>
             </li>
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">article</span></span>
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">article</span></span>
                 is the mode when control has been transferred to another class,
-                like <span class="texttt">article.cls</span>. Note that the mode
-                is also <span class="texttt">article</span> if control is
-                transferred to, say, <span class="texttt">book.cls</span>.
+                like <span class="verb">article.cls</span>. Note that the mode
+                is also <span class="verb">article</span> if control is
+                transferred to, say, <span class="verb">book.cls</span>.
               </p>
             </li>
           </ul>
@@ -905,22 +905,22 @@ With some more text.
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             recognizes the following names for modes sets:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">all</span></span>
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">all</span></span>
                 refers to all modes.
               </p>
             </li>
             <li>
               <p>
-                &bull;
+                <span class="listmarker">&bull;</span>
                 <span class="declare"
-                  ><span class="texttt">presentation</span></span
+                  ><span class="verb">presentation</span></span
                 >
                 refers to the first four modes, that is, to all modes except for
-                the <span class="texttt">article</span> mode.
+                the <span class="verb">article</span> mode.
               </p>
             </li>
           </ul>
@@ -950,16 +950,16 @@ beamer second handout trans
             inserted only in that mode. For example, you might wish a certain
             frame or a certain table to be left out of your article version. In
             some situations, you can use the
-            <span class="texttt">\only</span> command for this purpose. However,
-            the command <span class="texttt">\mode</span>, which is described in
+            <span class="verb">\only</span> command for this purpose. However,
+            the command <span class="verb">\mode</span>, which is described in
             the following, is much more powerful than
-            <span class="texttt">\only</span>.
+            <span class="verb">\only</span>.
           </p>
           <p>
             The command actually comes in three &ldquo;flavors,&rdquo; which
             only slightly differ in syntax. The first, and simplest, is the
             version that takes one argument. It behaves essentially the same way
-            as <span class="texttt">\only</span>.
+            as <span class="verb">\only</span>.
           </p>
           <div class="command">
             <div class="command-headline">
@@ -997,7 +997,7 @@ beamer second handout trans
               >
               should not do anything fancy that involves mode switches or
               including other files. In particular, you should not put an
-              <span class="texttt">\include</span> command inside
+              <span class="verb">\include</span> command inside
               <span class="meta"
                 ><span class="angle">&langle;</span><i>text</i
                 ><span class="angle">&rangle;</span></span
@@ -1020,7 +1020,7 @@ beamer second handout trans
             </div>
           </div>
           <p>
-            The second flavor of the <span class="texttt">\mode</span> command
+            The second flavor of the <span class="verb">\mode</span> command
             takes no argument. &ldquo;No argument&rdquo; means that it is not
             followed by an opening brace, but any other symbol.
           </p>
@@ -1048,10 +1048,9 @@ beamer second handout trans
               to enter a kind of &ldquo;gobbling&rdquo; state. It will now
               ignore all following lines until the next line that has a sole
               occurrence of one of the following commands:
-              <span class="texttt">\mode</span>,
-              <span class="texttt">\mode*</span>,
-              <span class="texttt">\begin{document}</span>,
-              <span class="texttt">\end{document}</span>. Even a comment on this
+              <span class="verb">\mode</span>, <span class="verb">\mode*</span>,
+              <span class="verb">\begin{document}</span>,
+              <span class="verb">\end{document}</span>. Even a comment on this
               line will make
               <span class="latexlogofont"
                 ><span class="latexlogo"
@@ -1075,9 +1074,9 @@ beamer second handout trans
                   >T<span class="latexlogosub">e</span>X</span
                 ></span
               >
-              encounters a single <span class="texttt">\mode</span> command, it
+              encounters a single <span class="verb">\mode</span> command, it
               will execute this command. If the command is
-              <span class="texttt">\mode</span> command of the first flavor,
+              <span class="verb">\mode</span> command of the first flavor,
               <span class="latexlogofont"
                 ><span class="latexlogo"
                   >T<span class="latexlogosub">e</span>X</span
@@ -1085,54 +1084,56 @@ beamer second handout trans
               >
               will resume its &ldquo;gobbling&rdquo; state after having inserted
               (or not inserted) the argument of the
-              <span class="texttt">\mode</span> command. If the
-              <span class="texttt">\mode</span> command is of the second flavor,
+              <span class="verb">\mode</span> command. If the
+              <span class="verb">\mode</span> command is of the second flavor,
               it takes over.
             </p>
             <p>
-              Using this second flavor of <span class="texttt">\mode</span> is
+              Using this second flavor of <span class="verb">\mode</span> is
               less convenient than the first, but there are different reasons
               why you might need to use it:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull; The line-wise gobbling is much faster than the gobble
-                  of the third flavor, explained below.
+                  <span class="listmarker">&bull;</span> The line-wise gobbling
+                  is much faster than the gobble of the third flavor, explained
+                  below.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull; The first flavor reads its argument completely. This
-                  means, it cannot contain any verbatim text that contains
-                  unbalanced braces.
+                  <span class="listmarker">&bull;</span> The first flavor reads
+                  its argument completely. This means, it cannot contain any
+                  verbatim text that contains unbalanced braces.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull; The first flavor cannot cope with arguments that
-                  contain <span class="texttt">\include</span>.
+                  <span class="listmarker">&bull;</span> The first flavor cannot
+                  cope with arguments that contain
+                  <span class="verb">\include</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull; If the text mainly belongs to one mode with only small
-                  amounts of text from another mode inserted, this second flavor
-                  is nice to use.
+                  <span class="listmarker">&bull;</span> If the text mainly
+                  belongs to one mode with only small amounts of text from
+                  another mode inserted, this second flavor is nice to use.
                 </p>
               </li>
             </ul>
             <p>
               <em>Note:</em> When searching line-wise for a
-              <span class="texttt">\mode</span> command to shake it out of its
+              <span class="verb">\mode</span> command to shake it out of its
               gobbling state,
               <span class="latexlogofont"
                 ><span class="latexlogo"
                   >T<span class="latexlogosub">e</span>X</span
                 ></span
               >
-              will not recognize a <span class="texttt">\mode</span> command if
-              a mode specification follows on the same line. Thus, such a
+              will not recognize a <span class="verb">\mode</span> command if a
+              mode specification follows on the same line. Thus, such a
               specification must be given on the next line.
             </p>
             <p>
@@ -1149,20 +1150,20 @@ beamer second handout trans
                 ></span
               >
               must not be in the gobbling state. Switch this state off using
-              <span class="texttt">\mode</span> on one line and
+              <span class="verb">\mode</span> on one line and
               <span class="texttt">&lt;all&gt;</span> on the next.
             </p>
             <p>
               <em>Note:</em> The behavior of
-              <span class="texttt">\mode</span> command is different inside a
+              <span class="verb">\mode</span> command is different inside a
               frame: instead of line-wise gobbling, it puts every subsequent
               tokens inside a &ldquo;comment box&rdquo; until another
-              <span class="texttt">\mode</span> command is encountered. Some
+              <span class="verb">\mode</span> command is encountered. Some
               commands may cause errors in this situation, including the
               assignment of global variables and
-              <span class="texttt">\mode</span> of the first flavor, since they
+              <span class="verb">\mode</span> of the first flavor, since they
               are not actually &ldquo;gobbled&rdquo;. Please use
-              <span class="texttt">\mode</span> command
+              <span class="verb">\mode</span> command
               <em>of any flavor</em> outside frames.
             </p>
             <p>
@@ -1196,18 +1197,18 @@ This text is only inserted in presentation mode.
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\mode</kbd></span
-                ><span class="declare"><span class="texttt">*</span></span>
+                ><span class="declare"><span class="verb">*</span></span>
               </p>
             </div>
             <p>
               The effect of this mode is to ignore all text outside frames in
-              the <span class="texttt">presentation</span> modes. In
-              <span class="texttt">article</span> mode it has no effect.
+              the <span class="verb">presentation</span> modes. In
+              <span class="verb">article</span> mode it has no effect.
             </p>
             <p>
               This mode should only be entered outside of frames. Once entered,
               if the current mode is a
-              <span class="texttt">presentation</span> mode,
+              <span class="verb">presentation</span> mode,
               <span class="latexlogofont"
                 ><span class="latexlogo"
                   >T<span class="latexlogosub">e</span>X</span
@@ -1215,19 +1216,18 @@ This text is only inserted in presentation mode.
               >
               will enter a gobbling state similar to the gobbling state of the
               second &ldquo;flavor&rdquo; of the
-              <span class="texttt">\mode</span> command. The difference is that
+              <span class="verb">\mode</span> command. The difference is that
               the text is now read token-wise, not line-wise. The text is
               gobbled token by token until one of the following tokens is found:
-              <span class="texttt">\mode</span>,
-              <span class="texttt">\frame</span>,
-              <span class="texttt">\againframe</span>,
-              <span class="texttt">\part</span>,
-              <span class="texttt">\section</span>,
-              <span class="texttt">\subsection</span>,
-              <span class="texttt">\appendix</span>,
-              <span class="texttt">\note</span>,
-              <span class="texttt">\begin{frame}</span>, and
-              <span class="texttt">\end{document}</span> (the last two are not
+              <span class="verb">\mode</span>, <span class="verb">\frame</span>,
+              <span class="verb">\againframe</span>,
+              <span class="verb">\part</span>,
+              <span class="verb">\section</span>,
+              <span class="verb">\subsection</span>,
+              <span class="verb">\appendix</span>,
+              <span class="verb">\note</span>,
+              <span class="verb">\begin{frame}</span>, and
+              <span class="verb">\end{document}</span> (the last two are not
               really tokens, but they are recognized anyway).
             </p>
             <p>
@@ -1243,7 +1243,7 @@ This text is only inserted in presentation mode.
               returns to its gobbling.
             </p>
             <p>
-              Normally, <span class="texttt">\mode*</span> is exactly what you
+              Normally, <span class="verb">\mode*</span> is exactly what you
               want
               <span class="latexlogofont"
                 ><span class="latexlogo"
@@ -1252,18 +1252,17 @@ This text is only inserted in presentation mode.
               >
               to do outside of frames: ignore everything except for the
               above-mentioned commands outside frames in
-              <span class="texttt">presentation</span> mode. However, there are
+              <span class="verb">presentation</span> mode. However, there are
               cases in which you have to use the second flavor of the
-              <span class="texttt">\mode</span> command instead: If you have
+              <span class="verb">\mode</span> command instead: If you have
               verbatim text that contains one of the commands, if you have very
               long text outside frames, or if you wish some text outside a frame
               (like a definition) to be executed also in
-              <span class="texttt">presentation</span> mode.
+              <span class="verb">presentation</span> mode.
             </p>
             <p>
-              The class option
-              <span class="texttt">ignorenonframetext</span> will switch on
-              <span class="texttt">\mode*</span> at the beginning of the
+              The class option <span class="verb">ignorenonframetext</span> will
+              switch on <span class="verb">\mode*</span> at the beginning of the
               document.
             </p>
             <p>
@@ -1295,7 +1294,7 @@ Back to article stuff again.
             <p>
               <i>Example: </i>The following example shows how you can include
               other files in a main file. The contents of a
-              <span class="texttt">main.tex</span>:
+              <span class="verb">main.tex</span>:
             </p>
             <div class="fancyvrb" style>
               <pre class="verbatim">
@@ -1315,8 +1314,8 @@ Back to star mode
               >
             </div>
             <p>
-              And <span class="texttt">a.tex</span> (and likewise
-              <span class="texttt">b.tex</span>):
+              And <span class="verb">a.tex</span> (and likewise
+              <span class="verb">b.tex</span>):
             </p>
             <div class="fancyvrb" style>
               <pre class="verbatim">
@@ -1349,7 +1348,7 @@ Extra text in article version.
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

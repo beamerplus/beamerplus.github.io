@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>How To Uncover Things Piecewise - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -78,7 +78,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -166,8 +166,8 @@
           <p>
             The advantage of this approach is that you retain total control over
             the order in which items are shown. By changing, for example, the
-            last specification to <span class="texttt">&lt;2-&gt;</span>, you
-            can have the last two points uncovered at the same time.
+            last specification to <span class="verb">&lt;2-&gt;</span>, you can
+            have the last two points uncovered at the same time.
           </p>
           <p>
             A disadvantage of the approach is that you will have to renumber
@@ -184,15 +184,15 @@
 </pre
           >
           <p>
-            The effect of the <span class="texttt">[&lt;+-&gt;]</span> is to
+            The effect of the <span class="verb">[&lt;+-&gt;]</span> is to
             install a <em>default overlay specification</em>, see the definition
-            of <span class="texttt">itemize</span> for details.
+            of <span class="verb">itemize</span> for details.
           </p>
           <p>
             Now, suppose you wish the second and third point to be shown at the
             same time. You could achieve this by adding the specification
-            <span class="texttt">&lt;2-&gt;</span> to either the second or third
-            <span class="texttt">\item</span> command. However, then you still
+            <span class="verb">&lt;2-&gt;</span> to either the second or third
+            <span class="verb">\item</span> command. However, then you still
             have to do some renumbering if you add a new item at the beginning.
             A better approach is to temporarily use a different overlay
             specification and the dot-notation:
@@ -207,8 +207,8 @@
           >
           <p>
             You might wish to build your own macros based on these ideas (like
-            an <span class="texttt">itemstep</span> environment or a
-            <span class="texttt">\itemlikeprevious</span> command).
+            an <span class="verb">itemstep</span> environment or a
+            <span class="verb">\itemlikeprevious</span> command).
           </p>
           <!--
 ...... subsection Highlighting the Current Item in an Enumeration ......
@@ -279,14 +279,14 @@
           >
           <p>
             The effect of the code is to install a check mark as the default
-            template. If the action <span class="texttt">ballot</span> is now
+            template. If the action <span class="verb">ballot</span> is now
             requested for some item, this template will temporarily be replaced
             by the ballot templates.
           </p>
           <p>
-            Note that the <span class="texttt">ballotenv</span> is invoked with
+            Note that the <span class="verb">ballotenv</span> is invoked with
             the overlay specification given for the action directly following
-            it. This causes the <span class="texttt">\only</span> to be invoked
+            it. This causes the <span class="verb">\only</span> to be invoked
             exactly for the specified overlays.
           </p>
           <p>Here are example usages:</p>
@@ -320,12 +320,12 @@
 
 </ballot@+-|></pre>
           <p>
-            The important point is <span class="texttt">ballot@+</span>. The
-            funny <span class="texttt">visible@1-,+(1)</span> has the following
-            effect: Although it has no effect with respect to what is shown
-            (after all, it applies to all slides), it ensures that in the
-            enumeration the slide number 4 is mentioned. Thus there will also be
-            a slide in which all three points are checked.
+            The important point is <span class="verb">ballot@+</span>. The funny
+            <span class="verb">visible@1-,+(1)</span> has the following effect:
+            Although it has no effect with respect to what is shown (after all,
+            it applies to all slides), it ensures that in the enumeration the
+            slide number 4 is mentioned. Thus there will also be a slide in
+            which all three points are checked.
           </p>
           <!--
 ...... subsection Uncovering Tagged Formulas Piecewise ......
@@ -348,9 +348,9 @@
           >
           <p>
             Uncovering this formula line-by-line is a little tricky. A first
-            idea is to use the <span class="texttt">\pause</span> or
-            <span class="texttt">\onslide</span> commands. Unfortunately, these
-            do not work since <span class="texttt">align</span> internally
+            idea is to use the <span class="verb">\pause</span> or
+            <span class="verb">\onslide</span> commands. Unfortunately, these do
+            not work since <span class="verb">align</span> internally
             reprocesses its input several times, which messes up the delicate
             internals of the commands. The next idea is the following, which
             works a little better:
@@ -365,13 +365,13 @@
           >
           <p>
             Unfortunately, this does not work in the presence of tags (so it
-            works for the <span class="texttt">align*</span> environment). What
+            works for the <span class="verb">align*</span> environment). What
             happens is that the tag of the last line is shown on all slides. The
             problem here is that the tag is created when
-            <span class="texttt">\\</span> is encountered or when
-            <span class="texttt">\end{align}</span> is encountered. In the last
+            <span class="verb">\\</span> is encountered or when
+            <span class="verb">\end{align}</span> is encountered. In the last
             line these are already &ldquo;behind&rdquo; the
-            <span class="texttt">\uncover</span>.
+            <span class="verb">\uncover</span>.
           </p>
           <p>
             To solve this problem, you can add an empty line without a tag and
@@ -402,17 +402,17 @@
             sorts of problems if there are vertical and horizontal lines in the
             table. The reason is that the first vertical line at the left end is
             drawn before the line is even read (and thus, in particular, before
-            any <span class="texttt">\onslide</span> command can be read).
-            However, placing a <span class="texttt">\pause</span> or
-            <span class="texttt">\uncover</span> at the end of the line before
-            is also not helpful since it will then suppress the horizontal line
+            any <span class="verb">\onslide</span> command can be read).
+            However, placing a <span class="verb">\pause</span> or
+            <span class="verb">\uncover</span> at the end of the line before is
+            also not helpful since it will then suppress the horizontal line
             below the last uncovered line.
           </p>
           <p>
             A possible way to solve this problem is not to use either horizontal
             or vertical lines. Instead, coloring the lines using the
-            <span class="texttt">colortbl</span> package is a good alternative
-            to structure the table. Here is an optically pleasing example, where
+            <span class="verb">colortbl</span> package is a good alternative to
+            structure the table. Here is an optically pleasing example, where
             the table is uncovered line-wise:
           </p>
           <pre class="verbatim">
@@ -426,8 +426,8 @@
 </pre
           >
           <p>
-            By using <span class="texttt">\onslide</span> instead of
-            <span class="texttt">\pause</span>, you can get more fine-grained
+            By using <span class="verb">\onslide</span> instead of
+            <span class="verb">\pause</span>, you can get more fine-grained
             control over which line is shown on which slide.
           </p>
           <!--
@@ -445,13 +445,13 @@
             uncovering it columnwise.
           </p>
           <p>
-            Once more, using the <span class="texttt">colortbl</span> package
+            Once more, using the <span class="verb">colortbl</span> package
             offers a solution. In the following example, the
-            <span class="texttt">tabular</span> header is used to insert
-            <span class="texttt">\onslide</span> commands, one for each column,
+            <span class="verb">tabular</span> header is used to insert
+            <span class="verb">\onslide</span> commands, one for each column,
             that cover the entries in the column from a certain slide on. At the
             end of the last column, the
-            <span class="texttt">\onslide</span> without a specification ensures
+            <span class="verb">\onslide</span> without a specification ensures
             that the first column on the next row is once more shown normally.
           </p>
           <p>
@@ -487,7 +487,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

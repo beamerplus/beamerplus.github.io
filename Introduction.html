@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Introduction - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -57,7 +57,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -132,13 +132,13 @@
               ></span
             >
             document: It has a preamble and a body, the body contains
-            <span class="texttt">\section</span>s and
-            <span class="texttt">\subsection</span>s, the different slides
-            (called <em>frames</em> in
+            <span class="verb">\section</span>s and
+            <span class="verb">\subsection</span>s, the different slides (called
+            <em>frames</em> in
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >) are put in environments, they are structured using
-            <span class="texttt">itemize</span> and
-            <span class="texttt">enumerate</span> environments, and so on. The
+            <span class="verb">itemize</span> and
+            <span class="verb">enumerate</span> environments, and so on. The
             obvious disadvantage of this approach is that you have to know
             <span class="latexlogofont"
               ><span class="latexlogo"
@@ -184,19 +184,18 @@
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >). The most important features, in our opinion, are:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; You can use
+                <span class="listmarker">&bull;</span> You can use
                 <span class="beamer-name"
                   ><span class="textsc">beamer</span></span
                 >
-                with <span class="texttt">pdflatex</span>,
-                <span class="texttt">latex</span>+<span class="texttt"
-                  >dvips</span
-                >, <span class="texttt">lualatex</span> and
-                <span class="texttt">xelatex</span>.
-                <span class="texttt">latex</span>+<span class="texttt"
+                with <span class="verb">pdflatex</span>,
+                <span class="verb">latex</span>+<span class="verb">dvips</span>,
+                <span class="verb">lualatex</span> and
+                <span class="verb">xelatex</span>.
+                <span class="verb">latex</span>+<span class="verb"
                   >dvipdfm</span
                 >
                 isn&rsquo;t supported (but we accept patches!).
@@ -204,7 +203,7 @@
             </li>
             <li>
               <p>
-                &bull; The standard commands of
+                <span class="listmarker">&bull;</span> The standard commands of
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >L<span class="latexlogosup">a</span>T<span
@@ -213,39 +212,46 @@
                     >X</span
                   ></span
                 >
-                still work. A <span class="texttt">\tableofcontents</span> will
+                still work. A <span class="verb">\tableofcontents</span> will
                 still create a table of contents,
-                <span class="texttt">\section</span> is still used to create
-                structure, and <span class="texttt">itemize</span> still creates
-                a list.
-              </p>
-            </li>
-            <li>
-              <p>&bull; You can easily create overlays and dynamic effects.</p>
-            </li>
-            <li>
-              <p>
-                &bull; Themes allow you to change the appearance of your
-                presentation to suit your purposes.
+                <span class="verb">\section</span> is still used to create
+                structure, and <span class="verb">itemize</span> still creates a
+                list.
               </p>
             </li>
             <li>
               <p>
-                &bull; The themes are designed to be usable in practice, they
-                are not just for show. You will not find such nonsense as a
-                green body text on a picture of a green meadow.
+                <span class="listmarker">&bull;</span> You can easily create
+                overlays and dynamic effects.
               </p>
             </li>
             <li>
               <p>
-                &bull; The layout, the colors, and the fonts used in a
-                presentation can easily be changed globally, but you still also
-                have control over the most minute detail.
+                <span class="listmarker">&bull;</span> Themes allow you to
+                change the appearance of your presentation to suit your
+                purposes.
               </p>
             </li>
             <li>
               <p>
-                &bull; A special style file allows you to use the
+                <span class="listmarker">&bull;</span> The themes are designed
+                to be usable in practice, they are not just for show. You will
+                not find such nonsense as a green body text on a picture of a
+                green meadow.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="listmarker">&bull;</span> The layout, the colors,
+                and the fonts used in a presentation can easily be changed
+                globally, but you still also have control over the most minute
+                detail.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="listmarker">&bull;</span> A special style file
+                allows you to use the
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >L<span class="latexlogosup">a</span>T<span
@@ -262,21 +268,22 @@
                     >X</span
                   ></span
                 >
-                classes like <span class="texttt">article</span> or
-                <span class="texttt">book</span>. This makes it easy to create
+                classes like <span class="verb">article</span> or
+                <span class="verb">book</span>. This makes it easy to create
                 presentations out of lecture notes or lecture notes out of
                 presentations.
               </p>
             </li>
             <li>
               <p>
-                &bull; The final output is typically a
-                <span class="textsc">pdf</span>-file. Viewer applications for
-                this format exist for virtually every platform. When bringing
-                your presentation to a conference on a memory stick, you do not
-                have to worry about which version of the presentation program
-                might be installed there. Also, your presentation is going to
-                look exactly the way it looked on your computer.
+                <span class="listmarker">&bull;</span> The final output is
+                typically a <span class="textsc">pdf</span>-file. Viewer
+                applications for this format exist for virtually every platform.
+                When bringing your presentation to a conference on a memory
+                stick, you do not have to worry about which version of the
+                presentation program might be installed there. Also, your
+                presentation is going to look exactly the way it looked on your
+                computer.
               </p>
             </li>
           </ul>
@@ -302,7 +309,7 @@
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             would still be what it was originally intended to be: a small
             private collection of macros that make using the
-            <span class="texttt">seminar</span> class easier. Till created the
+            <span class="verb">seminar</span> class easier. Till created the
             first version of
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             for his PhD defense presentation in February 2003. A month later, he
@@ -549,13 +556,13 @@
             </div>
             <p>
               Here you will find the explanation of what the command
-              <span class="texttt">\somebeamercommand</span> does. The green
+              <span class="verb">\somebeamercommand</span> does. The green
               argument(s) is optional. The command of this example takes two
               parameters.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\somebeamercommand[opt]{my arg}{xxx}</span>
+              ><span class="verb">\somebeamercommand[opt]{my arg}{xxx}</span>
             </p>
           </div>
           <div class="environment">
@@ -590,7 +597,7 @@
             </div>
             <p>
               Here you will find the explanation of the effect of the
-              environment <span class="texttt">somebeamerenvironment</span>. As
+              environment <span class="verb">somebeamerenvironment</span>. As
               with commands, the green arguments are optional.
             </p>
             <p>
@@ -612,8 +619,8 @@
             </div>
             <p>
               Here you will find an explanation of the template, color, and/or
-              font <span class="texttt">some beamer element</span>. A
-              &ldquo;<span class="beamer-name"
+              font <span class="verb">some beamer element</span>. A &ldquo;<span
+                class="beamer-name"
                 ><span class="textsc">beamer</span></span
               >-element&rdquo; is a concept that is explained in more detail in
               Section&nbsp;<a
@@ -639,7 +646,7 @@
               >-color, and/or a
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-font of the name
-              <span class="texttt">some beamer element</span> exist. Typically,
+              <span class="verb">some beamer element</span> exist. Typically,
               all three exist and are employed together when the element needs
               to be typeset, that is, when the template is inserted the
               <span class="beamer-name"><span class="textsc">beamer</span></span
@@ -665,10 +672,10 @@
               <em>predefined options</em> for a template. These are indicated
               like this:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">rose</span>]</kbd></span
                   >
@@ -677,7 +684,7 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">shamrock</span>]</kbd>{<span
                       class="meta"
@@ -723,10 +730,10 @@
             >
             <p>
               You can also change them together using
-              <span class="texttt">fg=red,bg=black</span>. The background will
-              not always be &ldquo;honoured,&rdquo; since it is difficult to
-              show a colored background correctly and an extra effort must be
-              made by the templates (while the foreground color is usually used
+              <span class="verb">fg=red,bg=black</span>. The background will not
+              always be &ldquo;honoured,&rdquo; since it is difficult to show a
+              colored background correctly and an extra effort must be made by
+              the templates (while the foreground color is usually used
               automatically).
             </p>
             <p>
@@ -743,9 +750,9 @@
             >
             <p>
               In addition to the size, you can use things like
-              <span class="texttt">series=\bfseries</span> to set the series,
-              <span class="texttt">shape=\itshape</span> to change the shape,
-              <span class="texttt">family=\sffamily</span> to change the family,
+              <span class="verb">series=\bfseries</span> to set the series,
+              <span class="verb">shape=\itshape</span> to change the shape,
+              <span class="verb">family=\sffamily</span> to change the family,
               and you can use them in conjunction. Add a star to the command to
               first &ldquo;reset&rdquo; the font.
             </p>
@@ -784,9 +791,9 @@
             Opposed to this, a paragraph with
             <span class="textsc">article</span> next to it describes some
             behavior that is special for the
-            <span class="texttt">article</span> mode. This special mode is used
-            to create lecture notes out of a presentation (the two can coexist
-            in one file).
+            <span class="verb">article</span> mode. This special mode is used to
+            create lecture notes out of a presentation (the two can coexist in
+            one file).
           </p>
           <!--
 ...... subsection Getting Help ......
@@ -803,16 +810,17 @@
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >, please do the following:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="enumerate" style="list-style-type: none">
             <li>
               <p>
-                1. Read the user guide, at least the part that has to do with
-                your problem.
+                <span class="listmarker">1.</span> Read the user guide, at least
+                the part that has to do with your problem.
               </p>
             </li>
             <li>
               <p>
-                2. If that does not solve the problem, try searching one of the
+                <span class="listmarker">2.</span> If that does not solve the
+                problem, try searching one of the
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >T<span class="latexlogosub">e</span>X</span
@@ -834,8 +842,8 @@
             </li>
             <li>
               <p>
-                3. If you find no answers there, or if you are sure you have
-                found a bug in
+                <span class="listmarker">3.</span> If you find no answers there,
+                or if you are sure you have found a bug in
                 <span class="beamer-name"
                   ><span class="textsc">beamer</span></span
                 >, please report it <em>via</em>
@@ -848,19 +856,19 @@
             </li>
             <li>
               <p>
-                4. Before you file a bug report, especially a bug report
-                concerning the installation, make sure that this is really a
-                bug. In particular, have a look at the
-                <span class="texttt">.log</span> file that results when you
+                <span class="listmarker">4.</span> Before you file a bug report,
+                especially a bug report concerning the installation, make sure
+                that this is really a bug. In particular, have a look at the
+                <span class="verb">.log</span> file that results when you
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >T<span class="latexlogosub">e</span>X</span
                   ></span
                 >
-                your files. This <span class="texttt">.log</span> file should
-                show that all the right files are loaded from the right
-                directories. Nearly all installation problems can be resolved by
-                looking at the <span class="texttt">.log</span> file.
+                your files. This <span class="verb">.log</span> file should show
+                that all the right files are loaded from the right directories.
+                Nearly all installation problems can be resolved by looking at
+                the <span class="verb">.log</span> file.
               </p>
               <p>
                 If you can, before reporting the bug, retest using latest
@@ -883,11 +891,12 @@
             </li>
             <li>
               <p>
-                5. <em>As a last resort</em> you can try emailing authors. We do
-                not mind getting emails, we simply get way too many of them.
-                Because of this, we cannot guarantee that your emails will be
-                answered timely or even at all. Reporting an issue is usually a
-                better approach as they don&rsquo;t get lost.
+                <span class="listmarker">5.</span> <em>As a last resort</em> you
+                can try emailing authors. We do not mind getting emails, we
+                simply get way too many of them. Because of this, we cannot
+                guarantee that your emails will be answered timely or even at
+                all. Reporting an issue is usually a better approach as they
+                don&rsquo;t get lost.
               </p>
             </li>
           </ul>
@@ -909,7 +918,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Colors - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -104,7 +104,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -200,7 +200,7 @@
           <p>
             In order to also show the effect of the different color themes on
             the sidebar, in the following examples the color themes are used
-            together with the outer theme <span class="texttt">sidebar</span>.
+            together with the outer theme <span class="verb">sidebar</span>.
           </p>
           <!--
 ...... subsubsection Default and Special-Purpose Color Themes ......
@@ -236,7 +236,7 @@
               </p>
             </div>
             <p>
-              The <span class="texttt">default</span> color theme is very sober.
+              The <span class="verb">default</span> color theme is very sober.
               It installs little special colors and even less backgrounds. The
               default color theme sets up the default parent relations between
               the different
@@ -244,30 +244,35 @@
               >-colors.
             </p>
             <p>
-              The main colors set in the
-              <span class="texttt">default</span> color theme are the following:
+              The main colors set in the <span class="verb">default</span> color
+              theme are the following:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull; <span class="texttt">normal text</span> is black on
-                  white.
-                </p>
-              </li>
-              <li>
-                <p>&bull; <span class="texttt">alerted text</span> is red.</p>
-              </li>
-              <li>
-                <p>
-                  &bull; <span class="texttt">example text</span> is a dark
-                  green (green with 50% black).
+                  <span class="listmarker">&bull;</span>
+                  <span class="verb">normal text</span> is black on white.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull; <span class="texttt">structure</span> is set to a light
-                  version of MidnightBlue (more precisely, 20% red, 20% green,
-                  and 70% blue).
+                  <span class="listmarker">&bull;</span>
+                  <span class="verb">alerted text</span> is red.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span class="listmarker">&bull;</span>
+                  <span class="verb">example text</span> is a dark green (green
+                  with 50% black).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span class="listmarker">&bull;</span>
+                  <span class="verb">structure</span> is set to a light version
+                  of MidnightBlue (more precisely, 20% red, 20% green, and 70%
+                  blue).
                 </p>
               </li>
             </ul>
@@ -308,8 +313,7 @@
             </div>
             <p>
               The example was created using
-              <span class="texttt"
-                >\usecolortheme[named=SeaGreen]{structure}</span
+              <span class="verb">\usecolortheme[named=SeaGreen]{structure}</span
               >.
             </p>
             <p>
@@ -317,9 +321,9 @@
               structural elements. More precisely, it just changes the
               foreground of the
               <span class="beamer-name"><span class="textsc">beamer</span></span
-              >-color <span class="texttt">structure</span>. You can also
-              achieve this by directly invoking the function
-              <span class="texttt">\setbeamercolor</span>, but this color theme
+              >-color <span class="verb">structure</span>. You can also achieve
+              this by directly invoking the function
+              <span class="verb">\setbeamercolor</span>, but this color theme
               makes things a bit easier.
             </p>
             <p>
@@ -330,99 +334,97 @@
               >, which can be used to specify the color to be used for
               structural elements:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">rgb=</span>{<span class="meta"
+                    ><span class="verb">rgb=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>rgb tuple</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
                   >
-                  sets the <span class="texttt">structure</span> foreground to
-                  the specified red-green-blue tuple. The numbers are given as
+                  sets the <span class="verb">structure</span> foreground to the
+                  specified red-green-blue tuple. The numbers are given as
                   decimals between 0 and 1. For example,
-                  <span class="texttt">rgb={0.5,0,0}</span> yields a dark red.
+                  <span class="verb">rgb={0.5,0,0}</span> yields a dark red.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">RGB=</span>{<span class="meta"
+                    ><span class="verb">RGB=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>rgb tuple</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
                   >
-                  does the same as <span class="texttt">rgb</span>, except that
+                  does the same as <span class="verb">rgb</span>, except that
                   the numbers range between 0 and 255. For example,
-                  <span class="texttt">RGB={128,0,0}</span> yields a dark red.
+                  <span class="verb">RGB={128,0,0}</span> yields a dark red.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">cmyk=</span>{<span class="meta"
+                    ><span class="verb">cmyk=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>cmyk tuple</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
                   >
-                  sets the <span class="texttt">structure</span> foreground to
-                  the specified cyan-magenta-yellow-black tuple. The numbers are
+                  sets the <span class="verb">structure</span> foreground to the
+                  specified cyan-magenta-yellow-black tuple. The numbers are
                   given as decimals between 0 and 1. For example,
-                  <span class="texttt">cmyk={0,1,1,0.5}</span> yields a dark
-                  red.
+                  <span class="verb">cmyk={0,1,1,0.5}</span> yields a dark red.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">cmy=</span>{<span class="meta"
+                    ><span class="verb">cmy=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>cmy tuple</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
                   >
-                  is similar to <span class="texttt">cmyk</span>, except that
-                  the black component is not specified.
+                  is similar to <span class="verb">cmyk</span>, except that the
+                  black component is not specified.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">hsb=</span>{<span class="meta"
+                    ><span class="verb">hsb=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>hsb tuple</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
                   >
-                  sets the <span class="texttt">structure</span> foreground to
-                  the specified hue-saturation-brightness tuple. The numbers are
+                  sets the <span class="verb">structure</span> foreground to the
+                  specified hue-saturation-brightness tuple. The numbers are
                   given as decimals between 0 and 1. For example,
-                  <span class="texttt">hsb={0,1,.5}</span> yields a dark red.
+                  <span class="verb">hsb={0,1,.5}</span> yields a dark red.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">named=</span>{<span class="meta"
+                    ><span class="verb">named=</span>{<span class="meta"
                       ><span class="angle">&langle;</span><i>color name</i
                       ><span class="angle">&rangle;</span></span
                     >}</span
                   >
-                  sets the <span class="texttt">structure</span> foreground to a
+                  sets the <span class="verb">structure</span> foreground to a
                   named color. This color must previously have been defined
-                  using the
-                  <span class="texttt">\DefineNamedColor</span> command. Adding
-                  the class option
-                  <span class="texttt">xcolor=dvipsnames</span> or
-                  <span class="texttt">xcolor=svgnames</span> will install a
-                  long list of standard <span class="texttt">dvips</span> or SVG
-                  color names (respectively). See the file
-                  <span class="texttt">dvipsnam.def</span> for the list.
+                  using the <span class="verb">\DefineNamedColor</span> command.
+                  Adding the class option
+                  <span class="verb">xcolor=dvipsnames</span> or
+                  <span class="verb">xcolor=svgnames</span> will install a long
+                  list of standard <span class="verb">dvips</span> or SVG color
+                  names (respectively). See the file
+                  <span class="verb">dvipsnam.def</span> for the list.
                 </p>
               </li>
             </ul>
@@ -470,7 +472,7 @@
             A &ldquo;complete&rdquo; color theme is a color theme that
             completely specifies all colors for all parts of a frame. It
             installs specific colors and does not derive the colors from, say,
-            the <span class="texttt">structure</span>
+            the <span class="verb">structure</span>
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >-color. Complete color themes happen to have names of flying
             animals.
@@ -505,30 +507,34 @@
               is necessary for presentation themes that use shadows, but which
               (in Till&rsquo;s opinion) is undesirable for all other
               presentation themes. By using the
-              <span class="texttt">lily</span> color theme together with this
+              <span class="verb">lily</span> color theme together with this
               theme, the backgrounds for blocks can be removed.
             </p>
             <p>
               When using a light-on-dark theme like this one, be aware that
               there are certain disadvantages:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull; If the room in which the talk is given has been
-                  &ldquo;darkened,&rdquo; using such a theme makes it more
-                  difficult for the audience to take or read notes.
+                  <span class="listmarker">&bull;</span> If the room in which
+                  the talk is given has been &ldquo;darkened,&rdquo; using such
+                  a theme makes it more difficult for the audience to take or
+                  read notes.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull; Since the room becomes darker, the pupil becomes
-                  larger, thus making it harder for the eye to focus. This
-                  <em>can</em> make text harder to read.
+                  <span class="listmarker">&bull;</span> Since the room becomes
+                  darker, the pupil becomes larger, thus making it harder for
+                  the eye to focus. This <em>can</em> make text harder to read.
                 </p>
               </li>
               <li>
-                <p>&bull; Printing such slides is difficult at best.</p>
+                <p>
+                  <span class="listmarker">&bull;</span> Printing such slides is
+                  difficult at best.
+                </p>
               </li>
             </ul>
             <p>
@@ -543,25 +549,24 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">overlystylish</span></span
+                    ><span class="verb">overlystylish</span></span
                   >
                   installs a background canvas that is, in Till&rsquo;s opinion,
                   way too stylish. But then, it is not his intention to press
                   his taste on other people. When using this option, it is
                   probably a very good idea to also use the
-                  <span class="texttt">lily</span> color theme.
+                  <span class="verb">lily</span> color theme.
                 </p>
               </li>
             </ul>
             <p>
-              <i>Example: </i>The
-              <span class="texttt">overlystylish</span> option together with the
-              <span class="texttt">lily</span> color theme:
+              <i>Example: </i>The <span class="verb">overlystylish</span> option
+              together with the <span class="verb">lily</span> color theme:
             </p>
 
             <div class="themeexample-image">
@@ -607,7 +612,7 @@
               emphasis, the black text for normal text. The &ldquo;outer
               stuff&rdquo; like the headline and the footline use, however, a
               bluish color. To change this color, change the background of
-              <span class="texttt">palette primary</span>.
+              <span class="verb">palette primary</span>.
             </p>
             <p>
               Great care must be taken with this theme since both the white/gray
@@ -617,7 +622,7 @@
             </p>
             <p>
               You can change the &ldquo;grayish&rdquo; background by changing
-              the background of <span class="texttt">normal text</span>.
+              the background of <span class="verb">normal text</span>.
             </p>
           </div>
           <div class="colortheme">
@@ -680,9 +685,9 @@
             </p>
             <p>
               When using this theme, you should consider using the class option
-              <span class="texttt">gray</span>, which ensures that all colors
-              are converted to grayscale. Also consider using the
-              <span class="texttt">structurebold</span> font theme.
+              <span class="verb">gray</span>, which ensures that all colors are
+              converted to grayscale. Also consider using the
+              <span class="verb">structurebold</span> font theme.
             </p>
           </div>
           <div class="colortheme">
@@ -710,7 +715,7 @@
             </div>
             <p>
               This theme is the &ldquo;consequent&rdquo; version of
-              <span class="texttt">beetle</span> and uses white/black/gray
+              <span class="verb">beetle</span> and uses white/black/gray
               throughout. It does not go particularly well with themes that use
               shadows.
             </p>
@@ -765,10 +770,10 @@
               </p>
             </div>
             <p>
-              Like the <span class="texttt">dove</span> color theme, this theme
-              is useful for printing on a black-and-white printer. However, it
-              uses different shades of gray extensively, which may or may not
-              look good on a transparency.
+              Like the <span class="verb">dove</span> color theme, this theme is
+              useful for printing on a black-and-white printer. However, it uses
+              different shades of gray extensively, which may or may not look
+              good on a transparency.
             </p>
           </div>
           <div class="colortheme">
@@ -901,8 +906,8 @@
             <p>
               This theme is mainly used to <em>uninstall</em> any block colors
               setup by another theme, restoring the colors used in the
-              <span class="texttt">default</span> theme. In particular, using
-              this theme will remove all background colors for blocks.
+              <span class="verb">default</span> theme. In particular, using this
+              theme will remove all background colors for blocks.
             </p>
           </div>
           <div class="colortheme">
@@ -963,8 +968,8 @@
               This theme installs nearly transparent backgrounds for both block
               titles and block bodies. This theme is much less
               &ldquo;aggressive&rdquo; than the
-              <span class="texttt">orchid</span> theme. The background colors
-              are derived from the foreground of the structure
+              <span class="verb">orchid</span> theme. The background colors are
+              derived from the foreground of the structure
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-color.
             </p>
@@ -983,7 +988,7 @@
             An outer color theme changes the palette colors, on which the colors
             used in the headline, footline, and sidebar are based by default.
             Outer color themes normally do not change the color of inner
-            elements, except possibly for <span class="texttt">titlelike</span>.
+            elements, except possibly for <span class="verb">titlelike</span>.
             They happen to be sea-animal names.
           </p>
           <div class="colortheme">
@@ -1028,8 +1033,8 @@
             </p>
             <p>
               The counterpart to the theme with respect to blocks is the
-              <span class="texttt">orchid</span> theme. However, pairing it with
-              the <span class="texttt">rose</span> color theme is also
+              <span class="verb">orchid</span> theme. However, pairing it with
+              the <span class="verb">rose</span> color theme is also
               interesting.
             </p>
           </div>
@@ -1060,13 +1065,13 @@
               Installs a near-transparent backgrounds for the headline,
               footline, and sidebar. Using this theme will cause navigational
               elements to be much less &ldquo;dominant&rdquo; than when using
-              the <span class="texttt">whale</span> theme (see the discussion on
+              the <span class="verb">whale</span> theme (see the discussion on
               contrast there, though).
             </p>
             <p>
-              It goes well with the <span class="texttt">rose</span> or the
-              <span class="texttt">lily</span> color theme. Pairing it with the
-              <span class="texttt">orchid</span> overemphasizes blocks (in
+              It goes well with the <span class="verb">rose</span> or the
+              <span class="verb">lily</span> color theme. Pairing it with the
+              <span class="verb">orchid</span> overemphasizes blocks (in
               Till&rsquo;s opinion).
             </p>
           </div>
@@ -1096,9 +1101,8 @@
             <p>
               A color theme somewhere in the middle between the whale and the
               seahorse. It was graciously donated by Manuel Carro. Like the
-              seahorse, it goes well with the
-              <span class="texttt">rose</span> and the
-              <span class="texttt">lily</span> color theme.
+              seahorse, it goes well with the <span class="verb">rose</span> and
+              the <span class="verb">lily</span> color theme.
             </p>
           </div>
           <!--
@@ -1167,12 +1171,12 @@
             >-colors and the default themes make extensive use of this feature.
             For example, there is a
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >-color called <span class="texttt">structure</span> and all sorts
-            of elements inherit from this color. Thus, if someone changes
-            <span class="texttt">structure</span>, the color of all these
-            elements automatically change accordingly. When a color inherits
-            from another color, it can nevertheless still override only the
-            foreground or the background.
+            >-color called <span class="verb">structure</span> and all sorts of
+            elements inherit from this color. Thus, if someone changes
+            <span class="verb">structure</span>, the color of all these elements
+            automatically change accordingly. When a color inherits from another
+            color, it can nevertheless still override only the foreground or the
+            background.
           </p>
           <p>
             It is also possible to &ldquo;inherit&rdquo; from another
@@ -1183,7 +1187,7 @@
             >-color in an indirect way. You can specify that, say, the
             background of the title should be a 90% of the background of normal
             text and 10% of the foreground of
-            <span class="texttt">structure</span>.
+            <span class="verb">structure</span>.
           </p>
           <p>
             Inheritance and using of other
@@ -1213,37 +1217,37 @@
           <p>
             A <span class="beamer-name"><span class="textsc">beamer</span></span
             >-color is not a normal color as defined by the
-            <span class="texttt">color</span> and
-            <span class="texttt">xcolor</span> packages and, accordingly, cannot
+            <span class="verb">color</span> and
+            <span class="verb">xcolor</span> packages and, accordingly, cannot
             be used directly as in commands like
-            <span class="texttt">\color</span> or
-            <span class="texttt">\colorlet</span>. Instead, in order to use a
+            <span class="verb">\color</span> or
+            <span class="verb">\colorlet</span>. Instead, in order to use a
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >-color, you should first call the command
-            <span class="texttt">\usebeamercolor</span>, which is explained
-            below. This command will setup two (normal) colors called
-            <span class="texttt">fg</span> (for foreground) and
-            <span class="texttt">bg</span> (for, well, guess what). You can then
-            say <span class="texttt">\color{fg}</span> to install the foreground
-            color and <span class="texttt">\color{bg}</span> to install the
+            <span class="verb">\usebeamercolor</span>, which is explained below.
+            This command will setup two (normal) colors called
+            <span class="verb">fg</span> (for foreground) and
+            <span class="verb">bg</span> (for, well, guess what). You can then
+            say <span class="verb">\color{fg}</span> to install the foreground
+            color and <span class="verb">\color{bg}</span> to install the
             background color. You can also use the colors
-            <span class="texttt">fg</span> and <span class="texttt">bg</span> in
-            any context in which you normally use a color like, say,
-            <span class="texttt">red</span>. If a
+            <span class="verb">fg</span> and <span class="verb">bg</span> in any
+            context in which you normally use a color like, say,
+            <span class="verb">red</span>. If a
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >-color does not have a foreground or a background, the colors
-            <span class="texttt">fg</span> or <span class="texttt">bg</span> (or
+            <span class="verb">fg</span> or <span class="verb">bg</span> (or
             both) remain unchanged.
           </p>
           <p>
             Inside templates, this command will typically have already been
-            called for you with the option <span class="texttt">[fg]</span>.
+            called for you with the option <span class="verb">[fg]</span>.
           </p>
           <div class="command">
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\usebeamercolor</kbd></span
-                ><span class="opt"><span class="texttt">*</span></span
+                ><span class="opt"><span class="verb">*</span></span
                 ><span class="opt"
                   ><span class="oarg-left-bracket">[</span
                   ><span class="meta"
@@ -1258,32 +1262,31 @@
             </div>
             <p>
               This command (possibly) changes the two colors
-              <span class="texttt">fg</span> and
-              <span class="texttt">bg</span> to the foreground and background
-              color of the
+              <span class="verb">fg</span> and <span class="verb">bg</span> to
+              the foreground and background color of the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>beamer-color name</i
                 ><span class="angle">&rangle;</span></span
               >. If the
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-color does not specify a foreground,
-              <span class="texttt">fg</span> is left unchanged; if does not
-              specify a background, <span class="texttt">bg</span> is left
+              <span class="verb">fg</span> is left unchanged; if does not
+              specify a background, <span class="verb">bg</span> is left
               unchanged.
             </p>
             <p>
               You will often wish to directly use the color
-              <span class="texttt">fg</span> or
-              <span class="texttt">bg</span> after using this command. For this
-              common situation, the optional argument
+              <span class="verb">fg</span> or <span class="verb">bg</span> after
+              using this command. For this common situation, the optional
+              argument
               <span class="meta"
                 ><span class="angle">&langle;</span><i>fg or bg</i
                 ><span class="angle">&rangle;</span></span
               >
-              is useful, which may be either <span class="texttt">fg</span> or
-              <span class="texttt">bg</span>. Giving this option will cause the
-              foreground <span class="texttt">fg</span> or the background
-              <span class="texttt">bg</span> to be immediately installed after
+              is useful, which may be either <span class="verb">fg</span> or
+              <span class="verb">bg</span>. Giving this option will cause the
+              foreground <span class="verb">fg</span> or the background
+              <span class="verb">bg</span> to be immediately installed after
               they have been setup. Thus, the following command
             </p>
             <pre class="verbatim">
@@ -1299,31 +1302,31 @@
             <p>
               If you use the starred version of this command, the
               <span class="beamer-name"><span class="textsc">beamer</span></span
-              >-color <span class="texttt">normal text</span> is used before the
+              >-color <span class="verb">normal text</span> is used before the
               command is invoked. This ensures that, barring evil trickery, the
-              colors <span class="texttt">fg</span> and
-              <span class="texttt">bg</span> will be setup independently of
+              colors <span class="verb">fg</span> and
+              <span class="verb">bg</span> will be setup independently of
               whatever colors happened to be in use when the command is invoked.
             </p>
             <p>
               This command has special side-effects. First, the (normal) color
-              <span class="texttt">parent.bg</span> is set to the value of
-              <span class="texttt">bg</span> prior to this call. Thus you can
+              <span class="verb">parent.bg</span> is set to the value of
+              <span class="verb">bg</span> prior to this call. Thus you can
               access the color that was in use prior to the call of this command
-              via the color <span class="texttt">parent.bg</span>.
+              via the color <span class="verb">parent.bg</span>.
             </p>
             <p>
               Second, the special color
               <span class="meta"
                 ><span class="angle">&langle;</span><i>beamer-color name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.fg</span> is <em>globally</em> set to the
-              same value as <span class="texttt">fg</span> and
+              ><span class="verb">.fg</span> is <em>globally</em> set to the
+              same value as <span class="verb">fg</span> and
               <span class="meta"
                 ><span class="angle">&langle;</span><i>beamer-color name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.bg</span> is globally set to the value of
-              <span class="texttt">bg</span>. This allows you to access the
+              ><span class="verb">.bg</span> is globally set to the value of
+              <span class="verb">bg</span>. This allows you to access the
               foreground or background of a certain
               <span class="meta"
                 ><span class="angle">&langle;</span><i>beamer-color name</i
@@ -1339,12 +1342,12 @@
               <span class="meta"
                 ><span class="angle">&langle;</span><i>beamer-color name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.fg</span> and
+              ><span class="verb">.fg</span> and
               <span class="meta"
                 ><span class="angle">&langle;</span><i>beamer-color name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.bg</span> until the next invocation of
-              <span class="texttt">\usebeamercolor</span>. Also, if the
+              ><span class="verb">.bg</span> until the next invocation of
+              <span class="verb">\usebeamercolor</span>. Also, if the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>beamer-color name</i
                 ><span class="angle">&rangle;</span></span
@@ -1352,13 +1355,13 @@
               does not specify a foreground or a background color, then the
               values of the special colors are whatever happened to be the
               foreground or background at the time of the last invocation of
-              <span class="texttt">\usebeamercolor</span>.
+              <span class="verb">\usebeamercolor</span>.
             </p>
             <p>
               So, try not to get into the habit of writing
-              <span class="texttt">\color{structure.fg}</span> all the time, at
+              <span class="verb">\color{structure.fg}</span> all the time, at
               least not without a
-              <span class="texttt">\usebeamercolor{structure}</span> close by.
+              <span class="verb">\usebeamercolor{structure}</span> close by.
             </p>
             <p>
               <i>Example: </i>
@@ -1379,7 +1382,7 @@
             </div>
             <p>
               This command has no effect in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
@@ -1458,13 +1461,13 @@
             To set or to change a
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >-color, you can use the command
-            <span class="texttt">\setbeamercolor</span>.
+            <span class="verb">\setbeamercolor</span>.
           </p>
           <div class="command">
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\setbeamercolor</kbd></span
-                ><span class="opt"><span class="texttt">*</span></span
+                ><span class="opt"><span class="verb">*</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>beamer-color name</i
                   ><span class="angle">&rangle;</span></span
@@ -1484,27 +1487,27 @@
               >
               should be a reasonably simple text (do not try too much trickery
               and avoid punctuation symbols), but it may contain spaces. Thus,
-              <span class="texttt">normal text</span> is a valid
+              <span class="verb">normal text</span> is a valid
               <span class="meta"
                 ><span class="angle">&langle;</span><i>beamer-color name</i
                 ><span class="angle">&rangle;</span></span
               >
-              and so is <span class="texttt">My Color Number 2</span>.
+              and so is <span class="verb">My Color Number 2</span>.
             </p>
             <p>
               In the most simple case, you just specify a foreground by giving
-              the <span class="texttt">fg=</span> option and, possibly, also a
-              background using the <span class="texttt">bg=</span> option.
+              the <span class="verb">fg=</span> option and, possibly, also a
+              background using the <span class="verb">bg=</span> option.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\setbeamercolor{normal text}{fg=black,bg=mylightgrey}</span
               >
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\setbeamercolor{alerted text}{fg=red!80!black}</span
               >
             </p>
@@ -1545,12 +1548,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">fg=</span
+                    ><span class="verb">fg=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>color</i
                       ><span class="angle">&rangle;</span></span
@@ -1571,8 +1574,8 @@
                     ><span class="angle">&rangle;</span></span
                   >
                   may also be a color expression like
-                  <span class="texttt">red!50!black</span>, see the manual of
-                  the <span class="textsc">xcolor</span> package. If
+                  <span class="verb">red!50!black</span>, see the manual of the
+                  <span class="textsc">xcolor</span> package. If
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>color</i
                     ><span class="angle">&rangle;</span></span
@@ -1592,23 +1595,23 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">bg=</span
+                    ><span class="verb">bg=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>color</i
                       ><span class="angle">&rangle;</span></span
                     ></span
                   >
-                  does the same as the <span class="texttt">fg</span> option,
-                  but for the background.
+                  does the same as the <span class="verb">fg</span> option, but
+                  for the background.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">parent=</span
+                    ><span class="verb">parent=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>parent beamer-color(s)</i
@@ -1666,9 +1669,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">use=</span
+                    ><span class="verb">use=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span
                       ><i>another beamer-color</i
@@ -1695,10 +1698,10 @@
                   the
                   <span class="beamer-name"
                     ><span class="textsc">beamer</span></span
-                  >-color <span class="texttt">structure</span> changes, the
-                  (normal) color <span class="texttt">structure.fg</span> is not
+                  >-color <span class="verb">structure</span> changes, the
+                  (normal) color <span class="verb">structure.fg</span> is not
                   immediately updated. In order to ensure that the normal color
-                  <span class="texttt">structure.fg</span> is correct, use the
+                  <span class="verb">structure.fg</span> is correct, use the
                   following:
                 </p>
                 <pre class="verbatim">
@@ -1707,9 +1710,9 @@
                 >
                 <p>
                   This will guarantee that the colors
-                  <span class="texttt">structure.fg</span> and
-                  <span class="texttt">normal text.fg</span> are setup correctly
-                  when the foreground of <span class="texttt">item</span> is
+                  <span class="verb">structure.fg</span> and
+                  <span class="verb">normal text.fg</span> are setup correctly
+                  when the foreground of <span class="verb">item</span> is
                   computed.
                 </p>
                 <p>To show the difference, consider the following example:</p>
@@ -1763,8 +1766,8 @@
             </div>
             <p>
               This color is the parent of
-              <span class="texttt">math text inlined</span> and
-              <span class="texttt">math text displayed</span>. It is empty by
+              <span class="verb">math text inlined</span> and
+              <span class="verb">math text displayed</span>. It is empty by
               default. See those colors for details.
             </p>
           </div>
@@ -1779,7 +1782,7 @@
             <p>
               If the foreground of this color is set, inlined mathematical text
               is typeset using this color. This is done via some
-              <span class="texttt">\everymath</span> hackery and may not work in
+              <span class="verb">\everymath</span> hackery and may not work in
               all cases. If not, you&rsquo;ll have to try to find a way around
               the problem. The background is currently ignored.
             </p>
@@ -1793,14 +1796,13 @@
             </div>
             <p>Color parents: <kbd>math text</kbd></p>
             <p>
-              Like <span class="texttt">math text inlined</span>, only for
+              Like <span class="verb">math text inlined</span>, only for
               so-called &ldquo;displayed&rdquo; mathematical text. This is
-              mathematical text between <span class="texttt">\[</span> and
-              <span class="texttt">\]</span> or between
-              <span class="texttt">$$</span> and
-              <span class="texttt">$$</span> or inside environments like
-              <span class="texttt">equation</span> or
-              <span class="texttt">align</span>. The setup of this color is
+              mathematical text between <span class="verb">\[</span> and
+              <span class="verb">\]</span> or between
+              <span class="verb">$$</span> and <span class="verb">$$</span> or
+              inside environments like <span class="verb">equation</span> or
+              <span class="verb">align</span>. The setup of this color is
               somewhat fragile, use at your own risk. The background is
               currently ignored.
             </p>
@@ -1815,7 +1817,7 @@
             <p>
               If the foreground of this color is set, normal text inside
               mathematical text (which is introduced using the
-              <span class="texttt">\text</span> command) will be typeset using
+              <span class="verb">\text</span> command) will be typeset using
               this color. The background is currently ignored.
             </p>
           </div>
@@ -1850,17 +1852,16 @@
             change these palette colors. For example, a color theme might make
             the
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >-color <span class="texttt">palette primary</span> blue, make
-            <span class="texttt">palette secondary</span> a dark blue, and make
-            <span class="texttt">palette tertiary</span> black. Outer themes can
+            >-color <span class="verb">palette primary</span> blue, make
+            <span class="verb">palette secondary</span> a dark blue, and make
+            <span class="verb">palette tertiary</span> black. Outer themes can
             now setup things such that whatever they show at the top of the
-            headline inherits from <span class="texttt">palette primary</span>,
+            headline inherits from <span class="verb">palette primary</span>,
             what comes below inherits from
-            <span class="texttt">palette secondary</span>, and whatever is at
-            the bottom inherits from
-            <span class="texttt">palette tertiary</span>. This way, color themes
-            can change the way even complicated outer themes look and they can
-            do so consistently.
+            <span class="verb">palette secondary</span>, and whatever is at the
+            bottom inherits from <span class="verb">palette tertiary</span>.
+            This way, color themes can change the way even complicated outer
+            themes look and they can do so consistently.
           </p>
           <p>
             Note that the user can still change the color of every element
@@ -1890,12 +1891,12 @@
             </p>
             <p>
               By default, the palette colors do not have a background and the
-              foreground ranges from <span class="texttt">structure.fg</span> to
-              <span class="texttt">black</span>.
+              foreground ranges from <span class="verb">structure.fg</span> to
+              <span class="verb">black</span>.
             </p>
             <p>
               For the sidebar, there is an extra set of palette colors, see
-              <span class="texttt">palette sidebar primary</span>.
+              <span class="verb">palette sidebar primary</span>.
             </p>
           </div>
           <div class="element">
@@ -1905,7 +1906,7 @@
                 <span class="declare">palette secondary</span>
               </p>
             </div>
-            <p>See <span class="texttt">palette primary</span>.</p>
+            <p>See <span class="verb">palette primary</span>.</p>
           </div>
           <div class="element">
             <div class="element-headline">
@@ -1914,7 +1915,7 @@
                 <span class="declare">palette tertiary</span>
               </p>
             </div>
-            <p>See <span class="texttt">palette primary</span>.</p>
+            <p>See <span class="verb">palette primary</span>.</p>
           </div>
           <div class="element">
             <div class="element-headline">
@@ -1923,7 +1924,7 @@
                 <span class="declare">palette quaternary</span>
               </p>
             </div>
-            <p>See <span class="texttt">palette primary</span>.</p>
+            <p>See <span class="verb">palette primary</span>.</p>
           </div>
           <div class="element">
             <div class="element-headline">
@@ -1933,7 +1934,7 @@
               </p>
             </div>
             <p>
-              Similar to <span class="texttt">palette primary</span>, only outer
+              Similar to <span class="verb">palette primary</span>, only outer
               themes (should) base the colors of elements in the sidebar on the
               four sidebar palette colors.
             </p>
@@ -1945,7 +1946,7 @@
                 <span class="declare">palette sidebar secondary</span>
               </p>
             </div>
-            <p>See <span class="texttt">palette sidebar primary</span>.</p>
+            <p>See <span class="verb">palette sidebar primary</span>.</p>
           </div>
           <div class="element">
             <div class="element-headline">
@@ -1954,7 +1955,7 @@
                 <span class="declare">palette sidebar tertiary</span>
               </p>
             </div>
-            <p>See <span class="texttt">palette sidebar primary</span>.</p>
+            <p>See <span class="verb">palette sidebar primary</span>.</p>
           </div>
           <div class="element">
             <div class="element-headline">
@@ -1963,7 +1964,7 @@
                 <span class="declare">palette sidebar quaternary</span>
               </p>
             </div>
-            <p>See <span class="texttt">palette sidebar primary</span>.</p>
+            <p>See <span class="verb">palette sidebar primary</span>.</p>
           </div>
           <!--
 ...... subsection Miscellaneous Colors ......
@@ -1989,13 +1990,13 @@
             <p>
               The color is used for normal text. At the beginning of the
               document the foreground color is installed as
-              <span class="texttt">\normalcolor</span>. The background of this
+              <span class="verb">\normalcolor</span>. The background of this
               color is used by the default background canvas for the background
               of the presentation, see Section&nbsp;<a
                 href="Creating-Frames.html#section-canvas"
                 >8.2.7</a
               >. The background is also the default value of the normal color
-              <span class="texttt">bg</span>.
+              <span class="verb">bg</span>.
             </p>
             <p>
               Since the color is the &ldquo;root&rdquo; of all other
@@ -2004,8 +2005,8 @@
               particular, to get a transparent background canvas, make the
               background of the
               <span class="beamer-name"><span class="textsc">beamer</span></span
-              >-color <span class="texttt">background canvas</span> empty, not
-              the background of this color.
+              >-color <span class="verb">background canvas</span> empty, not the
+              background of this color.
             </p>
             <p>
               The
@@ -2023,7 +2024,7 @@
             </div>
             <p>
               The color/font is used when text is typeset inside an
-              <span class="texttt">example</span> block.
+              <span class="verb">example</span> block.
             </p>
           </div>
           <div class="element">
@@ -2034,9 +2035,9 @@
             </div>
             <p>
               This color/font is a more specialized form of the
-              <span class="texttt">structure</span> color/font. It is the base
-              for all elements that are &ldquo;like titles.&rdquo; This includes
-              the frame title and subtitle as well as the document title and
+              <span class="verb">structure</span> color/font. It is the base for
+              all elements that are &ldquo;like titles.&rdquo; This includes the
+              frame title and subtitle as well as the document title and
               subtitle.
             </p>
           </div>
@@ -2126,9 +2127,9 @@
           <p>
             By default, <em>covered</em> items are not shown during a
             presentation. Thus if you write
-            <span class="texttt">\uncover&lt;2&gt;{Text.}</span>, the text is
-            not shown on any but the second slide. On the other slides, the text
-            is not simply printed using the background color &ndash; it is not
+            <span class="verb">\uncover&lt;2&gt;{Text.}</span>, the text is not
+            shown on any but the second slide. On the other slides, the text is
+            not simply printed using the background color &ndash; it is not
             shown at all. This effect is most useful if your background does not
             have a uniform color.
           </p>
@@ -2144,10 +2145,10 @@
             Ideally, there would be an option to make covered text
             &ldquo;transparent.&rdquo; This would mean that when covered text is
             shown, it would instead be mixed with the background behind it.
-            Unfortunately, <span class="texttt">pgf</span> does not support real
+            Unfortunately, <span class="verb">pgf</span> does not support real
             transparency yet. Instead, transparency is created by mixing the
             color of the object you want to show with the current background
-            color (the color <span class="texttt">bg</span>, which has hopefully
+            color (the color <span class="verb">bg</span>, which has hopefully
             been setup such that it is the average color of the background on
             which the object should be placed). To install this effect, you can
             use:
@@ -2179,10 +2180,10 @@
             </div>
             <p>
               This command offers several different options, the most important
-              of which is <span class="texttt">transparent</span>. All options
-              are internally mapped to the two options
-              <span class="texttt">still covered</span> and
-              <span class="texttt">again covered</span>.
+              of which is <span class="verb">transparent</span>. All options are
+              internally mapped to the two options
+              <span class="verb">still covered</span> and
+              <span class="verb">again covered</span>.
             </p>
             <p>
               In detail, the following
@@ -2192,12 +2193,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">invisible</span></span
+                    ><span class="verb">invisible</span></span
                   >
                   is the default and causes covered text to &ldquo;completely
                   disappear&rdquo;.
@@ -2205,11 +2206,11 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">transparent</span></span
+                    ><span class="verb">transparent</span></span
                   ><span class="opt"
-                    ><span class="texttt">=</span
+                    ><span class="verb">=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>opaqueness</i
                       ><span class="angle">&rangle;</span></span
@@ -2226,8 +2227,8 @@
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>percentage</i
                     ><span class="angle">&rangle;</span></span
-                  >, where <span class="texttt">0</span> means &ldquo;totally
-                  transparent&rdquo; and <span class="texttt">100</span> means
+                  >, where <span class="verb">0</span> means &ldquo;totally
+                  transparent&rdquo; and <span class="verb">100</span> means
                   &ldquo;totally opaque.&rdquo;
                 </p>
                 <p>
@@ -2238,10 +2239,8 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"
-                    ><span class="texttt">dynamic</span></span
-                  >
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">dynamic</span></span>
                   Makes all covered text quite transparent, but in a dynamic
                   way. The longer it will take till the text is uncovered, the
                   stronger the transparency.
@@ -2249,19 +2248,19 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">highly dynamic</span></span
+                    ><span class="verb">highly dynamic</span></span
                   >
-                  Has the same effect as <span class="texttt">dynamic</span>,
-                  but the effect is stronger.
+                  Has the same effect as <span class="verb">dynamic</span>, but
+                  the effect is stronger.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">still covered=</span
+                    ><span class="verb">still covered=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>not yet list</i
                       ><span class="angle">&rangle;</span></span
@@ -2274,7 +2273,7 @@
                     ><span class="angle">&rangle;</span></span
                   >
                   should be a list of
-                  <span class="texttt">\opaqueness</span> commands, see the
+                  <span class="verb">\opaqueness</span> commands, see the
                   description of that command, below.
                 </p>
                 <p>
@@ -2291,9 +2290,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">again covered=</span
+                    ><span class="verb">again covered=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>once more list</i
                       ><span class="angle">&rangle;</span></span
@@ -2355,8 +2354,8 @@
                 ><i>percentage of opaqueness</i
                 ><span class="angle">&rangle;</span></span
               >
-              of the current <span class="texttt">bg</span>. At some future
-              point this command might result in real transparency.
+              of the current <span class="verb">bg</span>. At some future point
+              this command might result in real transparency.
             </p>
             <p>
               The alternate
@@ -2366,7 +2365,7 @@
                 ><span class="angle">&langle;</span
                 ><i>percentage of opaqueness</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">opaque</span>. In case of nested calls, only
+              ><span class="verb">opaque</span>. In case of nested calls, only
               the innermost opaqueness specification is used.
             </p>
             <p>
@@ -2403,7 +2402,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Guidelines for Creating Presentations - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -100,7 +100,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -219,22 +219,23 @@
             presentation. Depending on the occasion, this can be anything
             between 2 minutes and two hours.
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; A simple rule for the number of frames is that you should
-                have at most one frame per minute.
+                <span class="listmarker">&bull;</span> A simple rule for the
+                number of frames is that you should have at most one frame per
+                minute.
               </p>
             </li>
             <li>
               <p>
-                &bull; In most situations, you will have less time for your
-                presentation than you would like.
+                <span class="listmarker">&bull;</span> In most situations, you
+                will have less time for your presentation than you would like.
               </p>
             </li>
             <li>
               <p>
-                &bull;
+                <span class="listmarker">&bull;</span>
                 <em
                   >Do not try to squeeze more into a presentation than time
                   allows for.</em
@@ -265,32 +266,34 @@
             To create the &ldquo;global structure&rdquo; of a presentation, with
             the time constraints in mind, proceed as follows:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Make a mental inventory of the things you can reasonably
-                talk about within the time available.
+                <span class="listmarker">&bull;</span> Make a mental inventory
+                of the things you can reasonably talk about within the time
+                available.
               </p>
             </li>
             <li>
               <p>
-                &bull; Categorize the inventory into sections and subsections.
+                <span class="listmarker">&bull;</span> Categorize the inventory
+                into sections and subsections.
               </p>
             </li>
             <li>
               <p>
-                &bull; For very long talks (like a 90 minute lecture), you might
-                also divide your talk into independent parts (like a
-                &ldquo;review of the previous lecture part&rdquo; and a
-                &ldquo;main part&rdquo;) using the
-                <span class="texttt">\part</span> command. Note that each part
-                has its own table of contents.
+                <span class="listmarker">&bull;</span> For very long talks (like
+                a 90 minute lecture), you might also divide your talk into
+                independent parts (like a &ldquo;review of the previous lecture
+                part&rdquo; and a &ldquo;main part&rdquo;) using the
+                <span class="verb">\part</span> command. Note that each part has
+                its own table of contents.
               </p>
             </li>
             <li>
               <p>
-                &bull; Do not feel afraid to change the structure later on as
-                you work on the talk.
+                <span class="listmarker">&bull;</span> Do not feel afraid to
+                change the structure later on as you work on the talk.
               </p>
             </li>
           </ul>
@@ -303,11 +306,11 @@
             >
             <a id="beameruserguide-autopage-123"></a>
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Do not use more than four sections and not less than two
-                per part.
+                <span class="listmarker">&bull;</span> Do not use more than four
+                sections and not less than two per part.
               </p>
             </li>
           </ul>
@@ -319,57 +322,66 @@
             relevance of the different sections and will most likely have
             forgotten them by the time you reach them.
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Ideally, a table of contents should be understandable by
-                itself. In particular, it should be comprehensible
-                <em>before</em> someone has heard your talk.
-              </p>
-            </li>
-            <li>
-              <p>&bull; Keep section and subsection titles self-explaining.</p>
-            </li>
-            <li>
-              <p>
-                &bull; Both the sections and the subsections should follow a
-                logical pattern.
+                <span class="listmarker">&bull;</span> Ideally, a table of
+                contents should be understandable by itself. In particular, it
+                should be comprehensible <em>before</em> someone has heard your
+                talk.
               </p>
             </li>
             <li>
               <p>
-                &bull; Begin with an explanation of what your talk is all about.
-                (Do not assume that everyone knows this. The
-                <em>Ignorant Audience Law</em> states: Someone important in the
-                audience always knows less than you think everyone should know,
-                even if you take the Ignorant Audience Law into account.)
+                <span class="listmarker">&bull;</span> Keep section and
+                subsection titles self-explaining.
               </p>
             </li>
             <li>
               <p>
-                &bull; Then explain what you or someone else has found out
-                concerning the subject matter.
+                <span class="listmarker">&bull;</span> Both the sections and the
+                subsections should follow a logical pattern.
               </p>
             </li>
             <li>
               <p>
-                &bull; Always conclude your talk with a summary that repeats the
-                main message of the talk in a short and simple way. People pay
-                most attention at the beginning and at the end of talks. The
-                summary is your &ldquo;second chance&rdquo; to get across a
-                message.
+                <span class="listmarker">&bull;</span> Begin with an explanation
+                of what your talk is all about. (Do not assume that everyone
+                knows this. The <em>Ignorant Audience Law</em> states: Someone
+                important in the audience always knows less than you think
+                everyone should know, even if you take the Ignorant Audience Law
+                into account.)
               </p>
             </li>
             <li>
               <p>
-                &bull; You can also add an appendix part using the
-                <span class="texttt">\appendix</span> command. Put everything
-                into this part that you do not actually intend to talk about,
-                but that might come in handy when questions are asked.
+                <span class="listmarker">&bull;</span> Then explain what you or
+                someone else has found out concerning the subject matter.
               </p>
             </li>
             <li>
-              <p>&bull; Do not use subsubsections, they are evil.</p>
+              <p>
+                <span class="listmarker">&bull;</span> Always conclude your talk
+                with a summary that repeats the main message of the talk in a
+                short and simple way. People pay most attention at the beginning
+                and at the end of talks. The summary is your &ldquo;second
+                chance&rdquo; to get across a message.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="listmarker">&bull;</span> You can also add an
+                appendix part using the
+                <span class="verb">\appendix</span> command. Put everything into
+                this part that you do not actually intend to talk about, but
+                that might come in handy when questions are asked.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="listmarker">&bull;</span> Do not use
+                subsubsections, they are evil.
+              </p>
             </li>
           </ul>
           <!--
@@ -384,30 +396,33 @@
             about 100 words. This summary is intend to help readers appraise
             whether they should read the whole paper or not.
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Since your audience is unlikely to flee after the first
-                slide, in a presentation you usually do not need to present an
-                abstract.
+                <span class="listmarker">&bull;</span> Since your audience is
+                unlikely to flee after the first slide, in a presentation you
+                usually do not need to present an abstract.
               </p>
             </li>
             <li>
               <p>
-                &bull; However, if you can give a nice, succinct statement of
-                your talk, you might wish to include an abstract.
+                <span class="listmarker">&bull;</span> However, if you can give
+                a nice, succinct statement of your talk, you might wish to
+                include an abstract.
               </p>
             </li>
             <li>
               <p>
-                &bull; If you include an abstract, be sure that it is
-                <em>not</em> some long text but just a very short message.
+                <span class="listmarker">&bull;</span> If you include an
+                abstract, be sure that it is <em>not</em> some long text but
+                just a very short message.
               </p>
             </li>
             <li>
               <p>
-                &bull; <em>Never, ever</em> reuse a paper abstract for a
-                presentation, <em>except</em> if the abstract is &ldquo;We show
+                <span class="listmarker">&bull;</span>
+                <em>Never, ever</em> reuse a paper abstract for a presentation,
+                <em>except</em> if the abstract is &ldquo;We show
                 <span class="lateximagesource" id="lateximage-beameruserguide-3"
                   ><!--
 P = NP
@@ -435,8 +450,8 @@ P ̸= NP
             </li>
             <li>
               <p>
-                &bull; If your abstract is one of the above two, double-check
-                whether your proof is correct.
+                <span class="listmarker">&bull;</span> If your abstract is one
+                of the above two, double-check whether your proof is correct.
               </p>
             </li>
           </ul>
@@ -480,9 +495,12 @@ P ̸= NP
             the other way round. Papers and, worse, books that have a
             Theorem&nbsp;1 and a Definition&nbsp;1 are a pain.
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
-              <p>&bull; Do not inflict pain on other people.</p>
+              <p>
+                <span class="listmarker">&bull;</span> Do not inflict pain on
+                other people.
+              </p>
             </li>
           </ul>
           <!--
@@ -498,52 +516,54 @@ P ̸= NP
             possible. When adding a bibliography to a presentation, keep the
             following in mind:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; It is a bad idea to present a long bibliography in a
-                presentation. Present only very few references. (Naturally, this
-                applies only to the talk itself, not to a possible handout.)
+                <span class="listmarker">&bull;</span> It is a bad idea to
+                present a long bibliography in a presentation. Present only very
+                few references. (Naturally, this applies only to the talk
+                itself, not to a possible handout.)
               </p>
             </li>
             <li>
               <p>
-                &bull; If you present more references than fit on a single slide
-                you can be almost sure that none of them will be remembered.
+                <span class="listmarker">&bull;</span> If you present more
+                references than fit on a single slide you can be almost sure
+                that none of them will be remembered.
               </p>
             </li>
             <li>
               <p>
-                &bull; Present references only if they are intended as
-                &ldquo;further reading.&rdquo; Do not present a list of all
-                things you used like in a paper.
+                <span class="listmarker">&bull;</span> Present references only
+                if they are intended as &ldquo;further reading.&rdquo; Do not
+                present a list of all things you used like in a paper.
               </p>
             </li>
             <li>
               <p>
-                &bull; You should not present a long list of all your other
-                great papers <em>except</em> if you are giving an application
-                talk.
+                <span class="listmarker">&bull;</span> You should not present a
+                long list of all your other great papers <em>except</em> if you
+                are giving an application talk.
               </p>
             </li>
             <li>
               <p>
-                &bull; Using the <span class="texttt">\cite</span> commands can
-                be confusing since the audience has little chance of remembering
-                the citations. If you cite the references, always cite them with
-                full author name and year like &ldquo;[Tantau, 2003]&rdquo;
-                instead of something like &ldquo;[2,4]&rdquo; or
-                &ldquo;[Tan01,NT02]&rdquo;.
+                <span class="listmarker">&bull;</span> Using the
+                <span class="verb">\cite</span> commands can be confusing since
+                the audience has little chance of remembering the citations. If
+                you cite the references, always cite them with full author name
+                and year like &ldquo;[Tantau, 2003]&rdquo; instead of something
+                like &ldquo;[2,4]&rdquo; or &ldquo;[Tan01,NT02]&rdquo;.
               </p>
             </li>
             <li>
               <p>
-                &bull; If you want to be modest, you can abbreviate your name
-                when citing yourself as in &ldquo;[Nickelsen and T.,
-                2003]&rdquo; or &ldquo;[Nickelsen and T, 2003]&rdquo;. However,
-                this can be confusing for the audience since it is often not
-                immediately clear who exactly &ldquo;T.&rdquo; might be. We
-                recommend using the full name.
+                <span class="listmarker">&bull;</span> If you want to be modest,
+                you can abbreviate your name when citing yourself as in
+                &ldquo;[Nickelsen and T., 2003]&rdquo; or &ldquo;[Nickelsen and
+                T, 2003]&rdquo;. However, this can be confusing for the audience
+                since it is often not immediately clear who exactly
+                &ldquo;T.&rdquo; might be. We recommend using the full name.
               </p>
             </li>
           </ul>
@@ -575,58 +595,60 @@ P ̸= NP
             <span class="paragraph" id="autosec-132">The Frame Title</span>
             <a id="beameruserguide-autopage-132"></a>
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Put a title on each frame. The title explains the
-                contents of the frame to people who did not follow all details
-                on the slide.
+                <span class="listmarker">&bull;</span> Put a title on each
+                frame. The title explains the contents of the frame to people
+                who did not follow all details on the slide.
               </p>
             </li>
             <li>
               <p>
-                &bull; The title should really <em>explain</em> things, not just
-                give a cryptic summary that cannot be understood unless one has
-                understood the whole slide. For example, a title like &ldquo;The
-                Poset&rdquo; will have everyone puzzled what this slide might be
-                about. Titles like &ldquo;Review of the Definition of Partially
-                Ordered Sets (Posets)&rdquo; or &ldquo;A Partial Ordering on the
-                Columns of the Genotype Matrix&rdquo; are <em>much</em> more
-                informative.
+                <span class="listmarker">&bull;</span> The title should really
+                <em>explain</em> things, not just give a cryptic summary that
+                cannot be understood unless one has understood the whole slide.
+                For example, a title like &ldquo;The Poset&rdquo; will have
+                everyone puzzled what this slide might be about. Titles like
+                &ldquo;Review of the Definition of Partially Ordered Sets
+                (Posets)&rdquo; or &ldquo;A Partial Ordering on the Columns of
+                the Genotype Matrix&rdquo; are <em>much</em> more informative.
               </p>
             </li>
             <li>
               <p>
-                &bull; Ideally, titles on consecutive frames should &ldquo;tell
-                a story&rdquo; all by themselves.
+                <span class="listmarker">&bull;</span> Ideally, titles on
+                consecutive frames should &ldquo;tell a story&rdquo; all by
+                themselves.
               </p>
             </li>
             <li>
               <p>
-                &bull; In English, you should <em>either</em>
-                <em>always</em> capitalize all words in a frame title except for
-                words like &ldquo;a&rdquo; or &ldquo;the&rdquo; (as in a title),
-                <em>or</em> you <em>always</em> use the normal lowercase
-                letters. Do <em>not</em> mix this; stick to one rule. The same
-                is true for block titles. For example, do not use titles like
-                &ldquo;A short Review of Turing machines.&rdquo; Either use
-                &ldquo;A Short Review of Turing Machines.&rdquo; or &ldquo;A
-                short review of Turing machines.&rdquo; (Turing is still spelled
-                with a capital letter since it is a name).
+                <span class="listmarker">&bull;</span> In English, you should
+                <em>either</em> <em>always</em> capitalize all words in a frame
+                title except for words like &ldquo;a&rdquo; or &ldquo;the&rdquo;
+                (as in a title), <em>or</em> you <em>always</em> use the normal
+                lowercase letters. Do <em>not</em> mix this; stick to one rule.
+                The same is true for block titles. For example, do not use
+                titles like &ldquo;A short Review of Turing machines.&rdquo;
+                Either use &ldquo;A Short Review of Turing Machines.&rdquo; or
+                &ldquo;A short review of Turing machines.&rdquo; (Turing is
+                still spelled with a capital letter since it is a name).
               </p>
             </li>
             <li>
               <p>
-                &bull; In English, the title of the whole document should be
-                capitalized, regardless of whether you capitalize anything else.
+                <span class="listmarker">&bull;</span> In English, the title of
+                the whole document should be capitalized, regardless of whether
+                you capitalize anything else.
               </p>
             </li>
             <li>
               <p>
-                &bull; In German and other languages that have lots of
-                capitalized words, always use the correct upper-/lowercase
-                letters. Never capitalize anything in addition to what is
-                usually capitalized.
+                <span class="listmarker">&bull;</span> In German and other
+                languages that have lots of capitalized words, always use the
+                correct upper-/lowercase letters. Never capitalize anything in
+                addition to what is usually capitalized.
               </p>
             </li>
           </ul>
@@ -639,22 +661,24 @@ P ̸= NP
             >
             <a id="beameruserguide-autopage-133"></a>
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; A frame with too little on it is better than a frame with
-                too much on it. A usual frame should have between 20 and 40
-                words. The maximum should be at about 80 words.
+                <span class="listmarker">&bull;</span> A frame with too little
+                on it is better than a frame with too much on it. A usual frame
+                should have between 20 and 40 words. The maximum should be at
+                about 80 words.
               </p>
             </li>
             <li>
               <p>
-                &bull; Do not assume that everyone in the audience is an expert
-                on the subject matter. Even if the people listening to you
-                should be experts, they may last have heard about things you
-                consider obvious several years ago. You should always have the
-                time for a quick reminder of what exactly a &ldquo;semantical
-                complexity class&rdquo; or an &ldquo;<span
+                <span class="listmarker">&bull;</span> Do not assume that
+                everyone in the audience is an expert on the subject matter.
+                Even if the people listening to you should be experts, they may
+                last have heard about things you consider obvious several years
+                ago. You should always have the time for a quick reminder of
+                what exactly a &ldquo;semantical complexity class&rdquo; or an
+                &ldquo;<span
                   class="lateximagesource"
                   id="lateximage-beameruserguide-5"
                   ><!--
@@ -670,25 +694,28 @@ P ̸= NP
             </li>
             <li>
               <p>
-                &bull; Never put anything on a slide that you are not going to
-                explain during the talk, not even to impress anyone with how
-                complicated your subject matter really is. However, you may
-                explain things that are not on a slide.
+                <span class="listmarker">&bull;</span> Never put anything on a
+                slide that you are not going to explain during the talk, not
+                even to impress anyone with how complicated your subject matter
+                really is. However, you may explain things that are not on a
+                slide.
               </p>
             </li>
             <li>
               <p>
-                &bull; Keep it simple. Typically, your audience will see a slide
-                for less than 50 seconds. They will not have the time to puzzle
-                through long sentences or complicated formulas.
+                <span class="listmarker">&bull;</span> Keep it simple.
+                Typically, your audience will see a slide for less than 50
+                seconds. They will not have the time to puzzle through long
+                sentences or complicated formulas.
               </p>
             </li>
             <li>
               <p>
-                &bull; Lance Fortnow, a professor of computer science, claims:
-                PowerPoint users give better talks. His reason: Since PowerPoint
-                is so bad at typesetting math, they use less math, making their
-                talks easier to understand.
+                <span class="listmarker">&bull;</span> Lance Fortnow, a
+                professor of computer science, claims: PowerPoint users give
+                better talks. His reason: Since PowerPoint is so bad at
+                typesetting math, they use less math, making their talks easier
+                to understand.
               </p>
               <p>
                 There is some truth in this in our opinion. The great
@@ -747,32 +774,33 @@ P ̸= NP
             <span class="paragraph" id="autosec-140">Structuring a Frame</span>
             <a id="beameruserguide-autopage-140"></a>
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Use block environments like
-                <span class="texttt">block</span>,
-                <span class="texttt">theorem</span>,
-                <span class="texttt">proof</span>,
-                <span class="texttt">example</span>, and so on.
+                <span class="listmarker">&bull;</span> Use block environments
+                like <span class="verb">block</span>,
+                <span class="verb">theorem</span>,
+                <span class="verb">proof</span>,
+                <span class="verb">example</span>, and so on.
               </p>
             </li>
             <li>
               <p>
-                &bull; Prefer enumerations and itemize environments over plain
-                text.
+                <span class="listmarker">&bull;</span> Prefer enumerations and
+                itemize environments over plain text.
               </p>
             </li>
             <li>
               <p>
-                &bull; Use <span class="texttt">description</span> when you
-                define several things.
+                <span class="listmarker">&bull;</span> Use
+                <span class="verb">description</span> when you define several
+                things.
               </p>
             </li>
             <li>
               <p>
-                &bull; Do not use more than two levels of
-                &ldquo;subitemizing.&rdquo;
+                <span class="listmarker">&bull;</span> Do not use more than two
+                levels of &ldquo;subitemizing.&rdquo;
                 <span class="beamer-name"
                   ><span class="textsc">beamer</span></span
                 >
@@ -783,49 +811,57 @@ P ̸= NP
             </li>
             <li>
               <p>
-                &bull; Do not create endless
-                <span class="texttt">itemize</span> or
-                <span class="texttt">enumerate</span> lists.
-              </p>
-            </li>
-            <li>
-              <p>&bull; Do not uncover lists piecewise.</p>
-            </li>
-            <li>
-              <p>
-                &bull; Emphasis is an important part of creating structure. Use
-                <span class="texttt">\alert</span> to highlight important
-                things. This can be a single word or a whole sentence. However,
-                do not overuse highlighting since this will negate the effect.
-              </p>
-            </li>
-            <li>
-              <p>&bull; Use columns.</p>
-            </li>
-            <li>
-              <p>
-                &bull; <em>Never</em> use footnotes. They needlessly disrupt the
-                flow of reading. Either what is said in the footnote is
-                important and should be put in the normal text; or it is not
-                important and should be omitted (<em>especially</em> in a
-                presentation).
+                <span class="listmarker">&bull;</span> Do not create endless
+                <span class="verb">itemize</span> or
+                <span class="verb">enumerate</span> lists.
               </p>
             </li>
             <li>
               <p>
-                &bull; Use <span class="texttt">quote</span> or
-                <span class="texttt">quotation</span> to typeset quoted text.
+                <span class="listmarker">&bull;</span> Do not uncover lists
+                piecewise.
               </p>
             </li>
             <li>
               <p>
-                &bull; Do not use the option
-                <span class="texttt">allowframebreaks</span> except for long
+                <span class="listmarker">&bull;</span> Emphasis is an important
+                part of creating structure. Use
+                <span class="verb">\alert</span> to highlight important things.
+                This can be a single word or a whole sentence. However, do not
+                overuse highlighting since this will negate the effect.
+              </p>
+            </li>
+            <li>
+              <p><span class="listmarker">&bull;</span> Use columns.</p>
+            </li>
+            <li>
+              <p>
+                <span class="listmarker">&bull;</span> <em>Never</em> use
+                footnotes. They needlessly disrupt the flow of reading. Either
+                what is said in the footnote is important and should be put in
+                the normal text; or it is not important and should be omitted
+                (<em>especially</em> in a presentation).
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="listmarker">&bull;</span> Use
+                <span class="verb">quote</span> or
+                <span class="verb">quotation</span> to typeset quoted text.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="listmarker">&bull;</span> Do not use the option
+                <span class="verb">allowframebreaks</span> except for long
                 bibliographies.
               </p>
             </li>
             <li>
-              <p>&bull; Do not use long bibliographies.</p>
+              <p>
+                <span class="listmarker">&bull;</span> Do not use long
+                bibliographies.
+              </p>
             </li>
           </ul>
           <!--
@@ -835,55 +871,59 @@ P ̸= NP
             <span class="paragraph" id="autosec-141">Writing the Text</span>
             <a id="beameruserguide-autopage-141"></a>
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
-              <p>&bull; Use short sentences.</p>
+              <p><span class="listmarker">&bull;</span> Use short sentences.</p>
             </li>
             <li>
               <p>
-                &bull; Prefer phrases over complete sentences. For example,
-                instead of &ldquo;The figure on the left shows a Turing machine,
-                the figure on the right shows a finite automaton.&rdquo; try
-                &ldquo;Left: A Turing machine. Right: A finite automaton.&rdquo;
-                Even better, turn this into an itemize or a description.
+                <span class="listmarker">&bull;</span> Prefer phrases over
+                complete sentences. For example, instead of &ldquo;The figure on
+                the left shows a Turing machine, the figure on the right shows a
+                finite automaton.&rdquo; try &ldquo;Left: A Turing machine.
+                Right: A finite automaton.&rdquo; Even better, turn this into an
+                itemize or a description.
               </p>
             </li>
             <li>
               <p>
-                &bull; Punctuate correctly: no punctuation after phrases,
-                complete punctuation in and after complete sentences.
+                <span class="listmarker">&bull;</span> Punctuate correctly: no
+                punctuation after phrases, complete punctuation in and after
+                complete sentences.
               </p>
             </li>
             <li>
               <p>
-                &bull; <em>Never</em> use a smaller font size to &ldquo;fit more
-                on a frame.&rdquo; <em>Never ever</em> use the
-                <em>evil</em> option <span class="texttt">shrink</span>.
+                <span class="listmarker">&bull;</span> <em>Never</em> use a
+                smaller font size to &ldquo;fit more on a frame.&rdquo;
+                <em>Never ever</em> use the <em>evil</em> option
+                <span class="verb">shrink</span>.
               </p>
             </li>
             <li>
               <p>
-                &bull; Do not hyphenate words. If absolutely necessary,
-                hyphenate words &ldquo;by hand,&rdquo; using the
-                command&nbsp;<span class="texttt">\-</span>.
+                <span class="listmarker">&bull;</span> Do not hyphenate words.
+                If absolutely necessary, hyphenate words &ldquo;by hand,&rdquo;
+                using the command&nbsp;<span class="verb">\-</span>.
               </p>
             </li>
             <li>
               <p>
-                &bull; Break lines &ldquo;by hand&rdquo; using the
-                command&nbsp;<span class="texttt">\\</span>. Do not rely on
-                automatic line breaking. Break where there is a logical pause.
-                For example, good breaks in &ldquo;the tape alphabet is larger
-                than the input alphabet&rdquo; are before &ldquo;is&rdquo; and
-                before the second &ldquo;the.&rdquo; Bad breaks are before
-                either &ldquo;alphabet&rdquo; and before &ldquo;larger.&rdquo;
+                <span class="listmarker">&bull;</span> Break lines &ldquo;by
+                hand&rdquo; using the command&nbsp;<span class="verb">\\</span>.
+                Do not rely on automatic line breaking. Break where there is a
+                logical pause. For example, good breaks in &ldquo;the tape
+                alphabet is larger than the input alphabet&rdquo; are before
+                &ldquo;is&rdquo; and before the second &ldquo;the.&rdquo; Bad
+                breaks are before either &ldquo;alphabet&rdquo; and before
+                &ldquo;larger.&rdquo;
               </p>
             </li>
             <li>
               <p>
-                &bull; Text and numbers in figures should have the
-                <em>same</em> size as normal text. Illegible numbers on axes
-                usually ruin a chart and its message.
+                <span class="listmarker">&bull;</span> Text and numbers in
+                figures should have the <em>same</em> size as normal text.
+                Illegible numbers on axes usually ruin a chart and its message.
               </p>
             </li>
           </ul>
@@ -903,30 +943,33 @@ P ̸= NP
             page-down-key once for each slide. However, there are different
             reasons why you might have to deviate from this linear order:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Your presentation may contain &ldquo;different levels of
-                detail&rdquo; that may or may not be skipped or expanded,
-                depending on the audience&rsquo;s reaction.
+                <span class="listmarker">&bull;</span> Your presentation may
+                contain &ldquo;different levels of detail&rdquo; that may or may
+                not be skipped or expanded, depending on the audience&rsquo;s
+                reaction.
               </p>
             </li>
             <li>
               <p>
-                &bull; You are asked questions and wish to show supplementary
-                slides.
+                <span class="listmarker">&bull;</span> You are asked questions
+                and wish to show supplementary slides.
               </p>
             </li>
             <li>
               <p>
-                &bull; You present a complicated picture and you have to
-                &ldquo;zoom out&rdquo; different parts to explain details.
+                <span class="listmarker">&bull;</span> You present a complicated
+                picture and you have to &ldquo;zoom out&rdquo; different parts
+                to explain details.
               </p>
             </li>
             <li>
               <p>
-                &bull; You are asked questions about an earlier slide, which
-                forces you to find and then jump to that slide.
+                <span class="listmarker">&bull;</span> You are asked questions
+                about an earlier slide, which forces you to find and then jump
+                to that slide.
               </p>
             </li>
           </ul>
@@ -941,25 +984,26 @@ P ̸= NP
             things you can do to prepare &ldquo;planned detours&rdquo; or
             &ldquo;planned short cuts&rdquo;.
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; You can add &ldquo;skip buttons.&rdquo; When such a
-                button is pressed, you jump over a well-defined part of your
-                talk. Skip button have two advantages over just pressing the
-                forward key is rapid succession: first, you immediately end up
-                at the correct position and, second, the button&rsquo;s label
-                can give the audience a visual feedback of what exactly will be
-                skipped. For example, when you press a skip button labeled
-                &ldquo;Skip proof&rdquo; nobody will start puzzling over what he
-                or she has missed.
+                <span class="listmarker">&bull;</span> You can add &ldquo;skip
+                buttons.&rdquo; When such a button is pressed, you jump over a
+                well-defined part of your talk. Skip button have two advantages
+                over just pressing the forward key is rapid succession: first,
+                you immediately end up at the correct position and, second, the
+                button&rsquo;s label can give the audience a visual feedback of
+                what exactly will be skipped. For example, when you press a skip
+                button labeled &ldquo;Skip proof&rdquo; nobody will start
+                puzzling over what he or she has missed.
               </p>
             </li>
             <li>
               <p>
-                &bull; You can add an appendix to your talk. The appendix is
-                kept &ldquo;perfectly separated&rdquo; from the main talk. Only
-                once you &ldquo;enter&rdquo; the appendix part (presumably by
+                <span class="listmarker">&bull;</span> You can add an appendix
+                to your talk. The appendix is kept &ldquo;perfectly
+                separated&rdquo; from the main talk. Only once you
+                &ldquo;enter&rdquo; the appendix part (presumably by
                 hyperjumping into it), does the appendix structure become
                 visible. You can put all frames that you do not intend to show
                 during the normal course of your talk, but which you would like
@@ -968,36 +1012,34 @@ P ̸= NP
             </li>
             <li>
               <p>
-                &bull; You can add &ldquo;goto buttons&rdquo; and &ldquo;return
-                buttons&rdquo; to create detours. Pressing a goto button will
-                jump to a certain part of the presentation where extra details
-                can be shown. In this part, there is a return button present on
-                each slide that will jump back to the place where the goto
-                button was pressed.
+                <span class="listmarker">&bull;</span> You can add &ldquo;goto
+                buttons&rdquo; and &ldquo;return buttons&rdquo; to create
+                detours. Pressing a goto button will jump to a certain part of
+                the presentation where extra details can be shown. In this part,
+                there is a return button present on each slide that will jump
+                back to the place where the goto button was pressed.
               </p>
             </li>
             <li>
               <p>
-                &bull; In
+                <span class="listmarker">&bull;</span> In
                 <span class="beamer-name"
                   ><span class="textsc">beamer</span></span
-                >, you can use the
-                <span class="texttt">\againframe</span> command to
-                &ldquo;continue&rdquo; frames that you previously started
+                >, you can use the <span class="verb">\againframe</span> command
+                to &ldquo;continue&rdquo; frames that you previously started
                 somewhere, but where certain details have been suppressed. You
-                can use the <span class="texttt">\againframe</span> command at a
+                can use the <span class="verb">\againframe</span> command at a
                 much later point, for example only in the appendix to show
                 additional slides there.
               </p>
             </li>
             <li>
               <p>
-                &bull; In
+                <span class="listmarker">&bull;</span> In
                 <span class="beamer-name"
                   ><span class="textsc">beamer</span></span
-                >, you can use the
-                <span class="texttt">\framezoom</span> command to create links
-                to zoomed out parts of a complicated slide.
+                >, you can use the <span class="verb">\framezoom</span> command
+                to create links to zoomed out parts of a complicated slide.
               </p>
             </li>
           </ul>
@@ -1016,60 +1058,64 @@ P ̸= NP
             text: A picture can say more than a thousand words. (Although,
             sometimes a word can say more than a thousand pictures.)
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Put (at least) one graphic on each slide, whenever
-                possible. Visualizations help an audience enormously.
+                <span class="listmarker">&bull;</span> Put (at least) one
+                graphic on each slide, whenever possible. Visualizations help an
+                audience enormously.
               </p>
             </li>
             <li>
               <p>
-                &bull; Usually, place graphics to the left of the text. (Use the
-                <span class="texttt">columns</span> environment.) In a
+                <span class="listmarker">&bull;</span> Usually, place graphics
+                to the left of the text. (Use the
+                <span class="verb">columns</span> environment.) In a
                 left-to-right reading culture, we look at the left first.
               </p>
             </li>
             <li>
               <p>
-                &bull; Graphics should have the same typographic parameters as
-                the text: Use the same fonts (at the same size) in graphics as
-                in the main text. A small dot in a graphic should have exactly
-                the same size as a small dot in a text. The line width should be
-                the same as the stroke width used in creating the glyphs of the
-                font. For example, an 11pt non-bold Computer Modern font has a
-                stroke width of 0.4pt.
+                <span class="listmarker">&bull;</span> Graphics should have the
+                same typographic parameters as the text: Use the same fonts (at
+                the same size) in graphics as in the main text. A small dot in a
+                graphic should have exactly the same size as a small dot in a
+                text. The line width should be the same as the stroke width used
+                in creating the glyphs of the font. For example, an 11pt
+                non-bold Computer Modern font has a stroke width of 0.4pt.
               </p>
             </li>
             <li>
               <p>
-                &bull; While bitmap graphics, like photos, can be much more
-                colorful than the rest of the text, vector graphics should
-                follow the same &ldquo;color logic&rdquo; as the main text (like
-                black&nbsp;= normal lines, red&nbsp;= highlighted parts,
-                green&nbsp;= examples, blue&nbsp;= structure).
+                <span class="listmarker">&bull;</span> While bitmap graphics,
+                like photos, can be much more colorful than the rest of the
+                text, vector graphics should follow the same &ldquo;color
+                logic&rdquo; as the main text (like black&nbsp;= normal lines,
+                red&nbsp;= highlighted parts, green&nbsp;= examples, blue&nbsp;=
+                structure).
               </p>
             </li>
             <li>
               <p>
-                &bull; Like text, you should explain everything that is shown on
-                a graphic. Unexplained details make the audience puzzle whether
-                this was something important that they have missed. Be careful
-                when importing graphics from a paper or some other source. They
-                usually have much more detail than you will be able to explain
-                and should be radically simplified.
+                <span class="listmarker">&bull;</span> Like text, you should
+                explain everything that is shown on a graphic. Unexplained
+                details make the audience puzzle whether this was something
+                important that they have missed. Be careful when importing
+                graphics from a paper or some other source. They usually have
+                much more detail than you will be able to explain and should be
+                radically simplified.
               </p>
             </li>
             <li>
               <p>
-                &bull; Sometimes the complexity of a graphic is intentional and
-                you are willing to spend much time explaining the graphic in
-                great detail. In this case, you will often run into the problem
-                that fine details of the graphic are hard to discern for the
-                audience. In this case you should use a command like
-                <span class="texttt">\framezoom</span> to create anticipated
-                zoomings of interesting parts of the graphic, see
-                Section&nbsp;<a
+                <span class="listmarker">&bull;</span> Sometimes the complexity
+                of a graphic is intentional and you are willing to spend much
+                time explaining the graphic in great detail. In this case, you
+                will often run into the problem that fine details of the graphic
+                are hard to discern for the audience. In this case you should
+                use a command like <span class="verb">\framezoom</span> to
+                create anticipated zoomings of interesting parts of the graphic,
+                see Section&nbsp;<a
                   href="Structuring-Presentation-The-Interactive-Global-Structure.html#section-zooming"
                   >11.3</a
                 >.
@@ -1086,33 +1132,35 @@ P ̸= NP
             ><a class="anchor-link" href="#sec-5.3">&para;</a>
           </h5>
           <a id="beameruserguide-autopage-144"></a>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Use animations to explain the dynamics of systems,
-                algorithms, etc.
+                <span class="listmarker">&bull;</span> Use animations to explain
+                the dynamics of systems, algorithms, etc.
               </p>
             </li>
             <li>
               <p>
-                &bull; Do <em>not</em> use animations just to attract the
-                attention of your audience. This often distracts attention away
-                from the main topic of the slide. No matter how cute a rotating,
-                flying theorem seems to look and no matter how badly you feel
-                your audience needs some action to keep it happy, most people in
-                the audience will typically feel you are making fun of them.
+                <span class="listmarker">&bull;</span> Do <em>not</em> use
+                animations just to attract the attention of your audience. This
+                often distracts attention away from the main topic of the slide.
+                No matter how cute a rotating, flying theorem seems to look and
+                no matter how badly you feel your audience needs some action to
+                keep it happy, most people in the audience will typically feel
+                you are making fun of them.
               </p>
             </li>
             <li>
               <p>
-                &bull; Do <em>not</em> use distracting special effects like
-                &ldquo;dissolving&rdquo; slides unless you have a very good
-                reason for using them. If you use them, use them sparsely. They
-                <em>can</em> be useful in some situations: For example, you
-                might show a young boy on a slide and might wish to dissolve
-                this slide into a slide showing a grown man instead. In this
-                case, the dissolving gives the audience visual feedback that the
-                young boy &ldquo;slowly becomes&rdquo; the man.
+                <span class="listmarker">&bull;</span> Do <em>not</em> use
+                distracting special effects like &ldquo;dissolving&rdquo; slides
+                unless you have a very good reason for using them. If you use
+                them, use them sparsely. They <em>can</em> be useful in some
+                situations: For example, you might show a young boy on a slide
+                and might wish to dissolve this slide into a slide showing a
+                grown man instead. In this case, the dissolving gives the
+                audience visual feedback that the young boy &ldquo;slowly
+                becomes&rdquo; the man.
               </p>
             </li>
           </ul>
@@ -1131,54 +1179,57 @@ P ̸= NP
             comes with a number of different themes. When choosing a theme, keep
             the following in mind:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Different themes are appropriate for different occasions.
-                Do not become too attached to a favorite theme; choose a theme
-                according to occasion.
+                <span class="listmarker">&bull;</span> Different themes are
+                appropriate for different occasions. Do not become too attached
+                to a favorite theme; choose a theme according to occasion.
               </p>
             </li>
             <li>
               <p>
-                &bull; A longer talk is more likely to require navigational
-                hints than a short one. When you give a 90 minute lecture to
-                students, you should choose a theme that always shows a sidebar
-                with the current topic highlighted so that everyone always knows
-                exactly what&rsquo;s the current &ldquo;status&rdquo; of your
-                talk is; when you give a ten-minute introductory speech, a table
-                of contents is likely to just seem silly.
+                <span class="listmarker">&bull;</span> A longer talk is more
+                likely to require navigational hints than a short one. When you
+                give a 90 minute lecture to students, you should choose a theme
+                that always shows a sidebar with the current topic highlighted
+                so that everyone always knows exactly what&rsquo;s the current
+                &ldquo;status&rdquo; of your talk is; when you give a ten-minute
+                introductory speech, a table of contents is likely to just seem
+                silly.
               </p>
             </li>
             <li>
               <p>
-                &bull; A theme showing the author&rsquo;s name and affiliation
-                is appropriate in situations where the audience is likely not to
-                know you (like during a conference). If everyone knows you,
-                having your name on each slide is just vanity.
+                <span class="listmarker">&bull;</span> A theme showing the
+                author&rsquo;s name and affiliation is appropriate in situations
+                where the audience is likely not to know you (like during a
+                conference). If everyone knows you, having your name on each
+                slide is just vanity.
               </p>
             </li>
             <li>
               <p>
-                &bull; First choose a presentation theme that has a layout that
-                is appropriate for your talk.
+                <span class="listmarker">&bull;</span> First choose a
+                presentation theme that has a layout that is appropriate for
+                your talk.
               </p>
             </li>
             <li>
               <p>
-                &bull; Next you might wish to change the colors by installing a
-                different color theme. This can drastically change the
-                appearance of your presentation. A &ldquo;colorful&rdquo; theme
-                like <span class="texttt">Berkeley</span> will look much less
-                flashy if you use the color themes
-                <span class="texttt">seahorse</span> and
-                <span class="texttt">lily</span>.
+                <span class="listmarker">&bull;</span> Next you might wish to
+                change the colors by installing a different color theme. This
+                can drastically change the appearance of your presentation. A
+                &ldquo;colorful&rdquo; theme like
+                <span class="verb">Berkeley</span> will look much less flashy if
+                you use the color themes <span class="verb">seahorse</span> and
+                <span class="verb">lily</span>.
               </p>
             </li>
             <li>
               <p>
-                &bull; You might also wish to change the fonts by installing a
-                different font theme.
+                <span class="listmarker">&bull;</span> You might also wish to
+                change the fonts by installing a different font theme.
               </p>
             </li>
           </ul>
@@ -1192,47 +1243,50 @@ P ̸= NP
             ><a class="anchor-link" href="#sec-5.5">&para;</a>
           </h5>
           <a id="beameruserguide-autopage-146"></a>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Use colors sparsely. The prepared themes are already
-                quite colorful (blue&nbsp;= structure, red&nbsp;= alert,
-                green&nbsp;= example). If you add more colors for things like
-                code, math text, etc., you should have a <em>very</em> good
-                reason.
+                <span class="listmarker">&bull;</span> Use colors sparsely. The
+                prepared themes are already quite colorful (blue&nbsp;=
+                structure, red&nbsp;= alert, green&nbsp;= example). If you add
+                more colors for things like code, math text, etc., you should
+                have a <em>very</em>
+                good reason.
               </p>
             </li>
             <li>
               <p>
-                &bull; Be careful when using bright colors on white background,
-                <em>especially</em> when using green. What looks good on your
-                monitor may look bad during a presentation due to the different
-                ways monitors, beamers, and printers reproduce colors. Add lots
-                of black to pure colors when you use them on bright backgrounds.
+                <span class="listmarker">&bull;</span> Be careful when using
+                bright colors on white background, <em>especially</em> when
+                using green. What looks good on your monitor may look bad during
+                a presentation due to the different ways monitors, beamers, and
+                printers reproduce colors. Add lots of black to pure colors when
+                you use them on bright backgrounds.
               </p>
             </li>
             <li>
               <p>
-                &bull; Maximize contrast. Normal text should be black on white
-                or at least something very dark on something very bright.
-                <em>Never</em> do things like &ldquo;light green text on
-                not-so-light green background.&rdquo;
+                <span class="listmarker">&bull;</span> Maximize contrast. Normal
+                text should be black on white or at least something very dark on
+                something very bright. <em>Never</em> do things like
+                &ldquo;light green text on not-so-light green background.&rdquo;
               </p>
             </li>
             <li>
               <p>
-                &bull; Background shadings decrease the legibility without
-                increasing the information content. Do not add a background
-                shading just because it &ldquo;somehow looks nicer.&rdquo;
+                <span class="listmarker">&bull;</span> Background shadings
+                decrease the legibility without increasing the information
+                content. Do not add a background shading just because it
+                &ldquo;somehow looks nicer.&rdquo;
               </p>
             </li>
             <li>
               <p>
-                &bull; Inverse video (bright text on dark background) can be a
-                problem during presentations in bright environments since only a
-                small percentage of the presentation area is light up by the
-                beamer. Inverse video is harder to reproduce on printouts and on
-                transparencies.
+                <span class="listmarker">&bull;</span> Inverse video (bright
+                text on dark background) can be a problem during presentations
+                in bright environments since only a small percentage of the
+                presentation area is light up by the beamer. Inverse video is
+                harder to reproduce on printouts and on transparencies.
               </p>
             </li>
           </ul>
@@ -1351,8 +1405,8 @@ P ̸= NP
                 >X</span
               ></span
             >
-            has commands like <span class="texttt">\large</span> or
-            <span class="texttt">\small</span>. The actual size these commands
+            has commands like <span class="verb">\large</span> or
+            <span class="verb">\small</span>. The actual size these commands
             select depends on the size of normal text.
           </p>
           <p>
@@ -1362,7 +1416,7 @@ P ̸= NP
             the text should still be large enough that it actually
             <em>can</em> be read without binoculars. However, in a normal
             presentation environment the audience will still be able to read
-            even <span class="texttt">\tiny</span> text when necessary.
+            even <span class="verb">\tiny</span> text when necessary.
           </p>
           <p>
             However, using small fonts can be tricky. Many PostScript fonts are
@@ -1466,72 +1520,74 @@ P ̸= NP
             However, there are reasons for using font families other than
             Computer Modern:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; The Computer Modern fonts are a bit boring if you have
-                seen them too often. Using another font (but not Times!) can
-                give a fresh look.
+                <span class="listmarker">&bull;</span> The Computer Modern fonts
+                are a bit boring if you have seen them too often. Using another
+                font (but not Times!) can give a fresh look.
               </p>
             </li>
             <li>
               <p>
-                &bull; Other fonts, especially Times and Helvetica, are sometime
-                rendered better since they seem to have better internal hinting.
+                <span class="listmarker">&bull;</span> Other fonts, especially
+                Times and Helvetica, are sometime rendered better since they
+                seem to have better internal hinting.
               </p>
             </li>
             <li>
               <p>
-                &bull; The sans-serif version of Computer Modern is not nearly
-                as well-designed as the serif version. Indeed, the sans-serif
-                version is, in essence, the serif version with different design
-                parameters, not an independent design.
+                <span class="listmarker">&bull;</span> The sans-serif version of
+                Computer Modern is not nearly as well-designed as the serif
+                version. Indeed, the sans-serif version is, in essence, the
+                serif version with different design parameters, not an
+                independent design.
               </p>
             </li>
             <li>
               <p>
-                &bull; Computer modern needs much more space than more economic
-                fonts like Times (this explains why Times is so popular with
-                people who need to squeeze their great paper into just twelve
-                pages). To be fair, Times was specifically designed to be
-                economic (the newspaper company publishing The Times needed
-                robust, but space-economic font).
+                <span class="listmarker">&bull;</span> Computer modern needs
+                much more space than more economic fonts like Times (this
+                explains why Times is so popular with people who need to squeeze
+                their great paper into just twelve pages). To be fair, Times was
+                specifically designed to be economic (the newspaper company
+                publishing The Times needed robust, but space-economic font).
               </p>
             </li>
           </ul>
           <p>A small selection of alternatives to Computer Modern:</p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Latin Modern is a Computer Modern derivative that
-                provides more characters, so it&rsquo;s not considered a real
-                alternative. It&rsquo;s recommended over Computer Modern,
-                though.
+                <span class="listmarker">&bull;</span> Latin Modern is a
+                Computer Modern derivative that provides more characters, so
+                it&rsquo;s not considered a real alternative. It&rsquo;s
+                recommended over Computer Modern, though.
               </p>
             </li>
             <li>
               <p>
-                &bull; Helvetica is an often used alternative. However,
-                Helvetica also tends to look boring (since we see it everywhere)
-                and it has a very large x-height (the height of the
-                letter&nbsp;x in comparison to a letter like&nbsp;M). A large
-                x-height is usually considered good for languages (like English)
-                that use uppercase letters seldom and not-so-good for languages
-                (like German) that use uppercase letters a lot. (We have never
-                been quite convinced by the argument for this, though.) Be
-                warned: the x-height of Helvetica is so different from the
-                x-height of Times that mixing the two in a single line looks
-                strange. The packages for loading Times and Helvetica provide
-                options for fixing this, though.
+                <span class="listmarker">&bull;</span> Helvetica is an often
+                used alternative. However, Helvetica also tends to look boring
+                (since we see it everywhere) and it has a very large x-height
+                (the height of the letter&nbsp;x in comparison to a letter
+                like&nbsp;M). A large x-height is usually considered good for
+                languages (like English) that use uppercase letters seldom and
+                not-so-good for languages (like German) that use uppercase
+                letters a lot. (We have never been quite convinced by the
+                argument for this, though.) Be warned: the x-height of Helvetica
+                is so different from the x-height of Times that mixing the two
+                in a single line looks strange. The packages for loading Times
+                and Helvetica provide options for fixing this, though.
               </p>
             </li>
             <li>
               <p>
-                &bull; Futura is, in our opinion, a beautiful font that is very
-                well-suited for presentations. Its thick letters make it robust
-                against scaling, inversion, and low contrast. Unfortunately,
-                while it is most likely installed on your system somewhere in
-                some form, getting
+                <span class="listmarker">&bull;</span> Futura is, in our
+                opinion, a beautiful font that is very well-suited for
+                presentations. Its thick letters make it robust against scaling,
+                inversion, and low contrast. Unfortunately, while it is most
+                likely installed on your system somewhere in some form, getting
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >T<span class="latexlogosub">e</span>X</span
@@ -1539,28 +1595,29 @@ P ̸= NP
                 >
                 to work with it is a complicated process. However, it has been
                 made a lot simpler with modern typesetting engines such as
-                <span class="texttt">luatex</span> and
-                <span class="texttt">xetex</span>.
+                <span class="verb">luatex</span> and
+                <span class="verb">xetex</span>.
               </p>
             </li>
             <li>
               <p>
-                &bull; Times is a possible alternative to Computer Modern. Its
-                main disadvantage is that it is a serif font, which requires a
-                high-resolution projector. Naturally, it also used very often,
-                so we all know it very well.
+                <span class="listmarker">&bull;</span> Times is a possible
+                alternative to Computer Modern. Its main disadvantage is that it
+                is a serif font, which requires a high-resolution projector.
+                Naturally, it also used very often, so we all know it very well.
               </p>
             </li>
             <li>
               <p>
-                &bull; DejaVu, a derivative of Bitstream Vera is also a very
-                good and free alternative. TrueType version that comes with
-                OpenOffice.org is complicated to get to work with
+                <span class="listmarker">&bull;</span> DejaVu, a derivative of
+                Bitstream Vera is also a very good and free alternative.
+                TrueType version that comes with OpenOffice.org is complicated
+                to get to work with
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >T<span class="latexlogosub">e</span>X</span
                   ></span
-                >, but <span class="texttt">arev</span>
+                >, but <span class="verb">arev</span>
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >L<span class="latexlogosup">a</span>T<span
@@ -1571,33 +1628,39 @@ P ̸= NP
                 >
                 package provides an easy way to use Type 1 version named Bera.
                 It has both sans-serif and serif versions;
-                <span class="texttt">arev</span> provides both.
+                <span class="verb">arev</span> provides both.
               </p>
             </li>
           </ul>
           <p>
             Families that you should <em>not</em> use for normal text include:
           </p>
-          <ul style="list-style-type: none">
-            <li>
-              <p>&bull; All monospaced fonts (like Courier).</p>
-            </li>
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Script fonts (which look like handwriting). Their stroke
-                width is way too small for a presentation.
+                <span class="listmarker">&bull;</span> All monospaced fonts
+                (like Courier).
               </p>
             </li>
             <li>
               <p>
-                &bull; More delicate serif fonts like Stempel and possibly even
-                Garamond (though Garamond is really a beautiful font for books).
+                <span class="listmarker">&bull;</span> Script fonts (which look
+                like handwriting). Their stroke width is way too small for a
+                presentation.
               </p>
             </li>
             <li>
               <p>
-                &bull; Gothic fonts. Only a small fraction of your audience will
-                be able to read them fluently.
+                <span class="listmarker">&bull;</span> More delicate serif fonts
+                like Stempel and possibly even Garamond (though Garamond is
+                really a beautiful font for books).
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="listmarker">&bull;</span> Gothic fonts. Only a
+                small fraction of your audience will be able to read them
+                fluently.
               </p>
             </li>
           </ul>
@@ -1664,30 +1727,31 @@ P ̸= NP
             <em>italic</em> font is a font in which the text is slightly slanted
             to the right <em>like this</em>. Things to know about italics:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Italics are commonly used in novels to express emphasis.
-                However, especially with sans-serif fonts, italics are typically
-                not &ldquo;strong enough&rdquo; and the emphasis gets lost in a
-                presentation. Using a different color or bold text seems better
-                suited for presentations to create emphasis.
+                <span class="listmarker">&bull;</span> Italics are commonly used
+                in novels to express emphasis. However, especially with
+                sans-serif fonts, italics are typically not &ldquo;strong
+                enough&rdquo; and the emphasis gets lost in a presentation.
+                Using a different color or bold text seems better suited for
+                presentations to create emphasis.
               </p>
             </li>
             <li>
               <p>
-                &bull; If you look closely, you will notice that italic text is
-                not only slanted but that different letters are actually used
-                (compare a and <em>a</em>, for example). However, this is only
-                true for serif text, not for sans-serif text. Text that is only
-                slanted without using different characters is called
-                &ldquo;slanted&rdquo; instead of &ldquo;italic.&rdquo;
-                Sometimes, the word &ldquo;oblique&rdquo; is also used for
-                slanted, but it sometimes also used for italics, so it is
-                perhaps best to avoid it. Using slanted serif text is very much
-                frowned upon by typographers and is considered &ldquo;cheap
-                computer typography.&rdquo; However, people who use slanted text
-                in their books include Donald Knuth.
+                <span class="listmarker">&bull;</span> If you look closely, you
+                will notice that italic text is not only slanted but that
+                different letters are actually used (compare a and <em>a</em>,
+                for example). However, this is only true for serif text, not for
+                sans-serif text. Text that is only slanted without using
+                different characters is called &ldquo;slanted&rdquo; instead of
+                &ldquo;italic.&rdquo; Sometimes, the word &ldquo;oblique&rdquo;
+                is also used for slanted, but it sometimes also used for
+                italics, so it is perhaps best to avoid it. Using slanted serif
+                text is very much frowned upon by typographers and is considered
+                &ldquo;cheap computer typography.&rdquo; However, people who use
+                slanted text in their books include Donald Knuth.
               </p>
               <p>
                 In a presentation, if you go to the trouble of using a serif
@@ -1697,15 +1761,15 @@ P ̸= NP
             </li>
             <li>
               <p>
-                &bull; The different characters used for serif italics have
-                changed much less from the original handwritten letters they are
-                based on than normal serif text. For this reason, serif italics
-                creates the impression of handwritten text, which may be
-                desirable to give a presentation a more &ldquo;personal
-                touch&rdquo; (although you can&rsquo;t get very personal using
-                Times italics, which everyone has seen a thousand times).
-                However, it is harder to read than normal text, so do not use it
-                for text more than a line long.
+                <span class="listmarker">&bull;</span> The different characters
+                used for serif italics have changed much less from the original
+                handwritten letters they are based on than normal serif text.
+                For this reason, serif italics creates the impression of
+                handwritten text, which may be desirable to give a presentation
+                a more &ldquo;personal touch&rdquo; (although you can&rsquo;t
+                get very personal using Times italics, which everyone has seen a
+                thousand times). However, it is harder to read than normal text,
+                so do not use it for text more than a line long.
               </p>
             </li>
           </ul>
@@ -1719,49 +1783,50 @@ P ̸= NP
             are small capital letters. Using them can create a conservative,
             even formal impression, but some words of caution:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Small capitals are different from all-uppercase text. A
-                small caps text leaves normal uppercase letters unchanged and
-                uses smaller versions of the uppercase letters for normal
-                typesetting lowercase letters. Thus the word
-                &ldquo;German&rdquo; is typeset as
+                <span class="listmarker">&bull;</span> Small capitals are
+                different from all-uppercase text. A small caps text leaves
+                normal uppercase letters unchanged and uses smaller versions of
+                the uppercase letters for normal typesetting lowercase letters.
+                Thus the word &ldquo;German&rdquo; is typeset as
                 <span class="textsc">German</span> using small caps, but as
                 GERMAN using all uppercase letters.
               </p>
             </li>
             <li>
               <p>
-                &bull; Small caps either come as &ldquo;faked&rdquo; small caps
-                or as &ldquo;real&rdquo; small caps. Faked small caps are
-                created by just scaling down normal uppercase letters. This
-                leads to letters the look too thin. Real small caps are
-                specially designed smaller versions of the uppercase letters
-                that have the same stroke width as normal text.
+                <span class="listmarker">&bull;</span> Small caps either come as
+                &ldquo;faked&rdquo; small caps or as &ldquo;real&rdquo; small
+                caps. Faked small caps are created by just scaling down normal
+                uppercase letters. This leads to letters the look too thin. Real
+                small caps are specially designed smaller versions of the
+                uppercase letters that have the same stroke width as normal
+                text.
               </p>
             </li>
             <li>
               <p>
-                &bull; Computer Modern fonts and expert version of PostScript
-                fonts come with real small caps (though the small caps of
-                Computer Modern are one point size too large for some
-                unfathomable reason&mdash;but your audience is going to pardon
-                this since it will not be noticed anyway). &ldquo;Simple&rdquo;
-                PostScript fonts like out-of-the-box Helvetica or Times only
-                come with faked small caps.
+                <span class="listmarker">&bull;</span> Computer Modern fonts and
+                expert version of PostScript fonts come with real small caps
+                (though the small caps of Computer Modern are one point size too
+                large for some unfathomable reason&mdash;but your audience is
+                going to pardon this since it will not be noticed anyway).
+                &ldquo;Simple&rdquo; PostScript fonts like out-of-the-box
+                Helvetica or Times only come with faked small caps.
               </p>
             </li>
             <li>
               <p>
-                &bull; Text typeset in small caps is harder to read than normal
-                text. The reason is that we read by seeing the
-                &ldquo;shape&rdquo; of words. For example, the word
-                &ldquo;shape&rdquo; is mainly recognized by seeing one normal
-                letter, one ascending letter, a normal letter, one descending
-                letter, and a normal letter. One has much more trouble spotting
-                a misspelling like &ldquo;shepe&rdquo; than &ldquo;spape&rdquo;.
-                Small caps destroy the shape of words since
+                <span class="listmarker">&bull;</span> Text typeset in small
+                caps is harder to read than normal text. The reason is that we
+                read by seeing the &ldquo;shape&rdquo; of words. For example,
+                the word &ldquo;shape&rdquo; is mainly recognized by seeing one
+                normal letter, one ascending letter, a normal letter, one
+                descending letter, and a normal letter. One has much more
+                trouble spotting a misspelling like &ldquo;shepe&rdquo; than
+                &ldquo;spape&rdquo;. Small caps destroy the shape of words since
                 <span class="textsc">shape</span>,
                 <span class="textsc">shepe</span> and
                 <span class="textsc">spape</span> all have the same shape, thus
@@ -1823,7 +1888,7 @@ P ̸= NP
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

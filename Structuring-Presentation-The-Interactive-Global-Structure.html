@@ -9,7 +9,7 @@
       Structuring a Presentation: The Interactive Global Structure - Beamer
       Manual
     </title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -66,7 +66,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -174,27 +174,27 @@
             presentation to some other slide. Creating such a button is a
             three-step process:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="enumerate" style="list-style-type: none">
             <li>
               <p>
-                1. You specify a target using the command
-                <span class="texttt">\hypertarget</span> or (easier) the command
-                <span class="texttt">\label</span>. In some cases, see below,
-                this step may be skipped.
+                <span class="listmarker">1.</span> You specify a target using
+                the command <span class="verb">\hypertarget</span> or (easier)
+                the command <span class="verb">\label</span>. In some cases, see
+                below, this step may be skipped.
               </p>
             </li>
             <li>
               <p>
-                2. You render the button using
-                <span class="texttt">\beamerbutton</span> or a similar command.
+                <span class="listmarker">2.</span> You render the button using
+                <span class="verb">\beamerbutton</span> or a similar command.
                 This will <em>render</em> the button, but clicking it will not
                 yet have any effect.
               </p>
             </li>
             <li>
               <p>
-                3. You put the button inside a
-                <span class="texttt">\hyperlink</span> command. Now clicking it
+                <span class="listmarker">3.</span> You put the button inside a
+                <span class="verb">\hyperlink</span> command. Now clicking it
                 will jump to the target of the link.
               </p>
             </li>
@@ -237,9 +237,9 @@
               only on the specified slide. On all other slides, the text is
               shown normally. Note that you <em>must</em> add an overlay
               specification to the
-              <span class="texttt">\hypertarget</span> command whenever you use
-              it on frames that have multiple slides (otherwise
-              <span class="texttt">pdflatex</span> rightfully complains that you
+              <span class="verb">\hypertarget</span> command whenever you use it
+              on frames that have multiple slides (otherwise
+              <span class="verb">pdflatex</span> rightfully complains that you
               have defined the same target on different slides).
             </p>
             <p>
@@ -265,29 +265,28 @@
             </div>
             <p>
               You must say
-              <span class="texttt">\usepackage[hyperref]{beamerarticle}</span>
-              or <span class="texttt">\usepackage{hyperref}</span> in your
-              preamble to use this command in
-              <span class="texttt">article</span> mode.
+              <span class="verb">\usepackage[hyperref]{beamerarticle}</span> or
+              <span class="verb">\usepackage{hyperref}</span> in your preamble
+              to use this command in <span class="verb">article</span> mode.
             </p>
           </div>
           <p>
-            The <span class="texttt">\label</span> command creates a hypertarget
-            as a side-effect and the <span class="texttt">label=</span
+            The <span class="verb">\label</span> command creates a hypertarget
+            as a side-effect and the <span class="verb">label=</span
             ><span class="meta"
               ><span class="angle">&langle;</span><i>name</i
               ><span class="angle">&rangle;</span></span
             >
-            option of the <span class="texttt">\frame</span> command creates a
+            option of the <span class="verb">\frame</span> command creates a
             label named
             <span class="meta"
               ><span class="angle">&langle;</span><i>name</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">&lt;</span
+            ><span class="verb">&lt;</span
             ><span class="meta"
               ><span class="angle">&langle;</span><i>slide number</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">&gt;</span> for each slide of the frame as a
+            ><span class="verb">&gt;</span> for each slide of the frame as a
             side-effect. Thus the above example could be written more easily as:
           </p>
           <pre class="verbatim">
@@ -325,7 +324,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\hyperlink{somewhere}{\beamerbutton{Go somewhere}}</span
               >
             </p>
@@ -336,7 +335,7 @@
             </div>
             <p>
               This command (and the following) just insert their argument in
-              <span class="texttt">article</span> mode.
+              <span class="verb">article</span> mode.
             </p>
             <div class="element">
               <div class="element-headline">
@@ -346,18 +345,18 @@
                 </p>
               </div>
               <p>
-                When the <span class="texttt">\beamerbutton</span> command is
+                When the <span class="verb">\beamerbutton</span> command is
                 called, this template is used to render the button. Inside the
                 template you can use the command
-                <span class="texttt">\insertbuttontext</span> to insert the
+                <span class="verb">\insertbuttontext</span> to insert the
                 argument that was passed to
-                <span class="texttt">\beamerbutton</span>.
+                <span class="verb">\beamerbutton</span>.
               </p>
               <p>The following template options are predefined:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <span class="itemoption"
                       ><kbd>[<span class="declare">default</span>]</kbd></span
                     >
@@ -365,55 +364,55 @@
                     background of the
                     <span class="beamer-name"
                       ><span class="textsc">beamer</span></span
-                    >-color <span class="texttt">button</span> are used and also
+                    >-color <span class="verb">button</span> are used and also
                     the
                     <span class="beamer-name"
                       ><span class="textsc">beamer</span></span
-                    >-font <span class="texttt">button</span>. The border of the
+                    >-font <span class="verb">button</span>. The border of the
                     button gets the foreground of the
                     <span class="beamer-name"
                       ><span class="textsc">beamer</span></span
-                    >-color <span class="texttt">button border</span>.
+                    >-color <span class="verb">button border</span>.
                   </p>
                 </li>
               </ul>
               <p>The following inserts are useful for this element:</p>
-              <ul style="list-style-type: none">
+              <ul class="itemize" style="list-style-type: none">
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertbuttontext</span></kbd>
                     inserts the text of the current button. Inside
                     &ldquo;Goto-Buttons&rdquo; (see below) this text is prefixed
                     by the insert
-                    <span class="texttt">\insertgotosymbol</span> and similarly
+                    <span class="verb">\insertgotosymbol</span> and similarly
                     for skip and return buttons.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertgotosymbol</span></kbd>
                     This text is inserted at the beginning of goto buttons.
                     Redefine this command to change the symbol.
                   </p>
                   <p>
                     <i>Example: </i
-                    ><span class="texttt"
+                    ><span class="verb"
                       >\renewcommand{\insertgotosymbol}{\somearrowcommand}</span
                     >
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertskipsymbol</span></kbd>
                     This text is inserted at the beginning of skip buttons.
                   </p>
                 </li>
                 <li>
                   <p>
-                    &bull;
+                    <span class="listmarker">&bull;</span>
                     <kbd><span class="declare">\insertreturnsymbol</span></kbd>
                     This text is inserted at the beginning of return buttons.
                   </p>
@@ -453,7 +452,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\hyperlink{detour}{\beamergotobutton{Go to detour}}</span
               >
             </p>
@@ -534,9 +533,9 @@
           </div>
           <p>
             To make a button &ldquo;clickable&rdquo; you must place it in a
-            command like <span class="texttt">\hyperlink</span>. The command
-            <span class="texttt">\hyperlink</span> is a standard command of the
-            <span class="texttt">hyperref</span> package. The
+            command like <span class="verb">\hyperlink</span>. The command
+            <span class="verb">\hyperlink</span> is a standard command of the
+            <span class="verb">hyperref</span> package. The
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             class defines a whole bunch of other hyperlink commands that you can
             also use.
@@ -579,7 +578,7 @@
               >
               is typeset in the usual way. If you click anywhere on this text,
               you will jump to the slide on which the
-              <span class="texttt">\hypertarget</span> command was used with the
+              <span class="verb">\hypertarget</span> command was used with the
               parameter
               <span class="meta"
                 ><span class="angle">&langle;</span><i>target name</i
@@ -598,7 +597,7 @@
           </div>
           <p>
             The following commands have a predefined target; otherwise they
-            behave exactly like <span class="texttt">\hyperlink</span>. In
+            behave exactly like <span class="verb">\hyperlink</span>. In
             particular, they all also accept an overlay specification and they
             also accept it at the end, rather than at the beginning.
           </p>
@@ -717,13 +716,12 @@
             </p>
           </div>
           <p>
-            The previous four command exist also with &ldquo;<span
-              class="texttt"
+            The previous four command exist also with &ldquo;<span class="verb"
               >frame</span
-            >&rdquo; replaced by &ldquo;<span class="texttt">subsection</span
-            >&rdquo; everywhere, and also again with &ldquo;<span class="texttt"
+            >&rdquo; replaced by &ldquo;<span class="verb">subsection</span
+            >&rdquo; everywhere, and also again with &ldquo;<span class="verb"
               >frame</span
-            >&rdquo; replaced by &ldquo;<span class="texttt">section</span
+            >&rdquo; replaced by &ldquo;<span class="verb">section</span
             >&rdquo;.
           </p>
           <div class="command">
@@ -863,7 +861,7 @@
             Sometimes you may wish some slides of a frame to be shown in your
             main talk, but wish some &ldquo;supplementary&rdquo; slides of the
             frame to be shown only in the appendix. In this case, the
-            <span class="texttt">\againframe</span> command is useful.
+            <span class="verb">\againframe</span> command is useful.
           </p>
           <div class="command">
             <div class="command-headline">
@@ -876,12 +874,12 @@
                     ><span class="angle">&rangle;</span></span
                   >&gt;</span
                 ><span class="opt"
-                  ><span class="texttt">[&lt;</span
+                  ><span class="verb">[&lt;</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span
                     ><i>default overlay specification</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">&gt;]</span></span
+                  ><span class="verb">&gt;]</span></span
                 ><span class="opt"
                   ><span class="oarg-left-bracket">[</span
                   ><span class="meta"
@@ -901,8 +899,8 @@
             </div>
             <p>
               Resumes a frame that was previously created using
-              <span class="texttt">\frame</span> with the option
-              <span class="texttt">label=</span
+              <span class="verb">\frame</span> with the option
+              <span class="verb">label=</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
@@ -910,7 +908,7 @@
               frame &ldquo;by hand&rdquo; is not enough. You can use this
               command to &ldquo;continue&rdquo; a frame that has been
               interrupted by another frame. The effect of this command is to
-              call the <span class="texttt">\frame</span> command with the given
+              call the <span class="verb">\frame</span> command with the given
               <span class="meta"
                 ><span class="angle">&langle;</span><i>overlay specification</i
                 ><span class="angle">&rangle;</span></span
@@ -994,8 +992,7 @@
               </p>
             </div>
             <p>
-              This command is ignored in
-              <span class="texttt">article</span> mode.
+              This command is ignored in <span class="verb">article</span> mode.
             </p>
           </div>
           <!--
@@ -1014,10 +1011,10 @@
             Anticipated zooming is necessary when you have a very complicated
             graphic that you are not willing to simplify since, indeed, all the
             complex details merit an explanation. In this case, use the command
-            <span class="texttt">\framezoom</span>. It allows you to specify
-            that clicking on a certain area of a frame should zoom out this
-            area. You can then explain the details. Clicking on the zoomed out
-            picture will take you back to the original one.
+            <span class="verb">\framezoom</span>. It allows you to specify that
+            clicking on a certain area of a frame should zoom out this area. You
+            can then explain the details. Clicking on the zoomed out picture
+            will take you back to the original one.
           </p>
           <div class="command">
             <div class="command-headline">
@@ -1038,23 +1035,23 @@
                     ><span class="angle">&rangle;</span></span
                   ><span class="oarg-right-bracket">]</span></span
                 ><br />
-                <span class="texttt">(</span
+                <span class="verb">(</span
                 ><span class="meta"
                   ><span class="angle">&langle;</span><i>upper left x</i
                   ><span class="angle">&rangle;</span></span
-                ><span class="texttt">,</span
+                ><span class="verb">,</span
                 ><span class="meta"
                   ><span class="angle">&langle;</span><i>upper left y</i
                   ><span class="angle">&rangle;</span></span
-                ><span class="texttt">)(</span
+                ><span class="verb">)(</span
                 ><span class="meta"
                   ><span class="angle">&langle;</span><i>zoom area width</i
                   ><span class="angle">&rangle;</span></span
-                ><span class="texttt">,</span
+                ><span class="verb">,</span
                 ><span class="meta"
                   ><span class="angle">&langle;</span><i>zoom area depth</i
                   ><span class="angle">&rangle;</span></span
-                ><span class="texttt">)</span>
+                ><span class="verb">)</span>
               </p>
             </div>
             <p>
@@ -1097,8 +1094,8 @@
                   >T<span class="latexlogosub">e</span>X</span
                 ></span
               >
-              dimensions (like <span class="texttt">1cm</span> or
-              <span class="texttt">20pt</span>). The upper left corner of this
+              dimensions (like <span class="verb">1cm</span> or
+              <span class="verb">20pt</span>). The upper left corner of this
               area is given by
               <span class="meta"
                 ><span class="angle">&langle;</span><i>upper left x</i
@@ -1118,7 +1115,7 @@
               <em
                 >relative to the place where the first normal text of a frame
                 would go</em
-              >. Thus, the location <span class="texttt">(0pt,0pt)</span> is at
+              >. Thus, the location <span class="verb">(0pt,0pt)</span> is at
               the beginning of the normal text (which excludes the headline and
               also the frame title).
             </p>
@@ -1131,13 +1128,13 @@
                 ><span class="angle">&rangle;</span></span
               >:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">border</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">border</span></span
                   ><span class="opt"
-                    ><span class="texttt">=</span
+                    ><span class="verb">=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>width in pixels</i
                       ><span class="angle">&rangle;</span></span
@@ -1145,26 +1142,26 @@
                   >
                   will draw a border around the specified button area. The
                   default width is 1 pixel. The color of this button is the
-                  <span class="texttt">linkbordercolor</span> of
-                  <span class="texttt">hyperref</span>.
+                  <span class="verb">linkbordercolor</span> of
+                  <span class="verb">hyperref</span>.
                   <span class="beamer-name"
                     ><span class="textsc">beamer</span></span
                   >
                   sets this color to a 50% gray by default.<br />
                   To change this, you can use the command
-                  <span class="texttt">\hypersetup{linkbordercolor={</span
+                  <span class="verb">\hypersetup{linkbordercolor={</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>red</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt"> </span
+                  ><span class="verb"> </span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>green</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt"> </span
+                  ><span class="verb"> </span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>blue</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">}}</span>, where
+                  ><span class="verb">}}</span>, where
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>red</i
                     ><span class="angle">&rangle;</span></span
@@ -1239,10 +1236,10 @@
             <p>
               If you do not wish to have the frame title shown on a zoomed
               slide, you can add an overlay specification to the
-              <span class="texttt">\frametitle</span> command that simply
+              <span class="verb">\frametitle</span> command that simply
               suppresses the title for the slide. Also, by using the
-              <span class="texttt">plain</span>
-              option, you can have the zoomed slide fill the whole page.
+              <span class="verb">plain</span> option, you can have the zoomed
+              slide fill the whole page.
             </p>
             <p><i>Example: </i>A simple case</p>
             <pre class="verbatim">
@@ -1293,7 +1290,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

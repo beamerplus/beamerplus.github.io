@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Themes - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -83,7 +83,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -162,8 +162,8 @@
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             class uses five different kinds of themes:
           </p>
-          <dl>
-            <dt>Presentation Themes</dt>
+          <dl class="description">
+            <dt><span class="listmarker">Presentation Themes</span></dt>
             <dd>
               <p>
                 Conceptually, a presentation theme dictates for every single
@@ -179,7 +179,7 @@
                 inner theme, and outer theme that go well together.
               </p>
             </dd>
-            <dt>Color Themes</dt>
+            <dt><span class="listmarker">Color Themes</span></dt>
             <dd>
               <p>
                 A color theme only dictates which colors are used in a
@@ -191,15 +191,15 @@
                 the background of a button, and the text on a button.
               </p>
             </dd>
-            <dt>Font Themes</dt>
+            <dt><span class="listmarker">Font Themes</span></dt>
             <dd>
               <p>
                 A font theme dictates which fonts or font attributes are used in
-                a presentation. As for colors, the font of all text elements
+                a presentation. Similar to colors, the font of all text elements
                 used in a presentation can be specified independently.
               </p>
             </dd>
-            <dt>Inner Themes</dt>
+            <dt><span class="listmarker">Inner Themes</span></dt>
             <dd>
               <p>
                 An inner theme specifies how certain elements of a presentation
@@ -216,7 +216,7 @@
                 of the font theme).
               </p>
             </dd>
-            <dt>Outer Themes</dt>
+            <dt><span class="listmarker">Outer Themes</span></dt>
             <dd>
               <p>
                 An outer theme specifies what the &ldquo;outside&rdquo; or
@@ -231,11 +231,10 @@
           </dl>
           <p>
             The different themes reside in the five subdirectories
-            <span class="texttt">theme</span>,
-            <span class="texttt">color</span>, <span class="texttt">font</span>,
-            <span class="texttt">inner</span>, and
-            <span class="texttt">outer</span> of the directory
-            <span class="texttt">beamer/themes</span>. Internally, a theme is
+            <span class="verb">theme</span>, <span class="verb">color</span>,
+            <span class="verb">font</span>, <span class="verb">inner</span>, and
+            <span class="verb">outer</span> of the directory
+            <span class="verb">beamer/themes</span>. Internally, a theme is
             stored as a normal style file. However, to use a theme, the
             following special commands should be used:
           </p>
@@ -261,12 +260,12 @@
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
               >. Currently, the effect of this command is the same as saying
-              <span class="texttt">\usepackage</span> for the style file named
-              <span class="texttt">beamertheme</span
+              <span class="verb">\usepackage</span> for the style file named
+              <span class="verb">beamertheme</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.sty</span> for each
+              ><span class="verb">.sty</span> for each
               <span class="meta"
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
@@ -295,13 +294,13 @@
               </p>
             </div>
             <p>
-              Same as <span class="texttt">\usetheme</span>, only for color
+              Same as <span class="verb">\usetheme</span>, only for color
               themes. Color style files are named
-              <span class="texttt">beamercolortheme</span
+              <span class="verb">beamercolortheme</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.sty</span>.
+              ><span class="verb">.sty</span>.
             </p>
           </div>
           <div class="command">
@@ -321,13 +320,13 @@
               </p>
             </div>
             <p>
-              Same as <span class="texttt">\usetheme</span>, only for font
-              themes. Font style files are named
-              <span class="texttt">beamerfonttheme</span
+              Same as <span class="verb">\usetheme</span>, only for font themes.
+              Font style files are named
+              <span class="verb">beamerfonttheme</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.sty</span>.
+              ><span class="verb">.sty</span>.
             </p>
           </div>
           <div class="command">
@@ -347,13 +346,13 @@
               </p>
             </div>
             <p>
-              Same as <span class="texttt">\usetheme</span>, only for inner
+              Same as <span class="verb">\usetheme</span>, only for inner
               themes. Inner style files are named
-              <span class="texttt">beamerinnertheme</span
+              <span class="verb">beamerinnertheme</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.sty</span>.
+              ><span class="verb">.sty</span>.
             </p>
           </div>
           <div class="command">
@@ -373,13 +372,13 @@
               </p>
             </div>
             <p>
-              Same as <span class="texttt">\usetheme</span>, only for outer
+              Same as <span class="verb">\usetheme</span>, only for outer
               themes. Outer style files are named
-              <span class="texttt">beameroutertheme</span
+              <span class="verb">beameroutertheme</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.sty</span>.
+              ><span class="verb">.sty</span>.
             </p>
           </div>
           <p>
@@ -460,15 +459,15 @@
             <p>
               <span class="extracttheme"
                 >\usetheme<span class="opt"
-                  ><span class="texttt">[headheight=</span
+                  ><span class="verb">[headheight=</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>head height</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">,footheight=</span
+                  ><span class="verb">,footheight=</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>foot height</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">]</span></span
+                  ><span class="verb">]</span></span
                 >{<span class="declare">boxes</span>}</span
               >
             </p>
@@ -532,7 +531,7 @@
               <p>
                 A similar effect as the above commands can be achieved by
                 directly installing a head template that contains two
-                <span class="texttt">beamercolorbox</span>es:
+                <span class="verb">beamercolorbox</span>es:
               </p>
               <pre class="verbatim">
 \setbeamertemplate{headline}
@@ -604,12 +603,12 @@
               </p>
             </div>
             <p>
-              A theme based on the <span class="texttt">inmargin</span> inner
-              theme and the <span class="texttt">rectangles</span> inner theme.
+              A theme based on the <span class="verb">inmargin</span> inner
+              theme and the <span class="verb">rectangles</span> inner theme.
               Using this theme is not quite trivial since getting the spacing
               right can be trickier than with most other themes. Also, this
               theme goes badly with columns. You may wish to consult the remarks
-              on the <span class="texttt">inmargin</span> inner theme.
+              on the <span class="verb">inmargin</span> inner theme.
             </p>
             <p>
               Bergen is a town in Norway. It hosted
@@ -653,12 +652,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">secheader</span></span
+                    ><span class="verb">secheader</span></span
                   >
                   causes a headline to be inserted showing the current section
                   and subsection. By default, this headline is not shown.
@@ -701,15 +700,14 @@
               </p>
             </div>
             <p>
-              Like the <span class="texttt">Boadilla</span> theme, except that
+              Like the <span class="verb">Boadilla</span> theme, except that
               stronger colors are used and that the itemize icons are not
               modified. The same
               <span class="meta"
                 ><span class="angle">&langle;</span><i>options</i
                 ><span class="angle">&rangle;</span></span
               >
-              as for the <span class="texttt">Boadilla</span> theme may be
-              given.
+              as for the <span class="verb">Boadilla</span> theme may be given.
             </p>
             <p>
               <i>Theme author: </i>Manuel Carro. Madrid is the capital of Spain.
@@ -739,7 +737,7 @@
               </p>
             </div>
             <p>
-              Like <span class="texttt">Boadilla</span>, but using the colors of
+              Like <span class="verb">Boadilla</span>, but using the colors of
               the University of Michigan.
             </p>
             <p>
@@ -771,7 +769,7 @@
               </p>
             </div>
             <p>
-              Like <span class="texttt">Boadilla</span>, but using the colors of
+              Like <span class="verb">Boadilla</span>, but using the colors of
               MIT.
             </p>
             <p><i>Theme author: </i>Madhusudan Singh.</p>
@@ -800,7 +798,7 @@
               </p>
             </div>
             <p>
-              Like <span class="texttt">Boadilla</span>, but using the colors of
+              Like <span class="verb">Boadilla</span>, but using the colors of
               Michigan State University.
             </p>
             <p>
@@ -882,12 +880,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">height=</span
+                    ><span class="verb">height=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>dimension</i
                       ><span class="angle">&rangle;</span></span
@@ -970,7 +968,7 @@
               </p>
             </div>
             <p>
-              A variation on the <span class="texttt">Antibes</span> theme that
+              A variation on the <span class="verb">Antibes</span> theme that
               has a much &ldquo;smoother&rdquo; appearance. It can be made less
               dominant by choosing a different color theme.
             </p>
@@ -1063,7 +1061,7 @@
               sidebar will be highlighted by using a more vibrant color. A good
               alternative is to highlight the current entry by using a different
               color for the background of the current point. The color theme
-              <span class="texttt">sidebartab</span> installs the appropriate
+              <span class="verb">sidebartab</span> installs the appropriate
               colors, so you just have to say
             </p>
             <pre class="verbatim">
@@ -1086,12 +1084,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">hideallsubsections</span></span
+                    ><span class="verb">hideallsubsections</span></span
                   >
                   causes only sections to be shown in the sidebar. This is
                   useful, if you need to save space.
@@ -1099,9 +1097,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">hideothersubsections</span></span
+                    ><span class="verb">hideothersubsections</span></span
                   >
                   causes only the subsections of the current section to be
                   shown. This is useful, if you need to save space.
@@ -1109,23 +1107,23 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">left</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">left</span></span>
                   puts the sidebar on the left (default).
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">right</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">right</span></span>
                   puts the sidebar on the right.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">width=</span
+                    ><span class="verb">width=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>dimension</i
                       ><span class="angle">&rangle;</span></span
@@ -1171,14 +1169,13 @@
               </p>
             </div>
             <p>
-              A variation on the <span class="texttt">Berkeley</span> theme with
+              A variation on the <span class="verb">Berkeley</span> theme with
               less dominance of rectangular areas. The same
               <span class="meta"
                 ><span class="angle">&langle;</span><i>options</i
                 ><span class="angle">&rangle;</span></span
               >
-              as for the <span class="texttt">Berkeley</span> theme can be
-              given.
+              as for the <span class="verb">Berkeley</span> theme can be given.
             </p>
             <p>
               Palo Alto is also near San Francisco. It hosted the Bay Area
@@ -1221,8 +1218,7 @@
                 ><span class="angle">&langle;</span><i>options</i
                 ><span class="angle">&rangle;</span></span
               >
-              as for the <span class="texttt">Berkeley</span> theme can be
-              given.
+              as for the <span class="verb">Berkeley</span> theme can be given.
             </p>
             <p>
               Göttingen is a town in Germany. It hosted the 42nd Theorietag.
@@ -1259,7 +1255,7 @@
             </div>
             <p>
               A very dominant variation of the
-              <span class="texttt">Goettingen</span> theme. The same
+              <span class="verb">Goettingen</span> theme. The same
               <span class="meta"
                 ><span class="angle">&langle;</span><i>options</i
                 ><span class="angle">&rangle;</span></span
@@ -1309,12 +1305,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">hideallsubsections</span></span
+                    ><span class="verb">hideallsubsections</span></span
                   >
                   causes only sections to be shown in the sidebar. This is
                   useful, if you need to save space.
@@ -1322,9 +1318,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">hideothersubsections</span></span
+                    ><span class="verb">hideothersubsections</span></span
                   >
                   causes only the subsections of the current section to be
                   shown. This is useful, if you need to save space.
@@ -1332,9 +1328,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">width=</span
+                    ><span class="verb">width=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>dimension</i
                       ><span class="angle">&rangle;</span></span
@@ -1401,12 +1397,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">compress</span></span
+                    ><span class="verb">compress</span></span
                   >
                   causes the mini frames in the headline to use only a single
                   line. This is useful for saving space.
@@ -1445,7 +1441,7 @@
               </p>
             </div>
             <p>
-              A variation on the <span class="texttt">Berlin</span> theme. The
+              A variation on the <span class="verb">Berlin</span> theme. The
               same
               <span class="meta"
                 ><span class="angle">&langle;</span><i>options</i
@@ -1479,7 +1475,7 @@
               </p>
             </div>
             <p>
-              A variation on the <span class="texttt">Berlin</span> theme with a
+              A variation on the <span class="verb">Berlin</span> theme with a
               strong separation into navigational stuff at the top/bottom and a
               sober main text. The same
               <span class="meta"
@@ -1544,8 +1540,8 @@
               </p>
             </div>
             <p>
-              A variation on the <span class="texttt">Darmstadt</span> theme
-              that is slightly less cluttered by leaving out the subsection
+              A variation on the <span class="verb">Darmstadt</span> theme that
+              is slightly less cluttered by leaving out the subsection
               information.
             </p>
             <p>Frankfurt is a town in Germany.</p>
@@ -1677,7 +1673,7 @@
               </p>
             </div>
             <p>
-              A variation on the <span class="texttt">Copenhagen</span> theme.
+              A variation on the <span class="verb">Copenhagen</span> theme.
             </p>
             <p>
               Lübeck is a town in northern Germany. It hosted the 41st
@@ -1709,7 +1705,7 @@
             </div>
             <p>
               A more sober variation of the
-              <span class="texttt">Copenhagen</span> theme.
+              <span class="verb">Copenhagen</span> theme.
             </p>
             <p>
               Malmö is a town in southern Sweden. It hosted
@@ -1741,7 +1737,7 @@
             </div>
             <p>
               A dominant variation of the
-              <span class="texttt">Copenhagen</span> theme.
+              <span class="verb">Copenhagen</span> theme.
             </p>
             <p>
               Warsaw is the capital of Poland. It hosted
@@ -1768,8 +1764,8 @@
             will not be supported in the future. The following list shows which
             of the new themes should be used instead of the old themes. (When
             switching, you may want to use the font theme
-            <span class="texttt">structurebold</span> with the option
-            <span class="texttt">onlysmall</span>.)
+            <span class="verb">structurebold</span> with the option
+            <span class="verb">onlysmall</span>.)
           </p>
           <table>
             <tr style="display: none">
@@ -1784,64 +1780,61 @@
             <tr class="hline">
               <td class="tdl">none</td>
               <td class="tdp">
-                <p>Use <span class="texttt">compatibility</span>.</p>
+                <p>Use <span class="verb">compatibility</span>.</p>
               </td>
             </tr>
             <tr>
-              <td class="tdl"><span class="texttt">bars</span></td>
+              <td class="tdl"><span class="verb">bars</span></td>
               <td class="tdp">
-                <p>Try <span class="texttt">Dresden</span> instead.</p>
+                <p>Try <span class="verb">Dresden</span> instead.</p>
               </td>
             </tr>
             <tr>
-              <td class="tdl"><span class="texttt">classic</span></td>
+              <td class="tdl"><span class="verb">classic</span></td>
               <td class="tdp">
-                <p>Try <span class="texttt">Singapore</span> instead.</p>
+                <p>Try <span class="verb">Singapore</span> instead.</p>
               </td>
             </tr>
             <tr>
-              <td class="tdl"><span class="texttt">lined</span></td>
+              <td class="tdl"><span class="verb">lined</span></td>
               <td class="tdp">
-                <p>Try <span class="texttt">Szeged</span> instead.</p>
+                <p>Try <span class="verb">Szeged</span> instead.</p>
               </td>
             </tr>
             <tr>
-              <td class="tdl"><span class="texttt">plain</span></td>
+              <td class="tdl"><span class="verb">plain</span></td>
+              <td class="tdp">
+                <p>Try none or <span class="verb">Pittsburgh</span> instead.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="tdl"><span class="verb">sidebar</span></td>
               <td class="tdp">
                 <p>
-                  Try none or <span class="texttt">Pittsburgh</span> instead.
+                  Try <span class="verb">Goettingen</span> for the light version
+                  and <span class="verb">Marburg</span> for the dark version.
                 </p>
               </td>
             </tr>
             <tr>
-              <td class="tdl"><span class="texttt">sidebar</span></td>
+              <td class="tdl"><span class="verb">shadow</span></td>
+              <td class="tdp">
+                <p>Try <span class="verb">Warsaw</span> instead.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="tdl"><span class="verb">split</span></td>
+              <td class="tdp">
+                <p>Try <span class="verb">Malmoe</span> instead.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="tdl"><span class="verb">tree</span></td>
               <td class="tdp">
                 <p>
-                  Try <span class="texttt">Goettingen</span> for the light
-                  version and <span class="texttt">Marburg</span> for the dark
-                  version.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="tdl"><span class="texttt">shadow</span></td>
-              <td class="tdp">
-                <p>Try <span class="texttt">Warsaw</span> instead.</p>
-              </td>
-            </tr>
-            <tr>
-              <td class="tdl"><span class="texttt">split</span></td>
-              <td class="tdp">
-                <p>Try <span class="texttt">Malmoe</span> instead.</p>
-              </td>
-            </tr>
-            <tr>
-              <td class="tdl"><span class="texttt">tree</span></td>
-              <td class="tdp">
-                <p>
-                  Try <span class="texttt">Montpellier</span> and, for the bars
-                  version, <span class="texttt">Antibes</span> or
-                  <span class="texttt">JuansLesPins</span>.
+                  Try <span class="verb">Montpellier</span> and, for the bars
+                  version, <span class="verb">Antibes</span> or
+                  <span class="verb">JuansLesPins</span>.
                 </p>
               </td>
             </tr>
@@ -1864,7 +1857,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

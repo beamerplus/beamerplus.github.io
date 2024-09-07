@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Creating Overlays - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -96,7 +96,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -197,28 +197,28 @@
           </h5>
           <a id="beameruserguide-autopage-248"></a>
           <p>
-            The <span class="texttt">pause</span> command offers an easy, but
-            not very flexible way of creating frames that are uncovered
-            piecewise. If you say <span class="texttt">\pause</span> somewhere
-            in a frame, only the text on the frame up to the
-            <span class="texttt">\pause</span> command is shown on the first
+            The <span class="verb">pause</span> command offers an easy, but not
+            very flexible way of creating frames that are uncovered piecewise.
+            If you say <span class="verb">\pause</span> somewhere in a frame,
+            only the text on the frame up to the
+            <span class="verb">\pause</span> command is shown on the first
             slide. On the second slide, everything is shown up to the second
-            <span class="texttt">\pause</span>, and so forth. You can also use
-            <span class="texttt">\pause</span> inside environments; its effect
+            <span class="verb">\pause</span>, and so forth. You can also use
+            <span class="verb">\pause</span> inside environments; its effect
             will last after the environment. However, taking this to extremes
-            and using <span class="texttt">\pause</span> deeply within a nested
+            and using <span class="verb">\pause</span> deeply within a nested
             environment may not have the desired result.
           </p>
           <p>
             A much more fine-grained control over what is shown on each slide
             can be attained using overlay specifications, see the next sections.
             However, for many simple cases the
-            <span class="texttt">\pause</span> command is sufficient.
+            <span class="verb">\pause</span> command is sufficient.
           </p>
           <p>
-            The effect of <span class="texttt">\pause</span> lasts till the next
-            <span class="texttt">\pause</span>,
-            <span class="texttt">\onslide</span>, or the end of the frame.
+            The effect of <span class="verb">\pause</span> lasts till the next
+            <span class="verb">\pause</span>,
+            <span class="verb">\onslide</span>, or the end of the frame.
           </p>
           <pre class="verbatim">
 \begin{frame}
@@ -284,12 +284,12 @@
                 ><span class="angle">&langle;</span><i>number</i
                 ><span class="angle">&rangle;</span></span
               >
-              is given, the counter <span class="texttt">beamerpauses</span> is
+              is given, the counter <span class="verb">beamerpauses</span> is
               set to this number. This command uses the
-              <span class="texttt">\onslide</span> command, internally. This
+              <span class="verb">\onslide</span> command, internally. This
               command does <em>not</em> work inside
-              <span class="texttt">amsmath</span> environments like
-              <span class="texttt">align</span>, since these do really wicked
+              <span class="verb">amsmath</span> environments like
+              <span class="verb">align</span>, since these do really wicked
               things.
             </p>
             <p>
@@ -319,7 +319,7 @@
           </div>
           <p>
             To &ldquo;unpause&rdquo; some text, that is, to temporarily suspend
-            pausing, use the command <span class="texttt">\onslide</span>, see
+            pausing, use the command <span class="verb">\onslide</span>, see
             below.
           </p>
           <!--
@@ -337,24 +337,24 @@
           <p>
             The approach taken by most presentation classes to overlays is
             somewhat similar to the above
-            <span class="texttt">\pause</span> command. These commands get a
+            <span class="verb">\pause</span> command. These commands get a
             certain slide number as input and affect the text on the slide
             following this command in a certain way. For example,
             <span class="textsc">prosper</span>&rsquo;s
-            <span class="texttt">\FromSlide{2}</span> command causes all text
+            <span class="verb">\FromSlide{2}</span> command causes all text
             following this command to be shown only from the second slide on.
           </p>
           <p>
             The
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             class uses a different approach (though the abovementioned command
-            is also available:
-            <span class="texttt">\onslide&lt;2-&gt;</span> will have the same
-            effect as <span class="texttt">\FromSlide{2}</span>, except that
-            <span class="texttt">\onslide</span> transcends environments;
-            likewise, <span class="texttt">\pause</span> is internally mapped to
-            a command with an appropriate overlay specification). The idea is to
-            add <em>overlay specifications</em> to certain commands. These
+            is also available: <span class="verb">\onslide&lt;2-&gt;</span> will
+            have the same effect as <span class="verb">\FromSlide{2}</span>,
+            except that <span class="verb">\onslide</span> transcends
+            environments; likewise, <span class="verb">\pause</span> is
+            internally mapped to a command with an appropriate overlay
+            specification). The idea is to add
+            <em>overlay specifications</em> to certain commands. These
             specifications are always given in pointed brackets and follow the
             command &ldquo;as soon as possible,&rdquo; though in certain cases
             <span class="beamer-name"><span class="textsc">beamer</span></span>
@@ -374,7 +374,7 @@
 </pre
           >
           <p>
-            For the command <span class="texttt">\textbf</span>, the overlay
+            For the command <span class="verb">\textbf</span>, the overlay
             specification causes the text to be set in boldface only on the
             specified slides. On all other slides, the text is set in a normal
             font.
@@ -388,8 +388,7 @@
 </pre
           >
           <p>
-            The command <span class="texttt">\only</span>, which is introduced
-            by
+            The command <span class="verb">\only</span>, which is introduced by
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >, normally simply inserts its parameter into the current frame.
             However, if an overlay specification is present, it &ldquo;throws
@@ -408,14 +407,13 @@
           <p>
             The syntax of (basic) overlay specifications is the following: They
             are comma-separated lists of slides and ranges. Ranges are specified
-            like this: <span class="texttt">2-5</span>, which means slide two
+            like this: <span class="verb">2-5</span>, which means slide two
             through to five. The start or the end of a range can be omitted. For
-            example, <span class="texttt">3-</span> means &ldquo;slides three,
-            four, five, and so on&rdquo; and
-            <span class="texttt">-5</span> means the same as
-            <span class="texttt">1-5</span>. A complicated example is
-            <span class="texttt">-3,6-8,10,12-15</span>, which selects the
-            slides 1, 2, 3, 6, 7, 8, 10, 12, 13, 14, and 15.
+            example, <span class="verb">3-</span> means &ldquo;slides three,
+            four, five, and so on&rdquo; and <span class="verb">-5</span> means
+            the same as <span class="verb">1-5</span>. A complicated example is
+            <span class="verb">-3,6-8,10,12-15</span>, which selects the slides
+            1, 2, 3, 6, 7, 8, 10, 12, 13, 14, and 15.
           </p>
           <!--
 ...... subsection Commands with Overlay Specifications ......
@@ -449,24 +447,23 @@
           <p>
             For the following commands, adding an overlay specification causes
             the command to be simply ignored on slides that are not included in
-            the specification: <span class="texttt">\textbf</span>,
-            <span class="texttt">\textit</span>,
-            <span class="texttt">\textmd</span>,
-            <span class="texttt">\textnormal</span>,
-            <span class="texttt">\textrm</span>,
-            <span class="texttt">\textsc</span>,
-            <span class="texttt">\textsf</span>,
-            <span class="texttt">\textsl</span>,
-            <span class="texttt">\texttt</span>,
-            <span class="texttt">\textup</span>,
-            <span class="texttt">\emph</span>;
-            <span class="texttt">\color</span>,
-            <span class="texttt">\textcolor</span>;
-            <span class="texttt">\alert</span>,
-            <span class="texttt">\structure</span>. If a command takes several
-            arguments, like <span class="texttt">\color</span>, the
-            specification should directly follow the command as in the following
-            example (but there are exceptions to this rule):
+            the specification: <span class="verb">\textbf</span>,
+            <span class="verb">\textit</span>,
+            <span class="verb">\textmd</span>,
+            <span class="verb">\textnormal</span>,
+            <span class="verb">\textrm</span>,
+            <span class="verb">\textsc</span>,
+            <span class="verb">\textsf</span>,
+            <span class="verb">\textsl</span>,
+            <span class="verb">\texttt</span>,
+            <span class="verb">\textup</span>, <span class="verb">\emph</span>;
+            <span class="verb">\color</span>,
+            <span class="verb">\textcolor</span>;
+            <span class="verb">\alert</span>,
+            <span class="verb">\structure</span>. If a command takes several
+            arguments, like <span class="verb">\color</span>, the specification
+            should directly follow the command as in the following example (but
+            there are exceptions to this rule):
           </p>
           <pre class="verbatim">
 \begin{frame}
@@ -514,8 +511,8 @@
                 ><span class="angle">&langle;</span><i>modifier</i
                 ><span class="angle">&rangle;</span></span
               >
-              can be either a&nbsp;<span class="texttt">+</span> or a&nbsp;<span
-                class="texttt"
+              can be either a&nbsp;<span class="verb">+</span> or a&nbsp;<span
+                class="verb"
                 >*</span
               >.
             </p>
@@ -537,8 +534,8 @@
               >
               group, its effect transcends block groups. However, this command
               has a <em>different</em> effect inside an
-              <span class="texttt">overprint</span> environment, see the
-              description of <span class="texttt">overprint</span>.
+              <span class="verb">overprint</span> environment, see the
+              description of <span class="verb">overprint</span>.
             </p>
             <p>
               If the
@@ -546,11 +543,11 @@
                 ><span class="angle">&langle;</span><i>modifier</i
                 ><span class="angle">&rangle;</span></span
               >
-              is <span class="texttt">+</span>, hidden text will not be treated
-              as covered, but as invisible. The difference is the same as the
-              difference between <span class="texttt">\uncover</span> and
-              <span class="texttt">\visible</span>. The modifier
-              <span class="texttt">*</span> may not be given if no
+              is <span class="verb">+</span>, hidden text will not be treated as
+              covered, but as invisible. The difference is the same as the
+              difference between <span class="verb">\uncover</span> and
+              <span class="verb">\visible</span>. The modifier
+              <span class="verb">*</span> may not be given if no
               <span class="meta"
                 ><span class="angle">&langle;</span><i>text</i
                 ><span class="angle">&rangle;</span></span
@@ -584,16 +581,15 @@
                 ><span class="angle">&langle;</span><i>text</i
                 ><span class="angle">&rangle;</span></span
               >
-              argument is present, <span class="texttt">\onslide</span> (without
-              a
+              argument is present, <span class="verb">\onslide</span> (without a
               <span class="meta"
                 ><span class="angle">&langle;</span><i>modifier</i
                 ><span class="angle">&rangle;</span></span
-              >) is mapped to <span class="texttt">\uncover</span>,
-              <span class="texttt">\onslide+</span> is mapped to
-              <span class="texttt">\visible</span>, and
-              <span class="texttt">\onslide*</span> is mapped to
-              <span class="texttt">\only</span>.
+              >) is mapped to <span class="verb">\uncover</span>,
+              <span class="verb">\onslide+</span> is mapped to
+              <span class="verb">\visible</span>, and
+              <span class="verb">\onslide*</span> is mapped to
+              <span class="verb">\only</span>.
             </p>
             <p>
               <i>Example: </i>
@@ -650,13 +646,13 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\only&lt;3-&gt;{Text inserted from slide 3 on.}</span
               >
             </p>
             <p>
               Since the overlay specification may also be given after the text,
-              you can often use <span class="texttt">\only</span> to make other
+              you can often use <span class="verb">\only</span> to make other
               commands overlay specification-aware in a simple manner:
             </p>
             <p>
@@ -708,7 +704,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\uncover&lt;3-&gt;{Text shown from slide 3 on.}</span
               >
             </p>
@@ -719,7 +715,7 @@
             </div>
             <p>
               This command has the same effect as
-              <span class="texttt">\only</span>.
+              <span class="verb">\only</span>.
             </p>
           </div>
           <div class="command">
@@ -740,14 +736,14 @@
             </div>
             <p>
               This command does almost the same as
-              <span class="texttt">\uncover</span>. The only difference is that
-              if the text is not shown, it is never shown in a transparent way,
-              but rather it is not shown at all. Thus, for this command the
+              <span class="verb">\uncover</span>. The only difference is that if
+              the text is not shown, it is never shown in a transparent way, but
+              rather it is not shown at all. Thus, for this command the
               transparency settings have no effect.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\visible&lt;2-&gt;{Text shown from slide 2 on.}</span
               >
             </p>
@@ -758,7 +754,7 @@
             </div>
             <p>
               This command has the same effect as
-              <span class="texttt">\only</span>.
+              <span class="verb">\only</span>.
             </p>
           </div>
           <div class="command">
@@ -779,11 +775,11 @@
             </div>
             <p>
               This command is the opposite of
-              <span class="texttt">\visible</span>.
+              <span class="verb">\visible</span>.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\invisible&lt;-2&gt;{Text shown from slide 3 on.}</span
               >
             </p>
@@ -825,7 +821,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\alt&lt;2&gt;{On Slide 2}{Not on slide 2.}</span
               >
             </p>
@@ -835,7 +831,7 @@
             </p>
             <p>
               <i>Example: </i>Here is the definition of
-              <span class="texttt">\uncover</span>:
+              <span class="verb">\uncover</span>:
             </p>
             <pre class="verbatim">
 \newcommand{\uncover}{\alt{\@firstofone}{\makeinvisible}}
@@ -884,8 +880,8 @@
             >
             <p>
               As a possible application of the
-              <span class="texttt">\temporal</span> command consider the
-              following example:
+              <span class="verb">\temporal</span> command consider the following
+              example:
             </p>
             <p>
               <i>Example: </i>
@@ -988,9 +984,9 @@
             </p>
           </div>
           <p>
-            The related command <span class="texttt">\bibitem</span> is also
+            The related command <span class="verb">\bibitem</span> is also
             overlay specification-aware in the same way as
-            <span class="texttt">\item</span>.
+            <span class="verb">\item</span>.
           </p>
           <div class="command">
             <div class="command-headline">
@@ -1022,18 +1018,18 @@
               inserted only on the first slide. This is typically the desired
               behavior since it does not really matter on which slide the label
               is inserted, <em>except</em> if you use an
-              <span class="texttt">\only</span> command and <em>except</em> if
-              you wish to use that label as a hyperjump target. Then you need to
+              <span class="verb">\only</span> command and <em>except</em> if you
+              wish to use that label as a hyperjump target. Then you need to
               specify a slide.
             </p>
             <p>
               Labels can be used as target of hyperjumps. A convenient way of
-              labelling a frame is to use the <span class="texttt">label=</span
+              labelling a frame is to use the <span class="verb">label=</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
               >
-              option of the <span class="texttt">frame</span> environment.
+              option of the <span class="verb">frame</span> environment.
               However, this will cause the whole frame to be kept in memory till
               the end of the compilation, which may pose a problem.
             </p>
@@ -1044,7 +1040,7 @@
 \begin{frame}
   \begin{align}
     a &amp;= b + c \label{first}\\ % no specification needed
-    c &amp;= d + e \label{second}\\% no specification needed
+    c &amp;= d + e \label{second}% no specification needed
   \end{align}
 
   Blah blah, \uncover&lt;2&gt;{more blah blah.}
@@ -1097,20 +1093,18 @@
             is also shown.
           </p>
           <p>
-            For each of the basic commands <span class="texttt">\only</span>,
-            <span class="texttt">\alt</span>,
-            <span class="texttt">\visible</span>,
-            <span class="texttt">\uncover</span>, and
-            <span class="texttt">\invisible</span> there exists
-            &ldquo;environment versions&rdquo;
-            <span class="texttt">onlyenv</span>,
-            <span class="texttt">altenv</span>,
-            <span class="texttt">visibleenv</span>,
-            <span class="texttt">uncoverenv</span>, and
-            <span class="texttt">invisibleenv</span>. Except for
-            <span class="texttt">altenv</span> and
-            <span class="texttt">onlyenv</span>, these environments do the same
-            as the commands.
+            For each of the basic commands <span class="verb">\only</span>,
+            <span class="verb">\alt</span>, <span class="verb">\visible</span>,
+            <span class="verb">\uncover</span>, and
+            <span class="verb">\invisible</span> there exists &ldquo;environment
+            versions&rdquo; <span class="verb">onlyenv</span>,
+            <span class="verb">altenv</span>,
+            <span class="verb">visibleenv</span>,
+            <span class="verb">uncoverenv</span>, and
+            <span class="verb">invisibleenv</span>. Except for
+            <span class="verb">altenv</span> and
+            <span class="verb">onlyenv</span>, these environments do the same as
+            the commands.
           </p>
           <div class="environment">
             <div class="environment-headline">
@@ -1145,12 +1139,12 @@
               >
               is given, the contents of the environment is inserted into the
               text only on the specified slides. The difference to
-              <span class="texttt">\only</span> is, that the text is actually
+              <span class="verb">\only</span> is, that the text is actually
               typeset inside a box that is then thrown away, whereas
-              <span class="texttt">\only</span> immediately throws away its
+              <span class="verb">\only</span> immediately throws away its
               contents. If the text is not &ldquo;typesettable,&rdquo; the
-              <span class="texttt">onlyenv</span> may produce an error where
-              <span class="texttt">\only</span> would not.
+              <span class="verb">onlyenv</span> may produce an error where
+              <span class="verb">\only</span> would not.
             </p>
             <p>
               <i>Example: </i>
@@ -1266,7 +1260,7 @@
             dynamically from slide to slide. On each slide of the frame,
             something different should be shown inside this area. You could
             achieve the effect of dynamically changing text by giving a list of
-            <span class="texttt">\only</span> commands like this:
+            <span class="verb">\only</span> commands like this:
           </p>
           <pre class="verbatim">
   \only&lt;1&gt;{Initial text.}
@@ -1283,9 +1277,9 @@
           </p>
           <p>
             To solve this problem, you can use two environments:
-            <span class="texttt">overlayarea</span> and
-            <span class="texttt">overprint</span>. The first is more flexible,
-            but less user-friendly.
+            <span class="verb">overlayarea</span> and
+            <span class="verb">overprint</span>. The first is more flexible, but
+            less user-friendly.
           </p>
           <div class="environment">
             <div class="environment-headline">
@@ -1362,20 +1356,20 @@
                 ><span class="angle">&rangle;</span></span
               >
               defaults to the text width. Inside the environment, use
-              <span class="texttt">\onslide</span> commands to specify different
+              <span class="verb">\onslide</span> commands to specify different
               things that should be shown for this environment on different
-              slides. The <span class="texttt">\onslide</span> commands are used
-              like <span class="texttt">\item</span> commands. Everything within
+              slides. The <span class="verb">\onslide</span> commands are used
+              like <span class="verb">\item</span> commands. Everything within
               the environment will be placed in a rectangular area of the
               specified width. The height and depth of the area are chosen large
               enough to accommodate the largest contents of the area. The
               overlay specifications of the
-              <span class="texttt">\onslide</span> commands must be disjoint.
-              This may be a problem for handouts, since, there, all overlay
-              specifications default to <span class="texttt">1</span>. If you
-              use the option <span class="texttt">handout</span>, you can
-              disable all but one <span class="texttt">\onslide</span> by
-              setting the others to <span class="texttt">0</span>.
+              <span class="verb">\onslide</span> commands must be disjoint. This
+              may be a problem for handouts, since, there, all overlay
+              specifications default to <span class="verb">1</span>. If you use
+              the option <span class="verb">handout</span>, you can disable all
+              but one <span class="verb">\onslide</span> by setting the others
+              to <span class="verb">0</span>.
             </p>
             <p>
               <i>Example: </i>
@@ -1393,9 +1387,9 @@
           </div>
           <p>
             A similar need for dynamical changes arises when you have, say, a
-            series of pictures named <span class="texttt">first.pdf</span>,
-            <span class="texttt">second.pdf</span>, and
-            <span class="texttt">third.pdf</span> that show different stages of
+            series of pictures named <span class="verb">first.pdf</span>,
+            <span class="verb">second.pdf</span>, and
+            <span class="verb">third.pdf</span> that show different stages of
             some process. To make a frame that shows these pictures on different
             slides, the following code might be used:
           </p>
@@ -1412,25 +1406,25 @@
           <p>
             The above code uses the fact the
             <span class="beamer-name"><span class="textsc">beamer</span></span>
-            makes the <span class="texttt">\includegraphics</span> command
-            overlay specification-aware. It works nicely, but only if each
-            <span class="texttt">.pdf</span> file contains the complete graphic
-            to be shown. However, some programs, like
-            <span class="texttt">xfig</span>, sometimes also produce series of
+            makes the <span class="verb">\includegraphics</span> command overlay
+            specification-aware. It works nicely, but only if each
+            <span class="verb">.pdf</span> file contains the complete graphic to
+            be shown. However, some programs, like
+            <span class="verb">xfig</span>, sometimes also produce series of
             graphics in which each file just contains the
             <em>additional</em> graphic elements to be shown on the next slide.
             In this case, the first graphic must be shown not on overlay&nbsp;1,
             but from overlay&nbsp;1 on, and so on. While this is easy to achieve
             by changing the overlay specification
-            <span class="texttt">&lt;1&gt;</span> to
-            <span class="texttt">&lt;1-&gt;</span>, the graphics must also be
+            <span class="verb">&lt;1&gt;</span> to
+            <span class="verb">&lt;1-&gt;</span>, the graphics must also be
             shown <em>on top of each other</em>. An easy way to achieve this is
             to use
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >T<span class="latexlogosub">e</span>X</span
               ></span
-            >&rsquo;s <span class="texttt">\llap</span> command like this:
+            >&rsquo;s <span class="verb">\llap</span> command like this:
           </p>
           <pre class="verbatim">
 \begin{frame}
@@ -1457,8 +1451,7 @@
           >
           <p>
             A more convenient way is to use the
-            <span class="texttt">\multiinclude</span> command, see
-            Section&nbsp;<a
+            <span class="verb">\multiinclude</span> command, see Section&nbsp;<a
               href="Animations-Sounds-Slide-Transitions.html#section-xmpmulti"
               >14.1.3</a
             >
@@ -1503,14 +1496,13 @@
                   >e</span
                 >X</span
               ></span
-            >&rsquo;s standard command <span class="texttt">\newcommand</span>:
+            >&rsquo;s standard command <span class="verb">\newcommand</span>:
           </p>
           <div class="command">
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\newcommand</kbd></span
-                ><span class="declare"
-                  ><span class="texttt">&lt;&gt;</span></span
+                ><span class="declare"><span class="verb">&lt;&gt;</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>command name</i
                   ><span class="angle">&rangle;</span></span
@@ -1544,7 +1536,7 @@
                 ><span class="angle">&rangle;</span></span
               >
               should contain the body of this command and it may contain
-              occurrences of parameters like <span class="texttt">#</span
+              occurrences of parameters like <span class="verb">#</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>number</i
                 ><span class="angle">&rangle;</span></span
@@ -1583,8 +1575,8 @@
               arguments. While scanning them, it will look for an overlay
               specification, which may be given between any two arguments,
               before the first argument, or after the last argument. If it finds
-              an overlay specification like
-              <span class="texttt">&lt;3&gt;</span>, it will call
+              an overlay specification like <span class="verb">&lt;3&gt;</span>,
+              it will call
               <span class="meta"
                 ><span class="angle">&langle;</span><i>text</i
                 ><span class="angle">&rangle;</span></span
@@ -1609,8 +1601,8 @@
                   src="beameruserguide-images/8AFDC0E110595641EA1329A41E27AA16.svg"
                   style="width: 1.53163em; vertical-align: -0.09764em"
               /></span>
-              set to <span class="texttt">&lt;3&gt;</span> (including the
-              pointed brackets). If no overlay specification is found, the extra
+              set to <span class="verb">&lt;3&gt;</span> (including the pointed
+              brackets). If no overlay specification is found, the extra
               argument is empty.
             </p>
             <p>
@@ -1643,7 +1635,7 @@
             <p>
               <i>Example: </i>Here is
               <span class="beamer-name"><span class="textsc">beamer</span></span
-              >&rsquo;s definition of <span class="texttt">\emph</span>:
+              >&rsquo;s definition of <span class="verb">\emph</span>:
             </p>
             <pre class="verbatim">
 \newcommand&lt;&gt;{\emph}[1]{{\only#2{\itshape}#1}}
@@ -1653,9 +1645,9 @@
               <i>Example: </i>Here is
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >&rsquo;s definition of
-              <span class="texttt">\transdissolve</span> (the command
-              <span class="texttt">\beamer@dotrans</span> mainly passes its
-              argument to <span class="texttt">hyperref</span>):
+              <span class="verb">\transdissolve</span> (the command
+              <span class="verb">\beamer@dotrans</span> mainly passes its
+              argument to <span class="verb">hyperref</span>):
             </p>
             <pre class="verbatim">
 \newcommand&lt;&gt;{\transdissolve}[1][]{\only#2{\beamer@dotrans[#1]{Dissolve}}}
@@ -1666,8 +1658,7 @@
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\renewcommand</kbd></span
-                ><span class="declare"
-                  ><span class="texttt">&lt;&gt;</span></span
+                ><span class="declare"><span class="verb">&lt;&gt;</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span
                   ><i>existing command name</i
@@ -1693,19 +1684,19 @@
             </div>
             <p>
               Redeclares a command that already exists in the same way as
-              <span class="texttt">\newcommand&lt;&gt;</span>. Inside
+              <span class="verb">\newcommand&lt;&gt;</span>. Inside
               <span class="meta"
                 ><span class="angle">&langle;</span><i>text</i
                 ><span class="angle">&rangle;</span></span
               >, you can still access to original definitions using the command
-              <span class="texttt">\beameroriginal</span>, see the example.
+              <span class="verb">\beameroriginal</span>, see the example.
             </p>
             <p>
               <i>Example: </i>This command is used in
               <span class="beamer-name"
                 ><span class="textsc">beamer</span></span
               >
-              to make <span class="texttt">\hyperlink</span> overlay
+              to make <span class="verb">\hyperlink</span> overlay
               specification-aware:
             </p>
             <pre class="verbatim">
@@ -1717,8 +1708,7 @@
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\newenvironment</kbd></span
-                ><span class="declare"
-                  ><span class="texttt">&lt;&gt;</span></span
+                ><span class="declare"><span class="verb">&lt;&gt;</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>environment name</i
                   ><span class="angle">&rangle;</span></span
@@ -1748,8 +1738,8 @@
             <p>
               Declares a new environment that is overlay specification-aware. If
               this environment is encountered, the same algorithm as for
-              <span class="texttt">\newcommand&lt;&gt;</span> is used to parse
-              the arguments and the overlay specification.
+              <span class="verb">\newcommand&lt;&gt;</span> is used to parse the
+              arguments and the overlay specification.
             </p>
             <p>
               Note that, as always, the
@@ -1757,10 +1747,10 @@
                 ><span class="angle">&langle;</span><i>end text</i
                 ><span class="angle">&rangle;</span></span
               >
-              may not contain any arguments like <span class="texttt">#1</span>.
+              may not contain any arguments like <span class="verb">#1</span>.
               In particular, you do not have access to the overlay
               specification. In this case, it is usually a good idea to use
-              <span class="texttt">altenv</span> environment in the
+              <span class="verb">altenv</span> environment in the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>begin text</i
                 ><span class="angle">&rangle;</span></span
@@ -1795,9 +1785,9 @@
 </pre
             >
             <p>
-              Incidentally, since <span class="texttt">altenv</span> also
-              accepts its argument at the end, the same effect could have been
-              achieved using just
+              Incidentally, since <span class="verb">altenv</span> also accepts
+              its argument at the end, the same effect could have been achieved
+              using just
             </p>
             <pre class="verbatim">
 \newenvironment{boldornormal}
@@ -1812,8 +1802,7 @@
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\renewenvironment</kbd></span
-                ><span class="declare"
-                  ><span class="texttt">&lt;&gt;</span></span
+                ><span class="declare"><span class="verb">&lt;&gt;</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span
                   ><i>existing environment name</i
@@ -1843,7 +1832,7 @@
             </div>
             <p>
               Redefines an existing environment. The original environment is
-              still available under the name <span class="texttt">original</span
+              still available under the name <span class="verb">original</span
               ><span class="meta"
                 ><span class="angle">&langle;</span
                 ><i>existing environment name</i
@@ -1861,12 +1850,12 @@
             >
           </div>
           <p>
-            In a similar way <span class="texttt">\NewDocumentCommand</span>,
-            <span class="texttt">\NewDocumentEnvironment</span> etc. can be used
+            In a similar way <span class="verb">\NewDocumentCommand</span>,
+            <span class="verb">\NewDocumentEnvironment</span> etc. can be used
             to define overlay aware commands and environments. The overlay
             argument can be specified via
-            <span class="texttt">d&lt;&gt;</span> (without default value) or
-            <span class="texttt">D&lt;&gt;{}</span> (with default value) type
+            <span class="verb">d&lt;&gt;</span> (without default value) or
+            <span class="verb">D&lt;&gt;{}</span> (with default value) type
             arguments.
           </p>
           <p>
@@ -1877,11 +1866,11 @@
 </pre
           >
           <p>
-            Note that by using <span class="texttt">\NewDocumentCommand</span>,
-            <span class="texttt">\NewDocumentEnvironment</span> etc. the
-            original definition of the command or environment won&rsquo;t be
-            retained as <span class="texttt">\beameroriginal{...}</span> or
-            <span class="texttt">\begin{original...}</span>.
+            Note that by using <span class="verb">\NewDocumentCommand</span>,
+            <span class="verb">\NewDocumentEnvironment</span> etc. the original
+            definition of the command or environment won&rsquo;t be retained as
+            <span class="verb">\beameroriginal{...}</span> or
+            <span class="verb">\begin{original...}</span>.
           </p>
           <p>
             The following two commands can be used to ensure that a certain
@@ -1908,7 +1897,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\resetcounteronoverlays{equation}</span>
+              ><span class="verb">\resetcounteronoverlays{equation}</span>
             </p>
           </div>
           <div class="command">
@@ -1922,7 +1911,7 @@
               </p>
             </div>
             <p>
-              The same as <span class="texttt">\resetcounteronoverlays</span>,
+              The same as <span class="verb">\resetcounteronoverlays</span>,
               except that this command should be used with counts that have been
               created using the
               <span class="latexlogofont"
@@ -1930,7 +1919,7 @@
                   >T<span class="latexlogosub">e</span>X</span
                 ></span
               >
-              primitive <span class="texttt">\newcount</span> instead of
+              primitive <span class="verb">\newcount</span> instead of
               <span class="latexlogofont"
                 ><span class="latexlogo"
                   >L<span class="latexlogosup">a</span>T<span
@@ -1938,7 +1927,7 @@
                     >e</span
                   >X</span
                 ></span
-              >&rsquo;s <span class="texttt">\definecounter</span>.
+              >&rsquo;s <span class="verb">\definecounter</span>.
             </p>
             <p>
               <i>Example: </i>
@@ -1985,18 +1974,17 @@
           >
           <p>
             The vertical bar separates the two different specifications
-            <span class="texttt">3</span> and
-            <span class="texttt">handout:2</span>. By writing a mode name before
-            a colon, you specify that the following specification only applies
-            to that mode. If no mode is given, as in
-            <span class="texttt">3</span>, the mode
-            <span class="texttt">beamer</span> is automatically added. For this
+            <span class="verb">3</span> and <span class="verb">handout:2</span>.
+            By writing a mode name before a colon, you specify that the
+            following specification only applies to that mode. If no mode is
+            given, as in <span class="verb">3</span>, the mode
+            <span class="verb">beamer</span> is automatically added. For this
             reason, if you write
-            <span class="texttt">\only&lt;3&gt;{Text}</span> and you are in
-            <span class="texttt">handout</span> mode, the text will be shown on
+            <span class="verb">\only&lt;3&gt;{Text}</span> and you are in
+            <span class="verb">handout</span> mode, the text will be shown on
             all slides since there is no restriction specified for handouts and
-            since the <span class="texttt">3</span> is the same as
-            <span class="texttt">beamer:3</span>.
+            since the <span class="verb">3</span> is the same as
+            <span class="verb">beamer:3</span>.
           </p>
           <p>
             It is also possible to give an overlay specification that contains
@@ -2012,14 +2000,13 @@
             An overlay specification that does not contain any slide numbers is
             called a (pure) <em>mode specification</em>. If a mode specification
             is given, all modes that are not mentioned are automatically
-            suppressed. Thus
-            <span class="texttt"><beamer:1-></beamer:1-></span> means &ldquo;on
-            all slides in <span class="texttt">beamer</span> mode and also on
-            all slides in all other modes, since nothing special is specified
-            for them,&rdquo; whereas
+            suppressed. Thus <span class="texttt">&lt;beamer:1-&gt;</span> means
+            &ldquo;on all slides in <span class="verb">beamer</span> mode and
+            also on all slides in all other modes, since nothing special is
+            specified for them,&rdquo; whereas
             <span class="texttt">&lt;beamer&gt;</span> means &ldquo;on all
-            slides in <span class="texttt">beamer</span> mode and not on any
-            other slide.&rdquo;
+            slides in <span class="verb">beamer</span>
+            mode and not on any other slide.&rdquo;
           </p>
           <p>
             Mode specifications can also be used outside frames as in the
@@ -2033,9 +2020,9 @@
             >
           </div>
           <p>
-            Presentation modes include <span class="texttt">beamer</span>,
-            <span class="texttt">trans</span> and
-            <span class="texttt">handout</span>.
+            Presentation modes include <span class="verb">beamer</span>,
+            <span class="verb">trans</span> and
+            <span class="verb">handout</span>.
           </p>
           <p>
             You can also mix pure mode specifications and overlay
@@ -2048,11 +2035,11 @@
             >
           </div>
           <p>
-            This will cause the text <span class="texttt">Riddle</span> to be
-            inserted in <span class="texttt">article</span> mode and on the
-            first slide of a frame in <span class="texttt">beamer</span> mode,
-            but not at all in <span class="texttt">handout</span> or
-            <span class="texttt">trans</span> mode. (Try to find out how
+            This will cause the text <span class="verb">Riddle</span> to be
+            inserted in <span class="verb">article</span> mode and on the first
+            slide of a frame in <span class="verb">beamer</span> mode, but not
+            at all in <span class="verb">handout</span> or
+            <span class="verb">trans</span> mode. (Try to find out how
             <span class="texttt">&lt;beamer| beamer:1&gt;</span> differs from
             <span class="texttt">&lt;beamer&gt;</span> and from
             <span class="texttt">&lt;beamer:1&gt;</span>.)
@@ -2060,19 +2047,18 @@
           <p>
             As if all this were not already complicated enough, there is another
             mode that behaves in a special way: the mode
-            <span class="texttt">second</span>. For this mode a special rule
+            <span class="verb">second</span>. For this mode a special rule
             applies: An overlay specification for mode
-            <span class="texttt">beamer</span> also applies to mode
-            <span class="texttt">second</span> (but not the other way round).
-            Thus, if we are in mode <span class="texttt">second</span>, the
-            specification
-            <span class="texttt"><second:2></second:2></span> means &ldquo;on
-            slide 2&rdquo; and
-            <span class="texttt"><beamer:2></beamer:2></span> also means
-            &ldquo;on slide 2&rdquo;. To get a slide that is typeset in
-            <span class="texttt">beamer</span> mode, but not in
-            <span class="texttt">second</span> mode, you can use,
-            <span class="texttt"><second:0></second:0></span>.
+            <span class="verb">beamer</span> also applies to mode
+            <span class="verb">second</span> (but not the other way round).
+            Thus, if we are in mode <span class="verb">second</span>, the
+            specification <span class="texttt">&lt;second:2&gt;</span> means
+            &ldquo;on slide 2&rdquo; and
+            <span class="texttt">&lt;beamer:2&gt;</span> also means &ldquo;on
+            slide 2&rdquo;. To get a slide that is typeset in
+            <span class="verb">beamer</span> mode, but not in
+            <span class="verb">second</span> mode, you can use,
+            <span class="texttt">&lt;second:0&gt;</span>.
           </p>
           <!--
 ...... subsubsection Action Specifications ......
@@ -2098,7 +2084,7 @@
             <span class="meta"
               ><span class="angle">&langle;</span><i>action</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">@</span>, where
+            ><span class="verb">@</span>, where
             <span class="meta"
               ><span class="angle">&langle;</span><i>action</i
               ><span class="angle">&rangle;</span></span
@@ -2110,62 +2096,60 @@
 </pre
           >
           <p>
-            In the above example, the <span class="texttt">\item</span> command,
+            In the above example, the <span class="verb">\item</span> command,
             which allows actions to be specified, will uncover the item text
             from slide three on and it will, additionally, alert this item
             exactly on slide 3.
           </p>
           <p>
             Not all commands can take an action specification. Currently, only
-            <span class="texttt">\item</span> (though not in
-            <span class="texttt">article</span> mode currently),
-            <span class="texttt">\action</span>, the environment
-            <span class="texttt">actionenv</span>, and the block environments
-            (like <span class="texttt">block</span> or
-            <span class="texttt">theorem</span>) handle them.
+            <span class="verb">\item</span> (though not in
+            <span class="verb">article</span> mode currently),
+            <span class="verb">\action</span>, the environment
+            <span class="verb">actionenv</span>, and the block environments
+            (like <span class="verb">block</span> or
+            <span class="verb">theorem</span>) handle them.
           </p>
           <p>By default, the following actions are available:</p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">alert</span></span>
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">alert</span></span>
                 alters the item or block.
               </p>
             </li>
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">uncover</span></span>
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">uncover</span></span>
                 uncovers the item or block (this is the default, if no action is
                 specified).
               </p>
             </li>
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">only</span></span>
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">only</span></span>
                 causes the whole item or block to be inserted only on the
                 specified slides.
               </p>
             </li>
             <li>
               <p>
-                &bull;
-                <span class="declare"><span class="texttt">visible</span></span>
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">visible</span></span>
                 causes the text to become visible only on the specified slides
-                (the difference between <span class="texttt">uncover</span> and
-                <span class="texttt">visible</span> is the same as between
-                <span class="texttt">\uncover</span> and
-                <span class="texttt">\visible</span>).
+                (the difference between <span class="verb">uncover</span> and
+                <span class="verb">visible</span> is the same as between
+                <span class="verb">\uncover</span> and
+                <span class="verb">\visible</span>).
               </p>
             </li>
             <li>
               <p>
-                &bull;
-                <span class="declare"
-                  ><span class="texttt">invisible</span></span
-                >
+                <span class="listmarker">&bull;</span>
+                <span class="declare"><span class="verb">invisible</span></span>
                 causes the text to become invisible on the specified slides.
               </p>
             </li>
@@ -2180,7 +2164,7 @@
             <span class="meta"
               ><span class="angle">&langle;</span><i>action</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">@</span
+            ><span class="verb">@</span
             ><span class="meta"
               ><span class="angle">&langle;</span><i>slide numbers</i
               ><span class="angle">&rangle;</span></span
@@ -2189,19 +2173,18 @@
             <span class="meta"
               ><span class="angle">&langle;</span><i>action</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">env</span> around the
-            <span class="texttt">\item</span> or parameter of
-            <span class="texttt">\action</span> with
-            <span class="texttt">&lt;</span
+            ><span class="verb">env</span> around the
+            <span class="verb">\item</span> or parameter of
+            <span class="verb">\action</span> with <span class="verb">&lt;</span
             ><span class="meta"
               ><span class="angle">&langle;</span><i>slide numbers</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">&gt;</span> as overlay specification. Thus, by
+            ><span class="verb">&gt;</span> as overlay specification. Thus, by
             defining a new overlay specification-aware environment named
             <span class="meta"
               ><span class="angle">&langle;</span><i>my action name</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">env</span>, you can add your own action:
+            ><span class="verb">env</span>, you can add your own action:
           </p>
           <pre class="verbatim">
 \newenvironment{checkenv}{\only{\setbeamertemplate{itemize item}{X}}}{}
@@ -2216,11 +2199,10 @@
           </div>
           <p>
             This will change the itemization symbol before
-            <span class="texttt">Text.</span> to
-            <span class="texttt">X</span> on slide&nbsp;2 in
-            <span class="texttt">beamer</span> mode. The definition of
-            <span class="texttt">checkenv</span> used the fact that
-            <span class="texttt">\only</span> also accepts an overlay
+            <span class="verb">Text.</span> to <span class="verb">X</span> on
+            slide&nbsp;2 in <span class="verb">beamer</span> mode. The
+            definition of <span class="verb">checkenv</span> used the fact that
+            <span class="verb">\only</span> also accepts an overlay
             specification given after its argument.
           </p>
           <p>
@@ -2262,33 +2244,31 @@
               <span class="meta"
                 ><span class="angle">&langle;</span><i>action</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">@</span
+              ><span class="verb">@</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>slide numbers</i
                 ><span class="angle">&rangle;</span></span
-              >, it inserts the following text:
-              <span class="texttt">\begin{</span
+              >, it inserts the following text: <span class="verb">\begin{</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>action</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">env}&lt;</span
+              ><span class="verb">env}&lt;</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>slide number</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">&gt;</span> at the beginning of the
-              environment and the text <span class="texttt">\end{</span
+              ><span class="verb">&gt;</span> at the beginning of the
+              environment and the text <span class="verb">\end{</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>action</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">env}</span> at the end. If there are several
+              ><span class="verb">env}</span> at the end. If there are several
               action specifications, several environments are opened (and closed
               in the appropriate order). An
               <span class="meta"
                 ><span class="angle">&langle;</span><i>overlay specification</i
                 ><span class="angle">&rangle;</span></span
               >
-              without an action is promoted to
-              <span class="texttt">uncover@</span
+              without an action is promoted to <span class="verb">uncover@</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>overlay specification</i
                 ><span class="angle">&rangle;</span></span
@@ -2303,14 +2283,14 @@
               >
               is given. The default overlay specification is usually just empty,
               but it may be set either by providing an additional optional
-              argument to the command <span class="texttt">\frame</span> or to
-              the environments <span class="texttt">itemize</span>,
-              <span class="texttt">enumerate</span>, or
-              <span class="texttt">description</span> (see these for details).
+              argument to the command <span class="verb">\frame</span> or to the
+              environments <span class="verb">itemize</span>,
+              <span class="verb">enumerate</span>, or
+              <span class="verb">description</span> (see these for details).
               Also, the default action specification can be set using the
               command
-              <span class="texttt">\beamerdefaultoverlayspecification</span>,
-              see below.
+              <span class="verb">\beamerdefaultoverlayspecification</span>, see
+              below.
             </p>
             <p>
               <i>Example: </i>
@@ -2352,11 +2332,11 @@
                 ><span class="angle">&langle;</span><i>text</i
                 ><span class="angle">&rangle;</span></span
               >
-              in an <span class="texttt">actionenv</span>.
+              in an <span class="verb">actionenv</span>.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\action<alert@2
                   >{Could also have used
                   \texttt{\string\alert&lt;2&gt;\char&lsquo;\{\char&lsquo;\}}.}</alert@2
@@ -2379,24 +2359,23 @@
             <p>
               Locally sets the default overlay specification to the given value.
               This overlay specification will be used in every
-              <span class="texttt">actionenv</span> environment and every
-              <span class="texttt">\item</span> that does not have its own
-              overlay specification. The main use of this command is to install
-              an incremental overlay specification like
-              <span class="texttt">&lt;+-&gt;</span> or
-              <span class="texttt">&lt;+-| alert@+&gt;</span>, see
-              Section&nbsp;<a href="Creating-Overlays.html#section-incremental"
+              <span class="verb">actionenv</span> environment and every
+              <span class="verb">\item</span> that does not have its own overlay
+              specification. The main use of this command is to install an
+              incremental overlay specification like
+              <span class="verb">&lt;+-&gt;</span> or
+              <span class="verb">&lt;+-| alert@+&gt;</span>, see Section&nbsp;<a
+                href="Creating-Overlays.html#section-incremental"
                 >9.6.4</a
               >.
             </p>
             <p>
               Usually, the default overlay specification is installed
               automatically by the optional arguments to
-              <span class="texttt">\frame</span>,
-              <span class="texttt">frame</span>,
-              <span class="texttt">itemize</span>,
-              <span class="texttt">enumerate</span>, and
-              <span class="texttt">description</span>. You will only have to use
+              <span class="verb">\frame</span>, <span class="verb">frame</span>,
+              <span class="verb">itemize</span>,
+              <span class="verb">enumerate</span>, and
+              <span class="verb">description</span>. You will only have to use
               this command if you wish to do funny things.
             </p>
             <p>
@@ -2406,16 +2385,16 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\beamerdefaultoverlayspecification{&lt;+-&gt;}</span
               >
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\beamerdefaultoverlayspecification{}</span>
+              ><span class="verb">\beamerdefaultoverlayspecification{}</span>
               clears the default overlay specification. (Actually, it installs
               the default overlay specification
-              <span class="texttt">&lt;*&gt;</span>, which just means
+              <span class="verb">&lt;*&gt;</span>, which just means
               &ldquo;always,&rdquo; but the &ldquo;portable&rdquo; way of
               clearing the default overlay specification is this call.)
             </p>
@@ -2435,10 +2414,10 @@
           <p>
             This section is mostly important for people who have already used
             overlay specifications a lot and have grown tired of writing things
-            like <span class="texttt">&lt;1-&gt;</span>,
-            <span class="texttt">&lt;2-&gt;</span>,
-            <span class="texttt">&lt;3-&gt;</span>, and so on again and again.
-            You should skip this section on first reading.
+            like <span class="verb">&lt;1-&gt;</span>,
+            <span class="verb">&lt;2-&gt;</span>,
+            <span class="verb">&lt;3-&gt;</span>, and so on again and again. You
+            should skip this section on first reading.
           </p>
           <p>
             Often you want to have overlay specifications that follow a pattern
@@ -2457,9 +2436,9 @@
             The problem starts if you decide to insert a new fruit, say, at the
             beginning. In this case, you would have to adjust all of the overlay
             specifications. Also, if you add a
-            <span class="texttt">\pause</span> command before the
-            <span class="texttt">itemize</span>, you would also have to update
-            the overlay specifications.
+            <span class="verb">\pause</span> command before the
+            <span class="verb">itemize</span>, you would also have to update the
+            overlay specifications.
           </p>
           <p>
             <span class="beamer-name"><span class="textsc">beamer</span></span>
@@ -2477,11 +2456,10 @@
 </pre
           >
           <p>
-            The effect of the <span class="texttt">+</span>-sign is the
-            following: You can use it in any overlay specification at any point
-            where you would usually use a number. If a
-            <span class="texttt">+</span>-sign is encountered, it is replaced by
-            the current value of the
+            The effect of the <span class="verb">+</span>-sign is the following:
+            You can use it in any overlay specification at any point where you
+            would usually use a number. If a <span class="verb">+</span>-sign is
+            encountered, it is replaced by the current value of the
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >L<span class="latexlogosup">a</span>T<span class="latexlogosub"
@@ -2489,19 +2467,19 @@
                 >X</span
               ></span
             >
-            counter <span class="texttt">beamerpauses</span>, which is 1 at the
+            counter <span class="verb">beamerpauses</span>, which is 1 at the
             beginning of the frame. Then the counter is increased by 1, though
             it is only increased once for every overlay specification, even if
             the specification contains multiple
-            <span class="texttt">+</span>-signs (they are replaced by the same
+            <span class="verb">+</span>-signs (they are replaced by the same
             number).
           </p>
           <p>
             In the above example, the first specification is replaced by
-            <span class="texttt">&lt;1-&gt;</span>. Then the second is replaced
-            by <span class="texttt">&lt;2-&gt;</span> and so forth. We can now
-            easily insert new entries, without having to change anything else.
-            We might also write the following:
+            <span class="verb">&lt;1-&gt;</span>. Then the second is replaced by
+            <span class="verb">&lt;2-&gt;</span> and so forth. We can now easily
+            insert new entries, without having to change anything else. We might
+            also write the following:
           </p>
           <pre class="verbatim">
 \begin{itemize}
@@ -2515,10 +2493,10 @@
           <p>
             This will alert the current item when it is uncovered. For example,
             the first specification
-            <span class="texttt">&lt;+-| alert@+&gt;</span> is replaced by
-            <span class="texttt">&lt;1-| alert@1&gt;</span>, the second is
-            replaced by <span class="texttt">&lt;2-| alert@2&gt;</span>, and so
-            on. Since the <span class="texttt">itemize</span> environment also
+            <span class="verb">&lt;+-| alert@+&gt;</span> is replaced by
+            <span class="verb">&lt;1-| alert@1&gt;</span>, the second is
+            replaced by <span class="verb">&lt;2-| alert@2&gt;</span>, and so
+            on. Since the <span class="verb">itemize</span> environment also
             allows you to specify a default overlay specification, see the
             documentation of that environment, the above example can be written
             even more economically as follows:
@@ -2533,9 +2511,9 @@
 </pre
           >
           <p>
-            The <span class="texttt">\pause</span> command also updates the
-            counter <span class="texttt">beamerpauses</span>. You can change
-            this counter yourself using the normal
+            The <span class="verb">\pause</span> command also updates the
+            counter <span class="verb">beamerpauses</span>. You can change this
+            counter yourself using the normal
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >L<span class="latexlogosup">a</span>T<span class="latexlogosub"
@@ -2543,18 +2521,18 @@
                 >X</span
               ></span
             >
-            commands <span class="texttt">\setcounter</span> or
-            <span class="texttt">\addtocounter</span>.
+            commands <span class="verb">\setcounter</span> or
+            <span class="verb">\addtocounter</span>.
           </p>
           <p>
-            Any occurrence of a <span class="texttt">+</span>-sign may be
-            followed by an <em>offset</em> in round brackets. This offset will
-            be added to the value of <span class="texttt">beamerpauses</span>.
-            Thus, if <span class="texttt">beamerpauses</span> is 2, then
-            <span class="texttt">&lt;+(1)-&gt;</span> expands to
-            <span class="texttt">&lt;3-&gt;</span> and
-            <span class="texttt">&lt;+(-1)-+&gt;</span> expands to
-            <span class="texttt">&lt;1-2&gt;</span>. For example
+            Any occurrence of a <span class="verb">+</span>-sign may be followed
+            by an <em>offset</em> in round brackets. This offset will be added
+            to the value of <span class="verb">beamerpauses</span>. Thus, if
+            <span class="verb">beamerpauses</span> is 2, then
+            <span class="verb">&lt;+(1)-&gt;</span> expands to
+            <span class="verb">&lt;3-&gt;</span> and
+            <span class="verb">&lt;+(-1)-+&gt;</span> expands to
+            <span class="verb">&lt;1-2&gt;</span>. For example
           </p>
           <pre class="verbatim">
 \begin{frame}
@@ -2581,14 +2559,14 @@
           <p>
             There is another special sign you can use in an overlay
             specification that behaves similarly to the
-            <span class="texttt">+</span>-sign: a dot. When you write
-            <span class="texttt">&lt;.-&gt;</span>, a similar thing as in
-            <span class="texttt">&lt;+-&gt;</span> happens <em>except</em> that
-            the counter <span class="texttt">beamerpauses</span> is
+            <span class="verb">+</span>-sign: a dot. When you write
+            <span class="verb">&lt;.-&gt;</span>, a similar thing as in
+            <span class="verb">&lt;+-&gt;</span> happens <em>except</em> that
+            the counter <span class="verb">beamerpauses</span> is
             <em>not</em> incremented and <em>except</em> that you get the value
-            of <span class="texttt">beamerpauses</span> decreased by one. Thus a
+            of <span class="verb">beamerpauses</span> decreased by one. Thus a
             dot, possibly followed by an offset, just expands to the current
-            value of the counter <span class="texttt">beamerpauses</span> minus
+            value of the counter <span class="verb">beamerpauses</span> minus
             one, possibly offset. This dot notation can be useful in case like
             the following:
           </p>
@@ -2619,12 +2597,12 @@
 </pre
           >
           <p>
-            The expansions of the <span class="texttt">+</span>-sign and the
-            <span class="texttt">.</span>-sign are no less than zero. This
+            The expansions of the <span class="verb">+</span>-sign and the
+            <span class="verb">.</span>-sign are no less than zero. This
             prevents errors when encountering large negative offsets, for
-            example <span class="texttt">&lt;+(-7)-&gt;</span> is expanded to
-            <span class="texttt">&lt;0-&gt;</span> rather than
-            <span class="texttt">&lt;-6-&gt;</span>.
+            example <span class="verb">&lt;+(-7)-&gt;</span> is expanded to
+            <span class="verb">&lt;0-&gt;</span> rather than
+            <span class="verb">&lt;-6-&gt;</span>.
           </p>
         </section>
       </main>
@@ -2644,7 +2622,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

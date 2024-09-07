@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Creating Transparencies - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -47,7 +47,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -134,7 +134,7 @@
           </p>
           <p>
             In order to create a transparencies version, specify the class
-            option <span class="texttt">trans</span>. If you do not specify
+            option <span class="verb">trans</span>. If you do not specify
             anything else, this will cause all overlay specifications to be
             suppressed. For most cases this will create exactly the desired
             result.
@@ -145,17 +145,17 @@
             </div>
             <p>
               Create a version that uses the
-              <span class="texttt">trans</span> overlay specifications.
+              <span class="verb">trans</span> overlay specifications.
             </p>
           </div>
           <p>
             In some cases, you may want a more complex behavior. For example, if
-            you use many <span class="texttt">\only</span> commands to draw an
+            you use many <span class="verb">\only</span> commands to draw an
             animation. In this case, suppressing all overlay specifications is
             not such a good idea, since this will cause all steps of the
             animation to be shown at the same time. In some cases this is not
             desirable. Also, it might be desirable to suppress some
-            <span class="texttt">\alert</span> commands that apply only to
+            <span class="verb">\alert</span> commands that apply only to
             specific slides in the handout.
           </p>
           <p>
@@ -176,13 +176,13 @@
           >
           <p>
             This specification says: &ldquo;Normally (in
-            <span class="texttt">beamer</span> mode), insert the text on slides
+            <span class="verb">beamer</span> mode), insert the text on slides
             1&ndash;3 and 5&ndash;9. For the transparencies version, insert the
             text only on slides 2,&nbsp;3, and&nbsp;5.&rdquo; If no special mode
-            specification is given for <span class="texttt">trans</span> mode,
-            the default is &ldquo;always.&rdquo; This causes the desirable
-            effect that if you do not specify anything, the overlay
-            specification is effectively suppressed for the handout.
+            specification is given for <span class="verb">trans</span> mode, the
+            default is &ldquo;always.&rdquo; This causes the desirable effect
+            that if you do not specify anything, the overlay specification is
+            effectively suppressed for the handout.
           </p>
           <p>An especially useful specification is the following:</p>
           <pre class="verbatim">
@@ -191,12 +191,12 @@
           >
           <p>
             Since there is no zeroth slide, the text is not shown. Likewise,
-            <span class="texttt">\alert&lt;3| trans:0&gt;{Text}</span> will not
+            <span class="verb">\alert&lt;3| trans:0&gt;{Text}</span> will not
             alert the text on a transparency.
           </p>
           <p>
             You can also use a mode specification for the overlay specification
-            of the <span class="texttt">{frame}</span> environment as in the
+            of the <span class="verb">{frame}</span> environment as in the
             following example.
           </p>
           <pre class="verbatim">
@@ -219,11 +219,11 @@
           <p>
             It is also possible to give only an alternate overlay specification.
             For example,
-            <span class="texttt">\alert<trans:0>{...}</trans:0></span> causes
-            the text to be always highlighted during the presentation, but never
-            on the transparencies version. Likewise,
-            <span class="texttt">\frame<trans:0>{...}</trans:0></span> causes
-            the frame to be suppressed for the handout.
+            <span class="verb">\alert<trans:0>{...}</trans:0></span> causes the
+            text to be always highlighted during the presentation, but never on
+            the transparencies version. Likewise,
+            <span class="verb">\frame<trans:0>{...}</trans:0></span> causes the
+            frame to be suppressed for the handout.
           </p>
           <p>
             Finally, note that it is possible to give more than one alternate
@@ -240,7 +240,7 @@
           </div>
           <p>
             If you wish to give the same specification in all versions, you can
-            do so by specifying <span class="texttt">all:</span> as the version.
+            do so by specifying <span class="verb">all:</span> as the version.
             For example,
           </p>
           <div class="fancyvrb" style>
@@ -268,7 +268,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

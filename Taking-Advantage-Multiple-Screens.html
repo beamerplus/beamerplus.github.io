@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Taking Advantage of Multiple Screens - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -63,7 +63,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -193,19 +193,19 @@
           </p>
           <p>
             <span class="beamer-name"><span class="textsc">beamer</span></span>
-            uses the package <span class="texttt">pgfpages</span> to typeset
+            uses the package <span class="verb">pgfpages</span> to typeset
             two-screen presentations. One can choose from several appropriate
             options for showing something special on the second screen. These
             options are discussed in the following sections.
           </p>
           <p>
             One of the things these options do is to setup a certain
-            <span class="texttt">pgfpages</span>-layout that is appropriate for
+            <span class="verb">pgfpages</span>-layout that is appropriate for
             two-screen presentations. However, you can still change the
-            <span class="texttt">pgfpages</span>-layout arbitrarily, afterwards.
+            <span class="verb">pgfpages</span>-layout arbitrarily, afterwards.
             For example, you might wish to enlarge the virtual pages. For
             details, see the documentation of
-            <span class="texttt">pgfpages</span>.
+            <span class="verb">pgfpages</span>.
           </p>
           <!--
 ...... subsection Showing Notes on the Second Screen ......
@@ -220,9 +220,10 @@
           <p>
             The first way to use a second screen is to show the presentation on
             the main screen and to show your notes on the second screen. The
-            option <span class="texttt">show notes on second screen</span> can
-            be used for this. It is described on page&nbsp;(page for section
-            <a href="Adding-Notes-Yourself.html#command-notesonsecondscreen"
+            option <span class="verb">show notes on second screen</span> can be
+            used for this. It is described on page&nbsp;(page&nbsp;for
+            section&nbsp;<a
+              href="Adding-Notes-Yourself.html#command-notesonsecondscreen"
               >19.3</a
             >).
           </p>
@@ -245,9 +246,9 @@
           <p>
             To specify what is shown on the second screen, you can use a special
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >-mode called <span class="texttt">second</span>. This mode behaves
-            similar to modes like <span class="texttt">handout</span> or
-            <span class="texttt">beamer</span>, but its effect depends on the
+            >-mode called <span class="verb">second</span>. This mode behaves
+            similar to modes like <span class="verb">handout</span> or
+            <span class="verb">beamer</span>, but its effect depends on the
             exact options used:
           </p>
           <div class="beameroption">
@@ -256,7 +257,7 @@
                 \setbeameroption{<span class="declare"
                   >second mode text on second screen</span
                 ><span class="opt"
-                  ><span class="texttt">=</span
+                  ><span class="verb">=</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>location</i
                     ><span class="angle">&rangle;</span></span
@@ -271,10 +272,9 @@
                 ><span class="angle">&langle;</span><i>location</i
                 ><span class="angle">&rangle;</span></span
               >
-              of the second screen can be <span class="texttt">left</span>,
-              <span class="texttt">right</span>,
-              <span class="texttt">bottom</span>, or
-              <span class="texttt">top</span>.
+              of the second screen can be <span class="verb">left</span>,
+              <span class="verb">right</span>, <span class="verb">bottom</span>,
+              or <span class="verb">top</span>.
             </p>
             <p>
               In detail, the following happens: When a new frame needs to be
@@ -283,33 +283,32 @@
                 ><span class="textsc">beamer</span></span
               >
               checks whether the special option
-              <span class="texttt">typeset second</span> is given. If not, the
+              <span class="verb">typeset second</span> is given. If not, the
               frame is typeset normally and the slides are put on the main
               presentation screen (more precisely, on the logical
-              <span class="texttt">pgfpages</span>-page number zero). The second
+              <span class="verb">pgfpages</span>-page number zero). The second
               screen (logical page number one) shows whatever it showed before
               the frame was typeset.
             </p>
             <p>
               If the special frame option
-              <span class="texttt">typeset second</span> is given, after each
+              <span class="verb">typeset second</span> is given, after each
               slide of the frame the frame contents is typeset once more, but
-              this time for the mode <span class="texttt">second</span>. This
+              this time for the mode <span class="verb">second</span>. This
               results in another slide, which is put on the second screen (on
               logical page number one). Then the whole page is shipped out.
             </p>
             <p>
-              The <span class="texttt">second</span> mode behaves more like the
-              <span class="texttt">beamer</span> mode than other modes: Any
-              overlay specification for <span class="texttt">beamer</span> will
-              also apply to <span class="texttt">second</span> mode, unless an
-              explicit <span class="texttt">second</span> mode specification is
+              The <span class="verb">second</span> mode behaves more like the
+              <span class="verb">beamer</span> mode than other modes: Any
+              overlay specification for <span class="verb">beamer</span> will
+              also apply to <span class="verb">second</span> mode, unless an
+              explicit <span class="verb">second</span> mode specification is
               also given. In particular,
-              <span class="texttt">\only&lt;1-2&gt;{Text}</span> will be shown
-              on slides 1 and 2 in <span class="texttt">second</span> mode, but
-              only on the first slide in
-              <span class="texttt">handout</span> mode or
-              <span class="texttt">trans</span> mode.
+              <span class="verb">\only&lt;1-2&gt;{Text}</span> will be shown on
+              slides 1 and 2 in <span class="verb">second</span> mode, but only
+              on the first slide in <span class="verb">handout</span> mode or
+              <span class="verb">trans</span> mode.
             </p>
             <p>
               <i>Example: </i>
@@ -370,7 +369,7 @@
           </div>
           <p>
             In the last of the above example, it is a bit bothersome that the
-            option <span class="texttt">typeset second</span> has to be added to
+            option <span class="verb">typeset second</span> has to be added to
             each frame. The following option globally sets this option:
           </p>
           <div class="beameroption">
@@ -379,7 +378,7 @@
                 \setbeameroption{<span class="declare"
                   >always typeset second mode</span
                 ><span class="opt"
-                  ><span class="texttt">=</span
+                  ><span class="verb">=</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>true or false</i
                     ><span class="angle">&rangle;</span></span
@@ -389,7 +388,7 @@
             </div>
             <p>
               When this option is set to true, every following frame will have
-              the option <span class="texttt">typeset second</span> set to true.
+              the option <span class="verb">typeset second</span> set to true.
             </p>
           </div>
           <!--
@@ -408,7 +407,7 @@
                 \setbeameroption{<span class="declare"
                   >previous slide on second screen</span
                 ><span class="opt"
-                  ><span class="texttt">=</span
+                  ><span class="verb">=</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>location</i
                     ><span class="angle">&rangle;</span></span
@@ -419,10 +418,9 @@
             <p>
               This option causes the second screen to show the previous slide
               that was typeset, unless this is overruled by a frame with the
-              <span class="texttt">[typeset second]</span> option set. The idea
-              is that if you have two projectors you can always present
-              &ldquo;the last two&rdquo; slides simultaneously and talk about
-              them.
+              <span class="verb">[typeset second]</span> option set. The idea is
+              that if you have two projectors you can always present &ldquo;the
+              last two&rdquo; slides simultaneously and talk about them.
             </p>
             <p>
               Using this option will switch off the updating of external files
@@ -447,7 +445,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

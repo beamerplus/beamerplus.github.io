@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Graphics - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -73,7 +73,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -201,27 +201,27 @@
           </p>
           <p>
             You can use an external program, like
-            <span class="texttt">xfig</span>, GIMP or Inkscape, to create a
+            <span class="verb">xfig</span>, GIMP or Inkscape, to create a
             graphic. These programs have an option to <em>export</em> graphic
             files in a format that can then be inserted into the presentation.
           </p>
           <p>The main advantage is:</p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; You can use a powerful program to create a high-quality
-                graphic.
+                <span class="listmarker">&bull;</span> You can use a powerful
+                program to create a high-quality graphic.
               </p>
             </li>
           </ul>
           <p>The main disadvantages are:</p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; You have to worry about many files. Typically there are
-                at least two for each presentation, namely the program&rsquo;s
-                graphic data file and the exported graphic file in a format that
-                can be read by
+                <span class="listmarker">&bull;</span> You have to worry about
+                many files. Typically there are at least two for each
+                presentation, namely the program&rsquo;s graphic data file and
+                the exported graphic file in a format that can be read by
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >T<span class="latexlogosub">e</span>X</span
@@ -231,9 +231,10 @@
             </li>
             <li>
               <p>
-                &bull; Changing the graphic using the program does not
-                automatically change the graphic in the presentation. Rather,
-                you must reexport the graphic and rerun
+                <span class="listmarker">&bull;</span> Changing the graphic
+                using the program does not automatically change the graphic in
+                the presentation. Rather, you must reexport the graphic and
+                rerun
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >L<span class="latexlogosup">a</span>T<span
@@ -246,14 +247,14 @@
             </li>
             <li>
               <p>
-                &bull; It may be difficult to get the line width, fonts, and
-                font sizes right.
+                <span class="listmarker">&bull;</span> It may be difficult to
+                get the line width, fonts, and font sizes right.
               </p>
             </li>
             <li>
               <p>
-                &bull; Creating formulas as part of graphics is often difficult
-                or impossible.
+                <span class="listmarker">&bull;</span> Creating formulas as part
+                of graphics is often difficult or impossible.
               </p>
             </li>
           </ul>
@@ -267,29 +268,28 @@
               ></span
             >
             commands for inserting graphics, like
-            <span class="texttt">\includegraphics</span>. Also, the
-            <span class="texttt">pgf</span> package offers commands for
-            including graphics. Either will work fine in most situations, so
-            choose whichever you like. Like
-            <span class="texttt">\pgfdeclareimage</span>,
-            <span class="texttt">\includegraphics</span> also includes an image
-            only once in a <span class="texttt">.pdf</span> file, even if it
-            used several times (as a matter of fact, the
-            <span class="texttt">graphics</span> package is even a bit smarter
-            about this than <span class="texttt">pgf</span>). However, currently
-            only <span class="texttt">pgf</span> offers the ability to include
+            <span class="verb">\includegraphics</span>. Also, the
+            <span class="verb">pgf</span> package offers commands for including
+            graphics. Either will work fine in most situations, so choose
+            whichever you like. Like <span class="verb">\pgfdeclareimage</span>,
+            <span class="verb">\includegraphics</span> also includes an image
+            only once in a <span class="verb">.pdf</span> file, even if it used
+            several times (as a matter of fact, the
+            <span class="verb">graphics</span> package is even a bit smarter
+            about this than <span class="verb">pgf</span>). However, currently
+            only <span class="verb">pgf</span> offers the ability to include
             images that are partly transparent.
           </p>
           <p>
             At the end of this section you will find notes on how to include
-            specific graphic formats like <span class="texttt">.eps</span> or
-            <span class="texttt">.jpg</span>.
+            specific graphic formats like <span class="verb">.eps</span> or
+            <span class="verb">.jpg</span>.
           </p>
           <p>
-            The commands <span class="texttt">\includegraphics</span>,
-            <span class="texttt">\pgfuseimage</span>, and
-            <span class="texttt">\pgfimage</span> are
-            overlay-specification-aware in
+            The commands <span class="verb">\includegraphics</span>,
+            <span class="verb">\pgfuseimage</span>, and
+            <span class="verb">\pgfimage</span> are overlay-specification-aware
+            in
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >. If the overlay specification does not apply, the command has no
             effect. This is useful for creating a simple animation where each
@@ -324,12 +324,12 @@
             When choosing a graphic package, there are a few things to keep in
             mind:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Many packages produce poor quality graphics. This is
-                especially true of the standard
-                <span class="texttt">picture</span> environment of
+                <span class="listmarker">&bull;</span> Many packages produce
+                poor quality graphics. This is especially true of the standard
+                <span class="verb">picture</span> environment of
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >L<span class="latexlogosup">a</span>T<span
@@ -342,30 +342,31 @@
             </li>
             <li>
               <p>
-                &bull; Powerful packages that produce high-quality graphics
-                often do not work together with
-                <span class="texttt">pdflatex</span>,
-                <span class="texttt">lualatex</span> or
-                <span class="texttt">xelatex</span>.
+                <span class="listmarker">&bull;</span> Powerful packages that
+                produce high-quality graphics often do not work together with
+                <span class="verb">pdflatex</span>,
+                <span class="verb">lualatex</span> or
+                <span class="verb">xelatex</span>.
               </p>
             </li>
             <li>
               <p>
-                &bull; The most powerful and easiest-to-use package around,
-                namely <span class="texttt">pstricks</span>, does not work
-                together with <span class="texttt">pdflatex</span>,
-                <span class="texttt">lualatex</span> or
-                <span class="texttt">xelatex</span> and this is a fundamental
+                <span class="listmarker">&bull;</span> The most powerful and
+                easiest-to-use package around, namely
+                <span class="verb">pstricks</span>, does not work together with
+                <span class="verb">pdflatex</span>,
+                <span class="verb">lualatex</span> or
+                <span class="verb">xelatex</span> and this is a fundamental
                 problem. Due to the fundamental differences between
                 <span class="pgf-name"><span class="textsc">pdf</span></span>
                 and PostScript, it is not possible to write a &ldquo;<span
-                  class="texttt"
+                  class="verb"
                   >pdflatex</span
                 >
-                back-end for <span class="texttt">pstricks</span>.&rdquo;
-                (Situation with <span class="texttt">lualatex</span> and
-                <span class="texttt">xelatex</span> is very similar.)
-                Regardless, <span class="textsc">pst-pdf</span>,
+                back-end for <span class="verb">pstricks</span>.&rdquo;
+                (Situation with <span class="verb">lualatex</span> and
+                <span class="verb">xelatex</span> is very similar.) Regardless,
+                <span class="textsc">pst-pdf</span>,
                 <span class="textsc">xetex-pstricks</span> and
                 <span class="textsc">pdftricks</span> package can help here and
                 simplify things from user&rsquo;s perspective.
@@ -376,33 +377,36 @@
             There are three possible solutions to the above problem, each with
             it&rsquo;s own advantages and disadvantages.
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Use the <span class="textsc">pgf</span> package. It
-                produces high-quality graphics and works together with
-                <span class="texttt">pdflatex</span>,
-                <span class="texttt">lualatex</span>,
-                <span class="texttt">xelatex</span> and also with normal
-                <span class="texttt">latex</span>. It is not as powerful as
-                <span class="texttt">pstricks</span> (as pointed out above, this
+                <span class="listmarker">&bull;</span> Use the
+                <span class="textsc">pgf</span> package. It produces
+                high-quality graphics and works together with
+                <span class="verb">pdflatex</span>,
+                <span class="verb">lualatex</span>,
+                <span class="verb">xelatex</span> and also with normal
+                <span class="verb">latex</span>. It is not as powerful as
+                <span class="verb">pstricks</span> (as pointed out above, this
                 is because of rather fundamental reasons) and not as easy to
                 use, but it should be sufficient in most cases.
               </p>
             </li>
             <li>
               <p>
-                &bull; Use <span class="textsc">luamplib</span> package and
-                <span class="texttt">lualatex</span>. It provides you with an
+                <span class="listmarker">&bull;</span> Use
+                <span class="textsc">luamplib</span> package and
+                <span class="verb">lualatex</span>. It provides you with an
                 environment using which you can type MetaPost code directly in
                 your document.
               </p>
             </li>
             <li>
               <p>
-                &bull; Use <span class="texttt">pstricks</span> and stick to
-                <span class="texttt">latex</span> and
-                <span class="texttt">dvips</span> or use some of the workarounds
+                <span class="listmarker">&bull;</span> Use
+                <span class="verb">pstricks</span> and stick to
+                <span class="verb">latex</span> and
+                <span class="verb">dvips</span> or use some of the workarounds
                 mentioned above.
               </p>
             </li>
@@ -419,27 +423,27 @@
           <a id="beameruserguide-autopage-404"></a>
           <p>
             External graphic files ending with the extension
-            <span class="texttt">.eps</span> (Encapsulated PostScript) or
-            <span class="texttt">.ps</span> (PostScript) can be included if you
-            use <span class="texttt">latex</span> and
-            <span class="texttt">dvips</span>, but <em>not</em> when using
-            <span class="texttt">pdflatex</span>. This is true both for the
-            normal <span class="texttt">graphics</span> package and for
-            <span class="texttt">pgf</span>. When using
-            <span class="texttt">pgf</span>, do <em>not</em> add the extension
-            <span class="texttt">.eps</span>. When using
-            <span class="texttt">graphics</span>, do add the extension.
+            <span class="verb">.eps</span> (Encapsulated PostScript) or
+            <span class="verb">.ps</span> (PostScript) can be included if you
+            use <span class="verb">latex</span> and
+            <span class="verb">dvips</span>, but <em>not</em> when using
+            <span class="verb">pdflatex</span>. This is true both for the normal
+            <span class="verb">graphics</span> package and for
+            <span class="verb">pgf</span>. When using
+            <span class="verb">pgf</span>, do <em>not</em> add the extension
+            <span class="verb">.eps</span>. When using
+            <span class="verb">graphics</span>, do add the extension.
           </p>
           <p>
-            If you have a <span class="texttt">.eps</span> graphic and wish to
-            use <span class="texttt">pdflatex</span>, you can use the program
-            <span class="texttt">ps2pdf</span> to convert the graphic to a
-            <span class="texttt">.pdf</span> file. Some modern distributions
-            enable <span class="texttt">write18</span> which allows
-            <span class="texttt">pdflatex</span> to do that automatically. Note,
+            If you have a <span class="verb">.eps</span> graphic and wish to use
+            <span class="verb">pdflatex</span>, you can use the program
+            <span class="verb">ps2pdf</span> to convert the graphic to a
+            <span class="verb">.pdf</span> file. Some modern distributions
+            enable <span class="verb">write18</span> which allows
+            <span class="verb">pdflatex</span> to do that automatically. Note,
             however, that it is often a better idea to directly generate a
-            <span class="texttt">.pdf</span> if the program that produced the
-            <span class="texttt">.eps</span> supports this.
+            <span class="verb">.pdf</span> if the program that produced the
+            <span class="verb">.eps</span> supports this.
           </p>
           <!--
 ...... subsection Including Graphic Files Ending .pdf, .jpg, .jpeg or .png ......
@@ -453,16 +457,16 @@
           </h5>
           <a id="beameruserguide-autopage-405"></a>
           <p>
-            The four formats <span class="texttt">.pdf</span>,
-            <span class="texttt">.jpg</span>, <span class="texttt">.jpeg</span>,
-            and <span class="texttt">.png</span> can only be included by
-            <span class="texttt">pdflatex</span>. As before, do not add these
-            extension when using <span class="texttt">pgf</span>, but do add
-            them when using <span class="texttt">graphics</span>. If your
-            graphic file has any of these formats and you wish/must use
-            <span class="texttt">latex</span> and
-            <span class="texttt">dvips</span>, you have to convert your graphic
-            to <span class="texttt">.eps</span> first.
+            The four formats <span class="verb">.pdf</span>,
+            <span class="verb">.jpg</span>, <span class="verb">.jpeg</span>, and
+            <span class="verb">.png</span> can only be included by
+            <span class="verb">pdflatex</span>. As before, do not add these
+            extension when using <span class="verb">pgf</span>, but do add them
+            when using <span class="verb">graphics</span>. If your graphic file
+            has any of these formats and you wish/must use
+            <span class="verb">latex</span> and <span class="verb">dvips</span>,
+            you have to convert your graphic to
+            <span class="verb">.eps</span> first.
           </p>
           <!--
 ...... subsection Including Graphic Files Ending .mps ......
@@ -475,7 +479,7 @@
           </h5>
           <a id="beameruserguide-autopage-406"></a>
           <p>
-            A graphic file ending <span class="texttt">.mps</span> (MetaPost
+            A graphic file ending <span class="verb">.mps</span> (MetaPost
             PostScript) is a special kind of Encapsulated PostScript file. Files
             in this format are produced by the MetaPost program. As you know,
             <span class="latexlogofont"
@@ -489,33 +493,32 @@
           </p>
           <p>
             The MetaPost program converts a plain text file ending
-            <span class="texttt">.mp</span> into an
-            <span class="texttt">.mps</span> file (although for some
-            unfathomable reason the extension is not added). The
-            <span class="texttt">.mp</span> file must contain text written in
-            the MetaFont programming language. Since
-            <span class="texttt">.mps</span> files are actually also
-            <span class="texttt">.eps</span> files, you can use the normal
-            <span class="texttt">\includegraphics</span> command to include
-            them.
+            <span class="verb">.mp</span> into an
+            <span class="verb">.mps</span> file (although for some unfathomable
+            reason the extension is not added). The
+            <span class="verb">.mp</span> file must contain text written in the
+            MetaFont programming language. Since
+            <span class="verb">.mps</span> files are actually also
+            <span class="verb">.eps</span> files, you can use the normal
+            <span class="verb">\includegraphics</span> command to include them.
           </p>
           <p>
             However, as a special bonus, you can <em>also</em> include such a
-            file when using <span class="texttt">pdflatex</span>. Normally,
-            <span class="texttt">pdflatex</span> cannot handle
-            <span class="texttt">.eps</span> files, but the
-            <span class="texttt">.mps</span> files produced by MetaPost have
-            such a simple and special structure that this is possible. The
-            <span class="texttt">graphics</span> package implements some filters
+            file when using <span class="verb">pdflatex</span>. Normally,
+            <span class="verb">pdflatex</span> cannot handle
+            <span class="verb">.eps</span> files, but the
+            <span class="verb">.mps</span> files produced by MetaPost have such
+            a simple and special structure that this is possible. The
+            <span class="verb">graphics</span> package implements some filters
             to convert such PostScript output to
             <span class="pgf-name"><span class="textsc">pdf</span></span>
             on-the-fly. For this to work, the file should end
-            <span class="texttt">.mps</span> instead of
-            <span class="texttt">.eps</span>. The following command can be used
-            to make the <span class="texttt">graphics</span> package just
-            <em>assume</em> the extension <span class="texttt">.mps</span> for
-            any file it knows nothing about (like files ending with
-            <span class="texttt">.1</span>, which is what MetaPost loves to
+            <span class="verb">.mps</span> instead of
+            <span class="verb">.eps</span>. The following command can be used to
+            make the <span class="verb">graphics</span> package just
+            <em>assume</em> the extension <span class="verb">.mps</span> for any
+            file it knows nothing about (like files ending with
+            <span class="verb">.1</span>, which is what MetaPost loves to
             produce):
           </p>
           <pre class="verbatim">
@@ -524,8 +527,8 @@
           >
           <p>
             This special feature currently only works with the
-            <span class="texttt">graphics</span> package, not with
-            <span class="texttt">pgf</span>.
+            <span class="verb">graphics</span> package, not with
+            <span class="verb">pgf</span>.
           </p>
           <!--
 ...... subsection Including Graphic Files Ending .mmp ......
@@ -538,33 +541,33 @@
           </h5>
           <a id="beameruserguide-autopage-408"></a>
           <p>
-            The format <span class="texttt">.mmp</span> (Multi-MetaPost) is
+            The format <span class="verb">.mmp</span> (Multi-MetaPost) is
             actually not a format that can be included directly in a
             <span class="latexlogofont"
               ><span class="latexlogo"
                 >T<span class="latexlogosub">e</span>X</span
               ></span
-            >-file. Rather, like a <span class="texttt">.mp</span> file, it
-            first has to be converted using the MetaPost program. The crucial
-            difference between <span class="texttt">.mp</span> and
-            <span class="texttt">.mmp</span> is that in the latter multiple
-            graphics can reside in a single
-            <span class="texttt">.mmp</span> file (actually, multiple graphics
-            can also reside in a <span class="texttt">.mp</span> file, but by
-            convention such a file is called <span class="texttt">.mmp</span>).
-            When running MetaPost on a <span class="texttt">.mmp</span> file, it
-            will create not a single encapsulated PostScript file, but several,
-            ending <span class="texttt">.0</span>,
-            <span class="texttt">.1</span>, <span class="texttt">.2</span>, and
-            so on. The idea is that <span class="texttt">.0</span> might contain
-            a main graphic and the following pictures contain overlay material
-            that should be incrementally added to this graphic.
+            >-file. Rather, like a <span class="verb">.mp</span> file, it first
+            has to be converted using the MetaPost program. The crucial
+            difference between <span class="verb">.mp</span> and
+            <span class="verb">.mmp</span> is that in the latter multiple
+            graphics can reside in a single <span class="verb">.mmp</span> file
+            (actually, multiple graphics can also reside in a
+            <span class="verb">.mp</span> file, but by convention such a file is
+            called <span class="verb">.mmp</span>). When running MetaPost on a
+            <span class="verb">.mmp</span> file, it will create not a single
+            encapsulated PostScript file, but several, ending
+            <span class="verb">.0</span>, <span class="verb">.1</span>,
+            <span class="verb">.2</span>, and so on. The idea is that
+            <span class="verb">.0</span> might contain a main graphic and the
+            following pictures contain overlay material that should be
+            incrementally added to this graphic.
           </p>
           <p>
             To include the series of resulting files, you can use the command
-            <span class="texttt">\multiinclude</span> from the
-            <span class="texttt">mpmulti</span> or from the
-            <span class="texttt">xmpmulti</span> package. How this program works
+            <span class="verb">\multiinclude</span> from the
+            <span class="verb">mpmulti</span> or from the
+            <span class="verb">xmpmulti</span> package. How this program works
             is explained in Section&nbsp;<a
               href="Animations-Sounds-Slide-Transitions.html#section-mpmulti"
               >14.1.3</a
@@ -588,7 +591,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

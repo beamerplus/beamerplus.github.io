@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Workflow For Creating a Beamer Presentation - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -101,7 +101,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -221,12 +221,12 @@
             presentation folders to be listed nicely when you have several of
             them residing in one directory. If you use an extra directory for
             each presentation, you can call your main file
-            <span class="texttt">main.tex</span>.
+            <span class="verb">main.tex</span>.
           </p>
           <p>
-            To create an initial <span class="texttt">main.tex</span> file for
+            To create an initial <span class="verb">main.tex</span> file for
             your talk, copy an existing file from the
-            <span class="texttt">beamer/doc/solutions</span> directory and adapt
+            <span class="verb">beamer/doc/solutions</span> directory and adapt
             it to your needs. A list of possible
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             solutions that contain templates for presentation
@@ -257,8 +257,8 @@
           <a id="beameruserguide-autopage-98"></a>
           <p>
             The next step is to fill the presentation file with
-            <span class="texttt">\section</span> and
-            <span class="texttt">\subsection</span> to create a preliminary
+            <span class="verb">\section</span> and
+            <span class="verb">\subsection</span> to create a preliminary
             outline. You&rsquo;ll find some hints on how to create a good
             outline in Section&nbsp;<a
               href="Guidelines-Creating-Presentations.html#section-structure-guidelines"
@@ -266,8 +266,8 @@
             >.
           </p>
           <p>
-            Put <span class="texttt">\section</span> and
-            <span class="texttt">\subsection</span> commands into the (more or
+            Put <span class="verb">\section</span> and
+            <span class="verb">\subsection</span> commands into the (more or
             less empty) main file. Do not create any frames until you have a
             first working version of a possible table of contents. The file
             might look like this:
@@ -317,9 +317,9 @@
             The empty frame at the end (which should be deleted later) ensures
             that the sections and subsections are actually part of the table of
             contents. This frame is necessary since a
-            <span class="texttt">\section</span> or
-            <span class="texttt">\subsection</span>
-            command following the last page of a document has no effect.
+            <span class="verb">\section</span> or
+            <span class="verb">\subsection</span> command following the last
+            page of a document has no effect.
           </p>
           <!--
 ...... subsection Step Three: Creating a PDF or PostScript File ......
@@ -358,9 +358,9 @@
             </p>
           </div>
           <p>
-            To create a <span class="texttt">PDF</span> version of this file,
-            run the program <span class="texttt">pdflatex</span> on
-            <span class="texttt">main.tex</span> at least twice. You need to run
+            To create a <span class="verb">PDF</span> version of this file, run
+            the program <span class="verb">pdflatex</span> on
+            <span class="verb">main.tex</span> at least twice. You need to run
             it twice, so that
             <span class="latexlogofont"
               ><span class="latexlogo"
@@ -379,16 +379,14 @@
 </pre
           >
           <p>
-            Alternatively, you can use <span class="texttt">lualatex</span> or
-            <span class="texttt">xelatex</span> instead of
-            <span class="texttt">pdflatex</span> in above commands.
+            Alternatively, you can use <span class="verb">lualatex</span> or
+            <span class="verb">xelatex</span> instead of
+            <span class="verb">pdflatex</span> in above commands.
           </p>
           <p>
             You can next use a program like the Acrobat Reader,
-            <span class="texttt">xpdf</span>,
-            <span class="texttt">evince</span> or
-            <span class="texttt">okular</span> to view the resulting
-            presentation.
+            <span class="verb">xpdf</span>, <span class="verb">evince</span> or
+            <span class="verb">okular</span> to view the resulting presentation.
           </p>
           <pre class="verbatim">
 &gt; acroread main.pdf
@@ -416,22 +414,22 @@
             <span class="textsc">hyperref</span> package (which is automatically
             loaded by the
             <span class="beamer-name"><span class="textsc">beamer</span></span>
-            class) uses the option <span class="texttt">dvips</span> or some
+            class) uses the option <span class="verb">dvips</span> or some
             compatible option, see the documentation of the
             <span class="textsc">hyperref</span> package for details. Whether
             this is the case depends on the contents of your local
-            <span class="texttt">hyperref.cfg</span> file. You can enforce the
-            usage of this option by passing <span class="texttt">dvips</span> or
-            a compatible option to the
+            <span class="verb">hyperref.cfg</span> file. You can enforce the
+            usage of this option by passing <span class="verb">dvips</span> or a
+            compatible option to the
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             class (write
-            <span class="texttt">\documentclass[dvips]{beamer}</span>), which
-            will pass this option on to the
+            <span class="verb">\documentclass[dvips]{beamer}</span>), which will
+            pass this option on to the
             <span class="textsc">hyperref</span> package.
           </p>
           <p>
-            You can then run <span class="texttt">latex</span> twice, followed
-            by <span class="texttt">dvips</span>.
+            You can then run <span class="verb">latex</span> twice, followed by
+            <span class="verb">dvips</span>.
           </p>
           <pre class="verbatim">
 &gt; latex main.tex
@@ -442,8 +440,8 @@
 </pre
           >
           <p>
-            The option (<span class="texttt">-P pdf</span>) tells
-            <span class="texttt">dvips</span> to use Type&nbsp;1 outline fonts
+            The option (<span class="verb">-P pdf</span>) tells
+            <span class="verb">dvips</span> to use Type&nbsp;1 outline fonts
             instead of the usual Type&nbsp;3 bitmap fonts. You may wish to omit
             this option if there is a problem with it.
           </p>
@@ -471,11 +469,11 @@
                 >T<span class="latexlogosub">e</span>X</span
               ></span
             >
-            your <span class="texttt">.tex</span> file quickly and have the
+            your <span class="verb">.tex</span> file quickly and have the
             presentation contain only the most important information. This is
             especially true if you have a slow machine. In this case, you can do
             several things to speed up the compilation. First, you can use the
-            <span class="texttt">draft</span> class option.
+            <span class="verb">draft</span> class option.
           </p>
           <div class="classoption">
             <div class="classoption-headline">
@@ -484,8 +482,8 @@
             <p>
               Causes the headlines, footlines, and sidebars to be replaced by
               gray rectangles (their sizes are still computed, though). Many
-              other packages, including <span class="texttt">pgf</span> and
-              <span class="texttt">hyperref</span>, also &ldquo;speed up&rdquo;
+              other packages, including <span class="verb">pgf</span> and
+              <span class="verb">hyperref</span>, also &ldquo;speed up&rdquo;
               when this option is given.
             </p>
           </div>
@@ -502,13 +500,13 @@
             </div>
             <p>
               This command behaves a little bit like the
-              <span class="texttt">\includeonly</span> command: Only the frames
+              <span class="verb">\includeonly</span> command: Only the frames
               mentioned in the list are included. All other frames are
               suppressed. Nevertheless, the section and subsection commands are
               still executed, so that you still have the correct navigation
               bars. By labeling the current frame as, say,
-              <span class="texttt">current</span> and then saying
-              <span class="texttt">\includeonlyframes{current}</span>, you can
+              <span class="verb">current</span> and then saying
+              <span class="verb">\includeonlyframes{current}</span>, you can
               work on a single frame quickly.
             </p>
             <p>
@@ -519,14 +517,13 @@
               >
               is a comma-separated list (without spaces) of the names of frames
               that have been labeled. To label a frame, you must pass the option
-              <span class="texttt">label=</span
+              <span class="verb">label=</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>name</i
                 ><span class="angle">&rangle;</span></span
               >
-              to the <span class="texttt">\frame</span> command or
-              <span class="texttt">frame</span>
-              environment.
+              to the <span class="verb">\frame</span> command or
+              <span class="verb">frame</span> environment.
             </p>
             <p>
               <i>Example: </i>
@@ -563,7 +560,7 @@ This frame will not be included.
           <p>
             Once the table of contents looks satisfactory, start creating frames
             for your presentation by adding
-            <span class="texttt">frame</span> environments. You&rsquo;ll find
+            <span class="verb">frame</span> environments. You&rsquo;ll find
             guidelines on what to put on a frame in Section&nbsp;<a
               href="Guidelines-Creating-Presentations.html#section-frame-guidelines"
               >5.1.3</a
@@ -616,7 +613,7 @@ This frame will not be included.
           <p>
             Once your talk is fixed, you can create a handout, if this seems
             appropriate. For this, you can use the class option
-            <span class="texttt">handout</span> as explained in Section&nbsp;<a
+            <span class="verb">handout</span> as explained in Section&nbsp;<a
               href="Creating-Handouts-Lecture-Notes.html#handout"
               >21.1</a
             >. Typically, you might wish to put several handout slides on one
@@ -631,8 +628,8 @@ This frame will not be included.
               ></span
             >
             text typeset using, for example, the document class
-            <span class="texttt">article</span> or perhaps
-            <span class="texttt">llncs</span> or a similar document class. The
+            <span class="verb">article</span> or perhaps
+            <span class="verb">llncs</span> or a similar document class. The
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             class offers facilities to have this version coexist with your
             presentation version in one file and to share code. Also, you can
@@ -656,27 +653,27 @@ This frame will not be included.
           <a id="beameruserguide-autopage-113"></a>
 
           <p>
-            The easiest way to print a presentation is to user the Acrobat
-            Reader with the option &ldquo;expand small pages to paper
-            size&rdquo; form the printer dialog enabled. This is necessary,
-            because slides are by default only 128mm by 96mm large.
+            The easiest way to print a presentation is to use Acrobat Reader
+            with the option &ldquo;expand small pages to paper size&rdquo; form
+            the printer dialog enabled. This is necessary, because slides are by
+            default only 128mm by 96mm large.
           </p>
           <p>
             For the PostScript version and for printing multiple slides on a
             single page this simple approach does not work. In such cases you
-            can use the <span class="texttt">pgfpages</span> package, which
-            works directly with <span class="texttt">pdflatex</span>,
-            <span class="texttt">lualatex</span>,
-            <span class="texttt">xelatex</span> and
-            <span class="texttt">latex</span> plus
-            <span class="texttt">dvips</span>. Note however
+            can use the <span class="verb">pgfpages</span> package, which works
+            directly with <span class="verb">pdflatex</span>,
+            <span class="verb">lualatex</span>,
+            <span class="verb">xelatex</span> and
+            <span class="verb">latex</span> plus
+            <span class="verb">dvips</span>. Note however
             <em>that this package destroys hyperlinks</em>. This is due to
             fundamental flaws in the
             <span class="pgf-name"><span class="textsc">pdf</span></span
             >-specification and it is not likely to change.
           </p>
           <p>
-            The <span class="texttt">pgfpages</span> can do all sorts of tricks
+            The <span class="verb">pgfpages</span> can do all sorts of tricks
             with pages. The most important one for printing
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             slides is the following command:
@@ -690,10 +687,10 @@ This frame will not be included.
             This says &ldquo;Resize all pages to landscape A4 pages, no matter
             what their original size was, but shrink the pages by 5mm, so that
             there is a bit of a border around everything.&rdquo; Naturally,
-            instead of <span class="texttt">a4paper</span> you can also use
-            <span class="texttt">letterpaper</span> or any of the other standard
+            instead of <span class="verb">a4paper</span> you can also use
+            <span class="verb">letterpaper</span> or any of the other standard
             paper sizes. For further options and details see the documentation
-            of <span class="texttt">pgfpages</span>.
+            of <span class="verb">pgfpages</span>.
           </p>
           <p>
             The second thing you might wish to do is to put several slides on a
@@ -711,12 +708,12 @@ This frame will not be included.
             landscape mode.
           </p>
           <p>
-            Instead of <span class="texttt">2 on 1</span> you can also use
-            <span class="texttt">4 on 1</span>, but then with
-            <span class="texttt">landscape</span> once more, and also
-            <span class="texttt">8 on 1</span> and even
-            <span class="texttt">16 on 1</span> to get a grand (though
-            unreadable) overview.
+            Instead of <span class="verb">2 on 1</span> you can also use
+            <span class="verb">4 on 1</span>, but then with
+            <span class="verb">landscape</span> once more, and also
+            <span class="verb">8 on 1</span> and even
+            <span class="verb">16 on 1</span> to get a grand (though unreadable)
+            overview.
           </p>
           <p>
             If you put several slides on one page and if these slides normally
@@ -752,7 +749,7 @@ This frame will not be included.
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

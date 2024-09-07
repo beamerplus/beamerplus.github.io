@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Inner Themes, Outer Themes, and Templates - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -71,7 +71,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -174,39 +174,52 @@
             An inner theme installs templates that dictate how the following
             elements are typeset:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
-              <p>&bull; Title and part pages.</p>
+              <p>
+                <span class="listmarker">&bull;</span> Title and part pages.
+              </p>
             </li>
             <li>
-              <p>&bull; Itemize environments.</p>
+              <p>
+                <span class="listmarker">&bull;</span> Itemize environments.
+              </p>
             </li>
             <li>
-              <p>&bull; Enumerate environments.</p>
+              <p>
+                <span class="listmarker">&bull;</span> Enumerate environments.
+              </p>
             </li>
             <li>
-              <p>&bull; Description environments.</p>
+              <p>
+                <span class="listmarker">&bull;</span> Description environments.
+              </p>
             </li>
             <li>
-              <p>&bull; Block environments.</p>
+              <p><span class="listmarker">&bull;</span> Block environments.</p>
             </li>
             <li>
-              <p>&bull; Theorem and proof environments.</p>
+              <p>
+                <span class="listmarker">&bull;</span> Theorem and proof
+                environments.
+              </p>
             </li>
             <li>
-              <p>&bull; Figures and tables.</p>
+              <p><span class="listmarker">&bull;</span> Figures and tables.</p>
             </li>
             <li>
-              <p>&bull; Footnotes.</p>
+              <p><span class="listmarker">&bull;</span> Footnotes.</p>
             </li>
             <li>
-              <p>&bull; Bibliography entries.</p>
+              <p>
+                <span class="listmarker">&bull;</span> Bibliography entries.
+              </p>
             </li>
           </ul>
           <p>
             In the following examples, the color themes
-            <span class="texttt">seahorse</span> and
-            <span class="texttt">rose</span> are used to show where and how
+            <span class="verb">seahorse</span> and
+            <span class="verb">rose</span> are used to show where and how
             background colors are honored. Furthermore, background colors have
             been specified for all elements that honor them in the default
             theme. In the default color theme, all of the large rectangular
@@ -238,7 +251,7 @@
             <p>
               The default element theme is quite sober. The only extravagance is
               the fact that a little triangle is used in
-              <span class="texttt">itemize</span> environments instead of the
+              <span class="verb">itemize</span> environments instead of the
               usual dot.
             </p>
             <p>
@@ -248,17 +261,17 @@
               The background specifications are currently honored for the
               following elements:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull; Title, author, institute, and date fields in the title
-                  page.
+                  <span class="listmarker">&bull;</span> Title, author,
+                  institute, and date fields in the title page.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull; Block environments, both for the title and for the
-                  body.
+                  <span class="listmarker">&bull;</span> Block environments,
+                  both for the title and for the body.
                 </p>
               </li>
             </ul>
@@ -288,8 +301,8 @@
               </p>
             </div>
             <p>
-              In this theme, <span class="texttt">itemize</span> and
-              <span class="texttt">enumerate</span> items start with a small
+              In this theme, <span class="verb">itemize</span> and
+              <span class="verb">enumerate</span> items start with a small
               circle. Likewise, entries in the table of contents start with
               circles.
             </p>
@@ -318,8 +331,8 @@
               </p>
             </div>
             <p>
-              In this theme, <span class="texttt">itemize</span> and
-              <span class="texttt">enumerate</span> items and table of contents
+              In this theme, <span class="verb">itemize</span> and
+              <span class="verb">enumerate</span> items and table of contents
               entries start with small rectangles.
             </p>
           </div>
@@ -353,8 +366,8 @@
               </p>
             </div>
             <p>
-              In this theme, <span class="texttt">itemize</span> and
-              <span class="texttt">enumerate</span> items and table of contents
+              In this theme, <span class="verb">itemize</span> and
+              <span class="verb">enumerate</span> items and table of contents
               entries start with small balls. If a background is specified for
               blocks, then the corners of the background rectangles will be
               rounded off. The following
@@ -364,13 +377,11 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"
-                    ><span class="texttt">shadow</span></span
-                  >
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">shadow</span></span>
                   adds a shadow to all blocks.
                 </p>
               </li>
@@ -431,10 +442,10 @@
             </p>
             <p>
               The indicators for the title page can be adjusted by redefining
-              <span class="texttt">\inserttitleindicator</span>,
-              <span class="texttt">\insertauthorindicator</span>,
-              <span class="texttt">\insertinstituteindicator</span> and
-              <span class="texttt">\insertdateindicator</span>.
+              <span class="verb">\inserttitleindicator</span>,
+              <span class="verb">\insertauthorindicator</span>,
+              <span class="verb">\insertinstituteindicator</span> and
+              <span class="verb">\insertdateindicator</span>.
             </p>
           </div>
           <!--
@@ -454,30 +465,32 @@
             look like. Typically, an outer theme specifies how the following
             elements are rendered:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
-              <p>&bull; The head- and footline.</p>
+              <p>
+                <span class="listmarker">&bull;</span> The head- and footline.
+              </p>
             </li>
             <li>
-              <p>&bull; The sidebars.</p>
+              <p><span class="listmarker">&bull;</span> The sidebars.</p>
             </li>
             <li>
-              <p>&bull; The logo.</p>
+              <p><span class="listmarker">&bull;</span> The logo.</p>
             </li>
             <li>
-              <p>&bull; The frame title.</p>
+              <p><span class="listmarker">&bull;</span> The frame title.</p>
             </li>
           </ul>
           <p>
             An outer theme will not specify how things like
-            <span class="texttt">itemize</span> environments should be
+            <span class="verb">itemize</span> environments should be
             rendered&mdash;that is the job of an inner theme.
           </p>
           <p>
             In the following examples the color theme
-            <span class="texttt">seahorse</span> is used. Since the default
-            color theme leaves most backgrounds empty, most of the outer themes
-            look too unstructured with the default color theme.
+            <span class="verb">seahorse</span> is used. Since the default color
+            theme leaves most backgrounds empty, most of the outer themes look
+            too unstructured with the default color theme.
           </p>
           <div class="outertheme">
             <p>
@@ -543,9 +556,9 @@
             </p>
             <p>
               The colors used in the headline and footline are drawn from
-              <span class="texttt">palette primary</span>,
-              <span class="texttt">palette secondary</span>, and
-              <span class="texttt">palette tertiary</span> (see Section&nbsp;<a
+              <span class="verb">palette primary</span>,
+              <span class="verb">palette secondary</span>, and
+              <span class="verb">palette tertiary</span> (see Section&nbsp;<a
                 href="Colors.html#section-colors"
                 >17</a
               >
@@ -588,15 +601,15 @@
               that represent the different frames in the section. The frames are
               arranged subsection-wise, that is, there is a line of frames for
               each subsection. If the class option
-              <span class="texttt">compress</span> is given, the frames will
+              <span class="verb">compress</span> is given, the frames will
               instead be arranged in a single row for each section. The
               navigation bars draws its color from
-              <span class="texttt">section in head/foot</span>.
+              <span class="verb">section in head/foot</span>.
             </p>
             <p>
               Below the navigation bar, a line is put showing the title of the
               current subsection. The color is drawn from
-              <span class="texttt">subsection in head/foot</span>.
+              <span class="verb">subsection in head/foot</span>.
             </p>
             <p>
               At the bottom, two lines are put that contain information such as
@@ -608,25 +621,25 @@
               >
               given. The colors are drawn from the appropriate
               <span class="beamer-name"><span class="textsc">beamer</span></span
-              >-colors like <span class="texttt">author in head/foot</span>.
+              >-colors like <span class="verb">author in head/foot</span>.
             </p>
             <p>
               At the top and bottom of both the head- and footline and between
               the navigation bar and the subsection name, separation lines are
               drawn <em>if</em> the background color of
-              <span class="texttt">separation line</span> is set. This
-              separation line will have a height of 3pt. You can get even more
-              fine-grained control over the colors of the separation lines by
-              setting appropriate colors like
-              <span class="texttt">lower separation line head</span>.
+              <span class="verb">separation line</span> is set. This separation
+              line will have a height of 3pt. You can get even more fine-grained
+              control over the colors of the separation lines by setting
+              appropriate colors like
+              <span class="verb">lower separation line head</span>.
             </p>
             <p>
               <em>Note:</em> Make sure the document is organized in the
               section-subsection-frame structure when using
-              <span class="texttt">miniframes</span> and
-              <span class="texttt">smoothbars</span> theme. Any frame without a
-              <span class="texttt">\section</span> or
-              <span class="texttt">\subsection</span> will bring unpredictable
+              <span class="verb">miniframes</span> and
+              <span class="verb">smoothbars</span> theme. Any frame without a
+              <span class="verb">\section</span> or
+              <span class="verb">\subsection</span> will bring unpredictable
               effects in the navigation bar.
             </p>
             <p>
@@ -637,21 +650,21 @@
               >
               can be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">footline=empty</span></span
+                    ><span class="verb">footline=empty</span></span
                   >
                   suppresses the footline (default).
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">footline=authorinstitute</span></span
+                    ><span class="verb">footline=authorinstitute</span></span
                   >
                   shows the author&rsquo;s name and the institute in the
                   footline.
@@ -659,27 +672,27 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">footline=authortitle</span></span
+                    ><span class="verb">footline=authortitle</span></span
                   >
                   shows the author&rsquo;s name and the title in the footline.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">footline=institutetitle</span></span
+                    ><span class="verb">footline=institutetitle</span></span
                   >
                   shows the institute and the title in the footline.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt"
+                    ><span class="verb"
                       >footline=authorinstitutetitle</span
                     ></span
                   >
@@ -689,9 +702,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">subsection=</span
+                    ><span class="verb">subsection=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>true or false</i
                       ><span class="angle">&rangle;</span></span
@@ -700,7 +713,7 @@
                   shows or suppresses line showing the subsection in the
                   headline. It is shown by default. If the document does not use
                   subsections, this option should be set
-                  <span class="texttt">false</span>.
+                  <span class="verb">false</span>.
                 </p>
               </li>
             </ul>
@@ -736,15 +749,14 @@
             </div>
             <p>
               This theme behaves very much like the
-              <span class="texttt">miniframes</span> theme, at least with
-              respect to the headline. The only differences are that smooth
-              transitions are installed between the background colors of the
-              navigation bar, the (optional) bar for the subsection name, and
-              the background of the frame title. No footline is created. You can
-              get the footlines of the
-              <span class="texttt">miniframes</span> theme by first loading that
-              theme and then loading the
-              <span class="texttt">smoothbars</span> theme.
+              <span class="verb">miniframes</span> theme, at least with respect
+              to the headline. The only differences are that smooth transitions
+              are installed between the background colors of the navigation bar,
+              the (optional) bar for the subsection name, and the background of
+              the frame title. No footline is created. You can get the footlines
+              of the <span class="verb">miniframes</span> theme by first loading
+              that theme and then loading the
+              <span class="verb">smoothbars</span> theme.
             </p>
             <p>
               The following
@@ -754,12 +766,12 @@
               >
               can be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">subsection=</span
+                    ><span class="verb">subsection=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>true or false</i
                       ><span class="angle">&rangle;</span></span
@@ -824,17 +836,17 @@
             </p>
             <p>
               The background color of the sidebar is taken from
-              <span class="texttt">sidebar</span>, the background color of the
-              frame title from <span class="texttt">frametitle</span>, and the
+              <span class="verb">sidebar</span>, the background color of the
+              frame title from <span class="verb">frametitle</span>, and the
               background color of the logo corner from
-              <span class="texttt">logo</span>.
+              <span class="verb">logo</span>.
             </p>
             <p>
               The colors of the entries in the table of contents are drawn from
               the
               <span class="beamer-name"><span class="textsc">beamer</span></span
-              >-color <span class="texttt">section in sidebar</span> and
-              <span class="texttt">section in sidebar current</span> as well as
+              >-color <span class="verb">section in sidebar</span> and
+              <span class="verb">section in sidebar current</span> as well as
               the corresponding
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-colors for subsections. If an entry does not fit on a single
@@ -848,12 +860,12 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">height=</span
+                    ><span class="verb">height=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>dimension</i
                       ><span class="angle">&rangle;</span></span
@@ -869,9 +881,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">hideothersubsections</span></span
+                    ><span class="verb">hideothersubsections</span></span
                   >
                   causes all subsections except those of the current section to
                   be suppressed in the table of contents. This is useful if you
@@ -880,9 +892,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">hideallsubsections</span></span
+                    ><span class="verb">hideallsubsections</span></span
                   >
                   causes all subsections to be suppressed in the table of
                   contents.
@@ -890,8 +902,8 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">left</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">left</span></span>
                   puts the sidebar on the left side. Note that in a
                   left-to-right reading culture this is the side people look
                   first. Note also that this table of contents is usually
@@ -902,16 +914,16 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">right</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">right</span></span>
                   puts the sidebar of the right side.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">width=</span
+                    ><span class="verb">width=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>dimension</i
                       ><span class="angle">&rangle;</span></span
@@ -951,7 +963,7 @@
               This theme installs a headline in which, on the left, the sections
               of the talk are shown and, on the right, the subsections of the
               current section. If the class option
-              <span class="texttt">compress</span> has been given, the sections
+              <span class="verb">compress</span> has been given, the sections
               and subsections will be put in one line; normally there is one
               line per section or subsection.
             </p>
@@ -961,8 +973,8 @@
             </p>
             <p>
               The colors are taken from
-              <span class="texttt">palette primary</span> and
-              <span class="texttt">palette quaternary</span>.
+              <span class="verb">palette primary</span> and
+              <span class="verb">palette quaternary</span>.
             </p>
           </div>
           <div class="outertheme">
@@ -990,7 +1002,7 @@
             </div>
             <p>
               This layout theme extends the
-              <span class="texttt">split</span> theme by putting a horizontal
+              <span class="verb">split</span> theme by putting a horizontal
               shading behind the frame title and adding a little
               &ldquo;shadow&rdquo; at the bottom of the headline.
             </p>
@@ -1028,17 +1040,17 @@
               In this layout, the headline contains three lines that show the
               title of the current talk, the current section in this talk, and
               the current subsection in the section. The colors are drawn from
-              <span class="texttt">title in head/foot</span>,
-              <span class="texttt">section in head/foot</span>, and
-              <span class="texttt">subsection in head/foot</span>.
+              <span class="verb">title in head/foot</span>,
+              <span class="verb">section in head/foot</span>, and
+              <span class="verb">subsection in head/foot</span>.
             </p>
             <p>
               In addition, separation lines of height 3pt are shown above and
               below the three lines <em>if</em> the background of
-              <span class="texttt">separation line</span> is set. More
+              <span class="verb">separation line</span> is set. More
               fine-grained control of the colors of these lines can be gained by
-              setting <span class="texttt">upper separation line head</span> and
-              <span class="texttt">lower separation line head</span>.
+              setting <span class="verb">upper separation line head</span> and
+              <span class="verb">lower separation line head</span>.
             </p>
             <p>
               The following
@@ -1048,11 +1060,11 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">hooks</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">hooks</span></span>
                   causes little &ldquo;hooks&rdquo; to be drawn in front of the
                   section and subsection entries. These are supposed to increase
                   the tree-like appearance.
@@ -1085,8 +1097,8 @@
             </div>
             <p>
               This layout is similar to the
-              <span class="texttt">tree</span> layout. The main difference is
-              that the background colors change smoothly.
+              <span class="verb">tree</span> layout. The main difference is that
+              the background colors change smoothly.
             </p>
           </div>
           <!--
@@ -1123,7 +1135,7 @@
           </p>
           <p>
             A template specifies how an element of a presentation is typeset.
-            For example, the <span class="texttt">frametitle</span> template
+            For example, the <span class="verb">frametitle</span> template
             dictates where the frame title is put, which font is used, and so
             on.
           </p>
@@ -1138,7 +1150,7 @@
             >
             code you would also use when typesetting a single frame title by
             hand. Only, instead of the actual title, you use the command
-            <span class="texttt">\insertframetitle</span>.
+            <span class="verb">\insertframetitle</span>.
           </p>
           <p>
             <i>Example: </i>Suppose we would like to have the frame title
@@ -1186,7 +1198,7 @@
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             will use the code of the frame title template to typeset the frame
             title and it will replace every occurrence of
-            <span class="texttt">\insertframetitle</span> by the current frame
+            <span class="verb">\insertframetitle</span> by the current frame
             title.
           </p>
           <p>
@@ -1198,11 +1210,11 @@
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             will automatically setup the
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >-color <span class="texttt">frametitle</span> when the template
-            <span class="texttt">frametitle</span> is used. Thus, we can remove
-            the <span class="texttt">\color{red}</span> command if we set the
+            >-color <span class="verb">frametitle</span> when the template
+            <span class="verb">frametitle</span> is used. Thus, we can remove
+            the <span class="verb">\color{red}</span> command if we set the
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >-color <span class="texttt">frametitle</span> to red at some point.
+            >-color <span class="verb">frametitle</span> to red at some point.
           </p>
           <pre class="verbatim">
 \setbeamercolor{frametitle}{fg=red}
@@ -1219,9 +1231,9 @@
             Next, we can also make the font &ldquo;themable.&rdquo; Just like
             the color, the
             <span class="beamer-name"><span class="textsc">beamer</span></span
-            >-font <span class="texttt">frametitle</span> is installed before
-            the <span class="texttt">frametitle</span> template is typeset.
-            Thus, we should rewrite the code as follows:
+            >-font <span class="verb">frametitle</span> is installed before the
+            <span class="verb">frametitle</span> template is typeset. Thus, we
+            should rewrite the code as follows:
           </p>
           <pre class="verbatim">
 \setbeamercolor{frametitle}{fg=red}
@@ -1245,7 +1257,7 @@
             </p>
           </div>
           <p>
-            In <span class="texttt">article</span> mode, most of the template
+            In <span class="verb">article</span> mode, most of the template
             mechanism is switched off and has no effect. However, a few
             templates are also available. If this is the case, it is specially
             indicated.
@@ -1254,50 +1266,55 @@
             Here are a few hints that might be helpful when you wish to set a
             template:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Usually, you might wish to copy code from an existing
-                template. The code often takes care of some things that you may
-                not yet have thought about. The default inner and outer themes
-                might be useful starting points. Also, the file
-                <span class="texttt">beamerbaseauxtemplates.sty</span> contains
+                <span class="listmarker">&bull;</span> Usually, you might wish
+                to copy code from an existing template. The code often takes
+                care of some things that you may not yet have thought about. The
+                default inner and outer themes might be useful starting points.
+                Also, the file
+                <span class="verb">beamerbaseauxtemplates.sty</span> contains
                 interesting &ldquo;auxiliary&rdquo; templates.
               </p>
             </li>
             <li>
               <p>
-                &bull; When copying code from another template and when
-                inserting this code in the preamble of your document (not in
-                another style file), you may have to &ldquo;switch on&rdquo; the
-                at-character (<span class="texttt">@</span>). To do so, add the
-                command <span class="texttt">\makeatletter</span> before the
-                <span class="texttt">\setbeamertemplate</span> command and the
-                command <span class="texttt">\makeatother</span> afterward.
+                <span class="listmarker">&bull;</span> When copying code from
+                another template and when inserting this code in the preamble of
+                your document (not in another style file), you may have to
+                &ldquo;switch on&rdquo; the at-character (<span class="verb"
+                  >@</span
+                >). To do so, add the command
+                <span class="verb">\makeatletter</span> before the
+                <span class="verb">\setbeamertemplate</span> command and the
+                command <span class="verb">\makeatother</span> afterward.
               </p>
             </li>
             <li>
               <p>
-                &bull; Most templates having to do with the frame components
-                (headlines, sidebars, etc.) can only be changed in the preamble.
-                Other templates can be changed during the document.
+                <span class="listmarker">&bull;</span> Most templates having to
+                do with the frame components (headlines, sidebars, etc.) can
+                only be changed in the preamble. Other templates can be changed
+                during the document.
               </p>
             </li>
             <li>
               <p>
-                &bull; The height of the headline and footline templates is
-                calculated automatically. This is done by typesetting the
-                templates and then &ldquo;having a look&rdquo; at their heights.
-                This recalculation is done right at the beginning of the
-                document, <em>after</em> all packages have been loaded and even
-                <em>after</em> these have executed their
-                <span class="texttt">\AtBeginDocument</span> initialization.
+                <span class="listmarker">&bull;</span> The height of the
+                headline and footline templates is calculated automatically.
+                This is done by typesetting the templates and then &ldquo;having
+                a look&rdquo; at their heights. This recalculation is done right
+                at the beginning of the document, <em>after</em> all packages
+                have been loaded and even <em>after</em> these have executed
+                their <span class="verb">\AtBeginDocument</span> initialization.
               </p>
             </li>
             <li>
               <p>
-                &bull; Getting the boxes right inside any template is often a
-                bit of a hassle. You may wish to consult the
+                <span class="listmarker">&bull;</span> Getting the boxes right
+                inside any template is often a bit of a hassle. You may wish to
+                consult the
                 <span class="latexlogofont"
                   ><span class="latexlogo"
                     >T<span class="latexlogosub">e</span>X</span
@@ -1305,7 +1322,7 @@
                 >
                 book for the glorious details on &ldquo;Making Boxes.&rdquo; If
                 your headline is simple, you might also try putting everything
-                into a <span class="texttt">pgfpicture</span> environment, which
+                into a <span class="verb">pgfpicture</span> environment, which
                 makes the placement easier.
               </p>
             </li>
@@ -1336,7 +1353,7 @@
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\usebeamertemplate</kbd></span
-                ><span class="opt"><span class="texttt">***</span></span
+                ><span class="opt"><span class="verb">***</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>element name</i
                   ><span class="angle">&rangle;</span></span
@@ -1351,7 +1368,7 @@
               >
               is directly inserted at the current position. This text should
               previously have been specified using the
-              <span class="texttt">\setbeamertemplate</span> command. No text is
+              <span class="verb">\setbeamertemplate</span> command. No text is
               inserted if this command has not been called before.
             </p>
             <p>
@@ -1391,9 +1408,9 @@ Your answer is \usebeamertemplate{my template}.
             <p>
               If you add a second star, nearly the same happens as with only one
               star. However, in addition, the color is used with the command
-              <span class="texttt">\setbeamercolor*</span>. This causes the
-              colors to be reset to the normal text color if no special
-              foreground or background is specified by the
+              <span class="verb">\setbeamercolor*</span>. This causes the colors
+              to be reset to the normal text color if no special foreground or
+              background is specified by the
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-color
               <span class="meta"
@@ -1405,9 +1422,9 @@ Your answer is \usebeamertemplate{my template}.
             </p>
             <p>
               Finally, adding a third star will also cause a star to be added to
-              the <span class="texttt">\setbeamerfont*</span> command. This
-              causes the font used for the template also to be reset to normal
-              text, unless the
+              the <span class="verb">\setbeamerfont*</span> command. This causes
+              the font used for the template also to be reset to normal text,
+              unless the
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >-font
               <span class="meta"
@@ -1462,15 +1479,15 @@ Your answer is \usebeamertemplate{my template}.
             </div>
             <p>
               This command does the same as
-              <span class="texttt">\usebeamertemplate</span>{<span class="meta"
+              <span class="verb">\usebeamertemplate</span>{<span class="meta"
                 ><span class="angle">&langle;</span><i>beamer template name</i
                 ><span class="angle">&rangle;</span></span
               >}. The difference is that this command performs a direct
               expansion and does not scan for a star. This is important inside,
-              for example, an <span class="texttt">\edef</span>. If you
+              for example, an <span class="verb">\edef</span>. If you
               don&rsquo;t know the difference between
-              <span class="texttt">\def</span> and
-              <span class="texttt">\edef</span>, you won&rsquo;t need this
+              <span class="verb">\def</span> and
+              <span class="verb">\edef</span>, you won&rsquo;t need this
               command.
             </p>
           </div>
@@ -1525,8 +1542,8 @@ Your answer is \usebeamertemplate{my template}.
                 ><span class="angle">&rangle;</span></span
               >
               is setup to be this text. Upon later invocation of the template by
-              the command <span class="texttt">\usebeamertemplate</span> this
-              text is used.
+              the command <span class="verb">\usebeamertemplate</span> this text
+              is used.
             </p>
             <p>
               <i>Example: </i>
@@ -1544,7 +1561,7 @@ Your answer is \usebeamertemplate*{answer}.
                 ><span class="angle">&rangle;</span></span
               >, this command behaves slightly differently. In this case,
               someone has used the command
-              <span class="texttt">\defbeamertemplate</span> to predefine a
+              <span class="verb">\defbeamertemplate</span> to predefine a
               template for you. By giving the name of this predefined template
               as the optional parameter
               <span class="meta"
@@ -1559,12 +1576,12 @@ Your answer is \usebeamertemplate*{answer}.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\setbeamertemplate{bibliography item}[book]</span
               >
               causes the bibliography items to become little book icons. This
               command causes a subsequent call of
-              <span class="texttt">\usebeamertemplate{bibliography item}</span>
+              <span class="verb">\usebeamertemplate{bibliography item}</span>
               to insert the predefined code for inserting a book.
             </p>
             <p>
@@ -1581,8 +1598,8 @@ Your answer is \usebeamertemplate*{answer}.
                 ><span class="angle">&langle;</span><i>predefined option</i
                 ><span class="angle">&rangle;</span></span
               >
-              <span class="texttt">grid</span> for the template
-              <span class="texttt">background</span> takes an optional argument:
+              <span class="verb">grid</span> for the template
+              <span class="verb">background</span> takes an optional argument:
             </p>
             <pre class="verbatim">
 \setbeamertemplate{background}[grid][step=1cm]
@@ -1603,14 +1620,14 @@ Your answer is \usebeamertemplate*{answer}.
                 ><span class="angle">&rangle;</span></span
               >
               can be used together with its arguments, but the
-              <span class="texttt">\setbeamertemplate{xxxx}</span> is omitted.
+              <span class="verb">\setbeamertemplate{xxxx}</span> is omitted.
               Thus, the above example would be documented in the description of
-              the <span class="texttt">background</span> element like this:
+              the <span class="verb">background</span> element like this:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="itemoption"
                     ><kbd>[<span class="declare">grid</span>]</kbd
                     ><span class="opt"
@@ -1684,7 +1701,7 @@ Your answer is \usebeamertemplate*{answer}.
                     ><span class="angle">&langle;</span><i>mode specification</i
                     ><span class="angle">&rangle;</span></span
                   >&gt;</span
-                ><span class="opt"><span class="texttt">*</span></span
+                ><span class="opt"><span class="verb">*</span></span
                 >{<span class="meta"
                   ><span class="angle">&langle;</span><i>element name</i
                   ><span class="angle">&rangle;</span></span
@@ -1710,7 +1727,7 @@ Your answer is \usebeamertemplate*{answer}.
                   ><span class="angle">&rangle;</span></span
                 >}<br />
                 <span class="opt"
-                  ><span class="texttt">[action]</span>{<span class="meta"
+                  ><span class="verb">[action]</span>{<span class="meta"
                     ><span class="angle">&langle;</span><i>action command</i
                     ><span class="angle">&rangle;</span></span
                   >}</span
@@ -1725,11 +1742,11 @@ Your answer is \usebeamertemplate*{answer}.
                 ><span class="angle">&rangle;</span></span
               >. Once this command has been used, users can access the
               predefined template using the
-              <span class="texttt">\setbeamertemplate</span> command.
+              <span class="verb">\setbeamertemplate</span> command.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\defbeamertemplate{itemize item}{double
                 arrow}{$\Rightarrow$}</span
               >
@@ -1754,7 +1771,7 @@ Your answer is \usebeamertemplate*{answer}.
                 ><span class="angle">&rangle;</span></span
               >
               of the predefined option the same way one does for the
-              <span class="texttt">\newcommand</span> command:
+              <span class="verb">\newcommand</span> command:
             </p>
             <pre class="verbatim">
 \defbeamertemplate{itemize item}{square}[1]{\hrule width #1 height #1}
@@ -1765,8 +1782,8 @@ Your answer is \usebeamertemplate*{answer}.
 </pre
             >
             <p>
-              As for the <span class="texttt">\newcommand</span> command, you
-              can also specify a
+              As for the <span class="verb">\newcommand</span> command, you can
+              also specify a
               <span class="meta"
                 ><span class="angle">&langle;</span
                 ><i>default optional argument</i
@@ -1788,10 +1805,9 @@ Your answer is \usebeamertemplate*{answer}.
             <p>
               The starred version of the command installs the predefined
               template option, but then immediately calls
-              <span class="texttt">\setbeamertemplate</span> for this option.
-              This is useful for the default templates. If there are any
-              arguments necessary, these are set to
-              <span class="texttt">\relax</span>.
+              <span class="verb">\setbeamertemplate</span> for this option. This
+              is useful for the default templates. If there are any arguments
+              necessary, these are set to <span class="verb">\relax</span>.
             </p>
             <p>
               In certain cases, if a predefined template option is chosen, you
@@ -1804,17 +1820,17 @@ Your answer is \usebeamertemplate*{answer}.
                 ><span class="angle">&langle;</span><i>action</i
                 ><span class="angle">&rangle;</span></span
               >
-              following the keyword <span class="texttt">[action]</span>. Thus,
+              following the keyword <span class="verb">[action]</span>. Thus,
               after the normal use of the
-              <span class="texttt">\defbeamertemplate</span> you add the text
-              <span class="texttt">[action]</span> and then any commands that
+              <span class="verb">\defbeamertemplate</span> you add the text
+              <span class="verb">[action]</span> and then any commands that
               should be executed once when the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>predefined option</i
                 ><span class="angle">&rangle;</span></span
               >
               is selected by the
-              <span class="texttt">\setbeamertemplate</span> command.
+              <span class="verb">\setbeamertemplate</span> command.
             </p>
             <p>
               <i>Example: </i>
@@ -1844,24 +1860,24 @@ Your answer is \usebeamertemplate*{answer}.
             </div>
             <p>
               Normally, this command has no effect in
-              <span class="texttt">article</span> mode. However, if a
+              <span class="verb">article</span> mode. However, if a
               <span class="meta"
                 ><span class="angle">&langle;</span><i>mode specification</i
                 ><span class="angle">&rangle;</span></span
               >
               is given, this command is applied for the specified modes. Thus,
               this command behaves like the
-              <span class="texttt">\\</span> command, which also gets the
-              implicit mode specification
+              <span class="verb">\\</span> command, which also gets the implicit
+              mode specification
               <span class="texttt">&lt;presentation&gt;</span> if no other
               specification is given.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\defbeamertemplate{my template}{default}{something}</span
               >
-              has no effect in <span class="texttt">article</span> mode.
+              has no effect in <span class="verb">article</span> mode.
             </p>
             <p>
               <i>Example: </i
@@ -1869,8 +1885,8 @@ Your answer is \usebeamertemplate*{answer}.
                 >\defbeamertemplate&lt;article&gt;{my
                 template}{default}{something}</span
               >
-              has no effect in <span class="texttt">presentation</span> modes,
-              but has an effect in <span class="texttt">article</span> mode.
+              has no effect in <span class="verb">presentation</span> modes, but
+              has an effect in <span class="verb">article</span> mode.
             </p>
             <p>
               <i>Example: </i
@@ -1911,14 +1927,13 @@ Your answer is \usebeamertemplate*{answer}.
             colors and fonts. This is due to the fact the templates for one
             element seldom make sense for another. However, sometimes certain
             elements &ldquo;behave similarly&rdquo; and one would like a
-            <span class="texttt">\setbeamertemplate</span> to apply to a whole
-            set of templates via inheritance. For example, one might want that
-            <span class="texttt">\setbeamertemplate{items}[circle]</span> causes
-            all items to use the <span class="texttt">circle</span> option,
-            though the effects for the
-            <span class="texttt">itemize item</span> as opposed to the
-            <span class="texttt">itemize subsubitem</span> as opposed to
-            <span class="texttt">enumerate item</span> must be slightly
+            <span class="verb">\setbeamertemplate</span> to apply to a whole set
+            of templates via inheritance. For example, one might want that
+            <span class="verb">\setbeamertemplate{items}[circle]</span> causes
+            all items to use the <span class="verb">circle</span> option, though
+            the effects for the <span class="verb">itemize item</span> as
+            opposed to the <span class="verb">itemize subsubitem</span> as
+            opposed to <span class="verb">enumerate item</span> must be slightly
             different.
           </p>
           <p>
@@ -1968,24 +1983,24 @@ Your answer is \usebeamertemplate*{answer}.
             </div>
             <p>
               The effect of this command is that whenever someone calls
-              <span class="texttt">\setbeamertemplate{</span
+              <span class="verb">\setbeamertemplate{</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>parent template name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">}{</span
+              ><span class="verb">}{</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>args</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">}</span>, the command
-              <span class="texttt">\setbeamertemplate{</span
+              ><span class="verb">}</span>, the command
+              <span class="verb">\setbeamertemplate{</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>child template name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">}{</span
+              ><span class="verb">}{</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>args</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">}</span> is called for each
+              ><span class="verb">}</span> is called for each
               <span class="meta"
                 ><span class="angle">&langle;</span><i>child template name</i
                 ><span class="angle">&rangle;</span></span
@@ -2003,13 +2018,13 @@ Your answer is \usebeamertemplate*{answer}.
                 ><span class="angle">&rangle;</span></span
               >
               come into play if the
-              <span class="texttt">\setbeamertemplate</span> command is called
+              <span class="verb">\setbeamertemplate</span> command is called
               with a predefined option name (not necessarily the same as the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>predefined option name</i
                 ><span class="angle">&rangle;</span></span
               >, we&rsquo;ll come to that). If
-              <span class="texttt">\setbeamertemplate</span> is called with some
+              <span class="verb">\setbeamertemplate</span> is called with some
               predefined option name, the children are called with the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>arguments for children</i
@@ -2056,14 +2071,14 @@ Your answer is \usebeamertemplate*{answer}.
             >
             <p>
               In detail, the following happens: When
-              <span class="texttt">\setbeamertemplate</span> is encountered for
-              a parent template,
+              <span class="verb">\setbeamertemplate</span> is encountered for a
+              parent template,
               <span class="beamer-name"
                 ><span class="textsc">beamer</span></span
               >
               first checks whether a predefined option follows. If not, a single
               argument is read and
-              <span class="texttt">\setbeamertemplate</span> is called for all
+              <span class="verb">\setbeamertemplate</span> is called for all
               children for this template. If there is a predefined template
               option set,
               <span class="beamer-name"
@@ -2073,12 +2088,11 @@ Your answer is \usebeamertemplate*{answer}.
               <span class="meta"
                 ><span class="angle">&langle;</span><i>argument for children</i
                 ><span class="angle">&rangle;</span></span
-              >. It may contain parameters like
-              <span class="texttt">#1</span> or <span class="texttt">#2</span>.
-              These parameters are filled with the arguments that follow the
-              call of <span class="texttt">\setbeamertemplate</span> for the
-              parent template. The number of arguments must be the number given
-              as
+              >. It may contain parameters like <span class="verb">#1</span> or
+              <span class="verb">#2</span>. These parameters are filled with the
+              arguments that follow the call of
+              <span class="verb">\setbeamertemplate</span> for the parent
+              template. The number of arguments must be the number given as
               <span class="meta"
                 ><span class="angle">&langle;</span><i>argument number</i
                 ><span class="angle">&rangle;</span></span
@@ -2090,7 +2104,7 @@ Your answer is \usebeamertemplate*{answer}.
                 ><span class="angle">&rangle;</span></span
               >
               have been computed,
-              <span class="texttt">\setbeamertemplate</span> is called for all
+              <span class="verb">\setbeamertemplate</span> is called for all
               children for the predefined template and with the computed
               arguments.
             </p>
@@ -2109,14 +2123,14 @@ Your answer is \usebeamertemplate*{answer}.
                 ><span class="angle">&langle;</span><i>predefined option name</i
                 ><span class="angle">&rangle;</span></span
               >
-              when calling <span class="texttt">\defbeamertemplateparent</span>.
+              when calling <span class="verb">\defbeamertemplateparent</span>.
               If this optional argument is specified, the parenthood of the
               template applies only to this particular
               <span class="meta"
                 ><span class="angle">&langle;</span><i>predefined option name</i
                 ><span class="angle">&rangle;</span></span
               >. Thus, if someone calls
-              <span class="texttt">\setbeamertemplate</span> for this
+              <span class="verb">\setbeamertemplate</span> for this
               <span class="meta"
                 ><span class="angle">&langle;</span><i>predefined option name</i
                 ><span class="angle">&rangle;</span></span
@@ -2158,7 +2172,7 @@ Your answer is \usebeamertemplate*{answer}.
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>

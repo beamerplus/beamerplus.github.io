@@ -6,7 +6,7 @@
     <meta content="LaTeX Lwarp package" name="generator" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Animations, Sounds, and Slide Transitions - Beamer Manual</title>
-    <link href="style.css?v=20231014" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=20240907" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
       rel="stylesheet"
@@ -69,7 +69,7 @@
                 <a href="https://github.com/josephwright/beamer" target="_blank"
                   >https://github.com/josephwright/beamer</a
                 ><br />
-                User Guide for version 3.70.</span
+                User Guide for version 3.71.</span
               >
             </p>
             <p>Contents</p>
@@ -189,7 +189,7 @@
           </p>
           <p>
             To include an animation in a presentation, you can use, for example,
-            the package <span class="texttt">multimedia.sty</span> which is part
+            the package <span class="verb">multimedia.sty</span> which is part
             of the
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             package. You have to include this package explicitly. Despite being
@@ -213,21 +213,21 @@
               including external animation and sound files in a
               <span class="pgf-name"><span class="textsc">pdf</span></span>
               document. The package can be used together with both
-              <span class="texttt">dvips</span> plus
-              <span class="texttt">ps2pdf</span> and
-              <span class="texttt">pdflatex</span>, though the special sound
-              support is available only in <span class="texttt">pdflatex</span>.
+              <span class="verb">dvips</span> plus
+              <span class="verb">ps2pdf</span> and
+              <span class="verb">pdflatex</span>, though the special sound
+              support is available only in <span class="verb">pdflatex</span>.
             </p>
             <p>
               When including this package, you must also include the
-              <span class="texttt">hyperref</span> package. The
-              <span class="texttt">multimedia</span> is one of the few packages
-              that needs to be loaded after
-              <span class="texttt">hyperref</span>. Since
+              <span class="verb">hyperref</span> package. The
+              <span class="verb">multimedia</span> is one of the few packages
+              that needs to be loaded after <span class="verb">hyperref</span>.
+              Since
               <span class="beamer-name"
                 ><span class="textsc">beamer</span></span
               >
-              includes <span class="texttt">hyperref</span> automatically, you
+              includes <span class="verb">hyperref</span> automatically, you
               need not worry about this when creating a presentation using
               <span class="beamer-name"><span class="textsc">beamer</span></span
               >.
@@ -236,7 +236,7 @@
           <p>
             For including an animation in a
             <span class="pgf-name"><span class="textsc">pdf</span></span> file,
-            you can use the command <span class="texttt">\movie</span>, which is
+            you can use the command <span class="verb">\movie</span>, which is
             explained below. Depending on the used options, this command will
             either setup the
             <span class="pgf-name"><span class="textsc">pdf</span></span> file
@@ -280,8 +280,8 @@
               resides. The movie file will <em>not</em> be embedded into the
               <span class="pgf-name"><span class="textsc">pdf</span></span> file
               in the sense that the actual movie data is part of the
-              <span class="texttt">main.pdf</span> file. The movie file must
-              hence be copied and passed along with the
+              <span class="verb">main.pdf</span> file. The movie file must hence
+              be copied and passed along with the
               <span class="pgf-name"><span class="textsc">pdf</span></span>
               file. (Nevertheless, one often says that the movie is
               &ldquo;embedded&rdquo; in the document, but that just means that
@@ -290,8 +290,8 @@
             </p>
             <p>
               The movie will use a rectangular area whose size is determined
-              either by the <span class="texttt">width=</span> and
-              <span class="texttt">height=</span> options or by the size of the
+              either by the <span class="verb">width=</span> and
+              <span class="verb">height=</span> options or by the size of the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>poster text</i
                 ><span class="angle">&rangle;</span></span
@@ -307,9 +307,9 @@
                 ></span
               >
               text; for example, it might be a
-              <span class="texttt">\pgfuseimage</span> command or an
-              <span class="texttt">\includegraphics</span> command or a
-              <span class="texttt">pgfpicture</span> environment or just plain
+              <span class="verb">\pgfuseimage</span> command or an
+              <span class="verb">\includegraphics</span> command or a
+              <span class="verb">pgfpicture</span> environment or just plain
               text. The
               <span class="meta"
                 ><span class="angle">&langle;</span><i>poster text</i
@@ -325,7 +325,7 @@
               movie is started, when it will be exactly replaced by the movie
               itself. However, there is also a different, sometimes better, way
               of creating a poster image, namely by using the
-              <span class="texttt">poster</span> option as explained later on.
+              <span class="verb">poster</span> option as explained later on.
             </p>
             <p>
               The aspect ratio of the movie will <em>not</em> be corrected
@@ -347,7 +347,7 @@
               might be a symbol representing the sound. There is also a
               different, dedicated command for including sounds in a
               <span class="pgf-name"><span class="textsc">pdf</span></span>
-              file, see the <span class="texttt">\sound</span> command in
+              file, see the <span class="verb">\sound</span> command in
               Section&nbsp;<a
                 href="Animations-Sounds-Slide-Transitions.html#section-sound"
                 >14.2</a
@@ -367,34 +367,33 @@
               <span class="pgf-name"><span class="textsc">pdf</span></span>
               standard and is not a peculiarity of the Acrobat Reader. In
               particular, one might expect other viewers like
-              <span class="texttt">xpdf</span> and
-              <span class="texttt">poppler</span>-based viewers (Okular, Evince)
+              <span class="verb">xpdf</span> and
+              <span class="verb">poppler</span>-based viewers (Okular, Evince)
               to support embedded movies in the future.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\movie{\pgfuseimage{myposterimage}}{mymovie.avi}</span
               >
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\movie[width=3cm,height=2cm,poster]{}{mymovie.mpg}</span
               >
             </p>
             <p>
               If your viewer application is not able to render your movie, but
               some external application is, you must use the
-              <span class="texttt">externalviewer</span> option. This will ask
-              the viewer application to launch an application for showing the
-              movie instead of displaying it itself. Since this application is
-              started in a new window, this is not nearly as nice as having the
-              movie displayed directly by the viewer (unless you use evil
-              trickery to suppress the frame of the viewer application). Which
-              application is chosen is left to the discretion of the viewer
-              application, which tries to make its choice according to the
-              extension of the
+              <span class="verb">externalviewer</span> option. This will ask the
+              viewer application to launch an application for showing the movie
+              instead of displaying it itself. Since this application is started
+              in a new window, this is not nearly as nice as having the movie
+              displayed directly by the viewer (unless you use evil trickery to
+              suppress the frame of the viewer application). Which application
+              is chosen is left to the discretion of the viewer application,
+              which tries to make its choice according to the extension of the
               <span class="meta"
                 ><span class="angle">&langle;</span><i>movie filename</i
                 ><span class="angle">&rangle;</span></span
@@ -412,28 +411,28 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">autostart</span></span
+                    ><span class="verb">autostart</span></span
                   >. Causes the movie to start playing immediately when the page
                   is shown. At most one movie can be started in this way. The
                   viewer application will typically be able to show at most one
                   movie at the same time anyway. When the page is no longer
                   shown, the movie immediately stops. This can be a problem if
-                  you use the <span class="texttt">\movie</span> command to
+                  you use the <span class="verb">\movie</span> command to
                   include a sound that should be played on after the page has
                   been closed. In this case, the
-                  <span class="texttt">\sound</span> command must be used.
+                  <span class="verb">\sound</span> command must be used.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">borderwidth=</span></span
+                    ><span class="verb">borderwidth=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span
                     ><i
@@ -463,8 +462,8 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">depth=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">depth=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span
                     ><i
@@ -485,43 +484,42 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">duration=</span></span
+                    ><span class="verb">duration=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>time</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">s</span>. Specifies in seconds how long
+                  ><span class="verb">s</span>. Specifies in seconds how long
                   the movie should be shown. The
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>time</i
                     ><span class="angle">&rangle;</span></span
                   >
                   may be a fractional value and must be followed by the letter
-                  <span class="texttt">s</span>. For example,
-                  <span class="texttt">duration=1.5s</span> will show the movie
+                  <span class="verb">s</span>. For example,
+                  <span class="verb">duration=1.5s</span> will show the movie
                   for one and a half seconds. In conjunction with the
-                  <span class="texttt">start</span> option, you can &ldquo;cut
+                  <span class="verb">start</span> option, you can &ldquo;cut
                   out&rdquo; a part of a movie for display.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">externalviewer</span></span
+                    ><span class="verb">externalviewer</span></span
                   >. As explained above, this causes an external application to
                   be launched for displaying the movie in a separate window.
-                  Most options, like <span class="texttt">duration</span> or
-                  <span class="texttt">loop</span>, have no effect since they
-                  are not passed along to the viewer application.
+                  Most options, like <span class="verb">duration</span> or
+                  <span class="verb">loop</span>, have no effect since they are
+                  not passed along to the viewer application.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"
-                    ><span class="texttt">height=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">height=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span
                     ><i
@@ -542,14 +540,14 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">label=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">label=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>movie label</i
                     ><span class="angle">&rangle;</span></span
                   >. Assigns a label to the movie such that it can later be
                   referenced by the command
-                  <span class="texttt">\hyperlinkmovie</span>, which can be used
+                  <span class="verb">\hyperlinkmovie</span>, which can be used
                   to stop the movie or to show a different part of it. The
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>movie label</i
@@ -564,32 +562,32 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">loop</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">loop</span></span
                   >. Causes the movie to start again when the end has been
                   reached. Normally, the movie just stops at the end.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">once</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">once</span></span
                   >. Causes the movie to just stop at the end. This is the
                   default.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">open</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">open</span></span
                   >. Causes the player to stay open when the movie has finished.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">palindrome</span></span
+                    ><span class="verb">palindrome</span></span
                   >. Causes the movie to start playing backwards when the end
                   has been reached, and to start playing forward once more when
                   the beginning is reached, and so on.
@@ -597,8 +595,8 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">poster</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">poster</span></span
                   >. Asks the viewer application to show the first image of the
                   movie when the movie is not playing. Normally, nothing is
                   shown when the movie is not playing (and thus the box
@@ -614,49 +612,47 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"
-                    ><span class="texttt">repeat</span></span
-                  >
-                  is the same as <span class="texttt">loop</span>.
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">repeat</span></span>
+                  is the same as <span class="verb">loop</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">showcontrols=</span></span
+                    ><span class="verb">showcontrols=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>true or false</i
                     ><span class="angle">&rangle;</span></span
                   >. Causes a control bar to be displayed below the movie while
                   it is playing. Instead of
-                  <span class="texttt">showcontrols=true</span> you can also
-                  just say <span class="texttt">showcontrols</span>. By default,
-                  no control bar is shown.
+                  <span class="verb">showcontrols=true</span> you can also just
+                  say <span class="verb">showcontrols</span>. By default, no
+                  control bar is shown.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">start=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">start=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>time</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">s</span>. Causes the first
+                  ><span class="verb">s</span>. Causes the first
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>time</i
                     ><span class="angle">&rangle;</span></span
                   >
                   seconds of the movie to be skipped. For example,
-                  <span class="texttt">start=10s,duration=5s</span> will show
+                  <span class="verb">start=10s,duration=5s</span> will show
                   seconds 10 to 15 of the movie, when you play the movie.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">width=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">width=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span
                     ><i
@@ -667,7 +663,7 @@
                       >dimension</i
                     ><span class="angle">&rangle;</span></span
                   >
-                  works like the <span class="texttt">height</span> option, only
+                  works like the <span class="verb">height</span> option, only
                   for the width of the poster box.
                 </p>
               </li>
@@ -744,63 +740,63 @@
                 ><span class="angle">&rangle;</span></span
               >
               may be given, many of which are the same as for the
-              <span class="texttt">\movie</span> command; if a different option
-              is given for the link than for the movie itself, the option for
-              the link takes precedence:
+              <span class="verb">\movie</span> command; if a different option is
+              given for the link than for the movie itself, the option for the
+              link takes precedence:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">duration=</span></span
+                    ><span class="verb">duration=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>time</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">s</span>. As for
-                  <span class="texttt">\movie</span>, this causes the movie to
-                  be played only for the given number of seconds.
+                  ><span class="verb">s</span>. As for
+                  <span class="verb">\movie</span>, this causes the movie to be
+                  played only for the given number of seconds.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">loop</span></span>
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">loop</span></span>
                   and
-                  <span class="declare"><span class="texttt">repeat</span></span
-                  >. As for <span class="texttt">\movie</span>, this causes the
+                  <span class="declare"><span class="verb">repeat</span></span
+                  >. As for <span class="verb">\movie</span>, this causes the
                   movie to loop.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">once</span></span
-                  >. As for <span class="texttt">\movie</span>, this causes the
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">once</span></span
+                  >. As for <span class="verb">\movie</span>, this causes the
                   movie to played only once.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">palindrome</span></span
-                  >. As for <span class="texttt">\movie</span>, this causes the
+                    ><span class="verb">palindrome</span></span
+                  >. As for <span class="verb">\movie</span>, this causes the
                   movie to be played forth and back.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">pause</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">pause</span></span
                   >. Causes the playback of the movie to be paused, if the movie
                   was currently playing. If not, nothing happens.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">play</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">play</span></span
                   >. Causes the movie to be played from whatever start position
                   is specified. If the movie is already playing, it will be
                   stopped and restarted at the starting position. This is the
@@ -809,8 +805,8 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">resume</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">resume</span></span
                   >. Resumes playback of the movie, if it has previously been
                   paused. If has not been paused, but not started or is already
                   playing, nothing happens.
@@ -818,34 +814,33 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">showcontrols=</span></span
+                    ><span class="verb">showcontrols=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>true or false</i
                     ><span class="angle">&rangle;</span></span
-                  >. As for <span class="texttt">\movie</span>, this causes a
+                  >. As for <span class="verb">\movie</span>, this causes a
                   control bar to be shown or not shown during playback.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">start=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">start=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>time</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">s</span>. As for
-                  <span class="texttt">\movie</span>, this causes the given
-                  number of seconds to be skipped at the beginning of the movie
-                  if <span class="texttt">play</span> is used to start the
-                  movie.
+                  ><span class="verb">s</span>. As for
+                  <span class="verb">\movie</span>, this causes the given number
+                  of seconds to be skipped at the beginning of the movie if
+                  <span class="verb">play</span> is used to start the movie.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">stop</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">stop</span></span
                   >. Causes the playback of the movie to be stopped.
                 </p>
               </li>
@@ -885,8 +880,8 @@
           <p>
             To facilitate the creation of animations using this feature, the
             following commands can be used:
-            <span class="texttt">\animate</span> and
-            <span class="texttt">\animatevalue</span>.
+            <span class="verb">\animate</span> and
+            <span class="verb">\animatevalue</span>.
           </p>
           <div class="command">
             <div class="command-headline">
@@ -930,23 +925,22 @@
               </p>
             </div>
             <p>
-              This command is ignored in
-              <span class="texttt">article</span> mode.
+              This command is ignored in <span class="verb">article</span> mode.
             </p>
           </div>
           <div class="command">
             <div class="command-headline">
               <p>
                 <span class="declare"><kbd>\animatevalue</kbd></span
-                ><span class="texttt">&lt;</span
+                ><span class="verb">&lt;</span
                 ><span class="meta"
                   ><span class="angle">&langle;</span><i>start slide</i
                   ><span class="angle">&rangle;</span></span
-                ><span class="texttt">-</span
+                ><span class="verb">-</span
                 ><span class="meta"
                   ><span class="angle">&langle;</span><i>end slide</i
                   ><span class="angle">&rangle;</span></span
-                ><span class="texttt">&gt;</span> {<span class="meta"
+                ><span class="verb">&gt;</span> {<span class="meta"
                   ><span class="angle">&langle;</span><i>name</i
                   ><span class="angle">&rangle;</span></span
                 >}{<span class="meta"
@@ -1040,21 +1034,20 @@
               </p>
             </div>
             <p>
-              This command is ignored in
-              <span class="texttt">article</span> mode.
+              This command is ignored in <span class="verb">article</span> mode.
             </p>
           </div>
           <p>
             If your animation &ldquo;graphics&rdquo; reside in individual
             external graphic files, you might also consider using the
-            <span class="texttt">\multiinclude</span> command, which is
-            explained in Section&nbsp;<a
+            <span class="verb">\multiinclude</span> command, which is explained
+            in Section&nbsp;<a
               href="Animations-Sounds-Slide-Transitions.html#section-mpmulti"
               >14.1.3</a
-            >, together with <span class="texttt">\animate</span>. For example,
+            >, together with <span class="verb">\animate</span>. For example,
             you might create an animation like this, assuming you have created
-            graphic files named <span class="texttt">animation.1</span> through
-            to <span class="texttt">animation.10</span>:
+            graphic files named <span class="verb">animation.1</span> through to
+            <span class="verb">animation.10</span>:
           </p>
           <pre class="verbatim">
 \begin{frame}
@@ -1082,20 +1075,19 @@
             each stage of the animation there is an image file containing an
             image for this stage. You can include such a series of images
             conveniently by using the style
-            <span class="texttt">mpmulti.sty</span> from the ppower4 package.
-            This style, written by Klaus Guntermann, introduces a command called
-            <span class="texttt">\multiinclude</span> that takes the base name
-            of a graphic file like <span class="texttt">mygraphic</span> and
-            will then search for files called
-            <span class="texttt">mygraphic.0</span>,
-            <span class="texttt">mygraphic.1</span>, and so on, till no more
-            files are found. It will then include these graphics files using the
-            <span class="texttt">\includegraphics</span> command, but will put
+            <span class="verb">mpmulti.sty</span> from the ppower4 package. This
+            style, written by Klaus Guntermann, introduces a command called
+            <span class="verb">\multiinclude</span> that takes the base name of
+            a graphic file like <span class="verb">mygraphic</span> and will
+            then search for files called <span class="verb">mygraphic.0</span>,
+            <span class="verb">mygraphic.1</span>, and so on, till no more files
+            are found. It will then include these graphics files using the
+            <span class="verb">\includegraphics</span> command, but will put
             these graphics &ldquo;on top of each other.&rdquo; Furthermore, and
             this is the important part, it inserts a
-            <span class="texttt">\pause</span> command after each graphic. This
+            <span class="verb">\pause</span> command after each graphic. This
             command is defined in the ppower4 package and has the same effect as
-            the <span class="texttt">\pause</span> command of
+            the <span class="verb">\pause</span> command of
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >. For this reason, both ppower4 and also
             <span class="beamer-name"><span class="textsc">beamer</span></span>
@@ -1103,24 +1095,24 @@
             the next graphic on each slide.
           </p>
           <p>
-            If you try to use <span class="texttt">mpmulti.sty</span> directly,
+            If you try to use <span class="verb">mpmulti.sty</span> directly,
             you will run into the problem that it includes a file called
-            <span class="texttt">pause.sty</span>, which is part of the ppower4
+            <span class="verb">pause.sty</span>, which is part of the ppower4
             package.
           </p>
           <p>
             You might also consider using the style
-            <span class="texttt">xmpmulti.sty</span> that comes with
+            <span class="verb">xmpmulti.sty</span> that comes with
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >. This file is mainly identical to
-            <span class="texttt">mpmulti</span>, except for two differences:
-            First, it does not include <span class="texttt">pause.sty</span>, a
+            <span class="verb">mpmulti</span>, except for two differences:
+            First, it does not include <span class="verb">pause.sty</span>, a
             style that conceptually clashes with
             <span class="beamer-name"><span class="textsc">beamer</span></span
             >, although
             <span class="beamer-name"><span class="textsc">beamer</span></span>
             contains a workaround that sidesteps the problem. Second, it extends
-            the <span class="texttt">\multiinclude</span> command by allowing a
+            the <span class="verb">\multiinclude</span> command by allowing a
             special default overlay specification to be given. The effect of
             this is explained below.
           </p>
@@ -1133,15 +1125,15 @@
               </p>
             </div>
             <p>
-              Defines the command <span class="texttt">\multiinclude</span>. The
+              Defines the command <span class="verb">\multiinclude</span>. The
               code of this package is due to Klaus Guntermann with some
               additions of mine. It can be used together with
               <span class="beamer-name"
                 ><span class="textsc">beamer</span></span
               >
               and with ppower4, i. e., it can be used as a replacement for
-              <span class="texttt">mpmulti</span> if the
-              <span class="texttt">pause</span> package is also included in a
+              <span class="verb">mpmulti</span> if the
+              <span class="verb">pause</span> package is also included in a
               ppower4-presentation.
             </p>
           </div>
@@ -1150,12 +1142,12 @@
               <p>
                 <span class="declare"><kbd>\multiinclude</kbd></span
                 ><span class="opt"
-                  ><span class="texttt">[&lt;</span
+                  ><span class="verb">[&lt;</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span
                     ><i>default overlay specification</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">&gt;]</span></span
+                  ><span class="verb">&gt;]</span></span
                 ><span class="opt"
                   ><span class="oarg-left-bracket">[</span
                   ><span class="meta"
@@ -1175,7 +1167,7 @@
                 ><i>default overlay specification</i
                 ><span class="angle">&rangle;</span></span
               >, this command is identical to the
-              <span class="texttt">\multiinclude</span>
+              <span class="verb">\multiinclude</span>
               command from the ppower4 package.
             </p>
             <p>
@@ -1184,7 +1176,7 @@
               <span class="meta"
                 ><span class="angle">&langle;</span><i>base file name</i
                 ><span class="angle">&rangle;</span></span
-              ><span class="texttt">.</span
+              ><span class="verb">.</span
               ><span class="meta"
                 ><span class="angle">&langle;</span><i>number</i
                 ><span class="angle">&rangle;</span></span
@@ -1194,11 +1186,11 @@
                 ><span class="angle">&langle;</span><i>number</i
                 ><span class="angle">&rangle;</span></span
               >, starting with zero. As long as it finds these files, it issues
-              an <span class="texttt">\includegraphics</span> command on them.
-              The files following the first one are put &ldquo;on top&rdquo; of
-              the first one. Between any two invocations of
-              <span class="texttt">\includegraphics</span>, a
-              <span class="texttt">\pause</span> command is inserted. You can
+              an <span class="verb">\includegraphics</span> command on them. The
+              files following the first one are put &ldquo;on top&rdquo; of the
+              first one. Between any two invocations of
+              <span class="verb">\includegraphics</span>, a
+              <span class="verb">\pause</span> command is inserted. You can
               modify this behavior in different ways by given suitable
               <span class="meta"
                 ><span class="angle">&langle;</span><i>options</i
@@ -1207,9 +1199,8 @@
             </p>
             <p>
               <i>Example: </i>Assume that MetaPost has created files called
-              <span class="texttt">gra.0</span>,
-              <span class="texttt">gra.1</span>, and
-              <span class="texttt">gra.2</span>. You can then create frame
+              <span class="verb">gra.0</span>, <span class="verb">gra.1</span>,
+              and <span class="verb">gra.2</span>. You can then create frame
               consisting of three slides that incrementally show the graphic as
               follows:
             </p>
@@ -1227,9 +1218,9 @@
                 ><span class="angle">&rangle;</span></span
               >
               is the following: First, no
-              <span class="texttt">\pause</span> command is inserted between
+              <span class="verb">\pause</span> command is inserted between
               graphics. Instead, each graphic is surrounded by an
-              <span class="texttt">actionenv</span> environment with the overlay
+              <span class="verb">actionenv</span> environment with the overlay
               specification set to
               <span class="meta"
                 ><span class="angle">&langle;</span
@@ -1240,7 +1231,7 @@
             <p>
               <i>Example: </i>You can create the same effect as in the previous
               example using
-              <span class="texttt">\multiinclude[&lt;+-&gt;]{gra}</span>.
+              <span class="verb">\multiinclude[&lt;+-&gt;]{gra}</span>.
             </p>
             <p>
               <i>Example: </i>For a more interesting usage of the
@@ -1261,7 +1252,7 @@
             <p>
               <i>Example: </i>In order to have each graphic completely
               <em>replace</em> the previous one, you could use
-              <span class="texttt">\multiinclude[&lt;+&gt;]{gra}</span>.
+              <span class="verb">\multiinclude[&lt;+&gt;]{gra}</span>.
             </p>
             <p>
               The following
@@ -1272,19 +1263,19 @@
               may be given (these are the same as for the original command from
               the ppower4 package):
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">pause=</span
+                    ><span class="verb">pause=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>command</i
                       ><span class="angle">&rangle;</span></span
                     ></span
                   >
                   replaces the default pausing command
-                  <span class="texttt">\pause</span> by
+                  <span class="verb">\pause</span> by
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>command</i
                     ><span class="angle">&rangle;</span></span
@@ -1295,16 +1286,16 @@
                     ><span class="angle">&rangle;</span></span
                   >
                   is given, the default pausing command is empty; otherwise it
-                  is <span class="texttt">\pause</span>. Note that commands like
-                  <span class="texttt">\pauselevel</span> are not available in
-                  <span class="texttt">\beamer</span>.
+                  is <span class="verb">\pause</span>. Note that commands like
+                  <span class="verb">\pauselevel</span> are not available in
+                  <span class="verb">\beamer</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">graphics=</span
+                    ><span class="verb">graphics=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>options</i
                       ><span class="angle">&rangle;</span></span
@@ -1315,20 +1306,20 @@
                     ><span class="angle">&langle;</span><i>options</i
                     ><span class="angle">&rangle;</span></span
                   >
-                  to the <span class="texttt">\includegraphics</span> command.
+                  to the <span class="verb">\includegraphics</span> command.
                 </p>
                 <p>
                   <i>Example: </i
-                  ><span class="texttt"
+                  ><span class="verb"
                     >\multiinclude[graphics={height=5cm}]{gra}</span
                   >
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">format=</span
+                    ><span class="verb">format=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>extension</i
                       ><span class="angle">&rangle;</span></span
@@ -1338,7 +1329,7 @@
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>base file name</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">.</span
+                  ><span class="verb">.</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>number</i
                     ><span class="angle">&rangle;</span></span
@@ -1347,24 +1338,24 @@
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>base file name</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">-</span
+                  ><span class="verb">-</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>number</i
                     ><span class="angle">&rangle;</span></span
-                  ><span class="texttt">.</span
+                  ><span class="verb">.</span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>extension</i
                     ><span class="angle">&rangle;</span></span
                   >. Note the change from the dot to a hyphen. This option
                   allows you to include, say,
-                  <span class="texttt">.jpg</span> files.
+                  <span class="verb">.jpg</span> files.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">start=</span
+                    ><span class="verb">start=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>number</i
                       ><span class="angle">&rangle;</span></span
@@ -1379,9 +1370,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">end=</span
+                    ><span class="verb">end=</span
                     ><span class="meta"
                       ><span class="angle">&langle;</span><i>number</i
                       ><span class="angle">&rangle;</span></span
@@ -1398,14 +1389,14 @@
           </div>
           <p>
             Note that, if you do not use the
-            <span class="texttt">format=</span> option, the
-            <span class="texttt">\includegraphics</span> command will be
-            somewhat at a loss in which format your graphic file actually is.
-            After all, it ends with the cryptic &ldquo;format suffix&rdquo;
-            <span class="texttt">.0</span> or <span class="texttt">.1</span>.
-            You can tell <span class="texttt">\includegraphics</span> that any
-            file having a suffix it knows nothing about is actually in format,
-            say, <span class="texttt">.mps</span>, using the following command:
+            <span class="verb">format=</span> option, the
+            <span class="verb">\includegraphics</span> command will be somewhat
+            at a loss in which format your graphic file actually is. After all,
+            it ends with the cryptic &ldquo;format suffix&rdquo;
+            <span class="verb">.0</span> or <span class="verb">.1</span>. You
+            can tell <span class="verb">\includegraphics</span> that any file
+            having a suffix it knows nothing about is actually in format, say,
+            <span class="verb">.mps</span>, using the following command:
           </p>
           <pre class="verbatim">
 \DeclareGraphicsRule{*}{mps}{*}{}
@@ -1427,7 +1418,7 @@
             You can include sounds in a presentation. Such sound can be played
             when you open a slide or when a certain button is clicked. The
             commands for including sounds are defined in the package
-            <span class="texttt">multimedia</span>, which is introduced in
+            <span class="verb">multimedia</span>, which is introduced in
             Section&nbsp;<a
               href="Animations-Sounds-Slide-Transitions.html#section-multimedia"
               >14.1.1</a
@@ -1440,21 +1431,24 @@
             >, a sound can be included in a
             <span class="pgf-name"><span class="textsc">pdf</span></span>
             presentation by treating it as a movie and using the
-            <span class="texttt">\movie</span> command. While this is perfectly
+            <span class="verb">\movie</span> command. While this is perfectly
             sufficient in most cases, there are two cases where this approach is
             not satisfactory:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="enumerate" style="list-style-type: none">
             <li>
               <p>
-                1. When a page is closed, any playing movie is immediately
-                stopped. Thus, you cannot use the
-                <span class="texttt">\movie</span> command to create sounds that
+                <span class="listmarker">1.</span> When a page is closed, any
+                playing movie is immediately stopped. Thus, you cannot use the
+                <span class="verb">\movie</span> command to create sounds that
                 persist for a longer time.
               </p>
             </li>
             <li>
-              <p>2. You cannot play two movies at the same time.</p>
+              <p>
+                <span class="listmarker">2.</span> You cannot play two movies at
+                the same time.
+              </p>
             </li>
           </ul>
           <p>
@@ -1462,31 +1456,33 @@
             <span class="pgf-name"><span class="textsc">pdf</span></span>
             specification introduces special sound objects, which are treated
             quite differently from movie objects. You can create a sound object
-            using the command <span class="texttt">\sound</span>, which is
-            somewhat similar to <span class="texttt">\movie</span>. There also
-            exists a <span class="texttt">\hyperlinksound</span> command, which
-            is similar to <span class="texttt">\hyperlinkmovie</span>. While it
-            is conceptually better to use <span class="texttt">\sound</span> for
+            using the command <span class="verb">\sound</span>, which is
+            somewhat similar to <span class="verb">\movie</span>. There also
+            exists a <span class="verb">\hyperlinksound</span> command, which is
+            similar to <span class="verb">\hyperlinkmovie</span>. While it is
+            conceptually better to use <span class="verb">\sound</span> for
             sounds, there are a number of things to consider before using it:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; Several sounds <em>can</em> be played at the same time.
-                In particular, it is possible to play a general sound in
-                parallel to a (hopefully silent) movie.
+                <span class="listmarker">&bull;</span> Several sounds
+                <em>can</em> be played at the same time. In particular, it is
+                possible to play a general sound in parallel to a (hopefully
+                silent) movie.
               </p>
             </li>
             <li>
               <p>
-                &bull; A sound playback <em>can</em> persist after the current
-                page is closed (though it need not).
+                <span class="listmarker">&bull;</span> A sound playback
+                <em>can</em> persist after the current page is closed (though it
+                need not).
               </p>
             </li>
             <li>
               <p>
-                &bull; The data of a sound file <em>can</em> be completely
-                embedded in a
+                <span class="listmarker">&bull;</span> The data of a sound file
+                <em>can</em> be completely embedded in a
                 <span class="pgf-name"><span class="textsc">pdf</span></span>
                 file, obliterating the need to &ldquo;carry around&rdquo; other
                 files.
@@ -1494,26 +1490,29 @@
             </li>
             <li>
               <p>
-                &bull; The sound objects do <em>not</em> work together with
-                <span class="texttt">dvips</span> and
-                <span class="texttt">ps2pdf</span>. They only work with
-                <span class="texttt">pdflatex</span>.
+                <span class="listmarker">&bull;</span> The sound objects do
+                <em>not</em> work together with
+                <span class="verb">dvips</span> and
+                <span class="verb">ps2pdf</span>. They only work with
+                <span class="verb">pdflatex</span>.
               </p>
             </li>
             <li>
               <p>
-                &bull; There is much less control over what part of a sound
-                should be played. In particular, no control bar is shown and you
-                can specify neither the start time nor the duration.
+                <span class="listmarker">&bull;</span> There is much less
+                control over what part of a sound should be played. In
+                particular, no control bar is shown and you can specify neither
+                the start time nor the duration.
               </p>
             </li>
             <li>
               <p>
-                &bull; A bug in some versions of the Acrobat Reader makes it
-                necessary to provide very exact details on the encoding of the
-                sound file. You have to provide the sampling rate, the number of
-                channels (mono or stereo), the number of bits per sample, and
-                the sample encoding method (raw, signed, Alaw or
+                <span class="listmarker">&bull;</span> A bug in some versions of
+                the Acrobat Reader makes it necessary to provide very exact
+                details on the encoding of the sound file. You have to provide
+                the sampling rate, the number of channels (mono or stereo), the
+                number of bits per sample, and the sample encoding method (raw,
+                signed, Alaw or
                 <span
                   class="lateximagesource"
                   id="lateximage-beameruserguide-13"
@@ -1534,12 +1533,13 @@
             </li>
             <li>
               <p>
-                &bull; It seems that you can only include uncompressed sound
-                data, which can easily become huge. This is not required by the
-                specification, but some versions of Acrobat Reader are unable to
-                play any compressed data. Data formats that <em>do</em> work are
-                <span class="texttt">.aif</span> and
-                <span class="texttt">.au</span>.
+                <span class="listmarker">&bull;</span> It seems that you can
+                only include uncompressed sound data, which can easily become
+                huge. This is not required by the specification, but some
+                versions of Acrobat Reader are unable to play any compressed
+                data. Data formats that <em>do</em> work are
+                <span class="verb">.aif</span> and
+                <span class="verb">.au</span>.
               </p>
             </li>
           </ul>
@@ -1570,11 +1570,11 @@
               >
               into the
               <span class="pgf-name"><span class="textsc">pdf</span></span>
-              file. As for <span class="texttt">\movie</span>, the file must be
+              file. As for <span class="verb">\movie</span>, the file must be
               accessible when the sound is to be played. Unlike
-              <span class="texttt">\movie</span>, you can however use the option
-              <span class="texttt">inlinesound</span> to actually embed the
-              sound data in the
+              <span class="verb">\movie</span>, you can however use the option
+              <span class="verb">inlinesound</span> to actually embed the sound
+              data in the
               <span class="pgf-name"><span class="textsc">pdf</span></span>
               file.
             </p>
@@ -1586,19 +1586,18 @@
               >
               will be be put in a box that, when clicked on, will start playing
               the movie. However, you might also leave this box empty and only
-              use the <span class="texttt">autostart</span> option. Once
-              playback of a sound has started, it can only be stopped by
-              starting the playback of a different sound or by use of the
-              <span class="texttt">\hyperlinkmute</span> command.
+              use the <span class="verb">autostart</span> option. Once playback
+              of a sound has started, it can only be stopped by starting the
+              playback of a different sound or by use of the
+              <span class="verb">\hyperlinkmute</span> command.
             </p>
             <p>
               The supported sound formats depend on the viewer application. Some
               versions of Acrobat Reader support
-              <span class="texttt">.aif</span> and
-              <span class="texttt">.au</span>. Sometimes you also need to
-              specify information like the sampling rate, even though this
-              information could be extracted from the sound file and even though
-              the
+              <span class="verb">.aif</span> and <span class="verb">.au</span>.
+              Sometimes you also need to specify information like the sampling
+              rate, even though this information could be extracted from the
+              sound file and even though the
               <span class="pgf-name"><span class="textsc">pdf</span></span>
               standard specifies that the viewer application should do so. In
               this regard, some versions of Acrobat Reader seem to be
@@ -1606,13 +1605,13 @@
             </p>
             <p>
               This command only works together with
-              <span class="texttt">pdflatex</span>. If you use
-              <span class="texttt">dvips</span>, the poster is still shown, but
+              <span class="verb">pdflatex</span>. If you use
+              <span class="verb">dvips</span>, the poster is still shown, but
               clicking it has no effect and no sound is embedded in any way.
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
+              ><span class="verb"
                 >\sound[autostart,samplingrate=22050]{}{applause.au}</span
               >
             </p>
@@ -1624,30 +1623,29 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">autostart</span></span
+                    ><span class="verb">autostart</span></span
                   >. Causes the sound to start playing immediately when the page
                   is shown.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"
-                    ><span class="texttt">automute</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">automute</span></span
                   >. Causes all sounds to be muted when the current page is
                   left.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">bitspersample=</span></span
+                    ><span class="verb">bitspersample=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>8 or 16</i
                     ><span class="angle">&rangle;</span></span
@@ -1657,9 +1655,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">channels=</span></span
+                    ><span class="verb">channels=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>1 or 2</i
                     ><span class="angle">&rangle;</span></span
@@ -1669,8 +1667,8 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">depth=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">depth=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span
                     ><i
@@ -1691,38 +1689,37 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">encoding=</span></span
+                    ><span class="verb">encoding=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>method</i
                     ><span class="angle">&rangle;</span></span
                   >. Specifies the encoding method, which may be
-                  <span class="texttt">Raw</span>,
-                  <span class="texttt">Signed</span>,
-                  <span class="texttt">muLaw</span>, or
-                  <span class="texttt">ALaw</span>. If the method is
-                  <span class="texttt">muLaw</span>, this option need not be
+                  <span class="verb">Raw</span>,
+                  <span class="verb">Signed</span>,
+                  <span class="verb">muLaw</span>, or
+                  <span class="verb">ALaw</span>. If the method is
+                  <span class="verb">muLaw</span>, this option need not be
                   specified.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">externalviewer</span></span
+                    ><span class="verb">externalviewer</span></span
                   >
                   causes an external application to be launched for playing the
-                  sound. Most options, like <span class="texttt">loop</span>,
-                  have no effect since they are not passed along to the external
+                  sound. Most options, like <span class="verb">loop</span>, have
+                  no effect since they are not passed along to the external
                   application.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"
-                    ><span class="texttt">height=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">height=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span
                     ><i
@@ -1743,9 +1740,9 @@
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">inlinesound</span></span
+                    ><span class="verb">inlinesound</span></span
                   >
                   causes the sound data to be stored directly in the
                   <span class="pgf-name"><span class="textsc">pdf</span></span
@@ -1754,14 +1751,14 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">label=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">label=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>sound label</i
                     ><span class="angle">&rangle;</span></span
                   >. Assigns a label to the sound such that it can later be
                   referenced by the command
-                  <span class="texttt">\hyperlinksound</span>, which can be used
+                  <span class="verb">\hyperlinksound</span>, which can be used
                   to start a sound. The
                   <span class="meta"
                     ><span class="angle">&langle;</span><i>sound label</i
@@ -1772,34 +1769,33 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">loop</span></span>
-                  or
-                  <span class="declare"><span class="texttt">repeat</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">loop</span></span> or
+                  <span class="declare"><span class="verb">repeat</span></span
                   >. Causes the sound to start again when the end has been
                   reached.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">mixsound=</span></span
+                    ><span class="verb">mixsound=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>true or false</i
                     ><span class="angle">&rangle;</span></span
-                  >. If set to <span class="texttt">true</span>, the sound is
+                  >. If set to <span class="verb">true</span>, the sound is
                   played in addition to any sound that is already playing. If
-                  set to <span class="texttt">false</span> all other sounds
+                  set to <span class="verb">false</span> all other sounds
                   (though not sound from movies) are stopped before the sound is
-                  played. The default is <span class="texttt">false</span>.
+                  played. The default is <span class="verb">false</span>.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">samplingrate=</span></span
+                    ><span class="verb">samplingrate=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>number</i
                     ><span class="angle">&rangle;</span></span
@@ -1810,8 +1806,8 @@
               </li>
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">width=</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">width=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span
                     ><i
@@ -1823,7 +1819,7 @@
                       dimension</i
                     ><span class="angle">&rangle;</span></span
                   >
-                  works like the <span class="texttt">height</span> option, only
+                  works like the <span class="verb">height</span> option, only
                   for the width of the poster box.
                 </p>
               </li>
@@ -1831,8 +1827,8 @@
             <p>
               <i>Example: </i>The following example creates a &ldquo;background
               sound&rdquo; for the slide, assuming that
-              <span class="texttt">applause.au</span> is encoded correctly
-              (44100 samples per second, mono,
+              <span class="verb">applause.au</span> is encoded correctly (44100
+              samples per second, mono,
               <span class="lateximagesource" id="lateximage-beameruserguide-14"
                 ><!--
 𝜇
@@ -1897,30 +1893,29 @@
               >
               may be given:
             </p>
-            <ul style="list-style-type: none">
+            <ul class="itemize" style="list-style-type: none">
               <li>
                 <p>
-                  &bull;
-                  <span class="declare"><span class="texttt">loop</span></span>
-                  or
-                  <span class="declare"><span class="texttt">repeat</span></span
+                  <span class="listmarker">&bull;</span>
+                  <span class="declare"><span class="verb">loop</span></span> or
+                  <span class="declare"><span class="verb">repeat</span></span
                   >. Causes the sound to start again when the end has been
                   reached.
                 </p>
               </li>
               <li>
                 <p>
-                  &bull;
+                  <span class="listmarker">&bull;</span>
                   <span class="declare"
-                    ><span class="texttt">mixsound=</span></span
+                    ><span class="verb">mixsound=</span></span
                   ><span class="meta"
                     ><span class="angle">&langle;</span><i>true or false</i
                     ><span class="angle">&rangle;</span></span
-                  >. If set to <span class="texttt">true</span>, the sound is
+                  >. If set to <span class="verb">true</span>, the sound is
                   played in addition to any sound that is already playing. If
-                  set to <span class="texttt">false</span> all other sounds
+                  set to <span class="verb">false</span> all other sounds
                   (though not sound from movies) are stopped before the sound is
-                  played. The default is <span class="texttt">false</span>.
+                  played. The default is <span class="verb">false</span>.
                 </p>
               </li>
             </ul>
@@ -1984,7 +1979,7 @@
 </pre
           >
           <p>
-            The command <span class="texttt">\transdissolve</span> causes the
+            The command <span class="verb">\transdissolve</span> causes the
             slide of the second frame to be shown in a &ldquo;dissolved
             way.&rdquo; Note that the dissolving is a property of the second
             frame, not of the first one. We could have placed the command
@@ -2014,17 +2009,18 @@
             <span class="meta"
               ><span class="angle">&langle;</span><i>key</i
               ><span class="angle">&rangle;</span></span
-            ><span class="texttt">=</span
+            ><span class="verb">=</span
             ><span class="meta"
               ><span class="angle">&langle;</span><i>value</i
               ><span class="angle">&rangle;</span></span
             >
             pairs. The following options are possible:
           </p>
-          <ul style="list-style-type: none">
+          <ul class="itemize" style="list-style-type: none">
             <li>
               <p>
-                &bull; <span class="texttt">duration=</span
+                <span class="listmarker">&bull;</span>
+                <span class="verb">duration=</span
                 ><span class="meta"
                   ><span class="angle">&langle;</span><i>seconds</i
                   ><span class="angle">&rangle;</span></span
@@ -2041,16 +2037,16 @@
             </li>
             <li>
               <p>
-                &bull; <span class="texttt">direction=</span
+                <span class="listmarker">&bull;</span>
+                <span class="verb">direction=</span
                 ><span class="meta"
                   ><span class="angle">&langle;</span><i>degree</i
                   ><span class="angle">&rangle;</span></span
                 >. For &ldquo;directed&rdquo; effects, this option specifies the
                 effect&rsquo;s direction. Allowed values are
-                <span class="texttt">0</span>, <span class="texttt">90</span>,
-                <span class="texttt">180</span>,
-                <span class="texttt">270</span>, and for the glitter effect also
-                <span class="texttt">315</span>.
+                <span class="verb">0</span>, <span class="verb">90</span>,
+                <span class="verb">180</span>, <span class="verb">270</span>,
+                and for the glitter effect also <span class="verb">315</span>.
               </p>
             </li>
           </ul>
@@ -2061,7 +2057,7 @@
           </div>
           <p>
             All of these commands are ignored in
-            <span class="texttt">article</span> mode.
+            <span class="verb">article</span> mode.
           </p>
           <div class="command">
             <div class="command-headline">
@@ -2084,7 +2080,7 @@
             </div>
             <p>Show the slide as if horizontal blinds were pulled away.</p>
             <p>
-              <i>Example: </i><span class="texttt">\transblindshorizontal</span>
+              <i>Example: </i><span class="verb">\transblindshorizontal</span>
             </p>
           </div>
           <div class="command">
@@ -2109,7 +2105,7 @@
             <p>Show the slide as if vertical blinds were pulled away.</p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\transblindsvertical&lt;2,3&gt;</span>
+              ><span class="verb">\transblindsvertical&lt;2,3&gt;</span>
             </p>
           </div>
           <div class="command">
@@ -2133,7 +2129,7 @@
             </div>
             <p>Show the slide by moving to the center from all four sides.</p>
             <p>
-              <i>Example: </i><span class="texttt">\transboxin&lt;1&gt;</span>
+              <i>Example: </i><span class="verb">\transboxin&lt;1&gt;</span>
             </p>
           </div>
           <div class="command">
@@ -2159,7 +2155,7 @@
               Show the slide by showing more and more of a rectangular area that
               is centered on the slide center.
             </p>
-            <p><i>Example: </i><span class="texttt">\transboxout</span></p>
+            <p><i>Example: </i><span class="verb">\transboxout</span></p>
           </div>
           <div class="command">
             <div class="command-headline">
@@ -2181,7 +2177,7 @@
               </p>
             </div>
             <p>Show the slide by covering the content that was shown before.</p>
-            <p><i>Example: </i><span class="texttt">\transcover</span></p>
+            <p><i>Example: </i><span class="verb">\transcover</span></p>
           </div>
           <div class="command">
             <div class="command-headline">
@@ -2205,7 +2201,7 @@
             <p>Show the slide by slowly dissolving what was shown before.</p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\transdissolve[duration=0.2]</span>
+              ><span class="verb">\transdissolve[duration=0.2]</span>
             </p>
           </div>
           <div class="command">
@@ -2228,7 +2224,7 @@
               </p>
             </div>
             <p>Show the slide by slowly fading what was shown before.</p>
-            <p><i>Example: </i><span class="texttt">\transfade</span></p>
+            <p><i>Example: </i><span class="verb">\transfade</span></p>
           </div>
           <div class="command">
             <div class="command-headline">
@@ -2254,8 +2250,7 @@
               the old slide.
             </p>
             <p>
-              <i>Example: </i
-              ><span class="texttt">\transfly[direction=180]</span>
+              <i>Example: </i><span class="verb">\transfly[direction=180]</span>
             </p>
           </div>
           <div class="command">
@@ -2283,9 +2278,7 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt"
-                >\transglitter&lt;2-3&gt;[direction=90]</span
-              >
+              ><span class="verb">\transglitter&lt;2-3&gt;[direction=90]</span>
             </p>
           </div>
           <div class="command">
@@ -2311,7 +2304,7 @@
               Show the slide by pushing what was shown before off the screen
               using the new content.
             </p>
-            <p><i>Example: </i><span class="texttt">\transpush</span></p>
+            <p><i>Example: </i><span class="verb">\transpush</span></p>
           </div>
           <div class="command">
             <div class="command-headline">
@@ -2358,7 +2351,7 @@
               inward.
             </p>
             <p>
-              <i>Example: </i><span class="texttt">\transsplitverticalin</span>
+              <i>Example: </i><span class="verb">\transsplitverticalin</span>
             </p>
           </div>
           <div class="command">
@@ -2385,7 +2378,7 @@
               outward.
             </p>
             <p>
-              <i>Example: </i><span class="texttt">\transsplitverticalout</span>
+              <i>Example: </i><span class="verb">\transsplitverticalout</span>
             </p>
           </div>
           <div class="command">
@@ -2412,8 +2405,7 @@
               inward.
             </p>
             <p>
-              <i>Example: </i
-              ><span class="texttt">\transsplithorizontalin</span>
+              <i>Example: </i><span class="verb">\transsplithorizontalin</span>
             </p>
           </div>
           <div class="command">
@@ -2440,8 +2432,7 @@
               outward.
             </p>
             <p>
-              <i>Example: </i
-              ><span class="texttt">\transsplithorizontalout</span>
+              <i>Example: </i><span class="verb">\transsplithorizontalout</span>
             </p>
           </div>
           <div class="command">
@@ -2468,8 +2459,7 @@
               direction, thereby &ldquo;wiping out&rdquo; the previous contents.
             </p>
             <p>
-              <i>Example: </i
-              ><span class="texttt">\transwipe[direction=90]</span>
+              <i>Example: </i><span class="verb">\transwipe[direction=90]</span>
             </p>
           </div>
           <p>
@@ -2502,14 +2492,14 @@
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\transduration&lt;2&gt;{1}</span> Notice
-              that the <em>duration</em> of a slide transition is entire
-              separate from the <em>type</em> of transition which takes place.
-              Most notably, to cancel an existing auto-advance you need to use
+              ><span class="verb">\transduration&lt;2&gt;{1}</span> Notice that
+              the <em>duration</em> of a slide transition is entire separate
+              from the <em>type</em> of transition which takes place. Most
+              notably, to cancel an existing auto-advance you need to use
             </p>
             <p>
               <i>Example: </i
-              ><span class="texttt">\transduration{}</span> possibly with an
+              ><span class="verb">\transduration{}</span> possibly with an
               overlay specification.
             </p>
           </div>
@@ -2531,7 +2521,7 @@
           <a href="https://github.com/SwitWu/beamer-html-manual">Repository</a>
         </div>
         <div class="footer-right">
-          <em>HTML version last updated: 2023-10-14</em>
+          <em>HTML version last updated: 2024-09-07</em>
         </div>
       </footer>
     </div>
